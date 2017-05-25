@@ -1,0 +1,270 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{exam}
+
+\printanswers
+
+
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/478/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\firstpageheader{\bfseries{Ichthyology, Exam 2, F\short{\year}}}{}{%
+	\ifprintanswers\textbf{KEY}\else\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+\pointsinmargin
+%\marginpointname{ pts}
+\marginpointname{ pt}
+
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+
+\begin{document}
+
+\begin{questions}
+
+\question[11]
+Use the provided phylogeny of living fishes to fill in the blanks below with the appropriate systematic group name and classification level (class, subclass, etc.).  Each lettered blank below corresponds to the lettered branch on the phylogeny. ($1/2$ point per blank). Spelling counts throughout.\vspace{0.5\baselineskip}
+
+\begin{tabular}{@{}lll@{}}
+	&	\multicolumn{1}{c}{Group Name}		& 	\multicolumn{1}{c}{Classification Level} \\[1em]
+A.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Myxini}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Class}\else\hrulefill\fi} \\[1.5em]%
+	
+B.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Petromyzontida}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Class}\else\hrulefill\fi} \\[1.5em]%
+
+C.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Selachii}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Subdivision}\else\hrulefill\fi} \\[1.5em]%
+	
+D.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Batoidei}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Subdivision}\else\hrulefill\fi} \\[1.5em]%
+	
+E.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Holocephali}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Subclass}\else\hrulefill\fi} \\[1.5em]%
+	
+F.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Teleostei/Amiiformes}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Division/Order}\else\hrulefill\fi} \\[1.5em]%
+	
+G.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Amiiformes/Teleostei}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Order/Division}\else\hrulefill\fi} \\[1.5em]%
+	
+H.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Chondrostei}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Subclass}\else\hrulefill\fi} \\[1.5em]%
+	
+I.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Cladistia}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Subclass}\else\hrulefill\fi} \\[1.5em]%
+	
+J.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Coelacanthimorpha}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Subclass}\else\hrulefill\fi} \\[1.5em]%
+	
+K.	& 	\makebox[2.75in][l]{\ifprintanswers\textbf{Dipnotetrapodomorpha}\else\hrulefill\fi}%
+	&	\makebox[2.75in][l]{\ifprintanswers\textbf{Subclass}\else\hrulefill\fi} \\[1.5em]%
+\end{tabular}
+
+\question[1]
+Groups J and K together form what group and classification level?
+\begin{solution}Class Sarcopterygii\end{solution}
+\vspace*{\stretch{0.5}}
+
+\question[1]
+Groups C and D together form what group and classification level?
+\begin{solution}Subclass Elasmobranchii\end{solution}
+\vspace*{\stretch{0.5}}
+
+\question[1]
+Which group or groups form the Actinoptergyii?  Which classification level is this?
+\begin{solution}Class Actinopterygii is composed of F, G, H, I and Lepisosteiformes\end{solution}
+\vspace*{\stretch{1}}
+
+\question[1]
+Which group or groups form the Neopterygii?  Which classification level is this?
+\begin{solution}Subclass Neoptergyii is composed of F, G, and Lepisosteiformes\end{solution}
+\vspace*{\stretch{1}}
+
+\newpage
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  No term is used twice. (2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Cypriniformes}{Largest order of freshwater fishes.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Weberian Ossicles}{Structure found only in Otophysan fishes.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{{\small Silur., Charac., Gymnot.}}{Name any one order of Otophysan fishes, except your answer from question 6. (Bonus +1 if you use an order not in list above.)}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Tuberous}{Electrical receptor used for intraspecific communication.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Pelvic Claspers}{Diagnostic feature of Chondrichthyes.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Canal Neuromast}{Sensory structure found inside the lateral line.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Schreckstoff}{Substance released by some fishes when bitten.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Paired Species}{One species of lamprey is a micropredator. Its sister species is not.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Lapillus}{Specific otolith used for orientation.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{{\footnotesize Perc.,Moron.,Elasso., Centr., Sciaen.}}{Name any family from the Perciformes that is found in Missouri. The name is not in the list above!}
+%\vspace{0.5\baselineskip}
+
+\fullwidth{\textbf{(GSH)} Answer the next two questions. Terms are not in the word bank. (2.5 points each.)}
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Ganoid}{Type of scales found on Cladistia.}
+\vspace{0.5\baselineskip}
+
+\question\MatchQuestion{Cyclostomata}{Superclass with two semi-circular canals.}
+\vspace{0.5\baselineskip}
+%\vspace{0.4\baselineskip}
+
+\newpage
+
+\fullwidth{Examine the photo on screen, and then answer the next three questions.}
+
+\question[1]
+To what class does the fish on screen belong? (Hint: not ichthyology class.) 
+\begin{solution}Myxini\end{solution}
+\vspace*{\stretch{0.5}}
+
+\question[4]
+List two diagnostic features that you used to determine your answer to the previous question.
+\begin{solution}Three pairs barbels, four rows (two pairs) of teeth.\end{solution}
+
+\vspace*{\stretch{0.5}}
+
+\question[5]
+Describe a mechanism that the fish on screen can use to reduce the chance of being killed by predation.  Be sure to explain how the mechanism you describe reduces the effectiveness of predators.
+
+\begin{solution}
+The produce slime. The slime clogs the gills of the predators. They spit out the hagfish.
+\end{solution}
+\vspace*{\stretch{1.5}}
+
+%\newpage
+
+\question[10]
+Describe the conditions that favor cockholdry in \textit{Lepomis} sunfishes. Name and describe both types of strategies used by young males.
+
+\begin{solution}
+Large males establish territories for nesting. Smaller males unable to compete for territories would not be able to mate. \textit{Sneaker} males are the smallest males. They sneak in when female releases eggs, releasing sperm, and then dashing out of nest. \textit{Satellite} males mimic females, which allows them to approach the male in the nest. They also release sperm when actual female releases eggs.
+\end{solution}
+
+\vspace*{\stretch{3}}
+
+\newpage
+
+\question[15]
+Name and briefly explain the difference between the two types of diadromy related to reproduction. Be clear where reproduction actually occurs. Explain any two adaptive advantages of diadromy for reproduction.  Name a representative group of fishes that displays each type. You do not have to use the scientific names for the groups.
+
+	\begin{solution}
+	\textit{Anadromy} is migration from marine/salt water to freshwater. Reproduction occurs in freshwater. \textit{Catadromy} is migration from freshwater to salt water. Reproduction occurs in salt water.  Advantages of diadromy for reproduction include
+	\begin{itemize}
+		\item increase ability of larvae to locate proper nursery habitats, 
+		\item reduces intraspecific competition among age-classes for similar resources by placing them in different habitats at different age groups,
+		\item maximizes growth of each life stage: adults and larvae in proper place for optimal feeding, and
+		\item reduces probability of cannibalism of juveniles by adults. 
+	\end{itemize}
+	\end{solution}
+
+\vspace*{\stretch{3}}
+
+
+\question[5]
+\textbf{(GSH)} Name the hemisphere (northern, southern) and latitude (high, low) most commonly associated with each type of diadromy you named above.
+\begin{solution}Anadromy: northern, high. Catadromy: southern, low\end{solution}
+\vspace*{\stretch{0.5}}
+
+\question[1]
+\textbf{Extra Credit:} Name either of the two largest families of perciform fishes in the world.
+\begin{solution}Gobiidae, Cichlidae\end{solution}
+%\vspace*{\stretch{0.5}}
+
+\newpage
+
+\question[15]
+Name, compare and contrast the three types of jaw suspension found in fishes and how they contribute to gape width and strength. Clearly state which arches contribute to jaw suspension (connect to the cranium) and which do not. Indicate which type of suspension is most commonly found in actinopterygian fishes. For the other two types of jaw suspension, name one major group of fishes that has that type. Do not repeat group names.
+
+\begin{solution}
+	\begin{itemize}
+		\item Autostylic jaw suspension involves only the mandibular arch, which is fused to the cranium. The hyoid arch does not contribute to suspension. The gape is limited because only the lower jaw is mobile. Autostylic suspension is found in Sarcopterygii and Holocephali.
+		\item Amphistylic suspension uses both the mandibular arch and hyoid arch. The gape increases do some extent and strength is increased. Amphistylic suspension is found in some sharks.
+		\item Hyostylic jaw suspension uses only the hyoid arch. The mandibular arch is not connected to the cranium. This maximizes gape width although strength is sacrificed. This the most common type of jaw suspension in Actinopterygii.
+	\end{itemize}
+\end{solution}
+
+\newpage
+
+\question[15]
+Describe the observed evolutionary trends of the following structures in the Actinopterygii:  scales, swim bladder, caudal fin, and paired fins.  Clearly explain how / why the evolutionary changes of these four structures are interrelated. That is, explain how / why the change in one particular structure reinforced the evolutionary changes of the other structures. 
+
+\begin{solution}
+\begin{itemize}
+	\item Early fishes had heavy, bony armor. Later fishes evolved thin, light, flexible scales.  This lightened the fish and increased flexibility of the body, which allowed for increased maneuverability.
+	\item The swim bladder evolved from the lung. The swim bladder provided buoyancy control, allowing the fish to remain at a particular position in the water column. The bladder eliminated the need of fins to provide lift.
+	\item The caudal fin evolved from heterocercal to homocercal (in a broad sense) shape. Because of the bladder, lift was not needed from a heterocercal tail. The homocercal allowed all of the energy to be directed forward.
+	\item The paired fins were no longer needed for lift due to the bladder. Fin position shifted from abdominal to thoracic/jugular. This allowed for greater maneuverability of the body. 
+\end{itemize}
+
+Early fishes depended on lift from the caudal and paired fins due to heavy armor and lack of a bladder. The reduction of the armor to light scales reduced the weight of the fish, reducing the need for strong lift. The bladder provided the remaining lift. That changed the role of the fins from providing lift to providing maneuverability. The maneuverability was enhanced by the thin, flexible scales.
+\end{solution}
+
+\end{questions}
+\end{document}

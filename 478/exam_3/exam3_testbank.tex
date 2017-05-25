@@ -1,0 +1,140 @@
+\question[10]
+Write one of the two formulas that we used in lab to calculate similarity of watersheds. Briefly explain what each of the different variables in the formula represents and what the similarity index measures.
+\begin{solution}SOLUTION\end{solution}
+\vspace*{\stretch{0.5}}
+
+
+\question[10]
+Write the formula for the Shannon-Weiner diversity index that you used to calculate diversity for the Whitewater and Little River drainages. Briefly explain what the diversity index represents.
+\begin{solution}SOLUTION\end{solution}
+\vspace*{\stretch{1}}
+
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{exam}
+
+\printanswers
+
+
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/478/exams/}}%
+
+\pagestyle{headandfoot}
+%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\firstpageheader{\bfseries{Ichthyology, Exam 3, F14}}{}{%
+	\ifprintanswers\textbf{KEY}\else\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+\pointsinmargin
+%\marginpointname{ pts}
+\marginpointname{ pt}
+
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+
+\begin{document}
+
+\begin{questions}
+
+\question[5]
+Explain the differences between an assemblage and a community.
+
+\question[5]
+Explain the difference between a fundamental niche and a realized niche.
+
+\question[10]
+Relate the Antarctic convergence to the Tropical Submergence as it relates to the vertical distribution of deep-sea fishes.
+
+\question[5]
+Most cave fishes do not produce scales. In addition to costing energy, scales would reduce sensitivity to the environment. Name the specific type of sensory structure that would be inhibited if scales were produced (going for free neuromasts. Think about the wording, accuracy).
+
+\question[5]
+List and briefly explain three adaptations that Antarctic fishes without hemoglobin must have to take up and distribute oxygen throughout its body. \textbf{Expand to Explain and 10 points}
+
+\question[10]
+List two adaptations that Antarctic fishes without hemoglobin must have to take up and distribute oxygen throughout its body. Briefly and specifically explain how each adaptation allows the fish to survive without hemoglobin the the Antarctic region.
+
+
+
+\question[10]
+List three adaptations other than the rete that allow deep-sea fishes to live below 1000m, then briefly explain how each adaptation allows the fish to survive in the bathypelagic. \textbf{Change wording depending on whether you want to include or exclude mesopelagic or bathypelagic fishes, or exclude specific adaptations such as the tete.}
+
+\question[10]
+List two adaptations of bathypelagic fishes to low productivity. Briefly and specifically explain how each adaptation relates to low productivity and how it allows the fishes to survive in the bathypelagic. 
+
+
+\question[10]
+\textbf{Consider something along these lines, too. Greater point value. Be specific about number of changes to be required.} Discuss the specific adaptive changes that the grotto sculpin appears to be going through as it adapts to a life underground.  Explain which changes are related to darkness and which are related to the low productivity of the cave environment.  For each change you list, explain why that change is related to darkness or productivity, and how the change is adaptive. 
+
+\question[10]
+\textbf{(GSH)} Both caves and the bathypelagic zone receive absolutely no light from the sun. However, cave fishes lose pigmentation and are uniformly pale. Bathypelagic fishes continue to produce pigment and are uniformly dark. Develop a hypothesis to explain why bathypelagic fishes might maintain black bodies in the total absence of sunlight.
+
+\vspace*{\stretch{0.5}}
+
+\question[15]
+Name and describe three different mechanisms or “filters” that ultimately determine which species of fishes occur at a given locality.  Provide a distinct example for each, and explain how each contributes to the observed assemblage or community.
+\begin{solution}SOLUTION\end{solution}
+\vspace*{\stretch{1}}
+
+\newpage
+
+\question[15]
+If we sampled a single 100 m section of the Current River (2 hours to our west in the heart of the Ozark Mountains) we could easily capture 7--8 species of Percidae and 12--15 species (or more!) of Cyprinidae.  What specific process (or processes) allows the coexistence of so many closely related species within each of these families? Provide a reasonable example to illustrate your point. Use scientific names for species included in your example. 
+\begin{solution}SOLUTION\end{solution}
+\newpage
+
+\question[20]
+Your friend has just returned from a diving trip to Indonesia.  She asks how so many species of fishes can co-exist on a reef, and why do the species present seem to vary from reef to reef, and from time to time. Use your knowledge of competition, predation, larval availability and random events to develop a hypothesis that would explain your friend’s observations.  You may emphasize any combination of the four items listed above but you must discuss all four.  This question is not about a “correct” answer.  Write a hypothesis that is biologically sound and scientifically accurate, based on our class discussion.
+\begin{solution}SOLUTION\end{solution}
+
+\newpage
+
+\question[20]
+Schlosser (1987) developed a predictive conceptual framework to describe changes in fish communities along a habitat complexity gradient in a stream.  He argues that the relative importance of physical (environmental) versus biological processes changes along the stream gradient.  For this question, consider two stream segments: a second order, high gradient section of an Ozark stream and a sixth order, low gradient section of the same stream.  For each segment, compare and contrast the relative importance of physical and biological processes that affect assemblage structure.  Explain each of the specific physical and biological processes (including habitat structure and complexity, and age classes of fishes) that Schlosser would argue are most important at each segment.  Include in your explanation how these processes contribute to the stability or variability of the community at each segment.  List 3--4 representative species typical of each community. We also discussed these ideas in class. There’s more room on the back if you need.
+
+\begin{solution}
+SOLUTION.
+\end{solution}
+\vspace*{\stretch{1.5}}
+
+\end{questions}
+\end{document}

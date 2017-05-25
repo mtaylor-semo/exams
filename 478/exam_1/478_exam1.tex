@@ -1,0 +1,209 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/478/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\firstpageheader{\bfseries{Ichthyology, Exam 1, F\short{\year}}}{}{%
+	\ifprintanswers\textbf{KEY}\else\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used. No term is used twice.\\(2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Ram-Gill Ventilation}{Breathing mechanism used by strong swimmers at high speeds.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Semelparity}{Spawn once, and then die.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Thunniform}{Form of BCF swimming where the energy wave begins in the caudal penduncle.}
+\vspace{0.5\baselineskip}
+
+\question\MatchQuestion{Sinus Venosus}{Chamber that collects deoxygenated blood from the body.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Osmoconformer}{Osmotic concentration of hagfish equals surrounding water.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Stenohaline}{Tolerates a narrow range of salinity.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Allopaternal Care}{Male steals nest of another male, guards his own and other male’s eggs.}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Labriform}{Form of MPF swimming that uses oscillation of the pectoral fins.}
+\vspace{0.5\baselineskip}
+
+\question\MatchQuestion{Buccal}{Chamber with the highest pressure during two-phase respiration.}
+\vspace{0.5\baselineskip}
+
+\question\MatchQuestion{Rectal Gland}{Used by sharks and rays to remove excess sodium ions.}
+%\vspace{0.0\baselineskip}
+
+\fullwidth{\textbf{(GSH)} Answer the next two questions. Terms are not in the word bank. (2.5 points each.)}
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Labyrinth/Suprabranchial}{A modified gill structure used by some fishes for air breathing (two possible answers).}
+\vspace{0.4\baselineskip}
+
+\question\MatchQuestion{Efferent}{Branchial arteries that leave the gills.}
+%\vspace{0.4\baselineskip}
+
+\newpage
+
+\question[5]
+List the five classes that together comprise “fishes.” 
+
+\vspace{4ex}
+	\begin{tabular}{@{}lll@{}}
+		\makebox[5.1cm][l]{a. \ifprintanswers\textbf{Myxini}\else\hrulefill\fi} & 
+		\makebox[5.1cm][l]{c. \ifprintanswers\textbf{Petromyzontida}\else\hrulefill\fi} &
+		\makebox[5.1cm][l]{c. \ifprintanswers\textbf{Chondrichthys}\else\hrulefill\fi} \\[5ex]
+		
+		\makebox[5.1cm][l]{d. \ifprintanswers\textbf{Actinopterygii}\else\hrulefill\fi} &
+		 \makebox[5.1cm][l]{e. \ifprintanswers\textbf{Sarcopterygii}\else\hrulefill\fi} \\
+	\end{tabular}
+
+\question[10]
+Draw an oxygen dissociation curve for a typical fast-swimming fish in a normoxic environment on the graph below. Draw a second dissociation curve for a typical sluggish fish in a hypoxic environment. Indicate P$_{50}$ on the graph and two curves. Explain each curve along with your reasoning for the shape of the curve. \emph{Be sure your drawings shows clear and accurate differences between the two fishes.}
+
+\includegraphics[width=0.5\textwidth]{ex1_dissociation_graph}
+\begin{solution}
+2 pts per curve. 1 point for P$_{50}$, 5 points for explanation. \\
+Steepest curve will be for hypoxic sluggish. Oxygen is scarce, so hemoglobin has high affinity to bind to whatever O$_2$ is present. Less steep curve for normoxic fish. Oxygen is abundant, so affinity not as high. 
+\end{solution}
+
+\vspace*{\stretch{1.3}}
+
+\question[5]
+\textbf{(GSH)} If a typical fish has a relative gill surface area of 1000, would you expect the sluggish fish to have a similar, much higher, or much lower relative gill surface area.  Explain why. 
+	\begin{solution}
+	Lower surface area because not as much oxygen demand so does not need to take it up as quickly.\\
+	\end{solution}	
+\vspace*{\stretch{1}}
+
+\newpage
+
+\question[10]
+How do active fishes like tuna fishes maintain a core body temperature several degrees higher than their surrounding environment?
+	\begin{solution}
+	Blood flows from along the skin, where it is cooled. It flows to the core where metabolic activity warms the blood. The warm blood then returns towards the skin. As the warm blood passes by the incoming cool blood, heat is transferred to the incoming blood via countercurrent exchange.
+	\end{solution}
+
+\vspace*{\stretch{1.5}}
+
+\question[15]
+Sharks and tunas both cruise the open seas.  Despite this commonality, these two fishes have very different body forms.  Paul Webb, on pages 80--81 of his Scientific American article, “Form and Function in Fish Swimming,” explains why these two fishes differ so greatly.  Describe one physiological, one structural and one ecological difference between sharks and tunas, and then explain how these three differences relate to each other to explain the overall morphological differences between sharks and tunas.
+	\begin{solution}
+	Physiological: Sharks are energy conservative. They do not swim as fast or as often as tunas. They are not endothermic/heterothermic so they do not require as much energy input. Tunas are “energy speculators” meaning they burn lots of energy to be endothermic/heterothermic. They swim fast and continuously.
+	
+	Structural: Sharks have cartilaginous skeletons, so they cannot generate the propulsive forces necessary to maintain high speed. They thus swim more slowly. Tunas have rigid, body skeleton so they can generate strong propulsive forces necessary to sustain high speed swimming.
+	
+	Ecological: Sharks are opportunistic predators. They are not constantly searching for prey because they do not have the high energy demands. Tuna must search constantly for prey to meet the high energy needs.
+	\end{solution}
+
+\vspace*{\stretch{4}}
+
+\newpage
+
+\question[20]
+Diagram and explain how a physoclistous bladder is inflated and emptied. Be sure to include all of the key structures and physiological processes.  Indicate proper direction of flow for all molecules involved. Use representative values for pH and oxygen concentration to aid your explanation.
+
+\begin{solution}
+(15 points) Incoming blood as high pH and high O$_2$ bound to hemoglobin. Because O$_2$ is bound to hemoglobin, the partial pressure of free O$_2$ in the blood is low. Gas gland takes up glucose from the incoming blood, produces lactic acid which diffuses into bloodstream. Lactic acid lowers pH, causing Root Effect. Root effect decreases O$_2$ capacity, so hemoglobin releases O$_2$. Some of the O$_2$ diffuses into gas bladder. Some of the O$_2$ and lactic acid enters the outgoing capillary. Outgoing blood contains higher concentrations of lactic acid and free O$_2$, so it diffuses into incoming blood via countercurrent exchange. This allows high pressures of O$_2$ to build up in rete mirabile and diffuse into gas bladder.
+
+(5 points) To empty, the oval is a blood network that can press against the gas bladder. A \emph{contracted} sphincter allows the oval to contact the bladder and gasses diffuse out of the bladder into the blood stream. A \emph{relaxed} sphincter prevents contact of the oval with the bladder, preventing diffusion of the gasses out of the bladder.
+\end{solution}
+
+\newpage
+
+\question[20]
+Explain how stenohaline freshwater and saltwater bony fishes maintain osmotic homeostasis.  Explain for water and for relevant ions (e.g., Na$^+$, Cl$^-$, K$^+$, Ca$^{2+}$).  Include for each when diffusion is operating and when active transport is required, and the primary regions for entry and exit of water and ions.  Use illustrations to enhance your explanation.  Do not include \emph{elasmobranchs or hagfishes}.
+
+\begin{solution}
+(10 points) Freshwater fishes are hypertonic relative to their environment. Therefore, water diffuses in passively. Salts diffuse out of gills passively. They produce a dilute urine to get rid of excess water. Kidneys resorb divalent ions. They use beta chloride cells to actively transport salts from the water into the fish. Salts also obtained by their food. 
+
+(10 points) Saltwater fishes are hypotonic relative to their environment. THerefore, marine fishes lose water passively and gain salts passively. Fishes drink sea water to replace lost water. They actively remove monovalent ions by alpha chloride cells in the gills. They actively remove divalent ions via the kidneys, released in a concentrated urine to help retain water.
+\end{solution}
+
+\newpage
+
+\question[10]
+\textbf{(GSH)} Sharks and rays use urea and TMAO to maintain osmotic balance. According to your text, another class of fishes also use urea and TMAO. Name this class. is the shared use of urea and TMAO the result of common ancestry or convergent evolution? Explain.
+
+\begin{solution}
+	Sarcopterygii also use urea and TMAO. Convergent evolution due to distant relationship between two classes.
+\end{solution}
+
+\vspace*{\stretch{2}}
+
+\question[10]
+\textbf{(GSH)} O$_2$ has slightly lower solubility in saltwater than in freshwater but most  air-breathing fishes are freshwater species.  Provide a hypothesis with justification to explain why air-breathing evolved several times in freshwater fishes.
+
+\begin{solution}
+  More freshwater areas tend to be warmer, more sluggish and therefore lower oxygen environments compared to salt water.
+\end{solution}
+
+\vspace*{\stretch{2}}
+
+\end{questions}
+\end{document}
