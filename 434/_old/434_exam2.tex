@@ -1,0 +1,170 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/Pictures/teach/300/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper, bottom=1in}                   
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{amssymb, amsmath}
+\usepackage{mathtools}
+	\everymath{\displaystyle}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana Math}
+%\setmathfont[Scale=MatchLowercase]{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+ 
+\usepackage{booktabs}
+%\usepackage{tabularx}
+\usepackage{longtable}
+%\usepackage{siunitx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+%\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+%\usepackage{hanging}
+
+\renewcommand{\solutiontitle}{\noindent}
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+
+\pagestyle{headandfoot}
+\firstpageheader{BI 434: Marine Evolutionary Ecology}{}{\ifprintanswers\textbf{KEY}\else Exam 2\fi}
+\runningheader{}{}{\footnotesize{pg. \thepage}}
+\footer{}{}{}
+\runningheadrule
+
+%\printanswers
+
+\begin{document}
+
+\subsection*{NOTE TO MST}
+
+Add section outlining my expectations. Point out that a paragraph for each process is rarely sufficient. Point out rubric online which they should read carefully. Write narrative paragraphs. Be sure explanations are clear, thorough and accurate. Focus on information we discussed in class. I can refuse to accept examples you find on the internet if I disagree with them. Contrary to popular belief, not all information on the internet is true and accurate.
+
+\subsection*{Take Home Exam (120 points)}
+
+You studied six major ecosystems. Although each ecosystem was different,
+you learned that similar ecological processes regulate community
+structure in these ecosystems.
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Ecological Process & Ecosystem\tabularnewline
+\midrule
+Alternative Stable States & Coral Reef \tabularnewline
+Competition & Deep Sea \tabularnewline
+%Competition & Coral Reef \tabularnewline
+%Keystone Species & Deep Sea \tabularnewline %Removed keystone species as tended to get weird or vague answers.
+Microbial Loop & Epipelagic \tabularnewline
+Nutrient Limitation & Rocky Intertidal \tabularnewline
+Patch Dynamics & Rocky Subtidal \tabularnewline
+Direct Positive Species Interactions & Salt Marsh \tabularnewline
+Predation & \tabularnewline
+Recruitment & \tabularnewline
+Trophic Cascade & \tabularnewline
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Instructions}
+
+\begin{itemize}
+\item
+  For each ecological process listed above, list all of the ecosystems
+  that have its zonation, diversity, or community structure regulated by that process. You do
+  not need to include an ecosystem if a given ecological process does
+  not influence its zonation or community structure.
+\item
+  Then, for each ecological process, compare and contrast how that
+  process affects zonation, diversity, or community structure in each ecosystem that you listed.
+  Remember that not all ecological processes affect zonation, diversity, or community structure
+  the same way in each ecosystem. Include an example of each process for each ecosystem to
+  support your explanation. For zonation, be sure to discuss whether and how the process 
+  affects the upper or lower end of a zone. For diversity, discuss how the process affects 
+  (decreases or increases) diversity in a particular area or across a broader region. For 
+  community structure, discuss how the process influences the types of organisms present 
+  in the community, or their specific adaptions that affect fitness. \emph{Do not arrange your exam by ecosystem. Keep it arranged by ecological process.}
+\item
+  You may confer with others to discuss which ecological processes are
+  associated with each ecosystem. You may also refer to your notes and text.
+  However, your explanations and examples must represent your own ideas
+  and work. Please be honest in this regard. Evidence of plagiarism,
+  whether from the text, from other students, or from other sources, will result in a grade
+  of zero. Remember that simply changing a few words is still
+  plagiarism.
+\item
+  Upload your double-spaced typed paper to the drop box online. I do not set minimum or maximum
+  page limits because I want you to write to the limits of your
+  knowledge, not the page limits. I will not accept handwritten assignments.
+\end{itemize}
+
+%% READ ME BELOW
+\subsection{IN FUTURE: GIVE ONLY ONE WEEK as they just postponed anyway. Students didn't appear to start until week it was due.}
+
+\subsection*{Due: Friday, 17 April, 5 pm.}
+
+I will not accept late exams. Use your time wisely.
+
+
+\newpage
+
+
+Each Ecological Process will be graded out of 12 points, given in 3-point increments. This totals 108 points of the exam.
+
+12 points: Excellent.  In-depth coverage of the ecological process. Successfully identifies all of the associated ecosystems. Provides one clear example of the how the process structures the community in each ecosystem.
+
+9 points: Very good.  In-depth coverage of the ecological process for included ecosystems but did not include some ecosystems, or coverage inadequate for some ecosystems, or missing examples. Also, inclusion of an ecosystem that does not belong.
+
+6 points: Good.  Average coverage of the ecological process for all ecosystems or in-depth coverage for only 1-2 ecosystems.  Examples missing for most ecosystems. Inclusion of 2-3 ecosystems that do not belong.
+
+3 points: Poor.  Superficial coverage for the entire ecological process.  Missing most or all ecosystems.  Missing most or all examples. Inclusion of 4 or more ecosystems that do not belong.
+
+0 points. Did not include this ecological process.
+
+
+The remaining 12 points are for mechanics, grammar, spelling, clarity, etc.
+
+\ifprintanswers
+
+\textbf{Competition:} All
+
+\textbf{Keystone:} Rocky Intertidal, Rocky Subtidal
+
+\textbf{Microbial Loop:} Epipelagic, (Deep-Sea, Salt Marsh)
+
+\textbf{Nutrient Limitation:} Deep Sea, Epipelagic
+
+\textbf{Patch Dynamics:} Coral Reef, Deep Sea, Rocky Intertidal, Rocky Subtidal, Salt Marsh
+
+\textbf{Positive Species Interactions:} Salt Marsh, Coral Reef, (Deep-Sea symbiosis)
+
+\textbf{Predation:} All
+
+\textbf{Recruitment:}  Coral Reef, Rocky Intertidal
+
+\textbf{Trophic Cascade:} Rocky subtidal
+
+CONSIDER PUTTING IN ALTERNATIVE STABLE STATES.  REPLACE KEYSTONE SPECIES AS PEOPLE PULL IN WEIRD EXAMPLES THAT CLEARLY AREN’T, OR VAGUE AT BEST.
+\fi
+
+\end{document}  

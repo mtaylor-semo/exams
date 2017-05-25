@@ -1,0 +1,170 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O}
+\newfontface\liningnums[Numbers=Lining]{\mainfont}
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/exams/}}%
+
+\usepackage[version=4]{mhchem}
+\mhchemoptions{textfontcommand=\liningnums}
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Marine Evolutionary Ecology, Exam 3, \textsc{f}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{\iflastpage{\tiny I can't believe you got the donut question wrong.}}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginbonuspointname{ pt \textsc{e.c.}}
+\marginpointname{ pts}
+
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[3]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#3\end{solution}}
+    \vspace*{\stretch{#2}}
+}
+
+\newenvironment{AnswerPage}[2]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+%\printanswers
+
+
+\begin{document}
+
+\noindent Demonstrate to me that you know the material. Use your words. 
+
+
+\begin{questions}
+
+%
+\bonusquestion[1]
+What is your favorite kind of donut?
+
+\AnswerBox{\baselineskip}{0}{%
+Whatver}
+
+%
+\question[5]
+List three anthropogenic effects that can induce alternate stable states in seagrass beds.
+
+\AnswerBox{1\baselineskip}{0.5}{%
+Overfishing, Pollution, and Eutrophication.}
+
+
+%
+\question[10]
+You did a case study on the Line Islands. Within this island group, Kingman and Kiritimati differed greatly by top predator abundance and successful coral recruitment. Tell how each of these differed between the two islands and how eutrophication contributed to these differences.
+
+\AnswerBox{6\baselineskip}{3}{%
+Answer here.}
+
+\newpage
+%
+
+\question[5]
+A study showed that hydrothermal vent populations were not connected between the northern and southern regions of the East Pacific Rise. Predict how population connectivity between these two regions might be affected by ocean warming. Justify your prediction.
+
+\AnswerBox{3\baselineskip}{1}{%
+Answer Here
+}
+
+%
+\question[5]\label{bicarb_equilibrium}
+Write the equilibrium equation for the bicarbonate buffering system.
+
+\AnswerBox{1\baselineskip}{0.5}{%
+Answer Here
+}
+
+\question[10] Using the equation from question~\ref{bicarb_equilibrium}, explain how addition of atmospheric \ce{CO2} is causing the loss of aragonite in the oceans.
+
+\AnswerBox{6\baselineskip}{3}{%
+Answer here.}
+
+
+
+\newpage
+
+%
+\question[10]
+Crabs in a salt marsh can have a negative indirect interaction with \textit{Spartina,} through snails. Explain the interaction, tell whether the interaction is trait- or density-mediated, and tell why. 
+
+\AnswerBox{4\baselineskip}{0.9}{%
+Answer here.}
+
+%
+\question[10] 
+For this course, you wrote a conservation plan for a specific ecosystem. For your ecosystem, describe two ecosystem services that will be affected negatively by either warming or acidification of the oceans. Describe each service, and then tell specifically how warming or acidification will alter the service.
+
+\AnswerBox{4\baselineskip}{1}{%
+Answer here.}
+
+\newpage
+
+%
+\question[15]\label{mesograzer}
+Diagram and describe the mutualistic mesograzer hypothesis. Your diagram should include two trophic levels above the mesograzers. If the top trophic level has low abundance, tell whether the seagrasses will be abundant or not, and why.
+
+\AnswerBox{4\baselineskip}{3}{%
+Answer here.}
+
+\question[5]
+Tell whether the effect that the top trophic level you diagrammed for question~\ref{mesograzer} has on seagrasses is a \textsc{tmii} or a \textsc{dmii} and why.
+
+\AnswerBox{2\baselineskip}{1}{%
+Answer here.}
+
+
+\end{questions}
+
+\end{document}

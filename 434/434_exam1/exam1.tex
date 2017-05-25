@@ -1,0 +1,224 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/348/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Marine Evolutionary Ecology, Exam 1, \textsc{f}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+%\printanswers
+
+
+\begin{document}
+
+\begin{questions}
+
+\question[10]
+Explain the difference between a community, an assemblage, and an ecosystem.
+
+	\begin{AnswerPage}{0.4\textheight}%
+	\emph{3 points each.}
+	
+	\vspace*{\baselineskip}
+	
+	Community: All of the different species together in the same area, potentially interacting with each other.
+	
+	\vspace*{\baselineskip}
+	
+	Assemblage: All of the individuals of different species that the same type (e.g., fishes) or are similar in function (e.g., a guild) together in the same area.
+	
+	\vspace*{\baselineskip}
+
+	Ecosystem: All of the different species together in the same area, potentially interacting with each other, and their interactions with the abiotic environment.
+	
+	\end{AnswerPage}
+
+
+\question[10]
+Explain the difference between ecosystem function and ecosystem services and the relationship between them. Provide an example of your choosing to show this relationship.
+
+	\begin{AnswerPage}{0.4\textheight}%
+	\emph{3 points each explanation; 2 points for relationship; 2 points for example.}
+	
+	\vspace*{\baselineskip}
+	
+	Ecosystem functions: The output of biological activity in an ecosystem. This can include primary productivity, reef building, etc.
+	
+	\vspace*{\baselineskip}
+	
+	Ecosystem services: Services are the direct or indirect benefits to humanity, such as harvested food, buffered climates, and protection from strong waves.
+	
+		\vspace*{\baselineskip}
+
+	Relationship: More functional output from an ecosystem means more potential gain to humans.
+	
+		\vspace*{\baselineskip}
+		
+		Example: whatever.
+			
+	\end{AnswerPage}
+
+\newpage
+
+\question[5]
+Why is a population-based approach to ecosystem restoration often ineffective?
+
+	\AnswerBox{0.15\textheight}{%
+	\emph{4 points.} Focus on management of individual species for future exploitation rather than for long-term improvement.
+}
+
+\question[15]
+Name the other three non-population-based approaches to ecosystem restoration and explain the difference in emphasis between them. Explain why that emphasis is important for \emph{each} approach.
+
+
+	\begin{AnswerPage}{0.6\textheight}%
+	
+	\emph{5 points each. 2 for name of approach, 3 for explanation of emphasis.}
+	
+	\vspace*{\baselineskip}
+
+	Habitat: Emphasizes foundation / ecosystem engineer species. If foundation species are present and healthy, then presumably other species will be attracted to the habitat, increasing overall diversity.
+	
+	\vspace*{\baselineskip}
+
+	 Landscape: Emphasizes connectivity between adjacent habitats. No habitat stands alone. A habitat must get what it needs from surrounding habitats.
+	
+	\vspace*{\baselineskip}
+
+	Ecosystem: Like landscape but emphasizes much larger scale. Consider whatever.
+	
+	\end{AnswerPage}
+	
+\newpage
+
+\question[10]
+Diversity measures like $H'$ incorporate richness and evenness. Explain one disadvantage of these diversity measures from the perspective of ecosystem function. Explain a more suitable way of measuring diversity and why it is suitable for assessing ecosystem function.
+
+	\begin{AnswerPage}{0.6\textheight}%
+
+	\emph{4 points for disadvantage.\\
+	5 points for functional diversity (2 points) and explanation (3 points).}
+
+	\vspace*{\baselineskip}
+
+	Disadvantage: Each species treated equally. May have many species that have very similar niches or have very similar roles in the ecosystem so each contributes the same function to an ecosystem. This does not increase ecosystem function.
+	
+	\vspace*{\baselineskip}
+
+	Functional diversity accounts for the different roles or niches contributed by species. Fewer species, each with very different functions or niches, provides more unique functions to an ecosystem that many species that have the same function.  
+
+	\end{AnswerPage}
+
+\question[5]
+Explain how complementarity increases ecosystem function.
+
+	\AnswerBox{0.15\textheight}{%
+	Complementarity reflects functional diversity. If you have species with different niches, then adding them together increases ecosystem function. Different niches complement each other.
+}
+
+\newpage
+
+\question[10]
+Explain the difference between the insurance hypothesis and the portfolio effect.  Explain how these confer stability under the high redundancy model of ecosystem function.
+
+	\begin{AnswerPage}{0.4\textheight}%
+	\emph{3 points for each explanation of effects, plus 3 points for the stability/redundancy explanation.}
+
+	\vspace*{\baselineskip}
+	
+	Insurance hypothesis emphasizes redundancy of similar species in highly variable environment. As more species are added to an ecosystem, the ecosystem function increases while the variability decreases.
+	
+	\vspace*{\baselineskip}
+	
+	Portfolio effect proposes that high diversity minimizes loss of functionality if any one species decreases in abundance. If diversity is high, only one or few species are likely to decrease at any one time so overall functionality remains high.
+	
+	\vspace*{\baselineskip}
+	
+	In a high redundancy model, many species that are ecologically similar are present. If one or two species is lost, then no problem. In a variable system, function is likely to remain high.
+	
+	\end{AnswerPage}
+
+\question[5]
+A comprehensive ecosystem-based management plan must account for all sectors used by humans. Explain why this is important in terms of trade-offs among sectors.
+
+	\AnswerBox{0.15\textheight}{%
+	If many different sectors are using the ecosystem, then some will be in conflict. Thus, must assess trade-offs. What are the benefits and losses to emphasizing one sector over another. In addition, what is the long term affects of each sector use?
+}
+
+\question[5]
+Which do you think provides greater economic value to humans, a shrimp farm or a mangrove forest? Justify your answer.
+
+	\AnswerBox{0.15\textheight}{%
+	A shrimp farm's primary economic value is providing food to commercial industries and employment. However, a mangrove forest provides greater value through storm buffering, nursery grounds, reduction of coastal erosion, possibly tourism, etc.
+}
+
+
+
+\end{questions}
+
+
+\end{document}

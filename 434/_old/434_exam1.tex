@@ -1,0 +1,253 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\firstpageheader{Marine Evol. Ecology, Exam 1, Sp\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used. No term is used twice.\\(2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.2\baselineskip}
+
+\question\MatchQuestion{PAR}{Amount of light that can be used for photosynthesis.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{\textit{r}-Type Life History}{organisms grow fast, produce many offspring.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Gyre}{Large circular surface current patterns.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Nanoplankton}{Non-swimming organisms less than 20 µm in size.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Holoepipelagic}{Spend entire life free-swimming in surface waters.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Competitive Exclusion}{No two species can occupy the same niche.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Thermocline}{Transition zone for water temperature and density.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Mixoplankton}{Both heterotrophic and autotrophic.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Sea Floor Spreading}{Creates new sea floor.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Compensation Intensity}{Light levels sufficient for photosynthesis to equal respiration.}
+%\vspace{0.5\baselineskip}
+
+\question[2]
+What does PIC stand for?\ifprintanswers\newline\textbf{Particulate inorganic carbon}\vspace*{1\baselineskip}\else
+\vspace*{2\baselineskip}\fi
+
+\fullwidth{\textbf{(GSH)} Answer the next two questions. Terms are not in the word bank. (2.5 points each.)}
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Bacillariophyceae}{Scientific name for class of diatoms.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Dinophyceae}{Scientific name for class of dinoflagellates.}
+%\vspace{0.4\baselineskip}
+
+\newpage
+
+\fullwidth{Use correct names to fill in the blanks below for the zones identified by letters in the figure below. (1 point each).
+\vspace{-0.5\baselineskip}\begin{center}
+\includegraphics[width=0.7\textwidth]{exam1_figure}\end{center}
+}%end full width
+\vspace{-0.5\baselineskip}
+
+\question\MatchQuestion{Epipelagic Zone}{A, based on depth.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Disphotic Zone}{B, based on light.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Bathypelagic Zone}{C, based on depth.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Aphotic Zone}{C, D, and E combined, based on light.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Neritic Zone}{F, open water out to shelf break.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Sublittoral}{G, benthic, from low water mark.}
+\vspace{0.3\baselineskip}
+
+\question\MatchQuestion{Pelagic Zone}{A and F combined, across ocean from shore to shore.}
+\vspace{0.3\baselineskip}% Switch to all zones combined, across ocean from shore to shore.
+
+\question\MatchQuestion{Littoral /Intertidal}{Benthic between low and high water. Not lettered.}
+\vspace{0.3\baselineskip}
+
+\fullwidth{Extra credit: Proper names for D and E. (1 point each.)\vspace*{1\baselineskip}
+
+D. \ifprintanswers\makebox[2.5in][l]{\textbf{Abyssalpelagic}}\else\makebox[2.5in][l]{\hrulefill}\fi\quad%
+E. \ifprintanswers\makebox[2.5in][l]{\textbf{Hadalpelagic}}\else\makebox[2.5in][l]{\hrulefill}\fi
+}%
+
+\newpage
+
+\fullwidth{Read each question carefully and completely. Be sure your answer addresses the question being asked. Use complete sentences.}
+
+\question[5]
+Briefly explain two ways by which NPP is exported away from hydrothermal vents to the rest of the deep ocean.
+
+\begin{minipage}[t][1in]{\textwidth}%
+\begin{solution}
+
+[2.5 points each.] \\
+1. Exported away on water currents. \\
+2. Exported by transient organisms (e.g., fishes) that feed around the vent, then swim away\\
+3. Exported via larval dispersal from organisms that live at the vents.
+\end{solution}%
+\end{minipage}
+
+\question[5]
+What effect does lecithotrophic larval dispersal tend to have on the geographic range size of a coastal invertebrate species compared to direct developing larvae? Briefly explain why.
+
+\begin{minipage}[t][1in]{\textwidth}%
+\begin{solution}
+Direct developing larvae do not feed so can not disperse far from the parent. Lecithotrophic larvae have a supply of yolk that allows them to remain in the larval stage for much longer than direct developing larvae. Therefore, lecithotrophic larvae can potentially disperse farther so those species will tend to have larger geographic ranges than direct-developing species.
+\end{solution}%
+\end{minipage}
+
+\question[10]
+Explain the one factor that both Cronin and Raymo (1997) and Rex et al. (2000) concluded was the major influence on benthic deep-sea diversity.
+
+\begin{minipage}[t][2in]{\textwidth}%
+\begin{solution}
+The concluded that primary productivity was the major influence on benthic deep-sea diversity.
+\end{solution}%
+\end{minipage}
+
+\question[10]
+Tropical epipelagic phytoplankton “leak” as much as 25\% of their DOM, so DOM should increase but it instead remains constant. Name and explain the process that keeps DOM in the epipelagic and returns it to the tropical food web. You may use an illustration but you must still explain it. 
+
+\begin{minipage}[t][2in]{\textwidth}%
+\begin{solution}
+The microbial loop prevents the build-up of DOM by making it available to higher trophic levels. Bacteria are capable of consuming DOM.  Bacteriophages (viruses) infect the bacteria, eventually causing the bacteria to release OM into the water as DOM. This process repeats, which is the microbial loop.  Microconsumers such as nanozooplankton consume the bacteria. Larger net zooplankton consume the nanozooplankton, so the DOM has entered the main food web so is no longer dissolved in the ocean water.
+\end{solution}%
+\end{minipage}
+
+\newpage
+
+\question[10]
+Name and briefly explain the stages of community development associated with whale fall.
+
+\begin{minipage}[t][4in]{\textwidth}%
+\begin{solution}
+Scavenger stage - nektonic organisms discover the carcass and consume the flesh. \vspace{0.5\baselineskip}
+
+Enriched Sediment stage - Nutrients from the whale seep into the sediment, enriching it. Supports aerobic organisms.\vspace{0.5\baselineskip}
+
+Sulfide stage - Sediment becomes anaerobic, supports invertebrates and bacteria that oxidize H\textsubscript{2}S.\vspace{0.5\baselineskip}
+
+Reef stage - Skeleton provides structure for sessile organisms. Begins after scavenger stage.
+\end{solution}
+\end{minipage}
+
+\question[10]
+Dr. Trieste d’Alvin compared benthic communities at 1000 m and 3000 m depth at several locations in the Atlantic Ocean.  She discovered that benthic diversity was greater at 1000 m than at 3000 m. Briefly describe how spatial heterogeneity and sediment size might explain her results. 
+
+\begin{minipage}[t][4in]{\textwidth}%
+\begin{solution}
+Here's the answer
+\end{solution}
+\end{minipage}
+\newpage
+ 
+\question[20]
+Summarize the classic model of primary productivity in the North Atlantic Ocean in the spring and early summer.  Your summary should name the major phytoplankton and zooplankton organisms and describe their roles in overall net primary production.  Your summary should also describe the seasonal availability of nutrients and light to explain the timing of peak productivity.  You may include an illustration to aid your answer. \textbf{Grad and Honors students must also explain why this model does not work in the northern Pacific Ocean. (25 points for GSH.)}
+
+\begin{solution}
+1. In the winter, surface temperatures are cold. Winter storms mix surface and deeper water, bringing nutrients to the surface water. [4 points.] 
+
+2. As the winter recedes and spring begins, increasing sunlight triggers the bloom. The diatoms and dinoflagellates undergo a bloom, rapidly increasing primary productivity because they now have both nutrients and sufficient light availability. [4 points. Diatoms must be mentioned.]
+
+3. During the winter, copepods are down deep. In later spring, the growing adults arrive at the surface, after the bloom and PP has begun. Rapid grazing by copepods (up to 12,000 diatoms per minute) depletes the diatom population, reducing PP. [4 points. Copepods must be mentioned.]
+
+4. The nutrients at the surface are eventually depleted by remaining diatoms, shutting down PP to very low levels. As fall approaches, the surface cools again. Early winter storms cause mixing, triggering a second smaller bloom.  This time, the extent of PP is limited by the shorter days as the fall shifts to winter [4 points]
+
+5. (GSH) Different species of copepod live in the Pacific Ocean. They have different life cycle timing. They do not arrive at the surface in a large pulse. (EXPAND)
+
+[4 points allotted for clarity, proper terminology, grammar and spelling.]
+
+
+\end{solution}
+
+\newpage
+
+\question[20]
+\textbf{(GSH)} Explain what is the great ocean conveyor, how it works, and its importance to deep-sea communities.  Then, predict what you think might happen to the conveyor and deep-sea communities if global climate change causes sea surface temperatures to increase by 3–4°C by the end of the 21st century. In addition, consider especially that warming of the atmosphere has been greatest at high latitudes, close to glacial regions. Justify your prediction. (20 pts)
+
+\begin{solution}
+Here's the answer
+\end{solution}
+
+\end{questions}
+\end{document}

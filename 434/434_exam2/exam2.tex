@@ -1,0 +1,231 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Marine Evolutionary Ecology, Exam 2, \textsc{f}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginbonuspointname{ pts \textsc{e.c.}}
+\marginpointname{ pts}
+
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+%\printanswers
+
+
+\begin{document}
+
+\noindent I score your exam based on what you write. Demonstrate to me that you know the material. Use appropriate vocabulary. Rock on! Rock lobster!
+
+\begin{questions}
+
+%
+\question[5]
+Is larval duration (e.g., 14 days or 60 days) a good measure of how far larvae \emph{actually} disperse? Why?
+
+	\AnswerBox{0.6\basespace}{No. Although larvae may have the potential to disperse far, they may not actually do so. Several studies have shown that some species with high potential do not disperse.}
+
+%
+\question
+\begin{parts}
+\part[5] Are two populations genetically connected or isolated if \textit{F}\textsubscript{ST} = 0.46? Are they ecologically connected or isolated? Explain.
+
+	\AnswerBox{0.6\basespace}{This is a moderately high \textit{F}\textsubscript{ST} indicating little larval dispersal or gene flow. Therefore, the populations should be ecologically (2 pts) and genetically isolated (2 pts).}
+	
+	\part[5] Is each of these two populations more likely to be sustained by larval retention or immigration? Explain.
+	
+	\AnswerBox{0.6\basespace}{If there is little larval connectivity, then each population is most likely sustained through larval retention.}
+\end{parts}
+
+%
+\question[5]
+\begin{multicols}{2}
+Why does the kelp forest distribution extend farther north on the west coast of Africa (dark shading, right) than on the east coast? 
+
+\ifprintanswers\textbf{Kelp forests require cold water. The current gyres in the southern hemisphere carry cold water farther north on the west coast than on the east coast, allowing the kelp forest to extend farther north.}\fi
+
+\columnbreak
+
+\hfil\includegraphics[width=0.3\textwidth]{exam2_africa}\hfill
+\end{multicols}
+
+
+\newpage
+
+%
+\question[10]
+Why is rocky intertidal ecosystem function highest with intermittent upwelling instead of constant upwelling or downwelling?
+
+%% Change the question to ask why top down effects of predators are not important under states of constant upwelling or downwelling. 
+% E.g., Why is rocky intertidal ecossytem function higher with intermittent upwelling instead of constant upwelling? Explain this from a bottom-up and top down perspective. (LAST part not great but a start).
+
+	\begin{AnswerPage}{0.25\textheight}%
+	 Relaxation of upwelling allows recruitment into the intertidal. (3 points)
+	 
+	 \vspace*{\baselineskip}
+	 
+	 With constant upwelling, water moves away from shore, reducing recruitment. (3 points)
+	 
+	 \vspace*{\baselineskip}
+	 
+	 With constant downwelling, larvae tend to be carried below the surface, reducing recruitment. (3 points)
+	
+	\end{AnswerPage}
+
+%
+\question[10]
+Why does an alternate stable state (e.g., state \textsc{b}) not return to its originate state (e.g., state \textsc{a}) when environmental conditions return to their original state? Include an explanation of hysteresis as part of your answer. You may use a diagram to aid your answer.
+
+
+	\begin{AnswerPage}{0.45\textheight}%
+	 Hysteresis is the difference in conditions required to return shift between alternate stable states. (4 points).
+	 
+	\vspace*{\baselineskip}
+		
+	Thus, once one state flips to another state, it takes a very dramatic change in environmental conditions to flip the state back to its original state. (4 points)
+	
+	\end{AnswerPage}
+
+
+%
+\bonusquestion[3]
+Write the author(s) and title of one paper that will appear in your annotated bibliography. (Subject to verification.) Or, for 1 measly extra credit point, what plankton group is 0.02–0.2 mm in size?
+
+\AnswerBox{-\baselineskip}{Whatever (3 pts)/Microplankton (1 pt)}
+
+\newpage
+
+%
+\question[5]
+What are trait-mediated indirect interactions (\textsc{tmii})? Explain it but do not give me an example.
+% Tie in Inducible defenses.
+
+\AnswerBox{2\baselineskip}{\textsc{Tmii}s are the indirect effects that a top predator has on abundance of lower trophic level organisms by through the modification of prey's behavioral or morphological traits due to the presence of the predator. }
+
+%
+\question[10] A tide pool in the rocky intertidal experiences high turbulence because it is exposed to waves. A nearby tide pool is protected from most waves so it experiences low to moderate turbulence. Both pools have \textit{Enteromorpha} algae, snails, and green crabs. How will the amount of turbulence affect affect the snail's behavior in each pool? How will this affect the abundance of algae present in each pool?
+
+	\begin{AnswerPage}{0.5\textheight}%
+	High turbulence reduces the ability of the snails to detect the presence of the crabs. (3 points).
+	
+	\vspace*{\baselineskip}
+	
+	In a turbulent pool, snails are less likely to detect the crabs so they will forage more often, reducing algal abundance (3 pts).
+	
+	\vspace*{\baselineskip}
+		
+	In a quiet pool, snails are more likely to detect crabs so they will forage less, increasing algal abundance. (3 pts)
+	
+	\end{AnswerPage}
+
+
+\newpage
+
+%
+\question[20]
+Why is the phytoplankton community in the Gulf of Maine (late spring) composed mostly of microplankton while the community in the middle of the equatorial Atlantic is composed mostly of picoplankton? Your answer must explain how nutrient availability (bottom-up), competition for nutrients, and predation (top-down) contribute to phytoplankton community structure in these two regions. You may use an illustration to aid your explanation.
+
+	\begin{AnswerPage}{0.4\textheight}%
+	The Gulf of Maine is nutrient rich in the late spring. The equatorial Atlantic is nutrient poor. (2 points)
+	
+	\vspace*{\baselineskip}
+	
+	In nutrient poor conditions, picoplankton are better competitors than microplankton so they are abundant. (2 points)
+	\vspace*{\baselineskip}
+	
+	Predators in the equatorial Atlantic are either not an issue or limit the abundance of picoplankton. (2 points)
+	
+	\vspace*{\baselineskip}
+
+	Nutrients never get abundant enough to support large populations of microplankton. (2 points) 
+	
+	\vspace*{\baselineskip}
+	
+	In the Gulf, picoplankton abundance becomes limited by predators. That leaves nutrients available for larger plankton sizes. (2 points)
+	
+	\vspace*{\baselineskip}
+	
+	Nanoplankton also take up nutrients but their abundance also becomes limited by their predators. (2 points)
+	
+	\vspace*{\baselineskip}
+	
+	That leaves sufficient nutrients to support microplankton. (2 points)
+	
+	\vspace*{\baselineskip}
+	
+	Microplankton abundance may ultimately get limited by their predators. (2 points)
+	
+	\vspace*{\baselineskip}
+	
+	Clarity (2 points)
+	
+	
+	
+	\end{AnswerPage}
+
+\end{questions}
+
+
+\end{document}
