@@ -1,0 +1,177 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/300/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Evolution, Exam 3, Sp\short{\year}. \numpoints\ points.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+
+\footer{}{}{}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{Match the \emph{most appropriate} term to each concept. Not all terms are used. No term is used twice.\\(2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Sneaking Males}{In the words of the eminent sponge, Dr. Judd: dash and squirt.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Ecological Release}{One taxon goes extinct, allows another taxon to diversify into the previously occupied niches.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Sexual Conflict}{Different self-interests of males and females.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Sperm Competition}{Toxic seminal fluid reduces swimming ability of sperm from another male.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Whatever}{Favorite band or musical artist (not in list above).}
+\vspace{0.7\baselineskip}
+
+\question[5]
+List three of the five major mass extinctions that have occurred since the Cambrian.  Include and indicate which event was the largest and which event is the most famous.
+	\begin{solution}
+	Ordo, Devonian, Permian (largest), Triassic, Cretaceaous (most famous).
+	\end{solution}
+\vspace*{\stretch{1}}
+
+\newpage
+
+\question[10]
+Illustrate and explain the relative fitness of males and of females at different ages or size classes that could lead to the evolution of protandry. Then, explain when relative fitness of males and females favors the evolution of or maintenance of separate sexes (i.e., no hermaphroditism).
+	\begin{solution}
+	Answer.
+	\end{solution}	
+
+\vspace*{\stretch{1}}
+
+
+\newpage
+
+\question
+\fullwidth{Male swordtail characin fishes (\textit{Corynopoma riisei}) have a long, narrow extension of the gill cover. The extension has a ``flag'' on the tip, which mimics the fish's prey. The male uses the flag to lure females to the male for mating. A study by Arnqvist and Kolm (2010) showed that the shape of the flag was strongly correlated with environmental variables like prey availability. Based on this information, answer the next two questions.}
+	\begin{parts}
+	\part[5]
+	Explain whether this is intrasexual or intersexual selection and why.
+	\begin{solution}
+	Answer.
+	\end{solution}
+	\vspace*{\stretch{1}}
+	\part[10]
+	Decide whether the flag more likely evolved by sensory bias or sensory drive. Explain what is sensory bias or sensory drive (depending on your choice), and justify your decision by explaining how your choice is consistent with the scenario described above.
+	\begin{solution}
+	Answer.
+	\end{solution}
+	\vspace*{\stretch{2}}
+	\end{parts}
+
+\newpage
+
+
+%\newpage
+
+\question[15]
+Fossil evidence suggests dinosaurs (excluding birds) had high turnover rates. Describe how ecological specialization and population dynamics might explain high turnover rate in dinosaurs. Include both origination and extinction.
+	\begin{solution}
+	Answer.
+	\end{solution}	
+
+\newpage
+
+\question[15]
+Male satin bowerbirds decorate their bowers with bright blue objects they find around the area. The bower is not a nest. It's a structure built solely to attract females. Females build the nest elsewhere. Assuming the male does \emph{not} help raise his offspring, explain how the male's ability to gather decorative objects may serve as an indirect indicator of male genetic quality that affects female choice. In your explanation, be sure to state which intersexual selection hypothesis best fits this scenario, and why.
+	\begin{solution}
+	Good genes hypothesis. Males with the most decorated bowers expended more energy to find the objects. That would also make them more vulnerable to predation as they spend more time searching. The most decorated bowers would indicate to the female that the male has good genetic quality because he is still alive.
+	\end{solution}
+
+
+\newpage
+
+\question[20]% Make 15 point question for future. 
+Discuss in terms of fitness and adaptive flexibility the advantages and disadvantages of both asexual and sexual reproduction. That is, what are the advantages and disadvantages of maintaining the same genome (asexual) versus a variable genome (sexual) in relation to the current environment (in a broad sense) and possible future changes to the environment. Be sure to include and explain the ``cost of sex'' in your discussion, as it relates to advantages of disadvantages of each mode of reproduction.
+%NEW VERSION This could be 20 point question, but make the cost of sex advantage worth 5 points.
+% Explain the ``cost of sex'' as it relates to the fitness advantage or disadvantage of asexual and sexual reproduction. Then explain one additional advantage and disadvantage of maintaining the same genome (asexual reproduction), and one advantage and disadvantage of maintaining a variable genome (sexual reproduction) in relation to the current environment and possible future changes to the environment. Think of environment in a broad sense, including parasites/disease.
+	\begin{solution}
+	3 pts: advantages of asexual.
+	
+	3 pts: disadvantages of asexal. \vspace{\baselineskip}
+	
+	3 pts: advantages of sexual.
+	
+	3 pts: disadvantages of sexual.
+	
+	3 pts: cost of sex.
+	\end{solution}
+
+\end{questions}
+
+\end{document}

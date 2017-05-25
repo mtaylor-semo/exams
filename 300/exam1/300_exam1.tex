@@ -1,0 +1,223 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+%\printanswers
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle,Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/300/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Evolution, Exam 1, \textsc{s}\short{\year}. \numpoints\ points.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+
+\footer{}{}{}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\begin{document}
+
+\noindent Read each question carefully. Write complete sentences with precise answers and proper vocabulary. Enjoy!
+
+\begin{questions}
+
+\question[5]
+How does a heterozygote advantage affect genetic variation (e.g., number of alleles at a gene locus) in a population? Explain briefly.
+
+	\begin{AnswerPage}{1\basespace}
+	Maintain/increase: 2 points\\
+	Explanation: 3 points
+	\end{AnswerPage}
+%\vspace*{\stretch{1}}
+
+
+\question[5]
+How does migration among small populations affect genetic drift in those populations?. Explain briefly.
+
+	\AnswerBox{\basespace}{%
+	Increases effective population size so genetic drift is reduced. Grade for 4 points unless left blank.
+}	
+%\vspace*{\stretch{1}}
+
+
+\question[5]
+Why did Darwin's concept of natural selection became widely accepted only after the Evolutionary Synthesis.
+
+	\AnswerBox{\basespace}{%
+	Genetic mechanism of inheritance was not available to Darwin. Provided by Evolutionary synthesis. Grade for 4 points unless left blank.
+}
+	
+%\vspace*{\stretch{1.25}}
+
+\question[3]
+What is the probability that a new, neutral mutation will drift to fixation in a population?  Express this answer as a fraction.  You need write nothing but the fraction.
+
+	\AnswerBox{\baselineskip}{\Large $\frac{1}{2N_e}$}
+	%\ifprintanswers{\LARGE$\frac{1}{2N_e}$}\fi\vspace*{\stretch{0.05}}
+
+%\fullwidth{(1 pt extra credit) Which Hardy-Weinberg assumption have we not yet studied?}\ifprintanswers\quad\textbf{Random Mating}\fi%\vspace*{\stretch{0.05}}
+
+\newpage
+
+\question[10]
+Fill in the following table with the correct genotype and allele frequencies based on this survey of 725 plants. 251 individuals had red flowers, 351 individuals had pink flowers (heterozygotes), and 123 individuals had white flowers. The population is in \textsc{hwe}. \emph{Show your work! Round to three digits after the decimal.}
+
+ The final values may sum to 0.999, 1.000 or 1.001 due to rounding error. (2 points each.)
+
+\begin{tabular}{lC{1.1in}}
+\toprule
+&	Frequency \\
+\midrule
+ & \\[0.2em]
+$p$		& \ifprintanswers \textbf{0.588} \else \rule{1in}{0.4pt} \fi\\[1.5em]
+$q$		& \ifprintanswers \textbf{0.412} \else \rule{1in}{0.4pt} \fi\\[1.5em]
+$p^2$	& \ifprintanswers \textbf{0.346} \else \rule{1in}{0.4pt} \fi\\[1.5em]
+$2pq$	& \ifprintanswers \textbf{0.484} \else \rule{1in}{0.4pt} \fi\\[1.5em]
+$q^2$	& \ifprintanswers \textbf{0.170} \else \rule{1in}{0.4pt} \fi\\
+\bottomrule
+\end{tabular}
+
+
+\question[10]
+Kumar and Subramanian estimated a mutation rate of $2.2 \times
+10^{-9}$ per base pair (bp) per year in the mammalian protein-coding genome. In contrast,
+Jaillon et al. estimated a mutation rate of $5.7 \times 10^{-9}$ per bp per year in the mammalian non-coding genome. Explain the apparent discrepancy between these two rates when both are estimated from mammalian genomes.
+
+\AnswerBox{3\basespace}{%
+Jaillon's estimate is based on non-coding regions so it is based on the neutral mutation rate. Kumar's is based on coding DNA so presumably some of those mutations were detrimental and removed by negative selection.}
+
+\fullwidth{(1 pt extra credit) What is one other valid term used to describe heterozygote advantage?}
+\ifprintanswers\quad\textbf{Overdominance or Heterosis}\fi\vspace*{\stretch{0.05}}
+
+\newpage
+
+\question[10]
+You discover a particular allele is fixed in a population of mice. You suspect the allele became fixed due to positive selection but you must consider the possibility that negative (purifying) selection removed a detrimental allele. Explain how you can use $dN$ and $dS$ to determine whether the first allele became fixed by positive selection or by negative (purifying) selection. Explain \emph{why} the comparison works as a test for selection at the genetic level.
+
+\AnswerBox{2\basespace}{%
+ If $dN \gg dS$ then more non-synonymous substitutions have occurred than synonymous substitutions. This is consistent with positive selection.  If $dN \ll dS$, then more synonymous substitutions have occurred than non-synonymous substitutions. This is consistent with negative selection.
+}
+
+
+
+\question[10]
+Calculate whether genetic drift or natural selection is more likely to be the \textit{primary} cause of allele frequency change in a population of $N_e = $2000, if the fitness of the three genotypes is $A_1A_1$ = 0.999, $A_1A_2$ = 0.999, and $A_2A_2$ = 1.0. Show your math and explain your reasoning. 
+
+	\begin{AnswerPage}{2\basespace}
+	\textit{s} = 1 - 0.999 = 0.001. (2 points)\\
+	1/4N\textsubscript{e} = 1 / (4\,\times\,2000) = 1/8000 = 0.000125. (2 points) \vspace{\baselineskip}
+	
+	$s$ is about 10 times greater than $1/4N_e$. When $s$ is much greater than $1/4N_e$, then selection will be the primary cause of allele frequency change in the population. (4 points)
+	\end{AnswerPage}
+
+
+\question[5]
+Name the mode of selection that describes how the phenotype would change if the fitness for the three genotypes  is $B_1B_1$ = 0.96, $B_1B_2$ = 0.98, and $B_2B_2$ = 1. Tell how you know.
+
+\AnswerBox{2\baselineskip}{%
+Directional selection. $B_2B_2$ has the greatest fitness and $B_1B_1$ has the lowest fitness. Hets have intermediate fitness. The population will shift to the $B_2B_2$ genotype.
+}
+
+\newpage
+
+\question[12]
+
+\begin{multicols}{2}
+\flushleft
+The table at right (Sharp et al. 2005) shows how \textit{E. coli} uses 32 codons from 40 highly expressed genes. The tabled numbers are the ratio of actual use to expected use if all codons were used equally. A ratio of 1 means the codon is used exactly as often as expected (e.g., Met, in bold). Explain whether the data in the table provide evidence for natural selection at the genetic level and, if so, how. If not, explain why not. Use 1--2 specific codons from the table to support your answer.
+
+\columnbreak
+
+\begin{tabular}{@{}llrcllr@{}}
+	\toprule
+	\multicolumn{7}{l}{Codon use in \textit{E. coli}.}\\
+	\midrule
+	Phe & UUU & 0.45 &  & Ser & UCU & 2.54\\
+Phe & UUC & 1.55 &  & Ser & UCC & 1.52\\
+Leu & UUA & 0.14 &  & Ser & UCA & 0.19\\
+Leu & UUG & 0.25 &  & Ser & UCG & 0.06\\
+Leu & CUU & 0.30 &  & Pro & CCU & 0.59\\
+Leu & CUC & 0.23 &  & Pro & CCC & 0.05\\
+Leu & CUA & 0.01 &  & Pro & CCA & 0.52\\
+Leu & CUG & 5.07 &  & Pro & CCG & 2.85\\
+Ile & AUU & 0.72 &  & Thr & ACU & 1.89\\
+Ile & AUC & 2.27 &  & Thr & ACC & 1.75\\
+Ile & AUA & 0.01 &  & Thr & ACA & 0.19\\
+\textbf{Met} & \textbf{AUG} & \textbf{1.00} &  & Thr & ACG & 0.17\\
+Val & GUU & 2.07 &  & Ala & GCU & 1.83\\
+Val & GUC & 0.30 &  & Ala & GCC & 0.32\\
+Val & GUA & 1.14 &  & Ala & GCA & 1.09\\
+Val & GUG & 0.48 &  & Ala & GCG & 0.76\\
+	\bottomrule
+	\end{tabular}
+\end{multicols}
+%	\end{minipage}
+	\begin{solution}
+	Codon bias is present.
+	\end{solution}
+
+
+\end{questions}
+
+
+\end{document}

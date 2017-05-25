@@ -1,0 +1,123 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article}
+%\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Pictures/teach/153/lab/}} % set of paths to search for images
+
+\usepackage{geometry}
+\geometry{letterpaper}                   
+\geometry{bottom=1in}
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{amssymb}
+%\usepackage{mathtools}
+%	\everymath{\displaystyle}
+
+\pagenumbering{gobble}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana-Math.otf}
+%\setmathfont{XITS Math}
+
+% To define fonts for particular uses within a document. For example, 
+% This sets the Libertine font to use tabular number format for tables.
+%\newfontfamily{\tablenumbers}[Numbers={Monospaced}]{Linux Libertine O}
+%\newfontfamily{\libertinedisplay}{Linux Libertine Display O}
+
+
+\usepackage{booktabs}
+\usepackage{multicol}
+%\usepackage{longtable}
+%\usepackage{siunitx}
+%\usepackage[justification=raggedright, singlelinecheck=off]{caption}
+%\captionsetup{labelsep=period} % Removes colon following figure / table number.
+%\captionsetup{tablewithin=none}  % Sequential numbering of tables and figures instead of
+%\captionsetup{figurewithin=none} % resetting numbers within each chapter (Intro, M&M, etc.)
+%\captionsetup[table]{skip=0pt}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{placeins} %PRovides \FloatBarrier to flush all floats before a certain point.
+
+\usepackage{titling}
+\setlength{\droptitle}{-60pt}
+\posttitle{\par\end{center}}
+\predate{}\postdate{}
+
+%\usepackage{fancyhdr}
+%\fancyhf{}
+%\pagestyle{fancy}
+%\lhead{}
+%\chead{}
+%\rhead{Name: \rule{5cm}{0.4pt} }
+%\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\VSpace}{\vspace{\baselineskip}}
+\newcommand{\BigVSpace}{\vspace{2\baselineskip}}
+
+\setlength\parindent{0pt}
+
+\title{Hardy-Weinberg Review Problems}
+\author{Evolution}
+\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\thispagestyle{fancy}
+
+Populations evolve through changing allele frequencies over time. We can understand how evolutionary processes cause evolutionary change in populations by using the Hardy-Weinberg equations. Here, you'll practice some basic problems so that you'll have a better understanding of the allele frequency changes in the upcoming exercises.\VSpace
+
+Answer the following five questions. Show your work for all questions. \VSpace
+
+The proportions of two alleles, $p$ and $q$, must sum to 1.
+
+ \[p + q = 1\]
+
+The proportions of each genotype, given two alleles, must sum to 1.
+
+
+\[p^2 + 2pq + q^2 = 1\]
+
+\begin{enumerate}
+
+\item The color of peas in a pod is determined by a single pair of alleles.  \emph{C}\textsuperscript{G} is the dominant allele and codes for green color.  C\textsuperscript{Y} is recessive and codes for yellow.  You plant a garden with seeds, and 100 pea plant sprout.  Assume the starting frequency of the C\textsuperscript{G} allele was 0.4.  
+
+	\begin{enumerate}[label=\alph*.]
+		\item What is the frequency of the C\textsuperscript{Y} allele?\vspace{1cm}
+
+		\item What is the frequency of the C\textsuperscript{G}C\textsuperscript{G} genotype?\vspace{1cm}
+
+		\item What is the frequency of the C\textsuperscript{Y}C\textsuperscript{Y} genotype?\vspace{1cm}
+
+		\item What is the frequency of the C\textsuperscript{G}C\textsuperscript{Y} genotype?\vspace{1cm}
+
+		\item How many of your plants have green peas?  How many have yellow peas?\vspace{0.25cm}
+	\end{enumerate}
+
+\newpage
+
+\item You survey a population of hummingbirds that drink nectar from flowers of various lengths.  You are interested in the genetics that control bill length of these hummingbirds. You recognize three distinct phenotypes: long, medium and short bills.  Because the bill length appears to be discrete, you hypothesize that bill length is controlled by two alleles at one gene locus. You survey a population of 500 birds and discover that 245 birds have short bill lengths (a homozygous trait), 45 birds have long bill lengths (a homozygous trait), and 210 have medium size bills (heterozygotes).  Is this population in HWE?  What is the frequency of the two alleles?\vspace{3in}
+
+\item After completing your study above, you find discover that the same population of seed-eating birds that was studied 100 years earlier.  That scientist noted that 64\% of the population had long bills, 35\% of the population had medium bills, and the remaining 1\% had short bills.  Was the population in HWE at the time of the earlier study?  
+
+\newpage
+
+\item You genotype a sample of 400 individuals collected from a very large population.  You determine that 160 individuals are A\textsubscript{1}A\textsubscript{1}1, 80 individuals are A\textsubscript{1}A\textsubscript{2}, and the remaining individuals are all A\textsubscript{2}A\textsubscript{2}.  Show that this population is not in Hardy-Weinberg equilibrium. If you know how, calculate the actual allele frequencies. I'll show you that the population will return to Hardy-Weinberg Equilibrium in a single generation if all assumptions are met. \vspace{3.5in}
+
+\item Cystic fibrosis is a life-threatening genetic disease that causes mucus to accumulate and clog organs such as the lungs. Cystic fibrosis is determined by two alleles: C is dominant for normal over c for cystic fibrosis. Among Caucasians in the USA, 1 in 2500 people have cystic fibrosis.  Determine the frequency of the C and c alleles in the USA population.  On average, how many individuals per 1000 people are carriers for cystic fibrosis? (Carriers have an allele for the disease, but have the normal phenotype.)
+
+\end{enumerate}
+
+\end{document}  

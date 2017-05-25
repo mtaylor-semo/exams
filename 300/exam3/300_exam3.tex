@@ -1,0 +1,218 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+
+\printanswers
+
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/300/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Evolution, Exam 3, Sp\short{\year}. \numpoints\ points.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+
+\footer{}{}{}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\addtocounter{numpoints}{2}
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+\begin{document}
+
+\begin{questions}
+
+\question[5]
+List three of the five major mass extinctions that have occurred since the Cambrian.  Indicate which event was the largest and which event is the most famous.
+
+\begin{enumerate}[label=\alph*.]
+	\item \ifprintanswers \textbf{Permian (Largest)} \fi \vspace*{1\baselineskip}
+	
+	\item \ifprintanswers \textbf{Cretaceous (Famous)} \fi  \vspace*{2\baselineskip}
+	
+	\item \ifprintanswers \textbf{Ordo, Dev., Triassic} \fi  \vspace*{2\baselineskip}
+	
+\end{enumerate}
+
+\bigskip
+
+\question[5]
+Explain the common, underlying cause of all five mass extinctions that have occurred since the Cambrian.
+
+\AnswerBox{0.25\textheight}{Climate change.}
+
+\question[5]
+Describe two adaptive advantages to bipedalism.
+
+\AnswerBox{0.25\textheight}{Thermoregulation, predator/prey detection, freeing of hands.}
+
+\newpage
+
+\question[5]
+Explain and diagram the cost of sex.
+
+\AnswerBox{0.25\textheight}{%
+	The cost of sex means that asexual individuals have greater fitness compared to sexual reproducers (2 pts). Asexual species can reproduce exponentially while sexually reproducing species can reproduce linearly (2 pts.) E.g.If each reproductive event results in four offspring, asexual individuals will reproduce 4, 16, 64 offspring. Sexual reproducers will produce 4, 8, 16.
+}
+
+\question[5]
+Briefly explain Muller's Ratchet.
+
+\AnswerBox{0.25\textheight}{%
+	Muller's ratchet is the accumulation of deleterious mutations in asexually reproducing species (2 pts). There is no way for asexually reproducing species to get rid of deleterious mutations (2 pts).
+}
+
+
+\question[5]
+\begin{multicols}{2}
+Is sequential hermaphroditism likely to evolve in this species? If not, explain why not. If so, then name which type and explain why.
+
+\ifprintanswers\textbf{%
+Protogyny (1 pt). Females have higher fitness than males at a younger age. Males have greater fitness at later age (2 pts). Being female first and male second increases fitness over the lifetime of the individual (2 pts).
+}\fi
+\columnbreak
+
+	\includegraphics[width=0.45\textwidth]{seq_hermaph}\\
+	
+	\vspace*{-2\baselineskip}\hfill\tiny Avise and Mank 2009.
+
+\end{multicols}
+
+
+\newpage
+
+\question
+\begin{multicols}{2}
+Male treehoppers (genus \textit{Enchenopa}) attract females by sending vibrations through plants. One species sends low frequency vibrations through the stem of a plant. The other species sends high frequency vibrations through the petiole.  The frequency differences of the males maximize detection by their respective females in the same environment (McNett and Cocroft 2008).
+
+\columnbreak
+
+	\includegraphics[height=1.75in]{petiole_stem}
+\end{multicols}
+
+	\begin{parts}
+	\part[5]
+	Is this intrasexual or intersexual selection? Why?
+	
+	\AnswerBox{1\basespace}{%
+	Intersexual. Females are choosing males based on a characteristic of the male.
+	}
+	
+	\part[10]
+	Did the frequency differences more likely evolved by sensory bias or sensory drive? Explain what is sensory bias or sensory drive (depending on your choice), and then explain how your choice is consistent with the scenario described above.
+
+	\AnswerBox{4\basespace}{%
+	Sensory drive. Sensory drive is when female drives evolution of a trait based on the ability of the trait to stand out from the environment. Here, the different vibrations standout relative to their environments.
+	}
+	\end{parts}
+
+\newpage
+
+
+%\newpage
+
+\question[5]
+Explain the Red Queen hypothesis as it relates to the evolution of sexual reproduction as a defense against parasites.
+
+\AnswerBox{1\basespace}{%
+	Red Queen Hypothesis suggests that parasites and their hosts continually evolve in response to each other. Parasites evolve to become better infectors, while hosts evolve better defenses. Sexual reproduction increase the ability generate new genetic combinations in an effort to evolve better defenses.
+}
+
+\question[10]
+Male satin bowerbirds decorate their bowers with bright blue objects they find around the area. The bower is not a nest. It's a structure built solely to attract females. Females build the nest elsewhere. Assuming the male does \emph{not} help raise his offspring, explain whether the good genes hypothesis or runaway sexual selection best fits this scenario, and why.
+
+\AnswerBox{4\basespace}{%
+	Good genes hypothesis. Males with the most decorated bowers expended more energy to find the objects. That would also make them more vulnerable to predation as they spend more time searching. The most decorated bowers would indicate to the female that the male has good genetic quality because he is still alive.
+}
+
+\newpage
+
+%\question[15]
+%\textbf{REPLACE WITH MADS and something else} Discuss in terms of fitness and adaptive flexibility the advantages and disadvantages of both asexual and sexual reproduction. That is, what are the advantages and disadvantages of maintaining the same genome (asexual) versus a variable genome (sexual) in relation to the current environment (in a broad sense) and possible future changes to the environment. 
+%
+%\begin{solution}
+%	3 pts: advantages of asexual.
+%	
+%	3 pts: disadvantages of asexual.
+%	
+%	3 pts: advantages of sexual.
+%	
+%	3 pts: disadvantages of sexual.
+%	
+%\end{solution}
+%
+\question[5]
+Explain the “Replacement Hypothesis" for the migration of early \textit{Homo} into Asia and Europe, and the evidence that supports this hypothesis.
+
+\AnswerBox{0.3\textheight}{Later wave of migration out of Africa replaced earlier waves. DNA lineages in European and Asian is “younger” that extant Africa lineages.}
+
+
+\question[10]
+The grasses (Poaceae, includes rice and corn) produce flowers that lack petals and sepals. Given the three classes of \textsc{mads} genes below, which class or classes most likely had a mutation or change in expression that caused the loss of petals and sepals? Explain why, using the \textsc{abc} model of floral development. Class \textsc{a}: Apetala1. Class \textsc{b}: Apetala3. Class \textsc{c}: Agamous.
+
+\AnswerBox{0.3\textheight}{%
+	Class A causes loss of sepals and petals. Class B and C form stamens and C alone forms carpals. A needed for both petals and sepals.}
+
+\vfill
+
+\input{devious_extra_credit}
+\end{questions}
+
+\end{document}

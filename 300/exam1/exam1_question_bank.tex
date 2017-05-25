@@ -1,0 +1,169 @@
+%% Matching
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used. No term is used twice.\\(2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Founder Effect}{type of genetic drift following colonization of a previously unoccupied area.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Haplotype Substitution}{one haplotype replaces another in a population.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Descent with Modification}{besides natural selection, the other theory to emerge from \textit{On the Origin of Species}.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Macroevolution}{evolutionary change above the species level.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Evolution}{change in allele frequencies in a population over time.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Selective Sweep}{evidence for natural selection at the DNA level.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Neutral Theory}{allows small role for natural selection to eliminate detrimental alleles.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{w}{difference in relative fitness between two genotypes.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Effective Pop. Size}{total number of breeding individuals in a population. }
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Homozygosity}{increases over time because population is not infinitely large.}
+\vspace{0.7\baselineskip}
+
+%% Short Answer
+
+\question[5]
+If no population meets the assumptions of the Hardy-Weinberg equations, then what is the importance of the equations?
+	\begin{solution}
+	Null hypothesis: grade for 4 points
+	\end{solution}
+
+\vspace*{\stretch{1}}
+
+\question[10]
+If the initial frequency of haplotype $A$ is 0.3, draw how the frequency will change if the mutation rate from $A$ to $a$ is 0.025 and the mutation rate from $a$ to $A$ is 0.05. You do not have to be exact but you should be reasonably close. Assume that $N_e$ is very large and all other assumptions of HWE are met. Do not draw the effects of drift.
+
+	\includegraphics[width=0.85\textwidth]{frequency_graph}
+
+\question[10]
+Kumar and Subramanian estimated a mutation rate of $2.2 \times
+10^{-9}$ per base pair (bp) per year in the mammalian protein-coding genome. In contrast,
+Jaillon et al. estimated a mutation rate of $5.7 \times 10^{-9}$ per bp per year in the mammalian non-coding genome. Explain the apparent discrepancy between these two rates when both are estimated from mammalian genomes.
+
+\AnswerBox{3\basespace}{%
+Jaillon's estimate is based on non-coding regions so it is based on the neutral mutation rate. Kumar's is based on coding DNA so presumably some of those mutations were detrimental and removed by negative selection.}
+
+
+%% Modes of Selection
+\question[2]
+The fitness for three genotypes in a population is $B_1B_1$ = 0.98, $B_1B_2$ = 1.0, and $B_2B_2$ = 0.96. Name the mode of selection that explains how the phenotype would change in this population. Tell how you know.
+
+\AnswerBox{0.2\basespace}{%
+Stablilizing selection. Heterozygotes have the greatest fitness (heterozygote advantage) so the population will converge on the intermediate phenotype.
+}
+
+\question[2]
+The fitness for three genotypes in a population is $B_1B_1$ = 1, $B_1B_2$ = 0.96, and $B_2B_2$ = 1. Name the mode of selection that explains how the phenotype would change in this population. Tell how you know.
+
+\AnswerBox{0.2\basespace}{%
+Disruptive selection. Heterozygotes have decreased fitness compared to both homozygotes, which have equal fitness. The population will diverge towards both homozygote genotypes.
+}
+
+\question[2]
+The fitness for three genotypes in a population is $B_1B_1$ = 0.96, $B_1B_2$ = 0.98, and $B_2B_2$ = 1. Name the mode of selection that explains how the phenotype would change in this population. Tell how you know.
+
+\AnswerBox{0.2\basespace}{%
+Directional selection. $B_2B_2$ has the greatest fitness and $B_1B_1$ has the lowest fitness. Hets have intermediate fitness. The population will shift to the $B_2B_2$ genotype.
+}
+
+
+
+\question[15]
+
+\begin{multicols}{2}
+\flushleft
+The table at right (Sharp et al. 2005) shows how \textit{E. coli} uses 32 codons from 40 highly expressed genes. The tabled numbers are the ratio of actual use to expected use if all codons were used equally. A ratio of 1 means the codon is used exactly as often as expected (e.g., Met, in bold). Explain whether the data in the table provide evidence for natural selection at the genetic level and, if so, how. If not, explain why not. Use 1--2 specific codons from the table to support your answer.
+\columnbreak
+\begin{tabular}{@{}llrcllr@{}}
+	\toprule
+	\multicolumn{7}{l}{Codon use in \textit{E. coli}.}\\
+	\midrule
+	Phe & UUU & 0.45 &  & Ser & UCU & 2.54\\
+Phe & UUC & 1.55 &  & Ser & UCC & 1.52\\
+Leu & UUA & 0.14 &  & Ser & UCA & 0.19\\
+Leu & UUG & 0.25 &  & Ser & UCG & 0.06\\
+Leu & CUU & 0.30 &  & Pro & CCU & 0.59\\
+Leu & CUC & 0.23 &  & Pro & CCC & 0.05\\
+Leu & CUA & 0.01 &  & Pro & CCA & 0.52\\
+Leu & CUG & 5.07 &  & Pro & CCG & 2.85\\
+Ile & AUU & 0.72 &  & Thr & ACU & 1.89\\
+Ile & AUC & 2.27 &  & Thr & ACC & 1.75\\
+Ile & AUA & 0.01 &  & Thr & ACA & 0.19\\
+\textbf{Met} & \textbf{AUG} & \textbf{1.00} &  & Thr & ACG & 0.17\\
+Val & GUU & 2.07 &  & Ala & GCU & 1.83\\
+Val & GUC & 0.30 &  & Ala & GCC & 0.32\\
+Val & GUA & 1.14 &  & Ala & GCA & 1.09\\
+Val & GUG & 0.48 &  & Ala & GCG & 0.76\\
+	\bottomrule
+	\end{tabular}
+\end{multicols}
+%	\end{minipage}
+	\begin{solution}
+	Codon bias is present.
+	\end{solution}
+
+\question[10]
+You survey a population of 725 plants. 251 individuals produce red flowers. 351 individuals produce pink flowers (heterozygotes). 123 individuals produce white flowers. Calculate genotype and allele frequencies and then fill in the following table. The population is in \textsc{hwe}. \emph{Round to three digits after the decimal. Show your work!}
+
+ The final values may sum to 0.999, 1.000 or 1.001 due to rounding error. (2 points each.)
+
+\begin{tabular}{lC{1.1in}}
+\toprule
+&	Frequency \\
+\midrule
+ & \\[0.5em]
+$p$		& \ifprintanswers \textbf{0.588} \else \rule{1in}{0.4pt} \fi\\[2em]
+$q$		& \ifprintanswers \textbf{0.412} \else \rule{1in}{0.4pt} \fi\\[2em]
+$p^2$	& \ifprintanswers \textbf{0.346} \else \rule{1in}{0.4pt} \fi\\[2em]
+$2pq$	& \ifprintanswers \textbf{0.484} \else \rule{1in}{0.4pt} \fi\\[2em]
+$q^2$	& \ifprintanswers \textbf{0.170} \else \rule{1in}{0.4pt} \fi\\
+\bottomrule
+\end{tabular}
+
+
+\question[5]
+Tell what each mathematical term in each formula represents for a population in HWE.
+
+\vspace{0.5cm}
+
+$p$ \quad\ifprintanswers\textbf{Frequency of $p$ allele.}\fi \vspace{1cm}
+
+$q$ \quad\ifprintanswers\textbf{Frequency of $q$ allele.}\fi\vspace{1cm}
+
+$p^2$ \quad\ifprintanswers\textbf{Frequency of $pp$ genotype.}\fi\vspace{1cm}
+
+$2pq$ \quad\ifprintanswers\textbf{Frequency of heterozygous genotype.}\fi\vspace{1cm}
+
+$q^2$ \quad\ifprintanswers\textbf{Frequency of $qq$ genotype.}\fi\vspace*{\stretch{0.1}}
+
+
+\question[20]
+Based on the principles for mutation rate, genetic drift, and natural selection, do you expect the rate of \emph{adaptive} evolution to occur more rapidly in small or large populations, or at about the same rate regardless of population size? Answer the same question with respect to \emph{nonadaptive} evolution. \emph{Explain your reasoning} for both answers. Be sure to include the roles of mutation rate, genetic drift, and selection in your answers. Disregard other assumptions of Hardy-Weinberg.
+
+\begin{solution}
+
+Adaptive Evolution: Will occur more rapidly in large populations. Although mutation rate is independent of population size, more mutations will occur in larger populations. For any mutation that is even slightly beneficial, it has a much better chance of becoming fixed in the population if the strength of selection ($s$) is much larger than $1/4N_e$. That means in large populations, $s$ can be very small.   Simulations showed that even weakly favored mutations can increase rapidly in frequency.  In small populations, few mutations will occur so won't get beneficial mutations as often. Unless there is stronger strength of selection to overcome the effects of drift, the new mutation is more likely to be lost due to drift.
+
+\vspace{\baselineskip}
+
+Non-adaptive Evolution: Non-adaptive evolution is by definition neutral so not subject to natural selection. Thus, natural selection does not have a role or, if anything, only removes detrimental alleles. Non-adaptive evolution occurs at the neutral mutation rate ($\mu$) regardless of population size. In small populations, fewer mutations will occur $2N_e\mu$) but each new haplotype will have a relatively higher probability of being fixed ($1/2N_e$). In large populations, more new mutations will occur but each new haplotype has a correspondingly lower probability of being fixed.
+
+
+\end{solution}

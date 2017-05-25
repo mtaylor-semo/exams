@@ -1,0 +1,191 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+%\printanswers
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle,Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+\graphicspath{%
+	{/Users/goby/Pictures/teach/300/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Evolution, Exam 2, \textsc{s}\short{\year}.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+
+\footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+%\footer{}{}{}
+%\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+\marginbonuspointname{ pts \textsc{e.c.}}
+
+\bonuspointpoints{point extra credit}{points extra credit}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+
+\newcommand*\AnswerBox[2]{%
+	\parbox[t][#1]{0.92\textwidth}{%
+		\begin{solution}#2\end{solution}}
+	\vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+{\begin{minipage}[t][#1]{0.92\textwidth}%
+		\begin{solution}}
+		{\end{solution}\end{minipage}
+	\vspace{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+\begin{document}
+
+\begin{questions}
+
+\question[3]
+Explain co-option of genes. Provide an example.
+
+	\AnswerBox{2\baselineskip}{%
+		Co-option is when a gene evolves a new function while retaining an existing function. Examples include \emph{Hox} genes and tetrapod appendages, toolkit genes for eye spots, non-toolkit genes for crystallin proteins.}
+
+\question
+The longnose butterflyfish (right, on screen) has an unusually long mouth compared to other species of butterflyfishes (left). You plan to study the genetics of jaw length in the butterflyfishes.  
+\begin{parts}
+	\part[2] Identify one toolkit gene that you would be wise to study first.
+	
+	\AnswerBox{1\baselineskip}{Ca\textsc{m}1}
+
+	\part[5] Explain the existing evidence that caused you to identify this toolkit gene.
+	
+	\AnswerBox{6\baselineskip}{%		
+		Ca\textsc{m}1 was shown to correlate with jaw length in birds, may also work in fishes.
+	}
+
+\end{parts}
+
+\question[5]
+Describe one type of fossil or genetic evidence that explains why evolution across the Ediacaran-Cambrian boundary was not ``explosive.''
+
+
+	\begin{AnswerPage}{8\baselineskip}
+		Molecular clock show most phyla evolved before Cambrian.\\
+		Fossils extending back to Ediacaran\\
+		Fossils accumulating over 30 million year period at start of Cambrian.
+	\end{AnswerPage}	
+
+
+\bonusquestion[2]
+	Name two of the maternal effect genes that control the earliest development of the Drosophila egg, before \emph{Hox} genes are used.
+	
+	\ifprintanswers\textbf{Nanos, Bicoid, Hunchback, Caudal}\fi
+
+
+\newpage
+
+\question[5]
+Why was photosynthesis by cyanobacteria important to the evolution of increased body size for single-celled eukaryotes?
+
+\AnswerBox{1\basespace}{%
+Increased oxygen concentration in the atmosphere, sufficient for cellular respiration in larger organisms.
+}	
+
+
+\question[10]
+The snapping shrimp \textit{Synalpheus brooksi} lives in sponges on coral reefs.  Duffy (1996) showed that shrimp occupying nearby but different species of sponges rarely come into contact with each other because they don't usually leave their sponges. In the lab, a male shrimp from one sponge species is extremely aggressive towards females from a different sponge species, suggesting reproductive incompatibility. Analyses showed that shrimp from the same sponge species were genetically similar but shrimp from different sponge species were genetically distinct. Duffy argued the shrimp in different sponges are different species.  If so, explain which prezygotic mechanism or mechanisms reproductively isolate shrimps in different sponge species.
+
+\AnswerBox{3\basespace}{%
+	Ecological. Occupy different habitats.
+}
+
+
+\newpage
+
+\question[5]
+Are dinosaurs extinct?  Explain why or why not.  Use the concepts of monophyly (or not monophyletic, if necessary) to justify your explanation.
+
+\AnswerBox{2\basespace}{No, birds are dinosaurs. Birds are more closely related to theropod dinosaurs than theropods are to other dinosaurs (they share a more recent common ancestor). If theropods are dinosaurs, then so must be birds.}
+
+\question[5]
+Whales are most closely related to hippopotamuses but lack rear limbs.  Explain how a change to \emph{Hox} gene expression might cause the loss of rear limbs. 
+
+	\AnswerBox{2\basespace}{%
+	Mutations to \emph{Hox} A and \emph{Hox} D 9-13 may have stopped limb production. Or, \emph{Hox} genes for the a-p axis may have stopped producing legs in the posterior end.
+	}
+
+
+\question[5]
+Explain ecological release and how it might have contributed to the Cambrian radiation.
+
+	\AnswerBox{2\basespace}{%
+	The Ediacaran fauna occupied various ecological niches. The extinction of the Ediacaran fauna would have freed up ecological resources, allowing the Cambrian fauna to evolve into new niches.}
+
+
+
+\newpage
+
+\fullwidth{The phylogeny below shows the relationships of gobies (fishes) in the genus \textit{Elacatinus}. Each species has a stripe on that side. The color of the stripe for each species is in parentheses. The vertical line indicates the behavior of each species (sponge-dwelling, hovering, cleaning). Every species to the left of the vertical line has that behavior. Based on this information, answer the next two questions.}
+
+{\centering
+\includegraphics[width=0.45\textwidth]{exam2_goby_tree}\par
+}
+
+\question[5]
+Circle the \emph{largest} monophyletic group you can identify based on color \emph{or} behavior. Be clear which species are included / excluded. Explain why that group is monophyletic. Do not circle the entire tree. That would be incorrect.
+
+	\AnswerBox{0.5\basespace}{
+	The largest group is the sponge-dwelling species beginning with \textit{E. xanthiprora.} The ancestor and all of its descendants	share the same behavior.}
+
+\question[10]
+Does color or behavior better explain most differences among closely related species? Explain why, providing specific examples. 
+
+	\AnswerBox{1\basespace}{%
+	Color. Most sister species differ by coloration. Behavior forms two large groups and two independent evolutions of hovering. Example counts for 4 points.
+	}
+
+\newpage
+
+\question[3]
+Tell how heterozygosity changes in a population with non-random mating.
+
+\AnswerBox{1\basespace}{Non-random mating reduces heterozygosity.}
+
+\question[12]
+
+The purple-throated carib is a species of hummingbird that lives on the Caribbean island of Dominica. Female caribs have longer, more curved bills than male caribs, which have shorter, straighter bills. Female hummingbirds get their nectar only from the red flowers of a plant called \textit{Heliconia bihai}. Male hummingbirds get their nectar only from the yellow flowers of the same plant species. An individual plant has either red or yellow flowers, but not both. The flower shape of each color morph corresponds to the bill shape of each sex. Red flowers have a longer, more curved flower corolla, while yellow flowers have a shorter, straighter corolla. The hummingbirds function as pollinators for \textit{H. bihai}.  No other pollinators (including wind) for this plant are known. Based on this information only, can reproductive isolation evolve for (1) the hummingbirds and (2) the color morphs of \textit{H. bihai}.  If so, say how. Justify your answer. 
+
+	\begin{AnswerPage}{5\basespace}
+	Yes for H. carib because plant has different pollinators. 6 points\\
+	No for birds because males and females must come together to reproduce. 6 points.
+	\end{AnswerPage}
+
+\end{questions}
+
+\end{document}
