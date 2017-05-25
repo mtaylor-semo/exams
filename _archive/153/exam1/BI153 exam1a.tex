@@ -1,0 +1,67 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{exam}
+
+\renewcommand{\thequestion}{\bfseries\Large\arabic{question}}
+\renewcommand\questionlabel{\thequestion)}
+
+%\printanswers
+\def\ExamCopy{a}
+
+\input{BI153_exam_preamble.tex}
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used. No term is used twice. (2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.7\baselineskip}
+
+\input{matchingA.tex}
+
+\pagebreak
+
+\fullwidth{Multiple choice. Choose the \emph{best} answer.  Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect. (2 points each)}
+
+\input{multiplechoiceA.tex}
+
+\vspace*{\stretch{1}}
+
+\fullwidth{Rock on!}
+
+\vspace*{\stretch{1}}
+
+\fullwidth{%
+Circle True or False.  Read each statement completely before answering. (2 points each)
+}
+
+\input{truefalseA.tex}
+
+\newpage
+
+%switch problems between directional, disruptive, and stabliziling. 
+\input{hwe_problemA_stabilizing}
+
+\newpage
+
+\input{hwe_short_stabilizing}
+%input{shortessay3.tex}
+\vspace*{\stretch{1}}
+
+%\input{shortessay1}
+%\vspace*{\stretch{1}}
+
+%\input{shortessay2}
+%\vspace*{\stretch{1}}
+
+%\input{medessay3}
+%\vspace*{\stretch{1.8}}
+
+\end{questions}
+
+\end{document}

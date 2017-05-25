@@ -1,0 +1,87 @@
+
+
+%% Packages
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/pictures/teach/153/exam/}} % set of paths to search for images
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage[left=0.75in, right=0.5in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{ifthen}
+\usepackage{booktabs}
+
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+\def\Semester{\ifthenelse{\number\month>8}
+	{F}%
+	{%
+		\ifthenelse{\number\month<4}
+		{S}%
+		{N}%
+	}%
+}
+
+%% Exam class specific items.
+\pagestyle{headandfoot}
+\firstpageheader{BI 153, Exam 1\ExamCopy{}, \Semester{}\short{\year}}{}{\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+
+%\footer{}{}{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-1in}
+%\footer{}{}{\iflastpage{Total points earned: \makebox[1in]{\hrulefill}}{\makebox[1in]{\hrulefill}}}
+\footer{}{}{\makebox[1in]{\hrulefill}}
+
+\unframedsolutions
+\SolutionEmphasis{\bfseries}
+\renewcommand{\solutiontitle}{}
+
+
+%% Create a True False question format
+\newcommand*{\TrueFalse}[1]{%
+\ifprintanswers
+	\ifthenelse{\equal{#1}{T}}{%
+		\textbf{TRUE}\hspace*{14pt}False
+	}{
+		True\hspace*{14pt}\textbf{FALSE}
+	}
+\else
+	{True}\hspace*{20pt}False
+\fi
+}
+\newlength\TFlengthA
+\newlength\TFlengthB
+\settowidth\TFlengthA{\hspace*{1.16in}}
+\newcommand\TFQuestion[2]{%
+	\setlength\TFlengthB{0.98\linewidth}
+	\addtolength\TFlengthB{-\TFlengthA}
+	\parbox[t]{\TFlengthA}{\TrueFalse{#1}}\parbox[t]{\TFlengthB}{#2}}
+
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+% change indentation for multiple choice
+\renewcommand{\choiceshook}{%
+	\setlength{\leftmargin}{0.25in}%
+	\setlength{\parsep}{3pt}%
+}
+
