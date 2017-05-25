@@ -1,0 +1,159 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/exams/}
+	{img/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Ornithology, Exam 3, Sp\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+
+\footer{}{}{}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+
+\begin{document}
+
+
+\begin{questions}
+\fullwidth{Read each question carefully and completely before answering.}
+
+\question[4]
+Explain the relationship between migration, breeding and wintering grounds, and global variation in peak primary productivity. 
+
+\vspace*{\stretch{1}}
+
+\question[6]
+Do birds that migrate at night orient via the north star specifically or by the axis of rotation around the north star? (2 pts)  Briefly describe the experiment that answered this question. (4 pts)
+
+\vspace*{\stretch{2}}
+
+
+\question[10]
+Illustrate \emph{and} describe a typical ``figure 8'' pattern for oceanic birds that migrate between the northern and southern hemispheres. Be sure to include the approximate location of the high pressure centers and the wind rotation direction around them (2 pts), the spring and fall routes (4 points), and a clear explanation (4 points).
+
+
+\vspace*{\stretch{3}}
+
+
+\newpage
+\question[4]
+Climate change does not affect the spring arrival time of the Pied Flycatcher, yet warming temperatures is decreasing nesting success. Explain why, in terms of peak food availability. 
+
+\vspace*{\stretch{1}}
+
+\question[6]
+Below is the U.S. surface weather map for Sunday, 03 May, around 5 pm.  Use the location of the highs (H) and lows (L) on the map and your knowledge of wind rotation around pressure centers to indicate what region(s) birds are most likely to fly north (2 pts) and what regions birds are most likely to remain in place until the wind direction becomes favorable (2 pts). Explain. (2 pts)
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{surface_weather}
+\end{center}
+\vspace{\stretch{2}}
+
+\question[4]
+Briefly explain why many bird populations experience their highest mortality rate during migration.
+\vspace{\stretch{1}}
+
+\newpage
+\question[4]
+Birds that fly loop migration routes in the western flyway often fly a longer, less direct route in the spring compared to the shorter, more direct route in the fall. Explain the specific advantage(s) gained by flying the longer route in the spring rather than in the fall. 
+\vspace{\stretch{1}}
+
+\question[8]
+The figure below shows the relationship between the density of adults Black-throated Blue Warblers and their rate of population growth \textit{r}. Briefly describe two density-dependent factors that might explain the negative relationship between adult density and \textit{r}.
+\begin{center}
+	\includegraphics[width=0.7\textwidth]{r_N}
+\end{center}
+\vspace{\stretch{2}}
+
+\question[2]
+Briefly state how species richness relates to habitat fragment size.
+\vspace{\stretch{0.5}}
+
+\newpage
+\question[8]
+Briefly explain two reasons why fledging success is greater in larger habitat fragments compared to small fragments.
+\vspace{\stretch{1}}
+
+\question[12]
+Diagram and clearly label the model of island biogeography. Include immigration and extinction rates, and both small and large islands and close and distant islands in your diagram. (6 pts) Describe how the model predicts relative species richness for a large, close habitat fragment and for a small, distant habitat fragment. (6 pts)
+\vspace{\stretch{2}}
+
+\question[6]
+Will a small bird adapted to specific wetland habitats (such as a Prothonotary Warbler) have a greater extinction threat from habitat loss or predation/persecution? (2 pts). Explain why. (4 pts)
+\vspace{\stretch{0.5}}
+
+
+\newpage
+
+\question[6]
+Explain how you might use burn management to maximize species richness for a single, large habitat fragment.
+\vspace{\stretch{2}}
+
+\question[4]
+Explain how overlapping flyways in eastern Asia and Siberia enhanced the spread of avian flu into Europe and into North America.
+\vspace{\stretch{2}}
+
+\question[4]
+Name the order (2 pts) and family (2 pts) of birds that have the highest incidence of avian flu and are therefore the most likely vectors responsible for the migratory introduction of avian flu into North America.
+\vspace{\stretch{0.5}}
+
+\newpage
+
+\question[12]
+You are charged with designing a bird sanctuary across a landscape.  Describe how you will you patch dynamics (4 pts), corridors (4 pts), and fragment shape (4 pts), to maximize the number of species protected by your sanctuary. Be sure to clearly state the purpose of each of these three components.
+\vspace{\stretch{3}}
+
+\question[2]
+(Extra credit) Favorite band or musical artist.
+
+\end{questions}
+
+%\numpoints\ points.
+
+
+\end{document}

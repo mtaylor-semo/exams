@@ -1,0 +1,181 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Ornithology, Exam 1, Sp\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+
+\footer{}{}{}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+
+\begin{document}
+
+
+\begin{questions}
+\fullwidth{Read each question carefully and completely before answering.}
+
+\question[6]
+Name the class and infraclass represented by the palate structure in the figure below. Describe the relationship of the vomer with either the maxillopalatine or the pterygoid to explain your answer.
+
+\hfill \includegraphics[width=0.4\textwidth]{palaeognath_jaw}
+
+\question[4]
+Among the skull features named in the figure above is one character that unites birds with other reptiles. Name the character and tell how it differs from the mammalian skull. 
+
+\vspace*{\stretch{1}}
+
+
+
+\question[8]
+Here is a close-up image of a feather vane. I have labeled the rachis already. Please provide labels for barbs, proximal barbules, distal barbules, and hooklets.
+
+\begin{center}
+	\includegraphics[width=0.35\textwidth]{feather_vane}
+\end{center}
+
+\newpage
+\question[12]
+Provide three bird adaptations that increase flight efficiency (6 pts). In general, how does each increase flight efficiency (6 pts)?
+
+\vspace{\stretch{2}}
+
+\question[4]
+Match the feather type with its diagrammatic depiction.
+
+\begin{minipage}[c]{0.3\textwidth}%
+	\vspace*{1cm}
+
+	\rule{1cm}{0.4pt} Semiplume \vspace*{1cm}
+
+	\rule{1cm}{0.4pt} Downy \vspace*{1cm}
+
+	\rule{1cm}{0.4pt} Filoplume \vspace*{1cm}
+
+	\rule{1cm}{0.4pt} Bristle \vspace{1cm}
+
+\end{minipage}\quad%
+\begin{minipage}[c]{0.6\textwidth}%
+a. \includegraphics[width=0.4in]{feather_downy} \hfill  b. \includegraphics[width=0.4in]{feather_bristle}%
+\hfill c. \includegraphics[width=0.4in]{feather_semiplume} \hfill d. \includegraphics[width=0.4in]{feather_filoplume}
+
+\end{minipage}
+
+\question[8]
+Provide one function from each of the feather types in the question above.
+
+\vspace{\stretch{1}}
+
+\newpage
+
+%\question[6]
+%The flight feather is one of the most complex feather types. Flight feathers possess a rachis with either symmetrical or asymmetrical vanes. They also possess barbules with hooklets, which results in the mass majority of the flight feather vane being pennaceous.  Flight feathers are often referred to as feather types IV and V when describing the evolutionary trajectory of feathers. Below, please provide similar details for feather types I, II, and IIIa in comparison to what I provided for flight feathers above. 
+
+\vspace{\stretch{1}}
+
+ \question[10]
+Explain the ontogenetic transition wing hypotheses that has been proposed to explain the origin of flight. Explain how wing-assisted climbing and controlled-descent flapping provide evidence for this hypothesis.
+
+\vspace{\stretch{2}}
+
+\question[4]
+Name the superorder that contains most species of living birds. Name two orders from this superorder that are found in Missouri.
+
+\vspace*{\stretch{0.5}}
+
+\question[6]
+Describe the evolutionary reduction of digits in theropods leading to modern birds. Using Roman numerals I--V, name the digits that were lost and the digits that were fused to form the modern bird wing. Why were these changes important for the evolution of flight?
+
+\vspace*{\stretch{2}}
+
+
+\newpage 
+
+\question[2]
+If I was a bird getting ready to find a mate, what molting stage would I go through to reach my breeding plumage.
+
+\vspace*{\stretch{0.25}}
+
+
+\question[4]
+Bird wings are specialized to provide both lift and thrust. Explain why thrust is important to lift.
+
+\vspace*{\stretch{1}}
+
+\question[8]
+How do airfoils work? Basically, describe the speed of air moving over and under an airfoil (4 pts) and the resultant pressures on each side of an airfoil (4 pts). 
+
+\vspace*{\stretch{1}}
+
+
+\question[8]
+What are the two types of drag that can reduce lift (4 pts)? How are these types of drags related to the speed of air moving over an airfoil (4 pts)?  
+
+\vspace*{\stretch{1}}
+
+\newpage
+
+\question[4]
+Describe the angle of attack of the inner and outer portions of a bird wing during the upstroke and down stroke of flapping in a “typical bird” (not a hummingbird). At what part of the flapping stroke is lift maximized and at what part is thrust maximized.
+
+\vspace*{\stretch{1}}
+
+\question[6]
+ If I was a bird that enjoyed slowly gliding over open spaces to find prey (like a hawk), describe what my wings might look like. Why? You may draw a representative wing but be certain your proportions are reasonably accurate. 
+
+\vspace*{\stretch{1}}
+ 
+ \question[6]
+ Explain how bill size and shape allows shorebirds to partition their food resources.
+ 
+ \vspace*{\stretch{1}}
+
+\end{questions}
+\end{document}
