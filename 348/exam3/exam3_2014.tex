@@ -1,0 +1,178 @@
+\documentclass[11pt]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+
+\pagestyle{headandfoot}
+\firstpageheader{\bfseries{Marine Biology, Exam 3, Sp14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{\iflastpage{\small{\vspace{-2\baselineskip}\quote\footnotesize{{``Great attention gets paid to rainforests because of the diversity of life there. Diversity in the oceans is even greater.'' --- Sylvia Earle, Oceanographer.}}}}}{}{}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{xcolor,graphicx}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used and no term is used twice. (2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Meiofauna}{Tiny organisms that live in the spaces between sand grains.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Photic}{Zone with sufficient light for photosynthesis.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Disphotic}{Zone between 200--1000 m of depth in the open ocean.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Brackish}{Organisms restricted to intermediate salinity concentrations, such as 5--15 ppt.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Supralittoral Fringe}{Also known as the splash zone.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Stenohaline}{Organisms that tolerate only a narrow range of high salinity.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Nekton}{Free-swimming organisms in water column.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Infauna}{All benthic organisms that live \emph{in} the sediment.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Dugong}{Strictly marine mammalian herbivore.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Oceanic}{The open ocean water between the two shelf breaks of an ocean basin.}
+\vspace{0.7\baselineskip}
+
+\fullwidth{1 pt extra credit: Another term for \#3 above.}
+
+\newpage
+
+\question[4]
+Briefly describe how dolphins use high and low frequencies for echolocation.
+	\begin{solution}
+	Low frequencies are used to highlight the larger overall area. High frequencies are used to highlight fine detail.
+	\end{solution}
+\vspace*{\stretch{1.2}}
+
+\question[5]
+Briefly explain bioturbation and how it affects the depth of the aerobic zone in a soft-bottom littoral community.
+	\begin{solution}
+	Bioturbation occurs when burrowing organisms disturb the sediment. This increases oxygen penetration deeper into the sediments, deeping the aerobic zone. 
+	\end{solution}
+\vspace*{\stretch{1}}
+
+\newpage
+
+\question[5]
+Briefly describe one reason why the size of a tide pool (larger and deeper vs. smaller and shallower) might determine the types of organisms present in the pool.
+	\begin{solution}
+	Smaller/shallower tide pools are more vulnerable to extreme fluctuations in temperature and salinity, or even drying out. Organisms found in small tide pools will have greater tolerance for the fluctuating conditions.
+	\end{solution}
+\vspace*{\stretch{1}}
+
+\question[10]
+Compare and contrast a horizontal hard-bottom community to a vertical hard-bottom community in terms of the organisms likely to be present and the important abiotic and biotic factors that determine the differences.
+
+	\begin{solution}
+	Vertical surfaces receive less light than horizontal surfaces, so tends to have less algae. Because less algae is present, it tends to be covered in sessile organisms. (5 points)
+
+	Horizontal surfaces have more algae due to more light. However, sea urchins may graze on the algae, leaving more space for other sessile organisms. Sea urchins not present on vertical surfaces because tube feet can't keep them attached. (5 points)
+	\end{solution}
+\vspace*{\stretch{2}}
+\newpage
+
+\question
+Answer the next two questions with regard to a bar-built estuary. Write precise answers and use proper terminology throughout. 
+	\begin{parts}
+	\part[8]
+	Describe the distribution of sediment types in the estuary, and explain why the sediments have this distribution.
+		\begin{solution}
+		(5 pts) Larger sand grains will be closer to the river or in areas where velocity is faster because they are heavier and settle out sooner. Immediately behind the bar will be sand again because wave action can stir up the fine sediments.
+		\vspace{\baselineskip}
+
+		(3 pts) Silt and clay (mud) are farther from the river in the quieter areas.
+		\end{solution}
+	\vspace*{\stretch{1.2}}
+
+	\part[8]
+	Describe the distribution of suspension and deposit feeders in the estuary, and explain why each appears where it does in the estuary. 
+		\begin{solution}
+		(4 pts) Suspension feeders are most common in sandy areas. They can't live in muddy areas because the silt and clay will clog their feeding apparatus. 
+		\vspace{\baselineskip}
+
+		(4 pts) Deposit feeders are found with mud. They ingest the mud and digest the organic material. The organic material settles out at the same rate as silt and clay so is associated with those sediment types.
+		\end{solution}
+	\vspace*{\stretch{1}}
+	\end{parts}
+
+\newpage
+
+\question[15]
+Describe and discuss one respiratory and two circulatory adaptations that allow marine cetaceans to dive deep for extended periods of time. Explain how each adapation enables the cetacean to dive deep for extended periods. Use precise terminology as appropriate. 
+
+\begin{solution}
+	5 points for each adaptation.
+	\begin{enumerate}
+	\item Apneustic Breathing: Rapid deep breaths to rid excess CO2; Exhale all air from lungs before diving so don't carry large gas bubble.
+	\item Anaerobic respiration. More myoglobin stores more oxygen in muscle, allows greater tolerance for lactic acid build up.
+	\item Bradycardia: Heart rate slows down considerably.
+	\item Limited circulation: Restrict blood flow to important organs. Shunted from extremities where oxygen less needed.
+	\item More myoglobin / hemoglobin which carries more oxygen in blood stream.
+	\end{enumerate}
+\end{solution}
+\vspace*{\stretch{5}}
+
+\fullwidth{2 pts extra credit: What are the actual size classes (in mm or $\mu$m) for the three sediment types we discussed?}
+\begin{solution}
+Sand: 2--0.062 mm. \\
+Silt: 0.062--0.004 mm.\\ 
+Clay: $<$ 0.004 mm.
+\end{solution}
+\vspace*{\stretch{0.4}}
+
+
+%% GRADS
+%\newpage
+%\question[15]
+%Compare and contrast salt marshes to mangrove forests. Discuss similarities and differences.  Include examples of the types and relative ages (larvae, juveniles, adults) of representative organisms likely to be present in different parts of each type of estuary.
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,176 @@
+\documentclass[11pt]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+
+\pagestyle{headandfoot}
+\firstpageheader{\bfseries{Marine Biology, Exam 4, Sp14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{\iflastpage{\small{\vspace{-2\baselineskip}\quote\footnotesize{{``The sea, once it casts its spell, holds one in its net of wonder forever.'' --- Jacques Yves Cousteau.}}}}}{}{}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{xcolor,graphicx}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used and no term is used twice. (2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Photophores}{Light-emitting organs on deep-sea organisms.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Max. Sustainable Yield}{Balance between harvest and population growth rate.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Microbial Loop}{Limits amount of DOM that is exported from the epipelagic to the deep sea.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Shellfish}{A commerical fishery consisting of arthropods and molluscs.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Net Plankton}{For a long time, the only type of plankton known from the epipelagic.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Biomagnification}{Increasing accumulation of toxins by organisms in higher trophic levels.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Scutes}{The lack of these separates leatherback turtles from other sea turtles.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Bloom}{Rapid increase in abundance of jellyfish in a small area.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Exploitative Comp.}{Rapid coral growth blocks light from slower growing species.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Whatever}{What is your favorite movie? (not in list above so get it right!)}
+\vspace{0.7\baselineskip}
+
+\newpage
+
+\question[5]
+Briefly explain two reasons why coral reefs are not found near large estuaries in the tropics.
+	\begin{solution}
+	Dilute salinity from freshwater and turbidity from sediments/nutrient enrichment.
+	\end{solution}
+\vspace*{\stretch{1}}
+
+\question[5]
+Describe one specific example of how a deep-sea organism uses bioluminescence.
+	\begin{solution}
+	Alarm, attract prey, counterillumination, attract mates. 
+	\end{solution}
+\vspace*{\stretch{1}}
+
+\question[5]
+The deepest regions of the bathypelagic zone have less than 1\% of the biomass that is found in zones directly above it.  Explain one reason why.
+	\begin{solution}
+	Most primary production comes from the surface in various forms. Most primary production is consumed in the epiplagic or mesopelagic so little makes it to the bathypelagic. Less primary production means less biomass can be supported.
+	\end{solution}
+\vspace*{\stretch{1}}
+
+\newpage
+
+\question
+	\begin{parts}
+	\part[5]
+	On screen is a whipnose seadevil (genus \textit{Gigantactis}). State whether the whipnose seadevil more likely lives in the mesopelagic or bathypelagic zone, and explain one adaptation, \emph{visible in the image}, the fish exhibits to justify your answer. Be sure to explain the specific relationship between the adaptation and the zone you choose.
+		\begin{solution}
+		Small eyes don't expend energy for lightless zone but still see biolum.\\
+		Blobby body because pressure provides support. No energy wasted on stout skeleton.\\
+		Consider color.
+		\end{solution}
+	\vspace*{\stretch{1}}
+
+	\part[5]
+	Identify a different adaptation, \emph{visible in the image}, that is specific to life in the deep-sea. Explain how that adaptation is related to the environment or survival in the deep-sea. 
+		\begin{solution}
+		
+		Apparently large stomach to hold large prey.\\
+		Apparently large mouth to capture large prey.\\
+		Biolum lure to attract prey, which are scarce.
+		\end{solution}
+	\vspace*{\stretch{1}}
+	\end{parts}
+
+%\vspace*{\stretch{1}}
+\newpage
+
+\question
+	\begin{parts}
+	\part[5]
+	Illustrate a profile of a barrier reef from shoreline to open ocean. Label each zone.
+		\begin{solution}
+		Fore-reef slope, reef crest, reef flat, back-reef slope, lagoon. Accept patch-reef.
+		\end{solution}
+	\vspace*{\stretch{0.75}}
+
+	\part[10]
+	For each zone you just identified, describe a representative coral shape or structure you will find in that zone. Relate the shape or structure of the coral to one primary physical process (e.g., light, temperature, tidal movement, turbidity, wave action, or others, as appropriate) present in each zone. 
+		\begin{solution}
+		Fore-reef slope has massive or large plate corals adapted for different light regimes / capture light.\\
+		Reef crest tends to have heavy branched corals to break up wave action. Also light tolerant, resisist some arial exposure.\\
+		Reef flat may have more delicate corals but able to withstand high light intensity / arial exposure.\\
+		Back reef slope tends to be stouter branched corals because more protected.\\
+		Lagoon has patch reefs.
+		\end{solution}
+	\vspace*{\stretch{1}}
+	\end{parts}
+\newpage
+
+\question[15]
+Southern Florida and coastal Louisiana once had extensive salt marshes (and mangrove forests in the case of Florida).  Explain two different ways that humans have caused the loss of these extensive marshes.  Then, explain the potential impact that the loss of these valuable estuaries could have on the associated marine communities and on humans. 
+
+\begin{solution}
+	Levees, canals and waterways.
+\end{solution}
+\vspace*{\stretch{5}}
+
+\fullwidth{2 pts extra credit: List, in order from smallest to largest, the seven size classes of plankton. Do not list the sizes of each class. Must be exact order to receive credit.}
+\begin{solution}
+Femtoplankton, Picoplankton, Nanoplankton, Nicroplankton, Mesoplankton, Macroplankton, Megaplankton.
+\end{solution}
+\vspace*{\stretch{0.4}}
+
+%% GRADS
+\newpage
+\question[15]
+Agricultural practices in the upper Midwest have had a significant detrimental effect on the marine ecosystem (benthic and pelagic) of the northern Gulf of Mexico. What is the name that has been given to this impact? Describe how it is caused.
+
+\end{questions}
+
+\end{document}

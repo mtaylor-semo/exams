@@ -1,0 +1,319 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt,addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={OldStyle,Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/348/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Marine Biology, Exam 1, Sp\short{\year}, \numpoints~points.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\bonuspointpoints{point extra credit}{points extra credit}
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+%% To hide and show points
+\newcommand{\hidepoints}{%
+	\pointsinmargin\pointformat{}
+}
+
+\newcommand{\showpoints}{%
+	\nopointsinmargin\pointformat{(\thepoints)}
+}
+
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
+
+\printanswers
+
+
+\begin{document}
+
+\begin{questions}
+
+\vspace*{-1\baselineskip}
+
+\question[2]
+How many atmospheres of pressure does a squid living 560 meters deep in the Pacific Ocean experience?
+
+	\AnswerBox{\baselineskip}{%
+		57 atmospheres.
+}
+
+
+\question[2]
+Chloride and sodium are the two most common ions in sea water. List the next four most common ions in sea water, from highest to lowest concentration. Do not list the concentration of each ion. 1/2 point per ion.
+
+	\AnswerBox{\baselineskip}{%
+	Sulfate, Magnesium, Calcium, Potassium.
+}
+
+
+\question[3]
+List the three deepest ocean trenches and the ocean in which each trench is located.  1/2 point per blank. 
+
+\vspace{0.5\baselineskip}
+
+	\begin{tabular}{cc}
+		Trench Name		&	Ocean Basin \\[4ex]
+		\makebox[5cm]{\ifprintanswers\textbf{Marianas}\else \hrulefill \fi} &
+		\makebox[5cm]{\ifprintanswers\textbf{Pacific}\else \hrulefill \fi} \\[4ex]
+		
+		\makebox[5cm]{\ifprintanswers\textbf{Puerto Rico}\else\hrulefill \fi} &
+		\makebox[5cm]{\ifprintanswers\textbf{Atlantic}\else \hrulefill \fi} \\[4ex]
+		
+		\makebox[5cm]{\ifprintanswers\textbf{Sunda/Diamantina}\else \hrulefill \fi} &
+		\makebox[5cm]{\ifprintanswers\textbf{Indian}\else \hrulefill \fi} \\
+	\end{tabular}
+
+\question[6]
+Briefly explain why the planktotrophic larval strategy is less common than the lecithotrophic strategy for marine organisms living at high latitudes. 
+
+	\AnswerBox{\basespace}{%
+	Planktotrophic larvae eat phytoplankton. The phytoplankton season is so short at high latitudes that a slight mistiming of larvae may miss the food supply. Lecithotrophic larvae do not feed so are not dependent on a food source so they have increased chance of survival.
+}
+
+\question[6]
+Briefly explain how water temperature and salinity interact to cause thermohaline circulation in the North Atlantic Ocean. You do not need to explain the entire ocean conveyor.
+
+	\AnswerBox{\basespace}{%
+	Water gets extremely cold in the North Atlantic. Cold water has increased density. Strong winds cause evaporation of the water. Salt does not evaporate, so the cold, salty water becomes even denser. It gets dense enough to sink below the deeper water.
+}
+
+\newpage
+\vspace*{-1\baselineskip}
+
+\fullwidth{\noindent Use correct names to fill in the blanks below for the zones identified by letters in the figure. (1 point each.)\vspace{-0.5\baselineskip}
+\begin{center}\includegraphics[width=0.7\textwidth]{exam1_figure}\end{center}
+}%end full width
+
+\question\MatchQuestion{Epipelagic Zone}{A, based on depth.}
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Disphotic Zone}{B, based on light.}
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Bathypelagic Zone}{C, based on depth.}
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Aphotic Zone}{C, D, and E combined, based on light.}
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Neritic Zone}{F, open water out to shelf break.}
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Sublittoral}{G, benthic, from low water mark.}
+\vspace{1\baselineskip}
+
+%\question\MatchQuestion{Pelagic Zone}{A and F combined, across ocean from shore to shore.}
+%\vspace{1\baselineskip}% Switch to all zones combined, across ocean from shore to shore.
+
+%\question\MatchQuestion{Littoral /Intertidal}{Benthic between low and high water. Not lettered.}
+%\vspace{1\baselineskip}
+
+\fullwidth{Extra credit: Proper names for D and E. (1/2 point each.)\vspace*{1\baselineskip}
+
+D. \ifprintanswers \textbf{Abyssalpelagic} \else \rule{2.1in}{0.4pt} \fi \qquad \qquad%
+E. \ifprintanswers \textbf{Hadalpelagic} \else \rule{2.1in}{0.4pt} \fi
+}%
+
+\vspace{1\baselineskip}
+
+\fullwidth{Extra credit: For one point, tell me what would you \emph{see} if you walked along the abyssal plain from Maine to Spain. Why? This is a trick question; I do have a sense of humor.
+
+	\ifprintanswers\textbf{Nothing. No light.}\else \vspace*{\baselineskip}\fi}
+	
+
+% Points bumped based on how many ocean zone questions used.
+% Bump one point for each question.
+
+\bumppoints{6}
+
+\newpage
+\vspace*{-1\baselineskip}
+
+\question[10]
+\begin{multicols}{2}
+The gladiator crab \textit{Callinectes gladiator} lives in estuaries along the west coast of Africa (indicated by the dots). The crab larvae develop over the continental shelf. In spring, the local winds blow from north to south. In fall, the winds blow from south to north. State which season a crab living in Bengo Bay should release its larvae to ensure the larvae reach the shelf and then return to the estuary for metamorphosis to adults. Explain why, using the information provided. Include the role of Ekman transport in your answer. %Include the two forces involved and describe why or how they help steer the larvae in the local surface currents.
+
+\columnbreak
+	\includegraphics[width=0.47\textwidth]{africa}
+\end{multicols}
+
+
+\begin{AnswerPage}{3\basespace}
+	The site is located in the southern hemisphere. 
+	\vspace*{0.5\baselineskip}
+		
+	Therefore, the Coriolis effect causes currents to turn counterclockwise relative to the direction of travel. [2 points for Coriolis and proper direction.]
+	\vspace*{0.5\baselineskip}
+	
+	Ekman transport causes currents to move 90° to the left of the wind direction. [2 points for Ekman and proper direction.]
+	\vspace*{0.5\baselineskip}
+	
+	In fall, winds blow from south to north, so Ekman transport would cause the currents to move out over the continental shelf. This would be the time for the crabs to release its larvae. [3 points]
+	\vspace*{0.5\baselineskip}
+	
+	In spring, the winds move north to south, so Ekman transport would cause the currents to move towards shore. This is when the larvae will return to the estuary. [3 points]
+	
+\end{AnswerPage}
+
+
+\newpage
+\vspace*{-1\baselineskip}
+
+\question
+	\begin{parts}
+	\part[5]
+	On screen is the Indo-Pacific Snaggletooth (\textit{Astronesthes indopacificus}). Tell whether the snaggletooth more likely lives in the mesopelagic or bathypelagic zone. Explain one adaptation, other than bioluminescence and \emph{visible in the image}, the fish exhibits to justify your answer. The adaptation \emph{must be characteristic of the depth zone} and not common to all deep-sea fishes. Be sure to explain the specific relationship between the adaptation and the zone you choose.
+
+	\smallskip
+	\emph{Write only one adaptation. If you write more than one, I will grade only the first one I read.}
+
+		\begin{AnswerPage}{2\basespace}
+			Mesopelagic [2 points], plus one of:
+			\vspace*{0.5\baselineskip}
+
+			\quad Large eyes [2 pts] to gather available light. [2 points]
+			\vspace*{0.5\baselineskip}
+
+			\quad Muscular body {2 pts};  for active swimming, migration to surface. [2 points]
+			\vspace*{0.5\baselineskip}
+
+			\quad Consider color. [2 points plus 2 points for explanation.]
+		\end{AnswerPage}
+
+	\part[5]
+	Identify a different adaptation, other than bioluminescence and \emph{visible in the image}, that is specific to life in the deep-sea (this adaptation can be common to deep sea organisms regardless of depth zone). Explain how that adaptation is related to the environment or survival in the deep-sea. %Do not use bioluminescence.
+
+	\smallskip
+	\emph{Write only one adaptation. If you write more than one, I will grade only the first one I read.}
+
+		\begin{AnswerPage}{2\basespace}
+			Large teeth to capture andhold large prey. [2 points] \\
+			Nutrients are scarce. [3 points]
+			\vspace*{0.5\baselineskip}
+
+			Apparently large mouth to capture large prey. [2 points] \\
+			Nutrients are scarce. [3 points]
+			\vspace*{0.5\baselineskip}
+
+			Consider color. [4 points]
+			%Biolum lure to attract prey, which are scarce.
+		\end{AnswerPage}
+
+	\end{parts}
+
+
+\newpage
+\vspace*{-0.5\baselineskip}
+
+\question
+	\begin{parts}
+	\part[15]
+Summarize the classic model of primary productivity in the North Atlantic Ocean from late winter to early summer.  Your summary should name the major phytoplankton and zooplankton organisms and describe their roles in overall primary production. Your summary should also describe the seasonal availability of nutrients and light to explain the timing of peak productivity.  You may include an illustration. Do not discuss the fall season.
+
+\begin{AnswerPage}{5\basespace}
+1. In the winter, surface temperatures are cold. Winter storms mix surface and deeper water, bringing nutrients to the surface water. [2 points.] 
+\vspace*{0.5\baselineskip}
+
+2. As the winter recedes and spring begins, increasing sunlight triggers the bloom. The diatoms and dinoflagellates undergo a bloom, rapidly increasing primary productivity because they now have both nutrients and sufficient light availability. [2 points. Diatoms must be mentioned.]
+\vspace*{0.5\baselineskip}
+
+3. During the winter, copepods are down deep. In later spring, the growing adults arrive at the surface, after the bloom and PP has begun. Rapid grazing by copepods (up to 12,000 diatoms per minute) depletes the diatom population, reducing PP. [2 points. Copepods must be mentioned.]
+\vspace*{0.5\baselineskip}
+
+4. The nutrients at the surface are eventually depleted by remaining diatoms, shutting down PP to very low levels. As fall approaches, the surface cools again. Early winter storms cause mixing, triggering a second smaller bloom.  This time, the extent of PP is limited by the shorter days as the fall shifts to winter [2 points]
+\vspace*{0.5\baselineskip}
+
+[3 points allotted for clarity, proper terminology, grammar and spelling.]
+\end{AnswerPage}
+
+	\part[5]
+	Name and describe the modification to the classic model to account for the amount of primary productivity and retention of POM and DOM in tropical surface waters. 
+
+	\begin{AnswerPage}{0.5\basespace}
+	
+	Microbial loop [1 point]
+	\vspace*{0.5\baselineskip}
+
+	Bacteria consume DOM. Viruses infect and rupture bacteria, releasing OM. [2 points]
+	\vspace*{0.5\baselineskip}
+
+	Nanozooplankton consume bacteria, transferring OM to higher trophic levels. [2 points]
+	
+	\end{AnswerPage}
+	
+	\end{parts}
+	
+
+\newpage
+\vspace*{-1\baselineskip}
+
+
+\question[10]
+Describe the difference between active and passive margins. Describe how this affects the biology of benthic (bottom-dwelling) organisms living on the different margin types. Be clear in your example. 
+
+\end{questions}
+
+\end{document}

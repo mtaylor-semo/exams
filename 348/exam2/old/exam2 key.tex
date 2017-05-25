@@ -1,0 +1,184 @@
+\documentclass[11pt]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\usepackage{mhchem}
+\pagestyle{headandfoot}
+\firstpageheader{\bfseries{Marine Biology, Exam 2 (Grad), Sp14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{\iflastpage{\small{``I hate a Barnacle as no man ever did before, not even a Sailor in a slow-sailing ship.'' --- Charles Darwin.}}{}}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{xcolor,graphicx}
+
+%% Remove comment %% to print answer key.
+\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used. No term is used twice. (2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Cnidocyte}{Stinging cells in coral polyps.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Amphipods}{Laterally (side-to-side) flattened arthropods.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Ostium}{Water enters sponges through this hole.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Octopus}{Mollusk that lacks any type of shell.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Shoal}{Fish in an undirected group for social reasons.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Trochophore}{Larval form of some annelids.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{\ce{CaCO3}}{The foraminiferan shell is composed of this chemical compound.}
+\vspace{0.7\baselineskip}
+
+
+\question[6]
+Briefly describe two possible functions of parapodia in polychaete worms.
+	\begin{solution}
+	Locomotion / Anchoring (3 points). \\
+	Respiration (3 pts)
+	\end{solution}
+\newpage
+
+\question[6]
+List the scientific names for the three phyla of macroalgae.  For each phylum, list the proper term that identifies the primary photosynthetic pigment that determines it's overall color. 
+\vspace{\baselineskip}
+
+	\begin{tabular}{@{}lll@{}}
+		\large Phylum		&	\large Pigment \\[4ex]
+		\makebox[6cm][l]{\ifprintanswers\textbf{Chlorophyta}\else\hrulefill\fi} & 
+		\makebox[6cm][l]{\ifprintanswers\textbf{Chlorophyll}\else\hrulefill\fi} \\[4ex]
+		
+		\makebox[6cm][l]{\ifprintanswers\textbf{Phaeophyta}\else\hrulefill\fi} & 
+		\makebox[6cm][l]{\ifprintanswers\textbf{Xanthophylls}\else\hrulefill\fi} \\[4ex]
+		
+		\makebox[6cm][l]{\ifprintanswers\textbf{Rhodophyta}\else\hrulefill\fi} & 
+		\makebox[6cm][l]{\ifprintanswers\textbf{Phycobilins}\else\hrulefill\fi} \\
+	\end{tabular}
+
+\question[4]
+With regard to energy and carbon sources, describe the one difference and the one similarity between a photoautotroph and a chemoautotroph. 
+\ifprintanswers
+	\begin{solution}
+	Photoautotroph gets energy from light;\\
+	Chemoautotroph gets energy from inorganic compounds. (2 points)\\
+	Both get carbon from inorganic compounds (2 points)
+	\end{solution}
+	\vspace*{\stretch{0.5}}
+\else
+	\vspace*{\stretch{1.5}}
+\fi
+
+\question[5]
+Briefly explain why small zooplankton like copepods must remain near the ocean surface even though they are not photosynthetic.
+	\begin{solution}%
+	They feed on phytoplankton which must remain near the surface for photosynthesis.
+	\end{solution}
+\vspace*{\stretch{1.5}}
+
+\question[10]
+On screen is a picture of a juvenile blueface angelfish. Describe at least two different ways in which the coloration and pattern help to protect this fish from predation on the coral reef.
+	\begin{solution}
+	The pattern creates disruptive coloration that breaks up the overall outline of the body. (4 points)\\
+	The blue and yellow matches the background of the water and reef, respectively, which acts as a type of camouflage. (6 points)
+	\end{solution}
+\vspace*{\stretch{3}}
+
+\newpage
+
+\question[10]
+Many nudibranchs are brightly colored and therefore highly visible to potential predators.  The colors are hypothesized to serve as warning coloration.  To support this hypothesis, briefly describe one defense mechanism that nudibranchs use to guard against predation.
+
+\begin{solution}
+Nudibranchs feed on cnidarians.  The nudibranchs are able to incorporate the cnidocytes from the cnidarians into their own skin.  Any predator that attacks the nudibranch will be stung by the cnidocytes.
+
+2 points for saying they feed on cnidarians. 
+2 points for saying that the cnidocytes are incorporated into the skin.
+2 points for saying that the predators will be stung.
+2 points for overall quality of explanation.
+\end{solution}
+\vspace*{\stretch{1}}
+
+\question[10]
+A new group of deep-sea echinoderms was discovered in 1986.  These deep-sea animals, called sea daisies, are flat and round, and look very much like sea stars without arms.  List three adult characters and one juvenile character that sea daisies should possess to confirm them as echinoderms.
+
+\begin{solution}
+2 points each.\\
+Oral / Aboral Surface\\
+Water Vascular System\\
+Pentaradial Symmetry (As adults)\\
+Bilateral symmetry (as juveniles)
+\end{solution}
+\vspace*{\stretch{1}}
+
+\newpage
+
+\question[10]
+Despite the low Reynold's number for many marine planktonic organisms, they still tend to sink. Describe three physical and biological mechanisms that help planktonic organisms remain at or near the ocean surface. Do not include the Reynold's number.
+
+	\begin{solution}
+	Each worth 3 points.\\
+	Turbulence\\
+	Swimming\\
+	Reduced density (oil droplets, air bubbles, etc.)\\
+	Increased surface area
+	\end{solution}
+\vspace*{\stretch{5}}
+
+\fullwidth{\textbf{2 pts extra credit:} Taylor did not know one newly discovered homologous structure that unites urochordates and chordates. Now he knows. Let's find out if you know, too.  Name the structure. Do not list the other four that he already knew or he may subtract points.}
+\begin{solution}Endostyle.\end{solution}
+\vspace*{\stretch{0.75}}
+
+\fullwidth{\textbf{1 pt extra credit:} Taylor did not know what adult freshwater lampreys eat. (Did he know \emph{anything}?) Now he knows. Let's find out if you know, too.  What do adult freshwater lampreys eat? Use one word and one word only to answer this question.  He will have read enough of your other answers by now.}
+\begin{solution}Nothing.\end{solution}
+\vspace*{\stretch{0.75}}
+
+%% GRADS
+\newpage
+\question[15]
+Compare and contrast the structure and reproductive biology of diatoms and dinoflagellates.
+
+
+\end{questions}
+
+\end{document}

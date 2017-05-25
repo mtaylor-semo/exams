@@ -1,0 +1,267 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+
+%\printanswers
+
+\usepackage[left=1in,right=1.25in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/348/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Marine Biology, Exam 4, S\short{\year}.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{\iflastpage{\small Have a great summer!}{}}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage[version=4]{mhchem}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a True False question format
+\newcommand*{\TrueFalse}[1]{%
+\ifprintanswers
+	\ifthenelse{\equal{#1}{T}}{%
+		\textbf{TRUE}\hspace*{14pt}False
+	}{
+		True\hspace*{14pt}\textbf{FALSE}
+	}
+\else
+	{True}\hspace*{20pt}False
+\fi
+}
+\newlength\TFlengthA
+\newlength\TFlengthB
+\settowidth\TFlengthA{\hspace*{1.16in}}
+\newcommand\TFQuestion[2]{%
+	\setlength\TFlengthB{0.98\linewidth}
+	\addtolength\TFlengthB{-\TFlengthA}
+	\parbox[t]{\TFlengthA}{\TrueFalse{#1}}\parbox[t]{\TFlengthB}{#2}}
+
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.4pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\addtocounter{numpoints}{2}
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+% change indentation for multiple choice
+\renewcommand{\choiceshook}{%
+	\setlength{\leftmargin}{0.25in}%
+	\setlength{\parsep}{3pt}%
+}
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+\begin{document}
+{\fontsize{20pt}{24pt}\selectfont
+
+\begin{questions}
+
+\fullwidth{Read each question carefully and completely. Be sure your answer addresses the question being asked. Use complete sentences.}
+
+\question[2]
+Name the type of bubbles that snapping shrimp and mantis shrimp use to stun their prey.
+
+\AnswerBox{0.1\textheight}{Cavitation}
+
+\question[4]
+Name two types of reproduction (giving birth) in sharks.
+
+\AnswerBox{0.1\textheight}{Oviparity, ovoviviparity, viviparity.}
+
+\question[4]
+Name two ways that sponges can reproduce asexually.
+
+\AnswerBox{0.1\textheight}{Fragmentation, gemmules, budding.}
+
+\question[5]
+Explain one reason a manager must understand how genetic variation is
+distributed across the entire range of a species that is being
+considered for conservation management or reintroduction into a
+particular area.
+
+\begin{AnswerPage}{0.4\textheight}
+	Many studies have shown that many organisms are not genetically uniform across its entire range.  
+	
+	\begin{itemize}
+		
+		\item A population adapted for one area my not be well adapted for another area. Thus, individuals are not amenable to transplant.
+		
+		\item Cannot let individuals in one area go extinct because they are genetically different. 
+		
+		\item Genetic variability across the population increases adaptive ability in a changing environment.
+	\end{itemize}
+	
+	Grade as 4 points per explained reason.
+	
+\end{AnswerPage}
+
+\newpage
+
+
+\question[10] \label{q:carbonate_buffering_system}
+Write the equilibrium equation for the carbonate buffering system in
+marine ecosystems. Use this equation to explain how the increase in
+atmospheric \ce{CO2} increases ocean acidity. Circle the hydrogen ion 
+that contributes to most increase in acidity.
+
+\begin{AnswerPage}{6\basespace}%
+
+\ce{CO2 + H2O <=> H2CO3 <=> H+ + HCO3- <=> 2H+ + CO3^2-}
+
+\vspace{\baselineskip}
+
+As \ce{CO2} is added to seawater, the equation drives to the right to achieve equilibrium. This increases the amount of \ce{H+} dissolved in water. pH is a measure of free \ce{H+}.  More free \ce{H+} means lower pH, meaning higher acidity.
+
+\vspace{\baselineskip}
+
+4 points for the entire equilibrium equation. Grade as 1 point per molecule. Deduct 1 point for each incorrect superscript or subscript. Deduct 1 point if not shown as equilibrium equation.
+
+1 point for the circle. 
+
+4 points for the explanation.
+
+\end{AnswerPage}
+
+\question[5] \label{q:calcium_carbonate_equilibrium}
+Write the equilibrium equation for \ce{CaCO3} chemistry.
+
+\AnswerBox{1\basespace}{%
+\ce{CaCO3 <=> Ca^2+ + CO3^2-}   \\
+Grade as 1 point per molecule. Deduct 1 point for each incorrect superscript or subscript. Deduct 1 point if not shown as equilibrium equation.
+}
+\newpage
+
+\question[10]
+Explain how the increased acidity (from the equilibrium equation in
+question~\ref{q:carbonate_buffering_system}) interacts with \ce{CO3^2-} (from the equilibrium equation in question~\ref{q:calcium_carbonate_equilibrium})
+to reduce \ce{CaCO3} availability to marine animals. Include
+the proper chemical equation as part of your answer 
+
+\AnswerBox{0.5\textheight}{blurb}
+
+\question[5]
+What is the minimum value of \Omega\ necessary for carbonate skeleton
+formation? What is the optimum value?
+
+\AnswerBox{0.1\textheight}{blurb}
+
+\newpage
+
+%\question[5]
+% MSY is based on a population logistic growth curve. Draw the logistic
+%growth curve, and then draw an arrow to indicate the point along the
+%growth curve that provides the theoretical maximum sustainable yield.
+%
+%\AnswerBox{1\basespace}{%
+%2 pts for the curve. \\
+%2 pts: Arrow pointing to the steepest part of the curve.
+%}
+
+
+\newpage
+
+%\fullwidth{\centering\includegraphics[width=6.5in]{Exam4_Fig1a}}
+
+\question[20]
+Use the provided figure to clearly and thoroughly explain how increased ocean acidity
+will alter connectivity and fecundity across a large coral reef. You must include coral
+recruitment and growth (indicated by the black arrow), distance between patches and coral fecundity. Be sure to include both positive and negative relation among these factors. Do not include unnecessary factors and relationships. 
+
+\begin{solution}
+Grade as 2 points per item. 
+
+Acidification will negatively affect coral recruitment and growth. Fewer new coral recruits will be added to the population and growth of existing corals will be inhibited.  
+
+Reduced coral growth has a negative relationship with bleached and dead corals. As coral growth is reduced, coral bleaching and death increases.  
+
+Coral bleaching and death has a positive relationship with distance between factors. Thus, as coral bleaching/death increases, the distance between the patches also increases.
+
+Patch distance has a negative influence on coral recruitment and growth through a reduction in connectivity.
+
+Coral recruitment and growth has a positive influence on diversity of fecund corals. as coral recruitment decreases so will the diversity of fecund corals. 
+
+In addition, bleached and dead corals has a negative relationship with diversity of fecund corals. As coral loss increases, the diversity of fecund corals decreases. 
+
+Diversity of fecund corals has a positive relationship with reef scale coral fecundity. As diversity of fecund corals decrease in one patch, so does fecundity across the entire coral reef (reef scale).
+
+Reef scale fecundity has a positive influence on coral recruitment and growth. As reef scale fecundity decreases, the larval supply will decrease, decreasing coral recruitment.
+
+\end{solution}
+
+\newpage
+
+\question[10]
+Briefly explain each of the three factors that must be considered to identify
+a potential biodiversity hotspot for conservation efforts.
+
+\begin{AnswerPage}{4\basespace}%
+	
+	Grade as 1 point per item, plus 2 points for the explanation.\vspace{\baselineskip}
+	
+	1. Identify areas that have the highest organismal diversity.
+	
+	2. Identify the areas that have the highest amount of endemism.
+	
+	3. Identify the areas that have the greatest threats from human impacts.
+	
+	The areas where these three items intersect are the best candidates for biodiversity hotspots.
+\end{AnswerPage}
+
+\vfill
+
+\input{devious_extra_credit}
+
+
+\end{questions}
+}
+\end{document}

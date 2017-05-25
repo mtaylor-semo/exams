@@ -1,0 +1,149 @@
+\documentclass[11pt]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+
+\pagestyle{headandfoot}
+\firstpageheader{\bfseries{Marine Biology, Exam 1, Sp14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+\usepackage{xcolor,graphicx}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used. No term is used twice. (2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Poikilotherm}{Internal temperature adjusts with external temperature.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Wavelength}{Distance between crests of two consecutive waves.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Mixed Semidiurnal}{One very low and one moderately low tide on a daily cycle.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{ENSO}{Causes periodic shift of warm water from Australia to South America.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Ocean Conveyor}{Carries surface oxygen to deep-sea organisms at equator.}
+\vspace{0.7\baselineskip}
+
+\question\MatchQuestion{Thermocline}{Permanent temperature transition between surface and deep layers}
+\vspace{0.7\baselineskip}
+
+
+
+\question[5]
+A brittle sea star lives on the abyssal plain in the middle of the Indian Ocean.  What is the salinity of this organism's environment? What is the temperature ($^\circ$C)?
+	\begin{solution}
+	Salinity = 35 ppt (2 points). Temp = 4$^\circ$C (2 points). 5 pt deduction if entirely wrong.
+	\end{solution}
+\vspace*{\stretch{1}}
+
+\question[3]
+How many atmospheres of pressure does an organism living 720 meters deep in the Pacific Ocean experience?
+
+	\begin{solution}
+	73 atmosphere.
+	\end{solution}
+\vspace*{\stretch{1}}
+\newpage
+
+\question[5]
+List the three deepest ocean trenches and the ocean basin in which each is located.  Then circle the deepest trench. \textbf{Extra Credit}:  List the depth, within 100 feet / 30 meters, of each trench you list. 0.5 point per trench. Be sure to indicate whether you are using feet or meters.
+
+\vspace{\baselineskip}
+
+	\begin{tabular}{ccc}
+		\large Trench Name		&	\large Ocean Basin	&	\large Depth \small(extra credit) \\[5ex]
+		\makebox[5cm]{\hrulefill} & \makebox[5cm]{\hrulefill} & \makebox[4cm]{\hrulefill} \\[5ex]
+		\makebox[5cm]{\hrulefill} & \makebox[5cm]{\hrulefill} & \makebox[4cm]{\hrulefill}\\[5ex]
+		\makebox[5cm]{\hrulefill} & \makebox[5cm]{\hrulefill} & \makebox[4cm]{\hrulefill} \\
+	\end{tabular}
+
+\question[5]
+Briefly explain the difference between an osmoregulator and an osmoconformer.
+\vspace*{\stretch{1}}
+
+\question[10]
+Briefly explain how and why spring and neap tides are different from each other. Diagram the relationship between the sun, earth and moon for spring tides and neap tides. You do not have to include the moon phases.
+\vspace*{\stretch{3}}
+
+\newpage
+
+\question[5]
+Briefly describe one adaptation that allows a bottom-dwelling organism to live along a passive margin coastline.
+
+\vspace*{\stretch{1}}
+
+\question[10]
+Explain how the Coriolis effect and Ekman Transport together cause Antarctic upwelling. State specifically the direction (N, E, S, W) of the wind at this latitude and the direction of upwelled surface water flow.  The location of the Antarctic upwelling is about about 60$^\circ$S latitude.  You will find a global map on the last page of the exam for assistance.  You may draw on the map to indicate wind direction and water flow.
+
+\vspace*{\stretch{4}}
+
+\begin{solution}
+Coriolis: 3 points
+Ekman: 3 points
+Wind: 2 points
+\end{solution}
+
+\newpage
+
+\question[20]
+Describe how the mechanism of plate tectonics causes the formation of new sea floor, the loss of older sea floor, and movement of the plates. You may include a drawing.  Use proper terminology.  You must also include the types of crust involved, and their relative ages and density for a clear and thorough explanation. Do not tell me about earthquakes and volcanos.
+	\begin{solution}
+	Plate tectonics
+	\end{solution}
+
+
+\newpage
+
+
+
+
+
+\newpage
+\includegraphics[width=0.6\textwidth]{global_map_rotated}
+
+\fullwidth{\textbf{Extra credit: } What is the average depth of the abyssal plain? (1 pt.) What would you \emph{see} if you walked along the abyssal plain from Maine to Spain. Why? (2 pts.) The second question is a trick question; I do have a sense of humor.}
+\end{questions}
+
+
+\end{document}

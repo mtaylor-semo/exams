@@ -1,0 +1,208 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+
+%\printanswers
+
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/348/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Marine Biology, Exam 2, Sp\short{\year}. \numpoints\ pts.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+
+\begin{document}
+
+\begin{questions}
+{\fontsize{20pt}{24pt}\selectfont
+
+\vspace*{-1\baselineskip}
+
+\question[2]
+Identify the four parts of waves identified by the letters. 1/2 point per blank. 
+
+\vspace*{2ex}
+%\includegraphics[width=0.5\textwidth]{wave_features_blank}
+%
+%\vspace*{4ex}
+%
+%\begin{tabular}[l]{cc}
+%\makebox[5cm][l]{A.~\ifprintanswers\textbf{Wavelength}\else \hrulefill \fi} &
+%\makebox[5cm][l]{C.~\ifprintanswers\textbf{Crest}\else \hrulefill \fi}\\[4ex]
+%
+%\makebox[5cm][l]{B.~\ifprintanswers\textbf{Wave height}\else \hrulefill \fi} &
+%\makebox[5cm][l]{D.~\ifprintanswers\textbf{Trough}\else \hrulefill \fi}\\
+%\end{tabular}
+
+\begin{multicols}{2}
+
+\textsc{a}.~\ifprintanswers\textbf{Wavelength}\else \rule{6cm}{0.4pt} \fi\\[1ex]
+
+\textsc{b}.~\ifprintanswers\textbf{Wave height}\else \rule{6cm}{0.4pt} \fi\\[1ex]
+
+\textsc{c}.~\ifprintanswers\textbf{Crest}\else \rule{6cm}{0.4pt} \fi\\[1ex]
+
+\textsc{d}.~\ifprintanswers\textbf{Trough}\else \rule{6cm}{0.4pt} \fi
+
+\columnbreak
+	\includegraphics[width=0.47\textwidth]{wave_features_blank}
+
+\end{multicols}
+
+
+
+\question[4]
+Use salinity and light to explain two distinct reasons why coral reefs are not found near the mouths of rivers.
+
+\AnswerBox{3\baselineskip}{%
+Dilute salinity from freshwater and turbidity from sediments/nutrient enrichment.%
+}
+
+\newpage
+
+\question[4]
+List the three sediment types that can occur on the continental slope in the deep sea, \emph{in order from the smallest to the largest size.} For 1 point extra credit, write the combination of types that make up mud. For 2 more points extra credit, write the size range in millimeters for each sediment type.
+
+\AnswerBox{\baselineskip}{Sand, silt, clay}
+
+\question[10]
+Name \emph{in order} and briefly explain the three stages of succession for community development associated with whale fall. Another stage overlaps the other three stages so the order of it does not matter but you must still explain what occurs during that stage.
+
+\begin{AnswerPage}{3in}%
+
+Scavenger stage - nektonic organisms discover the carcass and consume the flesh. \vspace{0.5\baselineskip}
+
+Enriched Sediment stage - Nutrients from the whale seep into the sediment, enriching it. Supports aerobic organisms.\vspace{0.5\baselineskip}
+
+Sulfide stage - Sediment becomes anaerobic, supports invertebrates and bacteria that oxidize H\textsubscript{2}S.\vspace{0.5\baselineskip}
+
+Reef stage - Skeleton provides structure for sessile organisms. Begins after scavenger stage.
+
+\end{AnswerPage}
+
+\question[10]
+%Dr. Trieste d’Alvin compared benthic communities from 200–3000 m depth at several locations in the Atlantic Ocean.  She discovered that benthic diversity was greater at 1000 m than at 200 m or 3000 m. 
+
+Briefly describe how spatial heterogeneity and patch dynamics explain higher benthic diversity at 1000 m compared to 200 m or 3000 m. % Can switch one to sediment size, or add it for variations.
+
+\begin{AnswerPage}{3in}%
+
+Here's the answer
+
+\end{AnswerPage}
+
+\question[10]
+Describe the cause of upwelling off coastal California, including the direction of local winds and the direction of surface water flow. (You should be able to figure this out by thinking about which way the surface water must move for upwelling to occur.) Name the forces involved and describe how they contribute to the upwelling process. You may use a drawing to support your explanation.
+
+\begin{AnswerPage}{3in}
+
+The wind blows south along the coast of CA. Ekman transport forces surface water to move to the right, relative to the wind direction. This forces water to move west, away from the coast. Deep water must upwell to replace the surface water.
+
+\end{AnswerPage}
+
+\newpage
+
+
+\question[10]
+Name and describe the two long-term alternate stable states that occur between kelp and sea urchins.
+
+\begin{AnswerPage}{2in}
+\emph{Macroalgae phase} has abundant kelp. Bits of kelp are always present on sea floor for urchins to eat so urchins remain in crevices. Something occurs (e.g., storm) that removes kelp. Urchins now form large aggregations that swarm the area. The swarm prevents the recruitment of new kelp, so the are remains in the \emph{barrens phase.} Warm temps or disease can but back on number of urchins, or large pulse of kelp recruits can overwhelm ability of urchins to consume them. Kelp become reestablished and urchin aggregation dissolves, urchins return to crevices. Back to macroalgal phase.
+\end{AnswerPage}
+
+\newpage
+
+\question[10]
+Name and describe the biotic and abiotic factors that determine the depth at which the infralittoral transitions to the circalittoral in a rocky sublittoral community.
+
+\begin{AnswerPage}{3in}
+
+\end{AnswerPage}
+
+\newpage
+
+\question
+	\begin{parts}
+	\part[5]
+	Illustrate the profile of a fringing reef from shoreline to open ocean. Label each zone.
+
+	\AnswerBox{1\basespace}{%
+	Fore-reef slope, reef crest, reef flat.%
+}
+
+
+	\part[10]
+	Describe how light, aerial exposure, and wave action interact to determine the types of corals (relative size, branching, etc.) present in each zone.
+	
+		\begin{AnswerPage}{5in}
+		Answer goes here.
+		\end{AnswerPage}
+	\end{parts}
+
+}
+\end{questions}
+
+
+\end{document}
