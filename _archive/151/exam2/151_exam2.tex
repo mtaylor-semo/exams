@@ -1,0 +1,185 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/151/exams/}%
+	{/img/}}%
+
+% Used to get the semester and last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+\def\Semester{\ifthenelse{\number\month>8}
+	{F}%
+	{%
+		\ifthenelse{\number\month<4}
+		{S}%
+		{N}%
+	}%
+}
+
+\pagestyle{headandfoot}
+\firstpageheader{BI 151, Quizzam 2, \Semester{}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+
+\footer{}{}{}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+%\usepackage{multicol}
+%\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+
+\begin{document}
+
+\fullwidth{\noindent Read each question completely. Explain \emph{thoroughly} your reasoning using clear and concise sentences. \vspace{1\baselineskip}}
+
+\begin{questions}
+
+\question[10]
+Draw the entire homology / analogy flow chart that you use to determine
+whether a trait found in two organisms is a homology or analogy.
+
+\ifprintanswers
+	\begin{center}\includegraphics[width=0.5\textwidth]{exam2_flow_chart}\end{center}
+	\vspace*{\stretch{0.5}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\question[5]
+Consider the pharyngeal arches found in embryos of fishes and
+mammals. During the embryonic stage, the pharygeal arches do not serve
+any function. In adult fishes, the pharyngeal arches form the gills. In
+adult mammals, the pharyngeal arches form a variety of structures,
+including tonsils, the middle ear, and thyroid glands, none of which are
+found in fishes. Is this similarity of embryonic pharyngeal arches an
+example of homology or analogy? \emph{Explain your complete thought
+process} as you use the homology / analogy flow chart to arrive at your
+conclusion. 
+
+\ifprintanswers
+	\textbf{Vertebrate embryos have pharyngeal arches, which are pouch-like structures. They are not used in the embryos. They serve different functions in adult vertebrates. Therefore, the similarity is not necessary for serve a specific function, making the pharyngeal arches a homology.}\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\newpage
+
+\begin{center}
+	\includegraphics{exam2_ant_cat}
+\end{center}
+\question[5]
+Consider the legs of the ant and the cat above. You notice the
+following structural similarity: \emph{The legs of cats and ants are
+similar in that they have bendable joints.} Based on this structural
+similarity, would you conclude the legs similar by homology or analogy?
+Choose one, and explain your reasoning, using the flowchart as a guide.
+(5 pts)
+
+\ifprintanswers
+	\textbf{The legs have joints which makes the legs flexible. The flexibility must be this way for walking. Therefore, the structural similarity is necessary for the function, which makes this an analogy.}\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+Use the following hypothesis to answer questions 4--7 on the
+next page. \emph{Thoroughly} explain your answers.
+
+\begin{center}	
+	\includegraphics[width=0.6\textwidth]{exam2_phylo_tree}
+\end{center}
+
+\newpage
+
+\question[5]
+Considering your answer about the ant and cat legs in the previous
+question, does your conclusion support or falsify the above hypothesis, or is the evidence inconclusive?
+Explain your reasoning.
+
+\ifprintanswers
+	\textbf{Analogies do not provide useful evidence for testing hypotheses. Therefore, my conclusion is that the evidence is inconclusive. It can neither support nor falsify the hypothesis.}\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\question[5]
+You determine that a bone present in the skulls of the coyote and the
+cat are homologous structures. Tell whether the homology supports or falsifies the
+hypothesis, whether the evidence is inconclusive. Explain your reasoning. 
+
+\ifprintanswers
+	\textbf{The hypothesis predicts that cat and coyote have a common ancestor so It predicts that these two organisms must have a homology. Therefore, the homology of the bone would support this hypothesis.}\vspace*{\stretch{0.67}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\question[5]
+Based on this skull homology found in coyote and cat, what
+\emph{predictions} does the hypothesis make about the presence or absence of this
+same homology for the bison, dolphin and whale? Explain your reasoning. 
+
+\ifprintanswers
+	\textbf{The homology may or may not be present in the common ancestor of all of these vertebrate. If the homology arose in the ancestor of the cat and coyote, then it will not be present in the other three mammals. If the homology arose in the common ancestor of all the vertebrates, then they too must have the homology.}\vspace*{\stretch{0.5}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\question[5]
+You discover a second homologous bone in the front legs of the cat
+and the bison. Based on this homology, what \emph{predictions} does the hypothesis
+make about the presence or absence of this homology in the front appendages
+(legs or flippers, which have bones) of the dolphin, whale and coyote, based on
+the hypothesis? Explain your reasoning.
+
+\ifprintanswers
+	\textbf{For this homology to be present in the dolphin and cat, it must have been present in the common ancestor. Therefore, this hypothesis predicts that the homology must be present in the dolphin, whale, and coyote.}\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\newpage
+\question[10]
+Given the following evidence for homology, draw a hypothesis for the
+following living organisms. Your hypothesis should be in the form of a
+phylogenetic tree that is consistent with \emph{all} of the data. After
+each homology, I give the organisms that have that particular homology.
+If an organism is not listed after a homology, the organism does not
+have that structure or trait. Do not name any ancestors.
+
+\begin{quote}
+fins: fish, shark \\
+embryonic pharyngeal pouches: fish, shark, frog, mouse, opossum \\
+hair: mouse, opossum \\
+four legs: frog, mouse, opossum \\
+\end{quote}
+
+\ifprintanswers
+	\begin{center}
+		\includegraphics{exam2_vert_phylo}
+	\end{center}
+\fi
+
+	
+\end{questions}
+
+
+\end{document}

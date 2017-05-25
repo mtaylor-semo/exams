@@ -1,0 +1,184 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Inconsolatazi4} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/151/exams/}%
+	{/img/}}%
+
+% Used to get the semestesr and last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+\def\Semester{\ifthenelse{\number\month>8}
+	{F}%
+	{%
+		\ifthenelse{\number\month<4}
+		{S}%
+		{N}%
+	}%
+}
+
+\pagestyle{headandfoot}
+\firstpageheader{BI 151, Quizzam 3, \Semester{}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+
+\footer{}{}{}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+%\usepackage{multicol}
+%\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+
+\begin{document}
+
+\fullwidth{\noindent Read each question completely. Explain \emph{thoroughly} your reasoning using clear and concise sentences. \vspace{1\baselineskip}}
+
+\begin{questions}
+
+\question[5]
+Clearly explain what is meant by ``mosaic evolution'' or the ``mosaic
+character of evolution'' and how it relates to transitional forms found
+in the fossil record. Support your explanation with two \emph{specific}
+traits observed in the reptile / bird fossils shown in class.
+
+\ifprintanswers
+	\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\question[10]
+Describe two pieces of evidence \emph{from transitional forms} that
+support the hypothesis that reptiles and mammals share a common
+ancestor. Explain why each piece of evidence is considered to support
+this hypothesis. Clearly explain how this evidence from the fossil
+record is consistent with the geological time scale.
+
+\ifprintanswers
+	\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\newpage
+
+\fullwidth{\noindent The following hypothesis makes specific \emph{predictions} about
+transitional forms between organisms and about when the forms should
+appear in the fossil record. \emph{Thoroughly explain your reasoning for
+questions~\ref{ques:fossil_predictions} and \ref{ques:fossil_evidence}}. (MYA = millions of years ago)}
+\begin{center}
+	\includegraphics{exam3_phylo_tree}
+\end{center}
+
+\question[10]\label{ques:fossil_predictions}
+Identify \emph{all} transitional forms that are \emph{predicted} by this hypothesis.
+Based on this hypothesis, when is each transitional form
+\emph{predicted} to appear in the fossil record?
+
+\ifprintanswers
+	\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\newpage
+
+\question[10]\label{ques:fossil_evidence}
+You find evidence in the fossil record that allows you to test the
+above hypothesis. You find the following transitional forms in the
+fossil record at the following geological ages: \vspace{\baselineskip}
+
+fish/amphibian: 375 million years ago
+
+reptile/mammal: 290 million years ago
+
+first vertebrates: 490 million years ago
+
+reptile/bird: 200 million years ago
+
+amphibian/reptile: 325 million years ago\vspace{\baselineskip}
+
+Thoroughly explain \emph{all} of the ways in which your new evidence
+supports or falsifies the hypothesis shown on the previous page.
+
+\ifprintanswers
+	\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\newpage
+
+\question[7]
+Draw a new hypothesis that is consistent with \emph{all} of the new evidence
+provided by question~\ref{ques:fossil_evidence}. Include a properly labeled time
+scale.
+
+\ifprintanswers
+	\vspace*{\stretch{6}}
+\else
+	\vspace*{\stretch{6}}
+\fi
+
+\question[2]
+Name the type of monomers that are joined together to form a
+carbohydrate.
+
+\ifprintanswers
+	\textbf{Saccharides}\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\question[2]
+Sucrose, a carbohydrate, is made of two monomers, glucose and
+fructose. Name the type of reaction that occurs to \emph{break} the bond
+that connects together the two monomers.
+
+\ifprintanswers
+	\textbf{hydrolysis}\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\question[2]
+Does this reaction release or consume energy?
+
+\ifprintanswers
+	\textbf{Release}\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\question[2]
+Name the group of macromolecules that are used for information storage. 
+
+\ifprintanswers
+	\textbf{Nucleic Acids}\vspace*{\stretch{1}}
+\else
+	\vspace*{\stretch{1}}
+\fi
+
+\end{questions}
+
+
+\end{document}

@@ -1,0 +1,392 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+%\usepackage[left=1in,right=1in,top=1in]{geometry}     
+\usepackage{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, BoldItalicFont={* BoldItalic}, Numbers={Proportional}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/151/exams/}%
+	{/img/}}%
+
+\usepackage[parfill]{parskip}
+
+
+%Accumulate answers at back on separate page.
+%http://tex.stackexchange.com/questions/15350/showing-solutions-of-the-questions-separately
+\newbox\allanswers
+\setbox\allanswers=\vbox{}
+
+\newenvironment{answer}
+{%
+  \global\setbox\allanswers=\vbox\bgroup
+  \unvbox\allanswers
+}%
+{%
+  \bigbreak
+  \egroup
+}
+
+\newcommand{\showallanswers}{\par\unvbox\allanswers}
+
+
+
+% Used to get the semestesr and last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+\def\Semester{\ifthenelse{\number\month>8}
+	{F}%
+	{%
+		\ifthenelse{\number\month<4}
+		{S}%
+		{N}%
+	}%
+}
+
+\pagestyle{headandfoot}
+\firstpageheader{BI 151, Take Home Quizzam 4, \Semester{}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+
+\footer{}{}{}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+%\usepackage{multicol}
+\usepackage{booktabs}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+
+\begin{document}
+
+\textbf{Instructions:}
+
+\begin{itemize}
+
+\item
+  \textbf{Due Date}: \input{exam4_due_date}
+
+\item You earn two extra credit points if you turn in the exam by Friday, 11 December, 2:30 pm (end of the usually scheduled class period on Friday).
+
+\item
+  This exam must be uploaded to the Exam 4 Drop Box no later than the due
+  date and time listed above. I will not accept e-mail attachments or hard copies
+  placed in my mailbox. Failure to upload your completed exam to the drop box
+  by the due date will result in a score of zero for the exam. Verify that the exam
+  was safely uploaded by going out the main Moodle page, then returning to the
+  drop box. You should see your file.
+
+\item
+  Late exams will not be accepted. You have plenty of time to complete the exam.
+  The due date and time is equivalent to the due date and time if you were taking
+  the exam in class.
+
+\item
+  Do not retype any of the questions. Simply type the question
+  number and then provide your answer.
+  
+\item
+  On the first page of the exam, before your first answer, type your
+  name, course and section number (BI 151-05). Do \emph{not} place your name on
+  any other page of the exam.
+  
+%\item
+%  You get \emph{2 free points} simply for following these basic
+%  directions! Schweet!
+  
+\item
+  You may use your class handouts for reference.
+  
+\item
+  I expect that you will \emph{not} consult with any of your classmates in
+  completing this exam. \emph{If I determine that you have cheated on
+  any portion of this test then you will receive a score of zero.} Your answers
+  must be based on your own reasoning.
+  
+\item
+  If you have any questions, please come see me or send me an e-mail
+  message. I will do what I can to help. That does not include me giving you the answers!
+  
+\item
+  This exam has \numquestions~questions. Read each question carefully. Be sure to
+  answer all \numquestions~questions.
+  
+\end{itemize}
+
+\newpage
+
+Shown below is a phylogenetic tree representing a hypothesis about
+relationships among vertebrates. Answer questions~\ref{q:vert_phylo_start}--\ref{q:vert_phylo_end} based on this
+diagram and other course material, as needed. \emph{Thoroughly explain your
+reasoning for each answer.}
+
+\begin{center}
+	\includegraphics[width=1\textwidth]{exam4_figure1}
+\end{center}
+
+\begin{questions}
+
+\question[3]\label{q:vert_phylo_start}
+If this hypothesis is correct, which would show more differences in
+the variable (``light'') amino acids in cytochrome C: giraffes compared
+with camels, or giraffes compared with dolphins? (That is, which pair of
+organisms does this hypothesis predict will show more differences?).
+
+\begin{answer}
+	\thequestion. Giraffes with dolphins. They share a common ancestor farther back in time so accumulate more mutations. (3 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[3]
+If this hypothesis is correct, which would show more differences in
+the variable (``light'') amino acids in cytochrome C: dolphins compared
+with camels or giraffes compared with mule deer? (That is, which pair of
+organisms does this hypothesis predict will show more differences?)
+
+\begin{answer}
+	\thequestion. Neither. Same number of differences. They all trace back to the same common ancestor so should have about the same number of differences. (3 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[3]
+If this hypothesis is correct, which would show more differences in
+the constant (``dark'') amino acids in cytochrome C: elk compared with
+dolphins or mule deer compared with camels? (That is, which pair of
+organisms does this hypothesis predict will show more differences?)
+
+\begin{answer}
+	\thequestion. No differences. Constant amino acids are not variable. (3 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[3]\label{q:vert_phylo_end}
+If this hypothesis is correct, which would show more differences in
+the variable (``light'') amino acids in cytochrome C: elk compared with
+mule deer, or giraffes compared with camels? (That is, which pair of
+organisms does this hypothesis predict will show more differences?) 
+
+\begin{answer}
+	\thequestion. About same amount due to same time of divergence. (3 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\newpage
+
+\fullwidth{A mycologist (a person that studies fungi) is interested in determining
+the relationships among several presumably closely related species of
+mushrooms. She decides to analyze the nucleotide sequences for one gene.
+Below is a data table showing the number of
+mutational (nucleotide) differences in this gene between each mushroom
+species in question. Answer questions~\ref{q:myco_start}--\ref{q:myco_end} based on the data in this
+table (and yes, they are real species of mushrooms):
+
+\begin{tabular}[c]{@{}lrrrrrrr@{}}
+\toprule
+& E & R & D & A & F & B & P\tabularnewline
+\midrule
+Elegant Stinkhorn (E) & 0 & 10 & 15 & 25 & 25 & 25 &
+25\tabularnewline
+Ravenel's Stinkhorn (R) & & 0 & 15 & 25 & 25 & 25 &
+25\tabularnewline
+Dead Man's Fingers (D) (a type of stinkhorn) & & & 0 & 25 & 25
+& 25 & 25\tabularnewline
+Ash-Tree Bolete (A) & & & & 0 & 5 & 15 & 20\tabularnewline
+Frost's Bolette (F) & & & & & 0 & 15 & 20\tabularnewline
+Bitter Bolete (B) & & & & & & 0 & 20\tabularnewline
+Rooting Polypore (P) & & & & & & & 0\tabularnewline
+\bottomrule
+\end{tabular}
+}% End Fullwidth
+
+\question[2]\label{q:myco_start}
+Which tree correctly shows the relationships between the various
+mushrooms? The scale to the left of each diagram represents the number
+of mutational differences. Choose the correct answer from choices A--D
+below.
+
+\begin{answer}
+	\thequestion. Tree B is the correct tree. (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{exam4_figure2}
+\end{center}
+
+\question[2]
+Mycologists have been unsure whether the Rooting Polypore is a type
+of stinkhorn mushroom or a type of bolete mushroom. Based on the correct
+tree of similarity, would you classify the Rooting Polypore with the
+stinkhorns or the boletes? Explain.
+
+\begin{answer}
+	\thequestion. Bolette. The Rooting Polypore shares a more recent common ancestor with the other Bolettes and not the stinkhorns. (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[2]\label{q:myco_end}
+Which two mushrooms have the most recent common ancestor? Explain how
+you know. 
+
+\begin{answer}
+	\thequestion. Ash-tree and Frost's Bolettes. They have only five amino acid differences so diverged from common ancestor more recently. All others have more a.a. differences, suggesting older divergence. (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\newpage
+
+\fullwidth{%
+Answer questions~\ref{q:range_start}--\ref{q:range_end} based on the following three hypotheses:
+
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{exam4_figure3}
+\end{center}
+}% End Fullwidth
+
+\question[2]\label{q:range_start}
+Of the groups shown above, the fewest number of cytochrome C amino
+acid differences is between reptiles and birds. This evidence supports
+which tree or trees (A, B, C, none, or all)? Why? (2 points)
+
+\begin{answer}
+	\thequestion. Tree C is the only tree that shows birds most closely related to reptiles. Thus, they should have the fewest number of amino acid differences. (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[2]
+Which tree or trees does a universal genetic code support (A, B, C,
+none, or all)? Why?
+
+\begin{answer}
+	\thequestion. Trees A and C are supported because all organisms in these trees have a common ancestor. Tree B predicts that reptiles and mammals do not share a common ancestor with fish, amphibians, or birds. (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[2]
+Which tree or trees do mammal-like reptiles support A, B, C, none,
+or all)? Why?
+
+\begin{answer}
+	\thequestion. All three trees predict a transition between reptiles and mammals. (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[2]
+Which tree or trees does an amphibian-reptile transitional form
+support (A, B, C, none, or all)? Why?
+
+\begin{answer}
+	\thequestion. Tree C is the only three that predicts a reptile-amphibian transition. Tree A predicts a fish-amphibian transition. Tree B predicts no common ancestry between reptiles and amphibians. (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[2]\label{q:range_end}
+Which tree is \emph{best} supported by the entire fossil record (A,
+B, C, none, or all)? Why?
+
+\begin{answer}
+	\thequestion. Tree C predicts the transitional forms shown in class (fish-amphib, reptile-mammal, reptile-bird) in the proper relative order. (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\newpage
+
+\fullwidth{%
+The blood clotting mechanism that prevents blood loss in vertebrate
+animals is a complex path of multiple chemical reactions that depends on
+seven or more enzymes and other proteins. Scientists long thought that
+every single step in the path was required; if one protein was missing,
+then clotting could not happen. However, experimentation and
+observations of the clotting process in many vertebrates has revealed
+that not all proteins are required for all vertebrates. For example, the
+enzymes called Hagemann Factor, prekallikrein and HMK are not required
+for clotting to occur in humans, although humans produce these enzymes.
+The Hagemann Factor enzyme is not even produced by dolphins, but
+dolphins have successful blood clotting. Some fishes, like the puffer
+fish, lack entire sections of the clotting pathway. However, at least
+based on evidence gathered so far, many of the proteins, including
+Prothrombin, are required by all vertebrates for clotting to occur. Use
+this information to answer questions~\ref{ques:clot_start} and \ref{ques:clot_end}.}
+
+
+\question[6]\label{ques:clot_start}
+Use the standard flow chart method to determine whether the
+presence of Prothrombin is a homology or analogy. Remember to clearly
+and completely explain each step of your decision-making process to
+justify your final choice of homology or analogy.
+
+\begin{answer}
+	\thequestion. Prothrombin is an analogy. Prothrombin is found in all organisms with blood clotting. Experiments show that clotting does not occur if prothrombin is not present. Therefore, prothrombin is required for function. (6 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[6]\label{ques:clot_end}
+Use the standard flow chart method to determine whether the
+presence of Hagemann Factor is a homology or analogy. Remember to
+clearly and completely explain \emph{each} step of your
+decision-making process to justify your final choice of homology or
+analogy.
+
+\begin{answer}
+	\thequestion. Hagemann Factor is homology. Hagemann Factor is found in some but not all organisms with blood clotting. That clotting occurs without Hagemann Factor suggests it is not required for the clotting function. (6 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\emph{Important}: Questions~\ref{ques:clot_start} and \ref{ques:clot_end} do not necessarily have 
+``correct'' answers. You earn points based on your how thoroughly you explain your
+reasoning and justification for your choice of homology or analogy.
+
+\vspace*{\stretch{1}}
+
+\fullwidth{OK, now for a brief review (the easy stuff!).}
+
+\question[2]
+Below is a sequence of mRNA. What is the sequence of DNA nucleotides
+that would code for this piece of mRNA?
+
+%AUG CCG GAG UUU ACA CGC UGU GAA UAA
+AUG CCG GAG UUU ACA CGC UGU GAA UAA
+
+\begin{answer}
+	\thequestion. TAC GGC CTC AAA TGT GCG ACA CTT ATT (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[2]
+What are the appropriate tRNA anticodons that correspond to this
+piece of mRNA?
+
+\begin{answer}
+	\thequestion. UAC GGC CUC AAA UGU GCG ACA CUU AUU (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[2]
+Using the universal genetic code in your text or from another
+source, what is the sequence of amino acids that would be translated
+from this piece of mRNA?
+
+\begin{answer}
+	\thequestion. Met-Pro-Glu-Phe-Thr-Arg-Cys-Glu-Stop (2 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\question[4]
+If you attempted to translate this piece of mRNA using the nuclear
+protein sequence machinery in \emph{E. coli}, a paramecium, and a
+donkey, would you get the same protein in all three instances? Explain.
+
+\begin{answer}
+	\thequestion. Yes. Same universal genetic code. So, a codon for an amino acid in one organism will also code for the same amino acid in other organisms. (4 pts)
+\end{answer}\vspace*{\stretch{1}}
+
+\end{questions}
+
+\ifprintanswers
+	\newpage
+
+	\textbf{Exam 4, \Semester{}\short{\year} Key}
+
+	\vspace{\baselineskip}
+
+	\showallanswers
+\fi
+
+\end{document}
