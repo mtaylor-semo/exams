@@ -1,0 +1,134 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{exam}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/pictures/teach/438/exam/}} % set of paths to search for images
+
+\usepackage[left=0.75in,right=0.75in,top=1in]{geometry}    
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolatazi4}
+\usepackage{microtype}
+
+\newfontfamily\DejaSans{DejaVu Sans}
+\newcommand\smiley{{\DejaSans ☺}}
+
+\usepackage{multicol}
+\usepackage{amsmath}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+\def\Semester{\ifthenelse{\number\month>8}
+	{F}%
+	{%
+		\ifthenelse{\number\month<4}
+		{S}%
+		{N}%
+	}%
+}
+
+\pagestyle{headandfoot}
+\firstpageheader{Biogeography, Exam 3, \Semester{}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{\iflastpage{Have a good break. Do great things!}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+\begin{document}
+
+\begin{questions}
+
+
+\question[5]
+I appreciate your patience during this version of Biogeography.  As my way of saying, “Thank you,” I will give you five free points if you write something heartfelt or snarky. Either is fine. Fun is good. 
+
+
+\vspace*{\stretch{0.75}}
+
+Time to get real.
+
+\question[2]
+About how many years did it take for anatomically modern humans to colonize the globe? You may write your answer in days if you want to do the math. \smiley{}
+
+\vspace*{\stretch{0.25}}
+
+\question[5]
+Describe nestedness on islands. Explain how filters can create a pattern of nestedness.
+
+\vspace*{\stretch{2}}
+
+\question[5]
+Explain the “island rule” and how \textit{Homo floresiensis} fits the rule. 
+
+\vspace*{\stretch{2}}
+
+\newpage
+
+\fullwidth{%
+\begin{multicols}{2}
+Watson et al. (2005) studied the Eastern Yellow Robin in a fragmented landscape. Fragment size and isolation is shown at right. Solid circles indicate fragments where the robin was present. Empty circles indicate fragments where the robin was absent. No fragment was larger than 1000 ha. 
+
+\columnbreak
+	\includegraphics[width=0.49\textwidth]{insular_distribution_robin}
+\end{multicols}
+}
+
+\question[3]
+What is the name of the function illustrated?
+
+\vspace*{\stretch{0.25}}
+
+\question[10]
+Suppose the robin is endangered. Describe how you can use information from the figure to increase the abundance of this species in the more isolated fragments (e.g., 3,000–6,000 km). Your answer must depend on the natural dispersal ability of the robin, which you can infer from the figure. You may not introduce the robin to any island. You may not kill other organisms that might be present. That goes against your conservation principles.
+
+
+\vspace*{\stretch{3}}
+
+\newpage
+
+%%% TUrn this into 15 point question. Have them name the different species, forms of H. sapiens, identify the specific regions (don't add regions not part of model, etc.)
+\question[10]
+Diagram and describe the difference between the multi-regional and the replacement hypotheses for human dispersal out of Africa. State which hypothesis is supported by genetic evidence. You do not need to discuss actual genetic evidence. 
+
+\newpage
+
+%% Turn into 10 point quesiton. TOo simple for 15 unless find information to add and ask about.
+\question[15]
+Recent evidence suggests that \textit{Homo neanderthalensis} went extinct due to climate change. Explain how the mild climate around the Mediterranean Sea may have allowed Neanderthals to survive longer across \textit{all} of Europe during the late Pleistocene. 
+
+%\vspace*{\stretch{2}}
+
+
+\newpage
+
+\question[20]
+Abbott's Duiker is a small antelope endemic to the fragmented Eastern Arc forests of Tanzania.  Known localities with the duiker are shown in the inset.  Assume you are given the task of increasing survivorship and movement of individuals between the southernmost and northernmost locations.  Apply whatever island biogeography or metapopulation concepts (or both) you think are necessary to accomplish this goal.  You must explain \textit{how} each concept you choose helps achieve the goal.  You must also discuss corridors and how / why they can contribute to your conservation goals. If you need more writing space for your novel, you may use the other side of this page.
+
+	\vspace{-\baselineskip}\null\hfill\includegraphics[width=0.7\textwidth]{abbott_duiker_distrib}
+
+	\begin{solution}[1in]
+	As the basin spreads, the taxa become less and less similar.
+	\end{solution}
+
+\end{questions}
+
+\end{document}

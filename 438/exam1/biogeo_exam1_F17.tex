@@ -1,0 +1,182 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{exam}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/pictures/teach/438/exam/}} % set of paths to search for images
+
+\usepackage[left=0.75in,right=0.75in,top=1in]{geometry}    
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\usepackage{microtype}
+
+\usepackage{multicol}
+\usepackage{amsmath}
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Biogeography, Exam 1, F\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+\begin{document}
+
+\begin{questions}
+
+\question[10]
+On the figure below, identify the eight terrestrial biogeographic regions. Draw horizontal lines that show the approximate north/south boundaries between each of the regions. You do not need to draw east/west boundaries. Identify the location of Wallace's Line.
+
+\ifprintanswers
+	\includegraphics[width=\textwidth]{globalmap_answer}	
+\else
+	\includegraphics[width=\textwidth]{GlobalMap}
+\fi
+
+\question[5]
+North American birds and mammals have various range sizes, from very small to very large.  In contrast, Eurasian birds and mammals tend to have only very large range sizes.  Explain the hypothesis that has been proposed to account for this discrepancy.
+
+	\begin{solution}
+	North America has mountain ranges that run north south that tend to act as barriers that limit the east-west range boundaries. Eurasia tends to have east-west running ranges so the east-west range boundaries are not restricted.
+	\end{solution}
+
+\newpage
+
+\question[10]
+Veter et al. (2013) examined whether Rapoport's rule applied to taxa that lived millions of years ago.  Below is a figure of their results.  Briefly explain Rapoport's Rule with regard to range size, then interpret their figure to explain whether their results are consistent with Rapoport's Rule. Explain each panel of the figure as it relates to the range size part of Rapoport's Rule.
+
+\begin{center}
+\includegraphics{paleorap.png} 
+\end{center}
+
+	\begin{solution}
+	Rapoport's rule says that geographic range size increase with higher latitudes. Also diversity decreases at higher latitudes (4 points).\vspace{\baselineskip}
+	
+	The Miocene and Pliocene show decreasing range size at higher latitudes so these periods are not consistent with Rapoport's Rule. The Pleistocene shows increasing range size at higher latitudes so that period is consistent with Rapoport. (2 points per panel).
+	\end{solution}
+
+\newpage
+
+
+\question
+\begin{parts}
+\part[2] 
+Below is the distribution of five families of freshwater crabs. To the left of the image, write the \emph{most likely} type of distribution displayed by the crabs.\vspace{2ex}
+
+\begin{minipage}{0.35\textwidth}%
+\ifprintanswers
+	\textbf{Gondwanan}
+\else
+	\hspace{0.35\textwidth}
+\fi
+\end{minipage}\begin{minipage}{0.45\textwidth}%
+	\hfill\includegraphics{crabdistrib}
+\end{minipage}
+
+\vspace{2ex}
+
+\part[8] 
+Klaus et al. (2011) examined whether the evolutionary relationships of the freshwater crabs were consistent with the distribution you just named.  Below left is a dendrogram that shows the order of the breakup of the land masses.  Below right is a phylogeny of the relationships among four of the crab families. Comparing the phylogeny to the dendrogram, explain whether the relationship of the crabs is consistent with a vicariant distribution. Provide two specific examples from the two trees to justify your answer. (Numbers in trees indicate time of divergence in millions of years ago (MYA). \textbf{NOTE TO SELF: Include earliest known fossil forms for taxa, wehre known?}\vspace{2ex}
+
+\includegraphics{crabgondwana.png}
+\end{parts}
+
+	\begin{solution}
+	
+	Overall, no. Consistent if you allow for Dispersal from Indomalaysia to Eurasia, placing most Indomalaysian taxa as basal to clade of Neotropics and Africa.  However, still have problems with Socotra and Madagascar.  Madagascar taxa are more closely related to African taxa. Madagascar taxa should be more closely related to Indomalaysian taxa. Madagascar taxa diverged from African taxa circa 76–73 MYA, well after the separation of Madagascar (and India) from Africa. Neotropical taxa more closely related to Socotra and Eurasia taxa rather than African taxa. Seychelles more closely related to one clade of African taxa rather than Indomalaysian/Madagascar taxa.
+	\end{solution}
+
+
+\newpage
+
+\question
+\begin{parts}
+\part[5]
+The figure below shows the similarity of coastal bivalves (clams and mussels) between North America and Europe. Briefly explain how and why bivalve similarity between North America and Europe is changing over time. (MYA = millions of years ago.)\vspace{2ex}
+
+\begin{minipage}{0.47\textwidth}%
+\ifprintanswers
+	\textbf{Similarity decreases with distance between the continents because continued speciation over time causes the continental faunas to become increasingly different. }
+\else
+	\hspace{0.47\textwidth}
+\fi
+\end{minipage}\begin{minipage}{0.45\textwidth}%
+	\hfill\includegraphics{atlanticbasin}
+\end{minipage}
+
+\vspace{2ex}
+
+\part[10]
+Briefly define or explain seafloor spreading and ridge push, and then describe how these processes together contribute to the pattern displayed in the figure above. You may draw a picture to aid your explanation.
+	\begin{solution}
+	Ridge push, seafloor spreading is moving the basins apart.
+	\end{solution}
+
+\end{parts}
+
+
+\newpage
+\question
+\begin{parts}
+\part[3]
+Briefly state what is the latitudinal diversity gradient.
+
+\ifprintanswers
+	\textbf{Species diversity is highest at low latitudes and decreases with increasing latitude.}\vspace*{\stretch{0.25}}
+\else
+	\vspace*{\stretch{0.25}}
+\fi
+
+
+\part[12]
+The Out-of-the-Tropics model has been proposed to explain the latitudinal diversity gradient. Use origination, extinction, 
+and immigration in tropical and extratropical regions to explain how the tropics act as cradles, museums, and immigration pumps, according to this model.
+
+\ifprintanswers
+	\vspace{2ex}
+	\textbf{4 points each.\\Cradles: $O_t > O_e.$\\Museum: $E_t < E_e.$\\ Immigration pump: $I_t < I_e.$ }\vspace*{\stretch{2}}
+\else
+	\vspace*{\stretch{2}}
+\fi
+
+\end{parts}
+
+
+\newpage
+
+\question[10]
+Stevens (1996) tested whether Pacific coastal fishes followed Rapoport's Rule. His results (below left) were consistent with the rule. Smith and Gaines (2003) analyzed Stevens' data in a different way.  Smith and Gaines got different results than Gaines. One part of their results is shown below right. Comparing the two figures below, explain how the results of Smith and Gaines differed from Stevens for range size and richness at it relates to Rapoport's Rule.
+\begin{center}
+\includegraphics{stevens1996} \hfill \includegraphics{smithgaines}
+\end{center}
+
+	\begin{solution}
+	Different bathymetric depths. Trend no longer applies.
+	\end{solution}
+
+
+
+
+
+
+\end{questions}
+
+\end{document}

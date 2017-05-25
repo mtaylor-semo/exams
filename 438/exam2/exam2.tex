@@ -1,0 +1,136 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{exam}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/pictures/teach/438/exam/}} % set of paths to search for images
+
+\usepackage[left=0.75in,right=0.75in,top=1in]{geometry}    
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolatazi4}
+\usepackage{microtype}
+
+\usepackage{multicol}
+\usepackage{amsmath}
+
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\firstpageheader{Biogeography, Exam 2, F\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+\begin{document}
+
+\begin{questions}
+
+
+\question[2]
+From when to when did the Pleistocene occur?
+
+\ifprintanswers 2.6 MYA -- 12 KYA \fi
+
+\vspace*{\stretch{0.75}}
+
+\question[5]
+Describe the albedo effect and how it contributed to expansion of Pleistocene glaciers.
+
+	\begin{solution}
+	Albedo is amount of light reflected away from earth. More glaciers would have reflected back more sun, leading to cooler temperatures.
+	\end{solution}
+
+\vspace*{\stretch{2}}
+
+
+\question[5]
+Describe the difference between the target effect and the rescue effect with respect to predicted and observed turnover rates.
+
+	\begin{solution}
+	Both are based on higher than expected immigration. Rescue effect occurs on ``near'' islands because high immigration reduces extinction rate (rescuing taxa), lowering the overall turnover rate. Target effect occurs on large islands because higher immigration (large target) replaces extinct taxa more often than expected, creating higher turnover rate.
+	\end{solution}
+
+\vspace*{\stretch{2}}
+
+
+\newpage
+
+\question[15]
+\begin{multicols}{2}
+The figure shows the distribution of three species of pika (rabbit relatives) in the Nearctic (stars and circles) and Palearctic (triangles). Write a clear and detailed hypothesis that includes \textit{one or more} refugia to explain this distribution and how each might have contributed to speciation. Include the proper name for each refugium and assume the pikas evolved from a single common ancestor.
+\columnbreak
+\begin{center}
+	\includegraphics[width=0.45\textwidth]{pika_distribution}
+\end{center}
+\end{multicols}
+
+
+\newpage
+
+
+\question[15]
+Australia was not covered by glaciers but climate change during the Pleistocene still caused range contraction and expansion for many taxa.  An Australian gecko, \textit{Heteronotia binoei}, has the distribution indicated by the black dots in the inset below.  The large gap in the distribution suggests one of two scenarios: post-Pleistocene range expansion or a long-term barrier to dispersal between the two regions. Strasburg et al. (2007) tested these alternate hypotheses. Below is a simplified version of their parsimony network.  Based on the network, state which hypothesis is supported and describe how the network supports the hypothesis you chose. 
+
+Each circle represents one allele. Shading corresponds to the population sampled; grey is the western cluster and white is the central cluster. Each line connecting two circles indicates one mutation difference between alleles.  Small dashes indicate additional mutational differences between alleles.
+
+	{\centering
+	\includegraphics[width=\textwidth]{gecko_network}\par}
+
+	\begin{solution}
+	The western (grey) clade shows considerable genetic diversity, suggesting it is older and was likely a refuge. The central (white) clade has little genetic diversity, suggesting it is much younger and therefore the result of recent range expansion.
+	\end{solution}
+
+\newpage
+
+\question[8]
+Draw and label the complete MacArthur-Wilson model of island biogeography. Be sure to label both axes of the model.
+
+\vspace*{\stretch{2}}
+
+\question[10]
+\begin{multicols}{2}
+Si et al. (2014) tested the MacArthur-Wilson model using 37 species of breeding birds living on islands in Thousand Island Lake, China. The following figure shows part of their results.  Based on the figure, tell whether their results are consistent with the MacArthur-Wilson model. Assume all islands are “near” islands. Clearly explain how you decided on your answer.
+\columnbreak
+\begin{center}
+	\includegraphics[width=0.45\textwidth]{island_turnover}
+\end{center}
+\end{multicols}
+
+\vspace*{\stretch{2}}
+
+\newpage
+
+\question[15]
+Use Lomolino's extension of the MacArthur-Wilson model of island biogeography to explain why endemism is high on large, isolated islands, as shown in the figure below.  
+
+\begin{minipage}{0.4\textwidth}
+	\hfill
+	\begin{solution}
+	Large islands provide resources to support abundance, different niches for adaptation. Isolation means little to no gene flow preventing evolution.
+	\end{solution}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\hfill \includegraphics[width=\textwidth]{lomolino_endemism}
+\end{minipage}
+
+
+\end{questions}
+
+\end{document}
