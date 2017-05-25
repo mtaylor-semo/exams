@@ -1,0 +1,12 @@
+Question to use with fangtooth
+
+Show image on screen. Ask students to state whether the fish more likely lives in the mesopelagic or bathypelagic zone, and explain one adaptation the fish exhibits to justify their answer. Then, have them explain a different adaptation that allows them to be successful predators (if you want to focus on feeding), or one adaptation for the deep sea in general.
+
+
+\question[10]
+Briefly explain two adaptive differences between mesopelagic and bathypelagic fishes. Be sure to explain why these adaptive differences exist relative to their habitat differences. Do not use bioluminescence.
+
+	\begin{solution}
+	Answer
+	\end{solution}
+\vspace*{\stretch{2}}

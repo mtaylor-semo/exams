@@ -19,24 +19,7 @@
 # *.eps
 # *.pdf
 
-## Lecture-related documents:
-*.doc
-*.docx
-*.ppt
-*.pptx
-*.xls
-*.xlsx
-*.jpg
-*.png
-*.psd
-*.ai
-*.dat
-*.pct
-*.gif
-*.pxm
-*.wmf
-*.zip
-*.txt
+## Misc
 *.Rhistory
 .DS_Store
 

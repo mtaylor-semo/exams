@@ -1,0 +1,38 @@
+2. -3 They will have about the same number of differences because they all trace back to the same common ancestor.
+
+3. -3 No differences. The constant amino acids don't vary at all among the organisms.
+
+4. -3 Same number of differences because they last shared common ancestors at the same time in the past.
+
+5. -2 Tree B is the correct tree.
+
+6. -2 Bolete. The rooting polypore has only 20 amino acid differences with the other boletes but 25 amino acid differences with the stinkhorns. Therefore, the rooting polypore shares a more recent ancestor with the boletes.
+
+7. -2 Ash-tree bolete and Frost's bolete. They differ by only 5 amino acids.
+
+8. -2 Only Tree C shows the fewest amino acid differences between birds and reptiles.
+
+9. -2 Tree B predicts no common ancestry between the two groups so they should not have the universal genetic code. Only A and C are supported by the evidence.
+
+10. -2 All three trees predict the reptile-mammal transition. Don’t fall into the trap of thinking the longest line is the organism at the tip. Flip the position of the bird and reptile and you have a reptile/mammal transition but the relationship between reptile and bird has not changed.
+
+10 -2 All three trees predict the reptile-mammal transition.  Don’t fall into the trap of thinking the longest line is the organism at the tip. Flip the position of the mammal and reptile and you have a reptile/mammal transition but the relationship between reptile and mammal has not changed.
+    
+10 -2 All three trees predict a transition between reptiles and mammals.
+
+11. -2 Tree C predicts reptile-amphibian.
+
+12. -2 Tree C shows all transitions studied in class (fish-amphibian, reptile-mammal, and reptile-bird) in about the same order.
+
+15. -2 TAC GGC CTC AAA TGT GCG ACA CTT ATT
+
+16. -2 UAC GGC CUC AAA UGU GCG ACA CUU AUU
+
+17. -2 Met-Pro-Glu-Phe-Thr-Cys-Glu-Stop
+
+18. -4 All have exactly the same universal code so all will be translated and make the proper protein. Remember I mentioned insulin in class?
+
+
+
+
++2 extra credit for early submission. See feedback file for comments.

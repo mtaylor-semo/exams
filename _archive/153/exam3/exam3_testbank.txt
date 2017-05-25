@@ -1,0 +1,7 @@
+30) Seasonal changes in snake activity are due to the fact that the snake
+A) is less active in winter because the food supply is decreased.
+B) is less active in winter because it does not need to avoid predators.
+C) is more active in summer because that is the period for mating.
+\correctchoice is more active in summer because it can gain body heat by conduction.
+E) is more active in summer as a result of being disturbed by other animals.
+

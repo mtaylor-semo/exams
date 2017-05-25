@@ -1,0 +1,83 @@
+\question
+Which of the following does not appear to be an important biotic controlling factor of zonation in the rocky intertidal zone?
+\begin{choices}
+\correctchoice  Parasitism
+\choice  Competition 
+\choice Predation
+\choice Grazing
+\choice Larval recruitment
+\end{choices}
+
+\question
+The outwelling hypothesis refers to
+\begin{choices}
+\correctchoice the export of excess primary production from high productivity estuaries.
+\choice the export of larval individuals from estuary nursery grounds to the open ocean.
+\choice the export of organic material out of the estuary by a microbial loop.
+\choice the enhancement of offshore productivity due to larval individuals leaving low productivity estuaries.
+\choice the loss of primary productivity to consumers in low productivity estuaries.
+\end{choices}
+
+\question
+Which one or more of the following features are major contributors to zonation in sandy beaches?
+
+\begin{enumerate}
+\item Space
+\item Competition 
+\item Predation
+\item Wave action
+\item Sediment particle size
+\end{enumerate}
+
+\begin{choices}
+\choice 1 and 2
+\choice 1 and 3 
+\correcctchoice 4 and 5
+\choice 3 and 5
+\choice 2 and 4
+\end{choices}
+
+\question
+An osmoconformer  is \rule{1in}{0.4pt}
+
+\begin{choices}
+\choice an estuarine organism whose blood salinity conforms to open ocean salinity.
+\choice an organism that maintains a constant blood salinity at any external salinity.
+\correctchoice an organism whose blood salinity matches any  external salinity.
+\choice an organism that maintains a constant rate of osmoregulation.
+\choice any stenohaline organism.
+\choice any euryhaline organism.
+\choice an organism whose rate of osmoregulation conforms to the rate of oxygen exchange.
+\end{choices}
+
+
+Two ways in which light can limit primary production of phytoplankton in an estuary:
+
+1) Turbidity limits production because not enough light.
+2) Water too clear, intensity is too great, also limiting production
+
+
+Why are stenohaline animals more likely to be located deeper in the water column the farther up the estuary they are found?
+
+True/False
+==========
+[False] The number and order of zones is identical between the rocky intertidal and the rocky subtidal.
+
+[True] Silt can hold more water in the interstitial spaces than sand.
+[False] Sand retains more water than silt.
+
+[True] There is very little primary production on open sand beaches.
+
+[True] Mud flats are unusual in that they possess two different layers where primary production may occur: the surface, where photosynthesis occurs, and a deeper layer, where chemosynthesis occurs. [REWORD]
+
+[True] Spring tides occur when the sun and the moon are directly aligned.
+[False] Neap tides occur when the sun and the moon are directly aligned.
+
+[False] Wave action causes bioturbation.
+
+\question[5]
+Briefly explain bioturbation and how it affects the depth of the aerobic zone in a soft-bottom littoral community.
+	\begin{solution}
+	Bioturbation occurs when burrowing organisms disturb the sediment. This increases oxygen penetration deeper into the sediments, deeping the aerobic zone. 
+	\end{solution}
+\vspace*{\stretch{1}}
