@@ -1,0 +1,60 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\showpoints
+
+\question[15]
+The table shows the presence and absence of six homologies (1–6) among seven species (A–G). Use these data to draw a phylogenetic tree. Draw a tick mark across the branch of each common ancestor and label the homology that unites that clade.
+
+\vspace*{\baselineskip}
+
+\begin{longtable}{@{}lrrrrrr@{}}
+\toprule
+	&	1	&	2	&	3	&	4	&	5	& 6 \tabularnewline
+\midrule
+A	&	0	&	0	&	0	&	1	&	0	&	1 \tabularnewline
+B	&	0	&	0	&	1	&	1	&	1	&	0 \tabularnewline
+C	&	1	&	0	&	0	&	1	&	0	&	1 \tabularnewline
+D	&	0	&	1	&	1	&	1	&	0	&	0 \tabularnewline
+E	&	1	&	0	&	0	&	1	&	0	&	1 \tabularnewline
+F	&	0	&	0	&	1	&	1	&	1	&	0 \tabularnewline
+G	&	0	&	1	&	1	&	1	&	0	&	0 \tabularnewline
+\bottomrule
+\end{longtable}
+
+\vspace*{2\baselineskip}
+
+\begin{AnswerPage}{5in}
+
+\centering
+
+\begin{forest}
+  mytree,
+    [[,name=ALL
+		[,name=CEA
+			[,name=CE
+				[C]
+				[E]
+			]
+			[A]
+		]
+		[,name=BFDG
+			[,name=BF
+				[B]
+				[F]
+			]
+			[,name=DG
+				[D]
+				[G]
+			]
+		]
+    ]]
+    \draw [thick] ([xshift=-2mm, yshift=-5mm] CE.base)--+(0:4mm) node [right] {1};
+    \draw [thick] ([xshift=-2mm, yshift=-5mm] CEA.base)--+(0:4mm) node [right] {6};
+    \draw [thick] ([xshift=-2mm, yshift=-5mm] BF.base)--+(0:4mm) node [right] {5};
+    \draw [thick] ([xshift=-2mm, yshift=-5mm] DG.base)--+(0:4mm) node [right] {2};
+    \draw [thick] ([xshift=-2mm, yshift=-5mm] BFDG.base)--+(0:4mm) node [right] {3};
+    \draw [thick] ([xshift=-2mm, yshift=-5mm] ALL.base)--+(0:4mm) node [right] {4};
+\end{forest}
+
+\end{AnswerPage}

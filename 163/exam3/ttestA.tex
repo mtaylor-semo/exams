@@ -1,0 +1,53 @@
+\showpoints
+
+\question[6]
+\begin{multicols}{2}
+You performed a \textit{t}-test to compare a variable between two populations.
+The sample size from \emph{each} population was 6 individuals. You calculated
+$t = 2.21.$ Using $\alpha = 0.05$, do you accept or reject the null hypothesis?
+Explain how you used the table at right to decide, including specific numbers.
+
+
+\columnbreak
+
+\setbox\ltmcbox\vbox{
+\makeatletter\col@number\@ne
+{\setlength{\LTcapwidth}{2.2in}\tablenumbers
+\begin{longtable}{@{}R{0.35in}R{0.35in}R{0.35in}R{0.35in}R{0.35in}@{}}
+	\caption{Critical values of $t$.\label{tab:ttable}} \tabularnewline
+	\toprule
+	& \multicolumn{4}{c}{$\alpha$} \\
+	\cmidrule(l){2-5}
+	df & 0.10 & 0.05 & 0.02 & 0.01 \tabularnewline
+	\midrule
+	1 & 6.31 & 12.71 & 31.82 & 63.66 \tabularnewline
+	2 & 2.92 & 4.30 & 6.96 & 9.92 \tabularnewline
+	3 & 2.35 & 3.18 & 4.54 & 5.84 \tabularnewline
+	4 & 2.13 & 2.78 & 3.75 & 4.60 \tabularnewline
+	5 & 2.02 & 2.57 & 3.36 & 4.03 \tabularnewline
+	6 & 1.94 & 2.45 & 3.14 & 3.71 \tabularnewline
+	7 & 1.89 & 2.36 & 3.00 & 3.50 \tabularnewline
+	8 & 1.86 & 2.31 & 2.90 & 3.36 \tabularnewline
+	9 & 1.83 & 2.26 & 2.82 & 3.25 \tabularnewline
+	10 & 1.81 & 2.23 & 2.76 & 3.17 \tabularnewline
+	11 & 1.80 & 2.20 & 2.72 & 3.11 \tabularnewline
+	12 & 1.78 & 2.18 & 2.68	& 3.06 \tabularnewline
+	\bottomrule
+\end{longtable}}
+\unskip
+\unpenalty
+\unpenalty}
+\unvbox\ltmcbox
+
+
+\end{multicols}
+
+
+
+\begin{solution}
+
+Accept null hypothesis. Degrees of freedom is 10, so critical $t = 2.23.$ 
+Calculated $t = 2.21,$ which is lower than the table value. If the calculated
+value is lower than the tabled value, then you accept (or fail to reject) the null hypothesis.
+
+\end{solution}

@@ -1,0 +1,59 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+
+\printanswers
+
+\def\ExamCopy{\textsc{a}}
+
+\input{163_exam2_preamble.tex}
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used. No term is used twice. 2 points each.}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.7\baselineskip}
+
+\input{matchingA.tex}
+
+\showpoints
+
+\input{time_match1}
+
+\pagebreak
+
+\hidepoints
+
+\fullwidth{Multiple choice. Choose the \emph{best} answer.  Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect. 2 points each.}
+
+\input{multiplechoiceA.tex}
+
+\input{medessay1.tex}
+
+\vskip0pt plus 1filll
+
+\fullwidth{%
+Circle True or False. Read each statement completely and at face value before answering. 2 points each.}
+
+\input{truefalseA.tex}
+
+\showpoints
+
+%\input{shortessay1.tex}
+
+\newpage
+
+\input{phylo_interpret.tex}
+
+%\input{transitional_form_prediction.tex}
+
+\newpage
+
+\input{tree_draw1}
+
+
+\end{questions}
+
+\end{document}

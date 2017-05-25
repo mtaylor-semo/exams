@@ -1,0 +1,60 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+%\usepackage{ifthen}
+\usepackage{xstring}
+
+%\printanswers
+\def\ExamCopy{c}
+
+\input{163_exam1_preamble.tex}
+
+\fullwidth{%
+Circle True or False.  Read each statement completely before answering.
+}
+
+\input{truefalseC.tex}
+
+\fullwidth{Multiple choice. Choose the \emph{best} answer.  Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect.}
+
+\input{multiplechoiceC.tex}
+
+%\vspace*{\stretch{1}}
+
+\input{classification_question}
+
+%\vspace*{\stretch{1}}
+
+\newpage
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used. No term is used twice.}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.7\baselineskip}
+
+\input{matchingC.tex}
+
+%\vspace*{\stretch{1}}
+
+\input{shortessay1}
+
+\newpage
+
+%\input{phylo_testingC}
+\input{hwe_problemC_flowers_disruptive}
+
+
+%\newpage
+
+%\input{phylo_tree_question}
+
+\newpage
+
+\input{scientific_methodC}
+
+\end{questions}
+
+\end{document}

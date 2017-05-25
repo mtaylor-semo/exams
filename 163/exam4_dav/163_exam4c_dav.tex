@@ -1,0 +1,61 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+
+\usepackage[version=4]{mhchem}
+
+%\printanswers
+\def\ExamCopy{\textsc{c\,jd}}
+
+\input{163_exam4_preamble.tex}
+
+\fullwidth{%
+Circle True or False.  Read each statement completely before answering.
+}
+
+\input{truefalseC.tex}
+
+\vspace*{2\baselineskip}
+
+\showpoints
+
+\input{bide.tex}
+
+\hidepoints
+
+\fullwidth{Multiple choice. Choose the \emph{best} answer.  Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect.}
+
+\input{multiplechoiceC.tex}
+
+\showpoints
+
+
+\newpage
+
+\fullwidth{Match the \emph{most appropriate} term to each concept.  Not all terms are used. No term is used twice.}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.7\baselineskip}
+
+\input{matchingC.tex}
+
+\showpoints
+
+\vfill
+
+\hfill {\footnotesize Almost there. Turn the page for the last question.}
+
+\newpage
+
+\input{intermediate_disturbance_graph.tex}
+
+\vfill
+
+Count the day as lost that you do not learn something new. Stay curious, do good things, and have a great break!
+
+\end{questions}
+
+\end{document}
