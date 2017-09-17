@@ -1,0 +1,35 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+%\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, Numbers={Proportional, Lining}]{\mainfont}
+\setsansfont[Ligatures={Common,TeX}, Scale=MatchLowercase, Numbers={Proportional,Lining}]\mainfont
+
+%\newfontface\lining[Numbers={Lining}]\mainfont
+
+\usepackage{graphicx}
+%	\graphicspath{{/Users/goby/Documents/teach/163/_current_semester/}} % set of paths to search for images
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\newcommand\examname{exam1_f17.pdf}
+\begin{document}
+%
+
+\begin{frame}[t]{Exam 1: $\overline{X}$ = 73.3 $\pm$ 13.0 points.}
+	\centering
+	\includegraphics[page = 1, width = 1\textwidth]{\examname}\\
+	\vspace*{-2\baselineskip}
+	\large Number of Students
+\end{frame}
+
+\end{document}
