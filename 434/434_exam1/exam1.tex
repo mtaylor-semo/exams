@@ -6,7 +6,7 @@
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={Proportional}]{\mainfont}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={Proportional, OldStyle}]{\mainfont}
 %\setmonofont[Scale=MatchLowercase]{Inconsolata} 
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
@@ -57,14 +57,14 @@
 \newcommand*\AnswerBox[2]{%
     \parbox[t][#1]{0.92\textwidth}{%
     \begin{solution}#2\end{solution}}
-    \vspace*{\stretch{1}}
+    \vspace{\stretch{1}}
 }
 
 \newenvironment{AnswerPage}[1]
     {\begin{minipage}[t][#1]{0.92\textwidth}%
     \begin{solution}}
     {\end{solution}\end{minipage}
-    \vspace*{\stretch{1}}}
+    \vspace{\stretch{1}}}
 
 \newlength{\basespace}
 \setlength{\basespace}{5\baselineskip}
@@ -77,26 +77,18 @@
 
 \begin{questions}
 
-\question[10]
-Explain the difference between a community, an assemblage, and an ecosystem.
+\question[5]
+Explain the relationship between ecosystem structure and ecosystem function.
 
-	\begin{AnswerPage}{0.4\textheight}%
-	\emph{3 points each.}
+	\AnswerBox{0.1\textheight}{%
+	Structure describes the species present. Function describes the ecological role of each species present.}
 	
-	\vspace*{\baselineskip}
-	
-	Community: All of the different species together in the same area, potentially interacting with each other.
-	
-	\vspace*{\baselineskip}
-	
-	Assemblage: All of the individuals of different species that the same type (e.g., fishes) or are similar in function (e.g., a guild) together in the same area.
-	
-	\vspace*{\baselineskip}
+\question[5]
+I listed five requirements for ecosystem-based management. List and briefly explain any two of them.
 
-	Ecosystem: All of the different species together in the same area, potentially interacting with each other, and their interactions with the abiotic environment.
-	
-	\end{AnswerPage}
-
+\AnswerBox{0.3\textheight}{%
+	2.5 points each.
+}
 
 \question[10]
 Explain the difference between ecosystem function and ecosystem services and the relationship between them. Provide an example of your choosing to show this relationship.
@@ -183,7 +175,7 @@ Explain how complementarity increases ecosystem function.
 \newpage
 
 \question[10]
-Explain the difference between the insurance hypothesis and the portfolio effect.  Explain how these confer stability under the high redundancy model of ecosystem function.
+Compare and contrast the insurance hypothesis and the portfolio effect.  Explain how these confer stability under the high redundancy model of ecosystem function.
 
 	\begin{AnswerPage}{0.4\textheight}%
 	\emph{3 points for each explanation of effects, plus 3 points for the stability/redundancy explanation.}
