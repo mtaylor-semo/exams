@@ -1,16 +1,21 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[11pt]{exam}
+\documentclass[11pt, addpoints]{exam}
+
+\printanswers
+
 \usepackage{graphicx}
-	\graphicspath{{/Users/goby/pictures/teach/438/exam/}} % set of paths to search for images
+	\graphicspath{%
+	{/Users/goby/pictures/teach/438/exam/}
+	{/Users/goby/pictures/teach/438/lectures/}} % set of paths to search for images
 
 \usepackage[left=0.75in,right=0.75in,top=1in]{geometry}    
 
 \usepackage{fontspec}
 \setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
 \setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
-\setmonofont[Scale=MatchLowercase]{Inconsolata}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O}
 \usepackage{microtype}
 
 \usepackage{multicol}
@@ -21,7 +26,7 @@
 
 \pagestyle{headandfoot}
 \firstpageheader{Biogeography, Exam 1, F\short{\year}}{}{%
-	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+	\ifprintanswers\textbf{KEY \numpoints~pts}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
@@ -33,129 +38,199 @@
 
 
 %% Remove comment %% to print answer key.
-%\printanswers
 \unframedsolutions
 \renewcommand{\solutiontitle}{}
 \SolutionEmphasis{\bfseries}
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
 
 \begin{document}
 
 \begin{questions}
 
-\question[10]
-On the figure below, identify the eight terrestrial biogeographic regions. Draw horizontal lines that show the approximate north/south boundaries between each of the regions. You do not need to draw east/west boundaries. Identify the location of Wallace's Line.
-
-\ifprintanswers
-	\includegraphics[width=\textwidth]{globalmap_answer}	
-\else
-	\includegraphics[width=\textwidth]{GlobalMap}
-\fi
-
 \question[5]
 North American birds and mammals have various range sizes, from very small to very large.  In contrast, Eurasian birds and mammals tend to have only very large range sizes.  Explain the hypothesis that has been proposed to account for this discrepancy.
 
-	\begin{solution}
+	\AnswerBox{\basespace}{%
 	North America has mountain ranges that run north south that tend to act as barriers that limit the east-west range boundaries. Eurasia tends to have east-west running ranges so the east-west range boundaries are not restricted.
-	\end{solution}
+	}
 
-\newpage
-
-\question[10]
-Veter et al. (2013) examined whether Rapoport's rule applied to taxa that lived millions of years ago.  Below is a figure of their results.  Briefly explain Rapoport's Rule with regard to range size, then interpret their figure to explain whether their results are consistent with Rapoport's Rule. Explain each panel of the figure as it relates to the range size part of Rapoport's Rule.
-
-\begin{center}
-\includegraphics{paleorap.png} 
-\end{center}
-
-	\begin{solution}
-	Rapoport's rule says that geographic range size increase with higher latitudes. Also diversity decreases at higher latitudes (4 points).\vspace{\baselineskip}
-	
-	The Miocene and Pliocene show decreasing range size at higher latitudes so these periods are not consistent with Rapoport's Rule. The Pleistocene shows increasing range size at higher latitudes so that period is consistent with Rapoport. (2 points per panel).
-	\end{solution}
-
-\newpage
-
-
-\question
-\begin{parts}
-\part[2] 
-Below is the distribution of five families of freshwater crabs. To the left of the image, write the \emph{most likely} type of distribution displayed by the crabs.\vspace{2ex}
-
-\begin{minipage}{0.35\textwidth}%
-\ifprintanswers
-	\textbf{Gondwanan}
-\else
-	\hspace{0.35\textwidth}
-\fi
-\end{minipage}\begin{minipage}{0.45\textwidth}%
-	\hfill\includegraphics{crabdistrib}
-\end{minipage}
-
-\vspace{2ex}
-
-\part[8] 
-Klaus et al. (2011) examined whether the evolutionary relationships of the freshwater crabs were consistent with the distribution you just named.  Below left is a dendrogram that shows the order of the breakup of the land masses.  Below right is a phylogeny of the relationships among four of the crab families. Comparing the phylogeny to the dendrogram, explain whether the relationship of the crabs is consistent with a vicariant distribution. Provide two specific examples from the two trees to justify your answer. (Numbers in trees indicate time of divergence in millions of years ago (MYA). \textbf{NOTE TO SELF: Include earliest known fossil forms for taxa, wehre known?}\vspace{2ex}
-
-\includegraphics{crabgondwana.png}
-\end{parts}
-
-	\begin{solution}
-	
-	Overall, no. Consistent if you allow for Dispersal from Indomalaysia to Eurasia, placing most Indomalaysian taxa as basal to clade of Neotropics and Africa.  However, still have problems with Socotra and Madagascar.  Madagascar taxa are more closely related to African taxa. Madagascar taxa should be more closely related to Indomalaysian taxa. Madagascar taxa diverged from African taxa circa 76–73 MYA, well after the separation of Madagascar (and India) from Africa. Neotropical taxa more closely related to Socotra and Eurasia taxa rather than African taxa. Seychelles more closely related to one clade of African taxa rather than Indomalaysian/Madagascar taxa.
-	\end{solution}
-
-
-\newpage
 
 \question
 \begin{parts}
 \part[5]
-The figure below shows the similarity of coastal bivalves (clams and mussels) between North America and Europe. Briefly explain how and why bivalve similarity between North America and Europe is changing over time. (MYA = millions of years ago.)\vspace{2ex}
+ 
+\begin{multicols}{2}
 
-\begin{minipage}{0.47\textwidth}%
-\ifprintanswers
-	\textbf{Similarity decreases with distance between the continents because continued speciation over time causes the continental faunas to become increasingly different. }
-\else
-	\hspace{0.47\textwidth}
-\fi
-\end{minipage}\begin{minipage}{0.45\textwidth}%
-	\hfill\includegraphics{atlanticbasin}
-\end{minipage}
+Explain the relationship between body mass and geographic range size shown in the figure.
 
-\vspace{2ex}
+\columnbreak
 
-\part[10]
-Briefly define or explain seafloor spreading and ridge push, and then describe how these processes together contribute to the pattern displayed in the figure above. You may draw a picture to aid your explanation.
-	\begin{solution}
-	Ridge push, seafloor spreading is moving the basins apart.
-	\end{solution}
+\includegraphics[width=0.45\textwidth]{range_size_area_mass}
+
+\end{multicols}
+
+\vspace*{4\baselineskip}
+
+\part[5]
+Explain why the range size for almost none of the mammals falls below the diagonal dashed line. 
+
+\AnswerBox{2\basespace}{%
+Answer here.
+}
+
 
 \end{parts}
 
 
+
+
+%\question[10]
+%What is the name for pattern shown in the four panels of the figure below. Explain two reasons why this pattern is not universal for all taxa. Think broadly for all taxa. Do not use the fish and bird examples for the readings. %This pattern has been found for many taxa but does not appear to be universal. 
+%
+%\begin{multicols}{2}
+%
+%	\begin{AnswerPage}{1\basespace}
+%	Rapoport's rule. (2 points.)\bigskip
+%	
+%	Reason 1.(4 pts).\bigskip
+%	
+%	Reason 2. (4 pts). 
+%	\end{AnswerPage}
+%
+%\columnbreak
+%  \hfill \includegraphics{rapo_pattern} 
+%  
+%\end{multicols}
+%
+%\vspace*{\stretch{2}}
+
 \newpage
+
+
+\question
+
+\begin{parts}
+\part[3]
+
+{\raggedcolumns
+\begin{multicols}{3}
+This figure, based on African catarrhine primates, illustrates a common biogeographic pattern. In 1–2 sentences, describe what this figure illustrates.
+
+\bigskip
+
+\ifprintanswers \textbf{Small geographic range size.} \fi
+
+\columnbreak
+
+\hfill \includegraphics{catarrhine.png}
+
+\end{multicols}
+}%ragged columns
+
+	\vspace*{4\baselineskip}
+
+\part[4]
+Explain the difference between the fundamental and realized geographic range. 
+
+
+\AnswerBox{5\baselineskip}{%
+The fundamental geo.~range describes the geographic range that can be potentially occupied by a species. The realized range is the range actually occupied by a species after accounting for disturbance, competition, habitat quality, etc.
+}
+
+\part[4]
+Explain how habitat quality can influence the range size of a species.
+
+\AnswerBox{5\baselineskip}{%
+Habitat quality\dots
+}
+
+\part[4] 
+Explain how competition with other species can influence the geographic range size a species.
+
+\AnswerBox{5\baselineskip}{%
+Competition\dots
+}
+
+
+\end{parts}
+
+\newpage
+
+\question[12]
+{\raggedcolumns
+\begin{multicols}{2}
+Explain why arid regions like the Sahara Desert are concentrated around 30° latitude. Begin your explanation with solar input at the equator. You may use the figure as a guide.
+
+
+\ifprintanswers \textbf{Dry air descends, warms back up, sucks moisture out of the ground.} \fi
+
+\columnbreak
+
+	\hfill \includegraphics[width=0.45\textwidth]{climate_hadley_cells}
+
+\end{multicols}
+}% ragged columns
+
+\vspace*{\stretch{5}}
+
+\question[3]
+What physical geographic feature can also lead to desert formation?  Name this effect.
+
+\AnswerBox{4\baselineskip}{%
+Mountains create rainshadows.
+}
+
+\newpage
+
 \question
 \begin{parts}
 \part[3]
-Briefly state what is the latitudinal diversity gradient.
+Draw and briefly state what is the latitudinal diversity gradient.
 
-\ifprintanswers
-	\textbf{Species diversity is highest at low latitudes and decreases with increasing latitude.}\vspace*{\stretch{0.25}}
-\else
-	\vspace*{\stretch{0.25}}
-\fi
+\AnswerBox{2\baselineskip}{%
+	\textbf{Species diversity is highest at low latitudes and decreases with increasing latitude.}
+}
 
+\part[5]
+Briefly explain how high net primary productivity contributes to the latitudinal gradient.
+
+\AnswerBox{2\baselineskip}{
+High \textsc{npp}\dots
+}
 
 \part[12]
-The Out-of-the-Tropics model has been proposed to explain the latitudinal diversity gradient. Use origination, extinction, 
-and immigration in tropical and extratropical regions to explain how the tropics act as cradles, museums, and immigration pumps, according to this model.
+Use relative rates of origination, extinction, and immigration to explain the Out-of-the-Tropics concepts of cradles, museums, and immigration pumps. Tell how these concepts together could explain the latitudinal diversity gradient. You may include an illustration to support your explanation.
 
-\ifprintanswers
+%The Out-of-the-Tropics model has been proposed to explain the latitudinal diversity gradient. Use origination, extinction, and immigration in tropical and extratropical regions to explain how the tropics act as cradles, museums, and immigration pumps, according to this model.
+
+\begin{AnswerPage}{4\basespace}
 	\vspace{2ex}
-	\textbf{4 points each.\\Cradles: $O_t > O_e.$\\Museum: $E_t < E_e.$\\ Immigration pump: $I_t < I_e.$ }\vspace*{\stretch{2}}
-\else
-	\vspace*{\stretch{2}}
-\fi
+	
+	4 points each.\bigskip
+	
+	Cradles: $O_t > O_e.$\bigskip
+	
+	Museum: $E_t < E_e.$\bigskip
+	
+	Immigration pump: $I_t < I_e.$ \bigskip
+	
+	Because origination is high and extinction is low in the tropics, species tend to accumulate in the tropics. Some taxa however do emigrate out of the tropics and immigrate into extra tropical regions. The tropics act as a source of taxa to extratropical regions but overall accumulation is highest in the tropics, leading to higher diversity in the tropics than in extratropical regions.
+	
+\end{AnswerPage}
 
 \end{parts}
 
