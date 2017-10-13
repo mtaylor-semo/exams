@@ -4,21 +4,22 @@
 \showpoints
 
 \question[15]
-The table shows the presence and absence of six homologies (1–6) among seven species (A–G). Use these data to draw a phylogenetic tree. Draw a tick mark across the branch of each common ancestor and label the homology that unites that clade.
+The table shows the presence and absence of seven homologies (1–7) among eight species (A–H). Use these data to draw a phylogenetic tree. Draw a tick mark across the branch of each common ancestor and label the homology that unites that clade.
 
 \vspace*{\baselineskip}
 
-\begin{longtable}{@{}lrrrrrr@{}}
+\begin{longtable}{@{}lrrrrrrr@{}}
 \toprule
-	&	1	&	2	&	3	&	4	&	5	& 6 \tabularnewline
+	& 1	& 2	& 3	& 4	& 5	& 6	& 7	\tabularnewline
 \midrule
-A	&	1	&	0	&	0	&	1	&	1	&	1 \tabularnewline
-B	&	0	&	0	&	0	&	0	&	0	&	1 \tabularnewline
-C	&	1	&	1	&	0	&	0	&	0	&	1 \tabularnewline
-D	&	1	&	0	&	1	&	1	&	0	&	1 \tabularnewline
-E	&	1	&	1	&	0	&	0	&	0	&	1 \tabularnewline
-F	&	1	&	0	&	1	&	1	&	0	&	1 \tabularnewline
-G	&	1	&	0	&	0	&	1	&	1	&	1 \tabularnewline
+A	& 1	& 0	& 0	& 1	& 1	& 1 & 0	\tabularnewline
+B	& 0	& 0	& 0	& 0	& 0	& 1 & 1	\tabularnewline
+C	& 1	& 1	& 0	& 0	& 0	& 1 & 0	\tabularnewline
+D	& 1	& 0	& 1	& 1	& 0	& 1 & 0	\tabularnewline
+E	& 1	& 1	& 0	& 0	& 0	& 1 & 0	\tabularnewline
+F	& 1	& 0	& 1	& 1	& 0	& 1 & 0	\tabularnewline
+G	& 1	& 0	& 0	& 1	& 1	& 1 & 0 \tabularnewline
+H	& 0	& 0	& 0	& 0	& 0	& 1	& 1	\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -46,7 +47,10 @@ G	&	1	&	0	&	0	&	1	&	1	&	1 \tabularnewline
 				[E]
 			]
 		]
-		[B]
+		[,name=BH
+		 [B]
+		 [H]
+		]
     ]]
     \draw [thick] ([xshift=-2mm, yshift=-5mm] AG.base)--+(0:4mm) node [right] {5};
     \draw [thick] ([xshift=-2mm, yshift=-5mm] DF.base)--+(0:4mm) node [right] {3};
@@ -54,6 +58,7 @@ G	&	1	&	0	&	0	&	1	&	1	&	1 \tabularnewline
     \draw [thick] ([xshift=-2mm, yshift=-5mm] CE.base)--+(0:4mm) node [right] {2};
     \draw [thick] ([xshift=-2mm, yshift=-5mm] AGDFC.base)--+(0:4mm) node [right] {1};
     \draw [thick] ([xshift=-2mm, yshift=-5mm] ALL.base)--+(0:4mm) node [right] {6};
+    \draw [thick] ([xshift=-2mm, yshift=-5mm] BH.base)--+(0:4mm) node [right] {7};
 \end{forest}
 
 \end{AnswerPage}

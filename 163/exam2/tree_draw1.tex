@@ -4,21 +4,22 @@
 \showpoints
 
 \question[15]
-The table shows the presence and absence of six homologies (1–6) among seven species (A–G). Use these data to draw a phylogenetic tree. Draw a tick mark across the branch of each common ancestor and label the homology that unites that clade.
+The table shows the presence and absence of seven homologies (1–7) among eight species (A–H). Use these data to draw a phylogenetic tree. Draw a tick mark across the branch of each common ancestor and label the homology that unites that clade.
 
 \vspace*{\baselineskip}
 
-\begin{longtable}{@{}lrrrrrr@{}}
+\begin{longtable}{@{}lrrrrrrr@{}}
 \toprule
-	&	1	&	2	&	3	&	4	&	5	& 6 \tabularnewline
+	& 1	& 2	& 3	& 4	& 5	& 6	& 7	\tabularnewline
 \midrule
-A	&	0	&	1	&	1	&	0	&	0	&	1 \tabularnewline
-B	&	0	&	1	&	0	&	1	&	1	&	0 \tabularnewline
-C	&	0	&	1	&	0	&	0	&	1	&	0 \tabularnewline
-D	&	1	&	1	&	1	&	0	&	0	&	1 \tabularnewline
-E	&	1	&	1	&	1	&	0	&	0	&	1 \tabularnewline
-F	&	0	&	1	&	0	&	1	&	1	&	0 \tabularnewline
-G	&	0	&	1	&	1	&	0	&	0	&	0 \tabularnewline
+A	& 0	& 1	& 1	& 0	& 0	& 1	& 0	\tabularnewline
+B	& 0	& 1	& 0	& 1	& 1	& 0	& 0	\tabularnewline
+C	& 0	& 1	& 0	& 0	& 1	& 0 & 1 \tabularnewline
+D	& 1	& 1	& 1	& 0	& 0	& 1 & 0	\tabularnewline
+E	& 1	& 1	& 1	& 0	& 0	& 1	& 0	\tabularnewline
+F	& 0	& 1	& 0	& 1	& 1	& 0	& 0	\tabularnewline
+G	& 0	& 1	& 1	& 0	& 0	& 0	& 0	\tabularnewline
+H	& 0	& 1	& 0	& 0	& 1	& 0	& 1	\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -46,7 +47,10 @@ G	&	0	&	1	&	1	&	0	&	0	&	0 \tabularnewline
 				[F]
 				[B]
 			]
-			[C]
+			[,name=CH
+			 [C]
+			 [H]
+			]
 		]
     ]]
     \draw [thick] ([xshift=-2mm, yshift=-6mm] DE.base)--+(0:4mm) node [right] {1};
@@ -55,6 +59,7 @@ G	&	0	&	1	&	1	&	0	&	0	&	0 \tabularnewline
     \draw [thick] ([xshift=-2mm, yshift=-5mm] FB.base)--+(0:4mm) node [right] {4};
     \draw [thick] ([xshift=-2mm, yshift=-5mm] CFB.base)--+(0:4mm) node [right] {5};
     \draw [thick] ([xshift=-2mm, yshift=-5mm] ALL.base)--+(0:4mm) node [right] {2};
+    \draw [thick] ([xshift=-2mm, yshift=-5mm] CH.base)--+(0:4mm) node [right] {7};
 \end{forest}
 
 \end{AnswerPage}
