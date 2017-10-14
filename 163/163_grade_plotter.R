@@ -2,10 +2,14 @@ library(ggplot2)
 library(ggthemes)
 library(extrafont)
 
+# Registers ttf fonts for use with PDF output (ggsave), 
+# enables them to be saved in PDF file (embed_fonts).
+loadfonts() 
+
 #Change exam name and numbers for each grade.
 # Number is order from A to F.
-exam_name <- "exam1_f17.pdf"
-Number <- c(9,23,27,20,14)
+exam_name <- "exam2_f17.pdf"
+Number <- c(29,18,21,9,12)
 
 Grade <- c("A","B","C","D","F")
 df <- data.frame(Grade, Number)
