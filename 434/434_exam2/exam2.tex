@@ -2,6 +2,9 @@
 %!TEX encoding = UTF-8 Unicode
 
 \documentclass[12pt, addpoints]{exam}
+
+%\printanswers
+
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
 \usepackage{fontspec}
@@ -20,7 +23,7 @@
 
 \pagestyle{headandfoot}
 \firstpageheader{Marine Evolutionary Ecology, Exam 2, \textsc{f}\short{\year}}{}{%
-	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+	\ifprintanswers\textbf{KEY, \numpoints\,pts.}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
@@ -72,12 +75,9 @@
 \setlength{\basespace}{5\baselineskip}
 
 
-%\printanswers
-
-
 \begin{document}
 
-\noindent I score your exam based on what you write. Demonstrate to me that you know the material. Use appropriate vocabulary. Rock on! Rock lobster!
+\noindent I score your exam based on what you write. Show me that you know the material. Use appropriate vocabulary. Rock on! Rock lobster!
 
 \begin{questions}
 
@@ -121,7 +121,7 @@ Why is rocky intertidal ecosystem function highest with intermittent upwelling i
 %% Change the question to ask why top down effects of predators are not important under states of constant upwelling or downwelling. 
 % E.g., Why is rocky intertidal ecossytem function higher with intermittent upwelling instead of constant upwelling? Explain this from a bottom-up and top down perspective. (LAST part not great but a start).
 
-	\begin{AnswerPage}{0.25\textheight}%
+	\begin{AnswerPage}{0.4\textheight}%
 	 Relaxation of upwelling allows recruitment into the intertidal. (3 points)
 	 
 	 \vspace*{\baselineskip}
@@ -139,7 +139,7 @@ Why is rocky intertidal ecosystem function highest with intermittent upwelling i
 Why does an alternate stable state (e.g., state \textsc{b}) not return to its originate state (e.g., state \textsc{a}) when environmental conditions return to their original state? Include an explanation of hysteresis as part of your answer. You may use a diagram to aid your answer.
 
 
-	\begin{AnswerPage}{0.45\textheight}%
+	\begin{AnswerPage}{0.4\textheight}%
 	 Hysteresis is the difference in conditions required to return shift between alternate stable states. (4 points).
 	 
 	\vspace*{\baselineskip}
@@ -148,13 +148,6 @@ Why does an alternate stable state (e.g., state \textsc{b}) not return to its or
 	
 	\end{AnswerPage}
 
-
-%
-\bonusquestion[3]
-Write the author(s) and title of one paper that will appear in your annotated bibliography. (Subject to verification.) Or, for 1 measly extra credit point, what plankton group is 0.02–0.2 mm in size?
-
-\AnswerBox{-\baselineskip}{Whatever (3 pts)/Microplankton (1 pt)}
-
 \newpage
 
 %
@@ -162,68 +155,62 @@ Write the author(s) and title of one paper that will appear in your annotated bi
 What are trait-mediated indirect interactions (\textsc{tmii})? Explain it but do not give me an example.
 % Tie in Inducible defenses.
 
-\AnswerBox{2\baselineskip}{\textsc{Tmii}s are the indirect effects that a top predator has on abundance of lower trophic level organisms by through the modification of prey's behavioral or morphological traits due to the presence of the predator. }
+\AnswerBox{0.2\textheight}{\textsc{Tmii}s are the indirect effects that a top predator has on abundance of lower trophic level organisms by through the modification of prey's behavioral or morphological traits due to the presence of the predator. }
 
 %
-\question[10] A tide pool in the rocky intertidal experiences high turbulence because it is exposed to waves. A nearby tide pool is protected from most waves so it experiences low to moderate turbulence. Both pools have \textit{Enteromorpha} algae, snails, and green crabs. How will the amount of turbulence affect affect the snail's behavior in each pool? How will this affect the abundance of algae present in each pool?
 
-	\begin{AnswerPage}{0.5\textheight}%
-	High turbulence reduces the ability of the snails to detect the presence of the crabs. (3 points).
-	
-	\vspace*{\baselineskip}
-	
-	In a turbulent pool, snails are less likely to detect the crabs so they will forage more often, reducing algal abundance (3 pts).
-	
-	\vspace*{\baselineskip}
-		
-	In a quiet pool, snails are more likely to detect crabs so they will forage less, increasing algal abundance. (3 pts)
-	
-	\end{AnswerPage}
+\question[10]
+Explain whether the amount of trophic heat in the ecosystem would increase or decrease if climate change causes the greatest temperature difference between immersed and exposed \textit{Pisaster} sea stars.
 
+\begin{AnswerPage}{0.6\textheight}%
+	A study showed that feeding rates decreased the most in \textit{Pisaster} when sea stars experienced the greatest thermal stress (greatest temp difference). If feeding rates go down, then trophic heat will increase because they energy they have consumed is lost as metabolic heat instead of being passed to higher trophc levels.	
+\end{AnswerPage}
 
 \newpage
 
 %
-\question[20]
-Why is the phytoplankton community in the Gulf of Maine (late spring) composed mostly of microplankton while the community in the middle of the equatorial Atlantic is composed mostly of picoplankton? Your answer must explain how nutrient availability (bottom-up), competition for nutrients, and predation (top-down) contribute to phytoplankton community structure in these two regions. You may use an illustration to aid your explanation.
 
-	\begin{AnswerPage}{0.4\textheight}%
-	The Gulf of Maine is nutrient rich in the late spring. The equatorial Atlantic is nutrient poor. (2 points)
-	
-	\vspace*{\baselineskip}
-	
-	In nutrient poor conditions, picoplankton are better competitors than microplankton so they are abundant. (2 points)
-	\vspace*{\baselineskip}
-	
-	Predators in the equatorial Atlantic are either not an issue or limit the abundance of picoplankton. (2 points)
-	
-	\vspace*{\baselineskip}
+\bonusquestion[2]
+For one extra credit point, what plankton group is 0.02–0.2 mm in size? For one more extra credit point, write the name of your favorite movie.
 
-	Nutrients never get abundant enough to support large populations of microplankton. (2 points) 
+\AnswerBox{\baselineskip}{Microplankton (1 pt) / Whatever (1 pt)}
+
+\question[10]
+\begin{multicols}{2}
+	The relative abundance of micro-, nano-, and picophytoplankton varies along a gradient from cold temperate to tropical latitudes. Explain how the figure at right provides support the change in relative abundance along the gradient, using your knowledge of competitive abilities among the phytoplankton groups and nutrient availability and high and low latitudes.
 	
-	\vspace*{\baselineskip}
+	\columnbreak
 	
-	In the Gulf, picoplankton abundance becomes limited by predators. That leaves nutrients available for larger plankton sizes. (2 points)
+	\includegraphics[width=0.49\textwidth]{exam2_picoplankton}
 	
-	\vspace*{\baselineskip}
+\end{multicols}	
+
+\begin{AnswerPage}{0.5\textheight}
 	
-	Nanoplankton also take up nutrients but their abundance also becomes limited by their predators. (2 points)
+	Tropical latitudes are nutrient poor so support few phytoplankton. Picoplankton are more efficient competitors in warm, nutrient poor waters. The low total Chl~\textit{a} (x-axis) corresponds to tropical waters, where picoplankton have the higher relative abundance. High total Chl~\textit{a} corresponds to colder temperate water where microphytoplankton (e.g., diatoms) have higher relative abundance.
 	
-	\vspace*{\baselineskip}
+\end{AnswerPage}
+
+%
+
+\newpage
+
+\question
+Whalen et al.~(2013) tested the mutualistic mesograzers hypothesis (\textsc{mmh}) in Virginia seagrass beds. Treatment plots (solid circles) received a chemical deterrent for Isopod mesograzers. Control plots (open circles) did not receive the deterrent. Mesograzer density (left panel) and amount of epiphytes (chlorophyll \textit{a}; right panel) were recorded before adding the deterrent (asterisk). The density of mesograzers and amount of epiphytes were recorded over several days.
+
+\includegraphics[width=0.96\textwidth]{exam2_mesograzers}
+\begin{parts}
+	\part[5] Explain the mutualistic mesograzers hypothesis and how it affects the abundance of seagrasses.
 	
-	That leaves sufficient nutrients to support microplankton. (2 points)
+	\AnswerBox{\basespace}{Mutalistic mesograzers hypothesis states that mesograzers consume epiphytes that grow on seagrasses, decreasing their functional efficiency. The mesograzers provide an indirect effect on seagrass abundance.}
 	
-	\vspace*{\baselineskip}
-	
-	Microplankton abundance may ultimately get limited by their predators. (2 points)
-	
-	\vspace*{\baselineskip}
-	
-	Clarity (2 points)
-	
-	
-	
-	\end{AnswerPage}
+	\part[5] Explain whether the results in the figure above provide support for or falsify the \textsc{mmh} and why. 
+
+	\AnswerBox{\basespace}{The figure above does provide support. As mesograzers decline in density, the amount of epiphytes increases.}
+
+\end{parts}
+
+
 
 \end{questions}
 
