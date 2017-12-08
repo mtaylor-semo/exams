@@ -1,11 +1,9 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[12pt]{exam}
-\usepackage{graphicx}
-	\graphicspath{{/Users/goby/pictures/teach/438/exam/}} % set of paths to search for images
+\documentclass[12pt, addpoints]{exam}
 
-\usepackage[left=0.75in,right=0.75in,top=1in]{geometry}    
+%\printanswers
 
 \usepackage{fontspec}
 \setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
@@ -15,6 +13,11 @@
 
 \newfontfamily\DejaSans{DejaVu Sans}
 \newcommand\smiley{{\DejaSans ☺}}
+
+\usepackage[left=0.75in,right=0.75in,top=1in]{geometry}    
+
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/pictures/teach/438/exam/}} % set of paths to search for images
 
 \usepackage{multicol}
 \usepackage{amsmath}
@@ -36,7 +39,7 @@
 
 \pagestyle{headandfoot}
 \firstpageheader{Biogeography, Exam 3, \Semester{}\short{\year}}{}{%
-	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+	\ifprintanswers\textbf{KEY: \numpoints~pts}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
@@ -47,11 +50,24 @@
 \marginpointname{ pts}
 
 
-%% Remove comment %% to print answer key.
-%\printanswers
 \unframedsolutions
 \renewcommand{\solutiontitle}{}
 \SolutionEmphasis{\bfseries}
+
+\newcommand*\AnswerBox[3]{%
+	\parbox[t][#1]{0.92\textwidth}{%
+		\begin{solution}#3\end{solution}}
+	\vspace*{\stretch{#2}}
+}
+
+\newenvironment{AnswerPage}[2]
+{\begin{minipage}[t][#1]{0.92\textwidth}%
+		\begin{solution}}
+		{\end{solution}\end{minipage}
+	\vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{4\baselineskip}
 
 \begin{document}
 
@@ -59,74 +75,88 @@
 
 
 \question[5]
-I appreciate your patience during this version of Biogeography.  As my way of saying, “Thank you,” I will give you five free points if you write something heartfelt or snarky. Either is fine. Fun is good. 
+Draw and label the Macarthur-Wilson equilibrium model of island biogeography. 
 
+\AnswerBox{\basespace}{0.75}{%
+	Image here.
+}
 
-\vspace*{\stretch{0.75}}
+\question[10]
+Explain “turnover rate” on islands. Explain how the target effect and the rescue effect alters the turnover rate on islands of different sizes and degrees of isolation, as appropriate.
 
-Time to get real.
-
-\question[2]
-About how many years did it take for anatomically modern humans to colonize the globe? You may write your answer in days if you want to do the math. \smiley{}
-
-\vspace*{\stretch{0.25}}
-
-\question[5]
-Describe nestedness on islands. Explain how filters can create a pattern of nestedness.
-
-\vspace*{\stretch{2}}
+\AnswerBox{\basespace}{2}{%
+	Answer here.
+}
 
 \question[5]
 Explain the “island rule” and how \textit{Homo floresiensis} fits the rule. 
 
-\vspace*{\stretch{2}}
+\AnswerBox{\basespace}{0.5}{%
+	Answer here.
+}
 
 \newpage
 
 \fullwidth{%
-\begin{multicols}{2}
-Watson et al. (2005) studied the Eastern Yellow Robin in a fragmented landscape. Fragment size and isolation is shown at right. Solid circles indicate fragments where the robin was present. Empty circles indicate fragments where the robin was absent. No fragment was larger than 1000 ha. 
-
-\columnbreak
-	\includegraphics[width=0.49\textwidth]{insular_distribution_robin}
-\end{multicols}
+	\begin{multicols}{2}
+		Watson et al. (2005) studied the Eastern Yellow Robin in a fragmented landscape. Fragment size and isolation is shown at right. Solid circles indicate fragments where the robin was present. Empty circles indicate fragments where the robin was absent. No fragment was larger than 1000 ha. 
+		
+		\columnbreak
+		
+		\includegraphics[width=0.49\textwidth]{insular_distribution_robin}
+	\end{multicols}
 }
 
-\question[3]
-What is the name of the function illustrated?
+\question[5]
+Name of the function illustrated. Explain what this function illustrates (in an general sense).
 
-\vspace*{\stretch{0.25}}
+\AnswerBox{2\baselineskip}{0.5}{%
+	Insular distribution function shows the combination of island size and isolation required for a species to be present.
+}
+
 
 \question[10]
 Suppose the robin is endangered. Describe how you can use information from the figure to increase the abundance of this species in the more isolated fragments (e.g., 3,000–6,000 km). Your answer must depend on the natural dispersal ability of the robin, which you can infer from the figure. You may not introduce the robin to any island. You may not kill other organisms that might be present. That goes against your conservation principles.
 
+\AnswerBox{\basespace}{2}{%
+	Answer here.
+}
 
-\vspace*{\stretch{3}}
+\question[5]
+Describe nestedness on islands. Explain how filters can create a pattern of nestedness.
+
+\AnswerBox{1\basespace}{0.25}{%
+	Answer here.
+}
+
+
 
 \newpage
 
-%%% TUrn this into 15 point question. Have them name the different species, forms of H. sapiens, identify the specific regions (don't add regions not part of model, etc.)
 \question[10]
-Diagram and describe the difference between the multi-regional and the replacement hypotheses for human dispersal out of Africa. State which hypothesis is supported by genetic evidence. You do not need to discuss actual genetic evidence. 
+According to Pedersen, when (years ago) did the Clovis people first occupy North America south of the glaciers? Why, according to Pedersen, could the Clovis people or their ancestors not have passed through the ice free corridor (\textsc{icf}) to be south of the glaciers by that time? If they did not pass through the \textit{icf}, then how did they get south of the glaciers?
+
+\AnswerBox{\basespace}{1}{%
+	First occupied about 14 \textsc{kya} (3 pts). The \textsc{icf} would have been under water at that time (3 pts). They would have passed along a coastal route (3 pts).
+}
+
+\question[10]
+\textit{Homo neanderthalensis} lived across Europe for at least 100,000 years during the Pleistocene. Recent evidence suggests that Neandertals went extinct due to climate change. Explain how the mild climate around the Mediterranean Sea may have allowed Neandertals to survive longer across \textit{all} of Europe during the late Pleistocene. 
+
+\AnswerBox{\basespace}{1}{%
+	The climate acted as refugia during glacial advances so pockets of Neandertals survived in that region. They were then able to expand back into Europe as the glaciers retreated. Eventually, they went extinct as population sizes reduced.
+}
+
 
 \newpage
 
-%% Turn into 10 point quesiton. TOo simple for 15 unless find information to add and ask about.
 \question[15]
-Recent evidence suggests that \textit{Homo neanderthalensis} went extinct due to climate change. Explain how the mild climate around the Mediterranean Sea may have allowed Neanderthals to survive longer across \textit{all} of Europe during the late Pleistocene. 
-
-%\vspace*{\stretch{2}}
-
-
-\newpage
-
-\question[20]
 Abbott's Duiker is a small antelope endemic to the fragmented Eastern Arc forests of Tanzania.  Known localities with the duiker are shown in the inset.  Assume you are given the task of increasing survivorship and movement of individuals between the southernmost and northernmost locations.  Apply whatever island biogeography or metapopulation concepts (or both) you think are necessary to accomplish this goal.  You must explain \textit{how} each concept you choose helps achieve the goal.  You must also discuss corridors and how / why they can contribute to your conservation goals. If you need more writing space for your novel, you may use the other side of this page.
 
 	\vspace{-\baselineskip}\null\hfill\includegraphics[width=0.7\textwidth]{abbott_duiker_distrib}
 
 	\begin{solution}[1in]
-	As the basin spreads, the taxa become less and less similar.
+	Open-ended discussion.
 	\end{solution}
 
 \end{questions}
