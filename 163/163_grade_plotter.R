@@ -8,8 +8,8 @@ library(extrafont)
 
 #Change exam name and numbers for each grade.
 # Number is order from A to F.
-exam_name <- "exam3_f17.pdf"
-Number <- c(36,23,12,9,5)
+exam_name <- "exam1_s18.pdf"
+Number <- c(6,9,13,11,6)
 
 Grade <- c("A","B","C","D","F")
 df <- data.frame(Grade, Number)
