@@ -30,6 +30,8 @@
 
 \pointsinmargin
 \marginpointname{ pts}
+\marginbonuspointname{ pts \textsc{e.c.}}
+
 
 \usepackage{multicol}
 \usepackage{booktabs}
@@ -84,7 +86,7 @@
 \question[5]
 How does a heterozygote advantage affect genetic variation (e.g., number of alleles at a gene locus) in a population? Explain briefly.
 
-	\begin{AnswerPage}{1\basespace}
+	\begin{AnswerPage}{0.15\textheight}
 	Maintain/increase: 2 points\\
 	Explanation: 3 points
 	\end{AnswerPage}
@@ -94,7 +96,7 @@ How does a heterozygote advantage affect genetic variation (e.g., number of alle
 \question[5]
 How does migration among small populations affect genetic drift in those populations?. Explain briefly.
 
-	\AnswerBox{\basespace}{%
+	\AnswerBox{0.15\textheight}{%
 	Increases effective population size so genetic drift is reduced. Grade for 4 points unless left blank.
 }	
 %\vspace*{\stretch{1}}
@@ -103,7 +105,7 @@ How does migration among small populations affect genetic drift in those populat
 \question[5]
 Why did Darwin's concept of natural selection became widely accepted only after the Evolutionary Synthesis.
 
-	\AnswerBox{\basespace}{%
+	\AnswerBox{0.15\textheight}{%
 	Genetic mechanism of inheritance was not available to Darwin. Provided by Evolutionary synthesis. Grade for 4 points unless left blank.
 }
 	
@@ -112,58 +114,50 @@ Why did Darwin's concept of natural selection became widely accepted only after 
 \question[3]
 What is the probability that a new, neutral mutation will drift to fixation in a population?  Express this answer as a fraction.  You need write nothing but the fraction.
 
-	\AnswerBox{\baselineskip}{\Large $\frac{1}{2N_e}$}
+	\AnswerBox{0.1\textheight}{\Large $\frac{1}{2N_e}$}
 	%\ifprintanswers{\LARGE$\frac{1}{2N_e}$}\fi\vspace*{\stretch{0.05}}
 
-%\fullwidth{(1 pt extra credit) Which Hardy-Weinberg assumption have we not yet studied?}\ifprintanswers\quad\textbf{Random Mating}\fi%\vspace*{\stretch{0.05}}
+%\fullwidth{(1 pt extra credit) 
+\bonusquestion[2]
+	Which Hardy-Weinberg assumption have we not yet studied?\ifprintanswers\quad\textbf{Random Mating}\fi%\vspace*{\stretch{0.05}}
+
+%\fullwidth{(1 pt extra credit) What is one other valid term used to describe heterozygote advantage?}
+%\ifprintanswers\quad\textbf{Overdominance or Heterosis}\fi\vspace*{\stretch{0.05}}
+
 
 \newpage
 
 \question[10]
-Fill in the following table with the correct genotype and allele frequencies based on this survey of 725 plants. 251 individuals had red flowers, 351 individuals had pink flowers (heterozygotes), and 123 individuals had white flowers. The population is in \textsc{hwe}. \emph{Show your work! Round to three digits after the decimal.}
+Based on the principles for mutation rate, genetic drift, and natural selection, do you expect the rate of \emph{non-adaptive} evolution to occur more rapidly in small or large populations, or at about the same rate regardless of population size? \emph{Explain your reasoning.} Be sure to include the roles of mutation rate, genetic drift, and selection in your answers. Disregard other assumptions of Hardy-Weinberg.
 
- The final values may sum to 0.999, 1.000 or 1.001 due to rounding error. (2 points each.)
-
-\begin{tabular}{lC{1.1in}}
-\toprule
-&	Frequency \\
-\midrule
- & \\[0.2em]
-$p$		& \ifprintanswers \textbf{0.588} \else \rule{1in}{0.4pt} \fi\\[1.5em]
-$q$		& \ifprintanswers \textbf{0.412} \else \rule{1in}{0.4pt} \fi\\[1.5em]
-$p^2$	& \ifprintanswers \textbf{0.346} \else \rule{1in}{0.4pt} \fi\\[1.5em]
-$2pq$	& \ifprintanswers \textbf{0.484} \else \rule{1in}{0.4pt} \fi\\[1.5em]
-$q^2$	& \ifprintanswers \textbf{0.170} \else \rule{1in}{0.4pt} \fi\\
-\bottomrule
-\end{tabular}
-
+\begin{AnswerPage}{0.35\textheight}
+	
+	Non-adaptive evolution is by definition neutral so not subject to natural selection. Thus, natural selection does not have a role or, if anything, only removes detrimental alleles. Non-adaptive evolution occurs at the neutral mutation rate ($\mu$) regardless of population size. In small populations, fewer mutations will occur $2N_e\mu$) but each new haplotype will have a relatively higher probability of being fixed ($1/2N_e$). In large populations, more new mutations will occur but each new haplotype has a correspondingly lower probability of being fixed.
+	
+\end{AnswerPage}
 
 \question[10]
 Kumar and Subramanian estimated a mutation rate of $2.2 \times
 10^{-9}$ per base pair (bp) per year in the mammalian protein-coding genome. In contrast,
 Jaillon et al. estimated a mutation rate of $5.7 \times 10^{-9}$ per bp per year in the mammalian non-coding genome. Explain the apparent discrepancy between these two rates when both are estimated from mammalian genomes.
 
-\AnswerBox{3\basespace}{%
+\AnswerBox{0.35\textheight}{%
 Jaillon's estimate is based on non-coding regions so it is based on the neutral mutation rate. Kumar's is based on coding DNA so presumably some of those mutations were detrimental and removed by negative selection.}
-
-\fullwidth{(1 pt extra credit) What is one other valid term used to describe heterozygote advantage?}
-\ifprintanswers\quad\textbf{Overdominance or Heterosis}\fi\vspace*{\stretch{0.05}}
 
 \newpage
 
 \question[10]
 You discover a particular allele is fixed in a population of mice. You suspect the allele became fixed due to positive selection but you must consider the possibility that negative (purifying) selection removed a detrimental allele. Explain how you can use $dN$ and $dS$ to determine whether the first allele became fixed by positive selection or by negative (purifying) selection. Explain \emph{why} the comparison works as a test for selection at the genetic level.
 
-\AnswerBox{2\basespace}{%
+\AnswerBox{0.32\textheight}{%
  If $dN \gg dS$ then more non-synonymous substitutions have occurred than synonymous substitutions. This is consistent with positive selection.  If $dN \ll dS$, then more synonymous substitutions have occurred than non-synonymous substitutions. This is consistent with negative selection.
 }
 
 
-
 \question[10]
-Calculate whether genetic drift or natural selection is more likely to be the \textit{primary} cause of allele frequency change in a population of $N_e = $2000, if the fitness of the three genotypes is $A_1A_1$ = 0.999, $A_1A_2$ = 0.999, and $A_2A_2$ = 1.0. Show your math and explain your reasoning. 
+Calculate whether genetic drift or natural selection is more likely to be the \textit{primary} cause of allele frequency change in a population of $N_e = 2000$, if the fitness of the three genotypes is $A_1A_1 = 0.999$, $A_1A_2 = 0.999$, and $A_2A_2 = 1.0$. Show your math and explain your reasoning. 
 
-	\begin{AnswerPage}{2\basespace}
+	\begin{AnswerPage}{0.25\textheight}
 	\textit{s} = 1 - 0.999 = 0.001. (2 points)\\
 	1/4N\textsubscript{e} = 1 / (4\,\times\,2000) = 1/8000 = 0.000125. (2 points) \vspace{\baselineskip}
 	
@@ -172,10 +166,10 @@ Calculate whether genetic drift or natural selection is more likely to be the \t
 
 
 \question[5]
-Name the mode of selection that describes how the phenotype would change if the fitness for the three genotypes  is $B_1B_1$ = 0.96, $B_1B_2$ = 0.98, and $B_2B_2$ = 1. Tell how you know.
+The fitness for three genotypes in a population is $B_1B_1 = 1$, $B_1B_2 = 0.96$, and $B_2B_2 = 1$. Name the mode of selection that explains how the phenotype would change in this population. Tell how you know.
 
-\AnswerBox{2\baselineskip}{%
-Directional selection. $B_2B_2$ has the greatest fitness and $B_1B_1$ has the lowest fitness. Hets have intermediate fitness. The population will shift to the $B_2B_2$ genotype.
+\AnswerBox{0.1\textheight}{%
+	Disruptive selection. Heterozygotes have decreased fitness compared to both homozygotes, which have equal fitness. The population will diverge towards both homozygote genotypes.
 }
 
 \newpage
