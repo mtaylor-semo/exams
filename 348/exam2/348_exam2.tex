@@ -3,7 +3,7 @@
 
 \documentclass[11pt, addpoints]{exam}
 
-%\printanswers
+\printanswers
 
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
@@ -22,15 +22,16 @@
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
 \pagestyle{headandfoot}
-\firstpageheader{Marine Biology, Exam 2, Sp\short{\year}. \numpoints\ pts.}{}{%
+\firstpageheader{Marine Biology, Exam 2, Sp\short{\year}.}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
-\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\footer{\iflastpage{\hspace{-1.2cm}\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
 
 \pointsinmargin
+\marginbonuspointname{ pt \textsc{e.c.}}
 \marginpointname{ pts}
 
 \usepackage{multicol}
@@ -133,6 +134,12 @@ Sulfide stage - Sediment becomes anaerobic, supports invertebrates and bacteria 
 Reef stage - Skeleton provides structure for sessile organisms. Begins after scavenger stage.
 
 \end{AnswerPage}
+
+\bonusquestion[2]
+Name one type of organism other than hermatypic corals that contribute to reef building.
+% Calcareous green algae or coralline red algae.
+
+\newpage
 
 \question[10]
 Briefly describe how spatial heterogeneity and patch dynamics explain higher benthic diversity at 1000 m compared to 200 m or 3000 m. % Can switch one to sediment size, or add it for variations.
