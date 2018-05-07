@@ -3,7 +3,7 @@
 
 \documentclass[11pt, addpoints]{exam}
 
-%\printanswers
+\printanswers
 
 \usepackage[left=1in,right=1.25in,top=1in]{geometry}     
 
@@ -21,7 +21,7 @@
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
 \pagestyle{headandfoot}
-\firstpageheader{Marine Biology, Exam 4, S\short{\year}.}{}{%
+\firstpageheader{Marine Biology, Exam 4, Sp\short{\year}. \numpoints\ points.}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
@@ -107,20 +107,19 @@
 
 \fullwidth{Read each question carefully and completely. Be sure your answer addresses the question being asked. Use complete sentences.}
 
-\question[2]
-Name the type of bubbles that snapping shrimp and mantis shrimp use to stun their prey.
+\question[5]
+Explain whether the amount of iron recycled in the Antarctic by toothed whales (e.g., Killer Whale) would be higher or lower compared to baleen whales (e.g., Blue Whales). Justify your answer.
 
-\AnswerBox{0.1\textheight}{Cavitation}
+\AnswerBox{0.2\textheight}{Reduced. More trophic levels.}
 
-\question[4]
-Name two types of reproduction (giving birth) in sharks.
+\question[5]
+Tell whether the results shown in the following figure support the predation risk hypothesis or the visual acuity hypothesis. Explain why.
 
-\AnswerBox{0.1\textheight}{Oviparity, ovoviviparity, viviparity.}
+\includegraphics[width=\textwidth]{exam4_visual_acuity}
 
-\question[4]
-Name two ways that sponges can reproduce asexually.
+\AnswerBox{0.2\textheight}{Visual acuity. Sharks were more successful when it was a new moon because the visual acuity of prey was reduced.}
 
-\AnswerBox{0.1\textheight}{Fragmentation, gemmules, budding.}
+%\newpage
 
 \question[5]
 Explain one reason a conservation manager must understand how genetic variation is
@@ -128,7 +127,7 @@ distributed across the entire range of a species that is being
 considered for conservation management or reintroduction into a
 particular area.
 
-\begin{AnswerPage}{0.4\textheight}
+\begin{AnswerPage}{0.2\textheight}
 	Many studies have shown that many organisms are not genetically uniform across its entire range.  
 	
 	\begin{itemize}
@@ -232,12 +231,7 @@ Optimum $\ge$ \textasciitilde4.0 (2 pts)
 \question[20]
 Use the figure above (also on screen) to clearly and thoroughly explain how increased ocean acidity
 will alter connectivity and fecundity across a large coral reef. You must include coral
-recruitment and growth (indicated by the black arrow), distance between patches and coral fecundity. Be sure to include both positive and negative relation among these factors. Do not include unnecessary factors and relationships. 
-
-\textbf{Modify figure to turn red (or green) lines into dashed lines so can be distinguished in pring.}
-
-\textbf{Remove dashe boxes so no confusion with dashed lines. Not relevant to question asked. COuld make
-	gray-filled boxes if necessary.}
+recruitment and growth (indicated by the black arrow), distance between patches and coral fecundity. Be sure to include both positive (dashed lines) and negative (solid lines) relation among these factors. Do not include unnecessary factors and relationships. 
 
 \begin{solution}
 Grade as 2 points per item. 
@@ -267,7 +261,7 @@ Briefly explain each of the three factors that must be considered to identify
 a potential biodiversity hotspot for conservation efforts.
 
 \textbf{Can turn into individual questions. E.g., Explain why FACTOR X is important to
-	identify a potential biodiversity hotspot.”
+	identify a potential biodiversity hotspot.}
 	
 \begin{AnswerPage}{4\basespace}%
 	
@@ -282,10 +276,10 @@ a potential biodiversity hotspot for conservation efforts.
 	The areas where these three items intersect are the best candidates for biodiversity hotspots.
 \end{AnswerPage}
 
-\vfill
-
-\input{devious_extra_credit}
-
+%\vfill
+%
+%\input{devious_extra_credit}
+%
 
 \end{questions}
 
