@@ -8,8 +8,8 @@ library(extrafont)
 
 #Change exam name and numbers for each grade.
 # Number is order from A to F.
-exam_name <- "exam1_s18.pdf"
-Number <- c(6,9,13,11,6)
+exam_name <- "exam2_f18.pdf"
+Number <- c(17,18,12,12,10)
 
 Grade <- c("A","B","C","D","F")
 df <- data.frame(Grade, Number)
@@ -37,7 +37,9 @@ grade_plot <- ggplot(df, aes(Grade,Number)) +
 # https://stackoverflow.com/questions/31223818/accessing-vector-of-axis-ticks-for-an-existing-plot-in-ggplot2
 # But note modified format below to fit with newer ggplot2 structure
 # Because the graph is flipped, use x.major_source instead of y.major_source
-y_intercept <- ggplot_build(grade_plot)$layout$panel_ranges[[1]]$x.major_source
+# y_intercept <- ggplot_build(grade_plot)$layout$panel_ranges[[1]]$x.major_source # No longer works.
+# See update.
+y_intercept <- ggplot_build(grade_plot)$layout$coord$labels(ggplot_build(grade_plot)$layout$panel_params)[[1]]$x.major_source
 grade_plot <- grade_plot + geom_hline(yintercept = y_intercept, color="white", size =  0.25)
 
 # Save the PDf file.
