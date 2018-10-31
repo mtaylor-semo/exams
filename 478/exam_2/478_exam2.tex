@@ -3,6 +3,8 @@
 
 \documentclass[11pt]{exam}
 
+
+
 \printanswers
 
 
@@ -10,8 +12,8 @@
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
-\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle, Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
@@ -24,10 +26,12 @@
 
 \pagestyle{headandfoot}
 %\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
-\firstpageheader{\bfseries{Ichthyology, Exam 2, F\short{\year}}}{}{%
+\firstpageheader{\bfseries{Ichthyology, Exam 2, \textsc{f}\short{\year}}}{}{%
 	\ifprintanswers\textbf{KEY}\else\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
+
+\usepackage{pdfpages}
 
 \footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
@@ -201,10 +205,10 @@ The produce slime. The slime clogs the gills of the predators. They spit out the
 %\newpage
 
 \question[10]
-Describe the conditions that favor cockholdry in \textit{Lepomis} sunfishes. Name and describe both types of strategies used by young males.
+Describe the different mechanoreception functions for sensory hair cells.  Explain and illustrate how a sensory hair cell functions in hearing or in the lateral line system.
 
 \begin{solution}
-Large males establish territories for nesting. Smaller males unable to compete for territories would not be able to mate. \textit{Sneaker} males are the smallest males. They sneak in when female releases eggs, releasing sperm, and then dashing out of nest. \textit{Satellite} males mimic females, which allows them to approach the male in the nest. They also release sperm when actual female releases eggs.
+To be written.
 \end{solution}
 
 \vspace*{\stretch{3}}
@@ -228,8 +232,11 @@ Name and briefly explain the difference between the two types of diadromy relate
 
 
 \question[5]
-\textbf{(GSH)} Name the hemisphere (northern, southern) and latitude (high, low) most commonly associated with each type of diadromy you named above.
-\begin{solution}Anadromy: northern, high. Catadromy: southern, low\end{solution}
+\textbf{(GSH)} Name the type of soft fin ray that is diagnostic of the Coelacanthimorpha. How does this ray differ from that same type of soft fin rays found in the Actinopterygii?
+
+\begin{solution}
+Coelacanthimorpha have \emph{unbranched} lepidotrichia. Actinopterygii have branched lepidotrichia.
+\end{solution}
 \vspace*{\stretch{0.5}}
 
 \question[1]
@@ -267,4 +274,10 @@ Early fishes depended on lift from the caudal and paired fins due to heavy armor
 \end{solution}
 
 \end{questions}
+
+
+\newpage
+
+\includepdf[landscape=true]{blank_phylogeny_exam2.pdf}
+
 \end{document}
