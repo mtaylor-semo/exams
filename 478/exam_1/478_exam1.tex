@@ -4,10 +4,13 @@
 \documentclass[11pt]{exam}
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
+%\printanswers
+
+
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
-\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O} 
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
@@ -20,8 +23,8 @@
 
 \pagestyle{headandfoot}
 %\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
-\firstpageheader{\bfseries{Ichthyology, Exam 1, F\short{\year}}}{}{%
-	\ifprintanswers\textbf{KEY}\else\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}\fi}
+\firstpageheader{Ichthyology, Exam 1, \textsc{f}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
@@ -34,8 +37,6 @@
 \usepackage{multicol}
 \usepackage{booktabs}
 
-%% Remove comment %% to print answer key.
-%\printanswers
 \unframedsolutions
 \renewcommand{\solutiontitle}{}
 \SolutionEmphasis{\bfseries}
@@ -75,7 +76,7 @@
 \question\MatchQuestion{Semelparity}{Spawn once, and then die.}
 \vspace{0.4\baselineskip}
 
-\question\MatchQuestion{Thunniform}{Form of BCF swimming where the energy wave begins in the caudal penduncle.}
+\question\MatchQuestion{Thunniform}{Form of \textsc{bcf} swimming where the energy wave begins in the caudal penduncle.}
 \vspace{0.5\baselineskip}
 
 \question\MatchQuestion{Sinus Venosus}{Chamber that collects deoxygenated blood from the body.}
@@ -90,7 +91,7 @@
 \question\MatchQuestion{Allopaternal Care}{Male steals nest of another male, guards his own and other male’s eggs.}
 \vspace{0.4\baselineskip}
 
-\question\MatchQuestion{Labriform}{Form of MPF swimming that uses oscillation of the pectoral fins.}
+\question\MatchQuestion{Labriform}{Form of \textsc{mpf} swimming that uses oscillation of the pectoral fins.}
 \vspace{0.5\baselineskip}
 
 \question\MatchQuestion{Buccal}{Chamber with the highest pressure during two-phase respiration.}
@@ -102,7 +103,7 @@
 \fullwidth{\textbf{(GSH)} Answer the next two questions. Terms are not in the word bank. (2.5 points each.)}
 \vspace{1\baselineskip}
 
-\question\MatchQuestion{Labyrinth/Suprabranchial}{A modified gill structure used by some fishes for air breathing (two possible answers).}
+\question\MatchQuestion{Labyrinth/Suprabranchial}{A modified gill structure used by some fishes for air breathing (write one of two possible answers).}
 \vspace{0.4\baselineskip}
 
 \question\MatchQuestion{Efferent}{Branchial arteries that leave the gills.}
@@ -187,17 +188,17 @@ Explain how stenohaline freshwater and saltwater bony fishes maintain osmotic ho
 
 \newpage
 
+%\question[10]
+%\textbf{(GSH)} Sharks and rays use urea and \textsc{tmao} to maintain osmotic balance. According to your text, another class of fishes also use urea and \textsc{tmao}. Name this class. is the shared use of urea and \textsc{tmao} the result of common ancestry or convergent evolution? Explain.
+%
+%\begin{solution}
+%	Sarcopterygii also use urea and \textsc{tmao}. Convergent evolution due to distant relationship between two classes.
+%\end{solution}
+%
+%\vspace*{\stretch{2}}
+
 \question[10]
-\textbf{(GSH)} Sharks and rays use urea and TMAO to maintain osmotic balance. According to your text, another class of fishes also use urea and TMAO. Name this class. is the shared use of urea and TMAO the result of common ancestry or convergent evolution? Explain.
-
-\begin{solution}
-	Sarcopterygii also use urea and TMAO. Convergent evolution due to distant relationship between two classes.
-\end{solution}
-
-\vspace*{\stretch{2}}
-
-\question[10]
-\textbf{(GSH)} O$_2$ has slightly lower solubility in saltwater than in freshwater but most  air-breathing fishes are freshwater species.  Provide a hypothesis with justification to explain why air-breathing evolved several times in freshwater fishes.
+\textbf{(GSH)} O$_2$ has slightly lower solubility in saltwater than in freshwater but most air-breathing fishes are freshwater species.  Provide a hypothesis with justification to explain why air-breathing evolved several times in freshwater fishes.
 
 \begin{solution}
   More freshwater areas tend to be warmer, more sluggish and therefore lower oxygen environments compared to salt water.
