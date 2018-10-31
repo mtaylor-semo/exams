@@ -6,10 +6,19 @@
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={OldStyle}]{\mainfont}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={OldStyle, Proportional}]{\mainfont}
 %\setmonofont[Scale=MatchLowercase]{Inconsolata} 
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}    
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
 
 \usepackage{graphicx}
 	\graphicspath{%
@@ -18,8 +27,9 @@
 % Used to get the last two digits of the year for the header below.
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
+
 \pagestyle{headandfoot}
-\firstpageheader{Marine Evolutionary Ecology, Exam 2, \textsc{f}\short{\year}}{}{%
+\firstpageheader{Marine Ecology \amper Conservation, Exam 2, \textsc{f}\short{\year}}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
@@ -83,21 +93,15 @@
 
 %
 \question[5]
-Is larval duration (e.g., 14 days or 60 days) a good measure of how far larvae \emph{actually} disperse? Why?
+Explain in terms of primary production whether it good to have seagrasses and epiphytes or only seagrasses in a seagrass ecosystem.
 
-	\AnswerBox{0.6\basespace}{No. Although larvae may have the potential to disperse far, they may not actually do so. Several studies have shown that some species with high potential do not disperse.}
+\AnswerBox{0.1\textheight}{If there is little larval connectivity, then each population is most likely sustained through larval retention.}
 
 %
-\question
-\begin{parts}
-\part[5] Are two populations genetically connected or isolated if \textit{F}\textsubscript{ST} = 0.46? Are they ecologically connected or isolated? Explain.
+\question[10]
+Draw and explain a simple food chain that shows how the loss of a top level predator through overfishing will affect seagrass abundance, based on the the mutualistic mesograzer hypothesis. Identify the direct and indirect interactions.
 
-	\AnswerBox{0.6\basespace}{This is a moderately high \textit{F}\textsubscript{ST} indicating little larval dispersal or gene flow. Therefore, the populations should be ecologically (2 pts) and genetically isolated (2 pts).}
-	
-	\part[5] Is each of these two populations more likely to be sustained by larval retention or immigration? Explain.
-	
-	\AnswerBox{0.6\basespace}{If there is little larval connectivity, then each population is most likely sustained through larval retention.}
-\end{parts}
+	\AnswerBox{0.3\textheight}{No. Although larvae may have the potential to disperse far, they may not actually do so. Several studies have shown that some species with high potential do not disperse.}
 
 %
 \question[5]
@@ -116,12 +120,15 @@ Why does the kelp forest distribution extend farther north on the west coast of 
 
 %
 \question[10]
-Why is rocky intertidal ecosystem function highest with intermittent upwelling instead of constant upwelling or downwelling?
+%Why is rocky intertidal ecosystem function highest with intermittent upwelling instead of constant upwelling or downwelling?
+One rocky intertidal ecosystem has constant upwelling. A nearby rocky intertidal ecosystem has intermittant upwelling. Which one will have greater ecosystem function? Explain why.
+
+%Why are the top down effects of predators \emph{not} important in rocky intertidal ecosystems under states of constant upwelling or downwelling.
 
 %% Change the question to ask why top down effects of predators are not important under states of constant upwelling or downwelling. 
 % E.g., Why is rocky intertidal ecossytem function higher with intermittent upwelling instead of constant upwelling? Explain this from a bottom-up and top down perspective. (LAST part not great but a start).
 
-	\begin{AnswerPage}{0.25\textheight}%
+	\begin{AnswerPage}{0.3\textheight}%
 	 Relaxation of upwelling allows recruitment into the intertidal. (3 points)
 	 
 	 \vspace*{\baselineskip}
@@ -139,7 +146,7 @@ Why is rocky intertidal ecosystem function highest with intermittent upwelling i
 Why does an alternate stable state (e.g., state \textsc{b}) not return to its originate state (e.g., state \textsc{a}) when environmental conditions return to their original state? Include an explanation of hysteresis as part of your answer. You may use a diagram to aid your answer.
 
 
-	\begin{AnswerPage}{0.45\textheight}%
+	\begin{AnswerPage}{0.4\textheight}%
 	 Hysteresis is the difference in conditions required to return shift between alternate stable states. (4 points).
 	 
 	\vspace*{\baselineskip}
