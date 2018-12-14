@@ -9,71 +9,7 @@ Write the formula for the Shannon-Weiner diversity index that you used to calcul
 \begin{solution}SOLUTION\end{solution}
 \vspace*{\stretch{1}}
 
-%!TEX TS-program = lualatex
-%!TEX encoding = UTF-8 Unicode
 
-\documentclass[11pt]{exam}
-
-\printanswers
-
-
-\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
-
-\usepackage{fontspec}
-\def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
-\setmonofont[Scale=MatchLowercase]{Inconsolata} 
-\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
-\usepackage{microtype}
-
-\usepackage{graphicx}
-	\graphicspath{%
-	{/Users/goby/Pictures/teach/478/exams/}}%
-
-\pagestyle{headandfoot}
-%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
-\firstpageheader{\bfseries{Ichthyology, Exam 3, F14}}{}{%
-	\ifprintanswers\textbf{KEY}\else\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}\fi}
-\runningheader{}{}{\small{pg. \thepage}}
-%\runningheadrule
-
-\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
-\extrafootheight{-0.5in}
-
-\usepackage{multicol}
-\usepackage{booktabs}
-
-%% Remove comment %% to print answer key.
-\unframedsolutions
-\renewcommand{\solutiontitle}{}
-\SolutionEmphasis{\bfseries}
-
-\pointsinmargin
-%\marginpointname{ pts}
-\marginpointname{ pt}
-
-
-%% Create a Matching question format
-\newcommand*\Matching[1]{
-\ifprintanswers
-	\textbf{#1}
-\else
-	\rule{2.1in}{0.5pt}
-\fi
-}
-\newlength\matchlena
-\newlength\matchlenb
-\settowidth\matchlena{\rule{2.1in}{0pt}}
-\newcommand\MatchQuestion[2]{%
-	\setlength\matchlenb{\linewidth}
-	\addtolength\matchlenb{-\matchlena}
-	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
-
-
-
-\begin{document}
-
-\begin{questions}
 
 \question[5]
 Explain the differences between an assemblage and a community.
