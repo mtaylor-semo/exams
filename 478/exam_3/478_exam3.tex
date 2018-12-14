@@ -3,15 +3,15 @@
 
 \documentclass[11pt]{exam}
 
-%\printanswers
+\printanswers
 
 
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
-\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
@@ -24,8 +24,8 @@
 
 \pagestyle{headandfoot}
 %\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
-\firstpageheader{\bfseries{Ichthyology, Exam 3, F\short{\year}}}{}{%
-	\ifprintanswers\textbf{KEY}\else\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}\fi}
+\firstpageheader{Ichthyology, Exam 3, \textsc{f}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
@@ -43,8 +43,8 @@
 \SolutionEmphasis{\bfseries}
 
 \pointsinmargin
-%\marginpointname{ pts}
-\marginpointname{ pt}
+\marginbonuspointname{ pts \textsc{e.c.}}
+\marginpointname{ pts}
 
 
 %% Create a Matching question format
@@ -70,7 +70,7 @@
 \begin{questions}
 
 \question[5]
-Briefly explain the difference between an assemblage and a community.
+Briefly explain the difference between an invasive and an exotic species. I gave two ways of defining the pair of terms. Use either way but be consistent (do not mix definitions).
 
 \vspace*{\stretch{0.5}}
 
@@ -96,7 +96,7 @@ List two sensory adaptations of cave fishes to the dark environment. Briefly and
 \vspace*{\stretch{1}}
 
 \question[10]
-\textbf{(GSH)} Both caves and the bathypelagic zone receive absolutely no light from the sun. However, cave fishes lose pigmentation and are uniformly pale but bathypelagic fishes produce pigment and are uniformly dark. Develop a hypothesis to explain why bathypelagic fishes might maintain black bodies in the total absence of sunlight. (I have a specific answer in mind but I am interested primarily in your reasoning and explanation.)
+\textbf{(GSH)} Provide three reasons why you think Florida and California have so many invasive species compared to other states?
 \vspace*{\stretch{1}}
 
 \newpage
@@ -116,11 +116,17 @@ Your friend has just returned from a diving trip to Indonesia.  She asks how so 
 \newpage
 
 \question[20]
-Schlosser (1987) developed a predictive conceptual framework to describe changes in fish communities along a habitat complexity gradient in a stream.  He argues that the relative importance of physical (environmental) versus biological processes changes along the stream gradient.  For this question, consider two stream segments: a second order, high gradient section of an Ozark stream and a sixth order, low gradient section of the same stream.  For each segment, compare and contrast the relative importance of physical and biological processes that affect assemblage structure.  Explain each of the specific physical and biological processes (including habitat structure and complexity, and age classes of fishes) that Schlosser would argue are most important at each segment.  Include in your explanation how these processes contribute to the stability or variability of the community at each segment.  List 3--4 representative species typical of each community (use scientific names for maximum points). We also discussed these ideas in class. There’s more room on the back if you need.
+Schlosser (1987) developed a predictive conceptual framework to describe changes in fish communities along a habitat complexity gradient in a stream.  He argues that the relative importance of physical (environmental) versus biological processes changes along the stream gradient.  For this question, consider two stream segments: a second order, high gradient section of an Ozark stream and a sixth order, low gradient section of the same stream.  For each segment, compare and contrast the relative importance of physical and biological processes that affect assemblage structure.  Explain each of the specific physical and biological processes (including habitat structure and complexity, and age classes of fishes) that Schlosser would argue are most important at each segment.  Include in your explanation how these processes contribute to the stability or variability of the community at each segment.  List 3--4 representative species typical of each community (use scientific names for maxi mum points). We also discussed these ideas in class. There’s more room on the back if you need.
 
 \begin{solution}
 SOLUTION.
 \end{solution}
+
+\vskip0pt plus 1filll
+
+\bonusquestion[2]
+What is your favorite kind of donut?
+
 
 \end{questions}
 \end{document}
