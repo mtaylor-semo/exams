@@ -57,7 +57,7 @@ Kumar and Subramanian estimated a mutation rate of $2.2 \times
 10^{-9}$ per base pair (bp) per year in the mammalian protein-coding genome. In contrast,
 Jaillon et al. estimated a mutation rate of $5.7 \times 10^{-9}$ per bp per year in the mammalian non-coding genome. Explain the apparent discrepancy between these two rates when both are estimated from mammalian genomes.
 
-\AnswerBox{3\basespace}{%
+\AnswerBox{0.35\textheight}{%
 Jaillon's estimate is based on non-coding regions so it is based on the neutral mutation rate. Kumar's is based on coding DNA so presumably some of those mutations were detrimental and removed by negative selection.}
 
 
@@ -82,6 +82,12 @@ The fitness for three genotypes in a population is $B_1B_1$ = 0.96, $B_1B_2$ = 0
 \AnswerBox{0.2\basespace}{%
 Directional selection. $B_2B_2$ has the greatest fitness and $B_1B_1$ has the lowest fitness. Hets have intermediate fitness. The population will shift to the $B_2B_2$ genotype.
 }
+
+\question[3]
+What is the probability that a new, neutral mutation will drift to fixation in a population?  Express this answer as a fraction.  You need write nothing but the fraction.
+
+	\AnswerBox{0.1\textheight}{\Large $\frac{1}{2N_e}$}
+	%\ifprintanswers{\LARGE$\frac{1}{2N_e}$}\fi\vspace*{\stretch{0.05}}
 
 
 
@@ -167,3 +173,42 @@ Non-adaptive Evolution: Non-adaptive evolution is by definition neutral so not s
 
 
 \end{solution}
+
+% Non-adaptive evolution
+\question[10]
+Based on the principles for mutation rate, genetic drift, and natural selection, do you expect the rate of \emph{non-adaptive} evolution to occur more rapidly in small or large populations, or at about the same rate regardless of population size? \emph{Explain your reasoning.} Be sure to include the roles of mutation rate, genetic drift, and selection in your answers. Disregard other assumptions of Hardy-Weinberg.
+
+\begin{AnswerPage}{0.35\textheight}
+	
+	Non-adaptive evolution is by definition neutral so not subject to natural selection. Thus, natural selection does not have a role or, if anything, only removes detrimental alleles. Non-adaptive evolution occurs at the neutral mutation rate ($\mu$) regardless of population size. In small populations, fewer mutations will occur $2N_e\mu$) but each new haplotype will have a relatively higher probability of being fixed ($1/2N_e$). In large populations, more new mutations will occur but each new haplotype has a correspondingly lower probability of being fixed.
+	
+\end{AnswerPage}
+
+% Adaptive evolution
+\question[10]
+Based on the principles for mutation rate, genetic drift, and natural selection, do you expect the rate of \emph{adaptive} evolution to occur more rapidly in small or large populations, or at about the same rate regardless of population size? \emph{Explain your reasoning.} Be sure to include the roles of mutation rate, genetic drift, and selection in your answers. Disregard other assumptions of Hardy-Weinberg.
+
+\begin{AnswerPage}{0.35\textheight}
+	
+Adaptive evolution will occur more rapidly in large populations. Although mutation rate is independent of population size, more mutations will occur in larger populations. For any mutation that is even slightly beneficial, it has a much better chance of becoming fixed in the population if the strength of selection $(s)$ is much larger than $1/4N_e$. That means $s$ can be very small in large populations. Simulations showed that even weakly favored mutations can increase rapidly in frequency.  In small populations, few mutations will occur so won't get beneficial mutations as often. Unless there is stronger strength of selection to overcome the effects of drift, the new mutation is more likely to be lost due to drift.
+	
+\end{AnswerPage}
+
+
+\question[10]
+You discover a particular allele is fixed in a population of mice. You suspect the allele became fixed due to positive selection but you must consider the possibility that negative (purifying) selection removed a detrimental allele. Explain how you can use $dN$ and $dS$ to determine whether the first allele became fixed by positive selection or by negative (purifying) selection. Explain \emph{why} the comparison works as a test for selection at the genetic level.
+
+\AnswerBox{0.32\textheight}{%
+ If $dN \gg dS$ then more non-synonymous substitutions have occurred than synonymous substitutions. This is consistent with positive selection.  If $dN \ll dS$, then more synonymous substitutions have occurred than non-synonymous substitutions. This is consistent with negative selection.
+}
+
+\question[5]
+Allele frequency \textit{p} in a population is 0.251. What is the heterozygosity of this population, if it is in Hardy-Weinberg equilibrium (\textsc{hwe})? How would you predict your result to change over the next 100 generations, assuming the population remains in \textsc{hwe}?
+
+\AnswerBox{0.2\textheight}{Heterozygosity $(2pq)$ is 0.376. It should remain at this value if the pop remains in \textsc{hwe}.}
+
+% Extra credit
+
+\fullwidth{(1 pt extra credit) What is one other valid term used to describe heterozygote advantage?}
+\ifprintanswers\quad\textbf{Overdominance or Heterosis}\fi\vspace*{\stretch{0.05}}
+

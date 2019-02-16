@@ -10,6 +10,8 @@
 \def\mainfont{Linux Libertine O}
 \setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle,Proportional}]{\mainfont}
 %\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+
+\newfontfamily{\lining}[Numbers=Lining,Ligatures=TeX]{\mainfont}
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
@@ -79,79 +81,81 @@
 
 \begin{document}
 
-\noindent Read each question carefully. Write complete sentences with precise answers and proper vocabulary. Enjoy!
+\noindent Read each question carefully and completely. Write complete sentences with precise answers and proper vocabulary. Enjoy!
 
 \begin{questions}
 
 \question[5]
 How does a heterozygote advantage affect genetic variation (e.g., number of alleles at a gene locus) in a population? Explain briefly.
 
-	\begin{AnswerPage}{0.15\textheight}
+	\begin{AnswerPage}{0.2\textheight}
 	Maintain/increase: 2 points\\
 	Explanation: 3 points
 	\end{AnswerPage}
-%\vspace*{\stretch{1}}
 
 
 \question[5]
 How does migration among small populations affect genetic drift in those populations?. Explain briefly.
 
-	\AnswerBox{0.15\textheight}{%
+	\AnswerBox{0.2\textheight}{%
 	Increases effective population size so genetic drift is reduced. Grade for 4 points unless left blank.
 }	
-%\vspace*{\stretch{1}}
-
 
 \question[5]
 Why did Darwin's concept of natural selection became widely accepted only after the Evolutionary Synthesis.
 
-	\AnswerBox{0.15\textheight}{%
+	\AnswerBox{0.2\textheight}{%
 	Genetic mechanism of inheritance was not available to Darwin. Provided by Evolutionary synthesis. Grade for 4 points unless left blank.
 }
-	
-%\vspace*{\stretch{1.25}}
-
-\question[3]
-What is the probability that a new, neutral mutation will drift to fixation in a population?  Express this answer as a fraction.  You need write nothing but the fraction.
-
-	\AnswerBox{0.1\textheight}{\Large $\frac{1}{2N_e}$}
-	%\ifprintanswers{\LARGE$\frac{1}{2N_e}$}\fi\vspace*{\stretch{0.05}}
 
 %\fullwidth{(1 pt extra credit) 
-\bonusquestion[2]
+\bonusquestion[1]
 	Which Hardy-Weinberg assumption have we not yet studied?\ifprintanswers\quad\textbf{Random Mating}\fi%\vspace*{\stretch{0.05}}
-
-%\fullwidth{(1 pt extra credit) What is one other valid term used to describe heterozygote advantage?}
-%\ifprintanswers\quad\textbf{Overdominance or Heterosis}\fi\vspace*{\stretch{0.05}}
-
 
 \newpage
 
-\question[10]
-Based on the principles for mutation rate, genetic drift, and natural selection, do you expect the rate of \emph{non-adaptive} evolution to occur more rapidly in small or large populations, or at about the same rate regardless of population size? \emph{Explain your reasoning.} Be sure to include the roles of mutation rate, genetic drift, and selection in your answers. Disregard other assumptions of Hardy-Weinberg.
+\question
+The following mutation rates were found in yeast (\textit{Saccharomyces cerevisiae}). Rates are per base pair per generation.
 
-\begin{AnswerPage}{0.35\textheight}
+\begin{parts}
+\part[5]
+{\lining Zhu et al. (2014) estimated that the average genome-wide mutation rate was 1.67 $\times$ 10\textsuperscript{-10}. 75\% of the yeast genome is coding and 25\% is non-coding. Would you predict the mutation rate in the non-coding region to be higher or lower than the genome-wide rate? Tell why.}
+
+\AnswerBox{0.25\textheight}{Predict non-coding rate to be higher. Most of their \textsc{dna} is coding so the overall rate is probably lower because detrimental mutations removed by natural selection. This would not affect non-coding regions, leading to higher average mutation rate.}
+
+
+\part[5]
+Lang and Murray (2008) compared mutation rates for two genes. Gene \textit{\textsc{ura3}} had a mutation rate of {\lining 3.8 $\times$ 10\textsuperscript{-10}}. Gene \textit{\textsc{can1}} had a mutation rate of {\lining 6.4 $\times$ 10\textsuperscript{-10}}. Provide a reason why these genes have different mutation rates and how this difference provides support for the Neutral Theory.
+
+\AnswerBox{0.25\textheight}{\textsc{ura3} might be more conserved so more mutations would be deleterious compared to \textsc{can1}. Neutral theory says that natural selection removes detrimental mutations so \textsc{ura3} would appear to have lower mutation rate.}
+\end{parts}
+
+\newpage
+
+\question[5]
+Tell whether population size affects the rate of haplotype substitution by genetic drift in a population. Demonstrate this for population sizes of 50 and 100 and a neutral mutation rate of 0.05 in each population. 
+
+\AnswerBox{0.1\textheight}{Haplotype substitution is independent of population size and occurs at the neutral mutation rate. 
+$$2 \cdot 50\cdot 0.05 \times \frac{1}{2\cdot 50} = 0.05.$$
+$$2 \cdot 500\cdot 0.05 \times \frac{1}{2\cdot 500} = 0.05.$$}
+
+
+\question[15]
+Based on the principles for mutation rate, genetic drift, and natural selection, do you expect the rate of \emph{adaptive} evolution to occur more rapidly in small or large populations, or at about the same rate regardless of population size? \emph{Explain your reasoning.} Be sure to include the roles of mutation rate, genetic drift, and selection in your answers. Disregard other assumptions of Hardy-Weinberg.
+
+\begin{AnswerPage}{0.4\textheight}
 	
-	Non-adaptive evolution is by definition neutral so not subject to natural selection. Thus, natural selection does not have a role or, if anything, only removes detrimental alleles. Non-adaptive evolution occurs at the neutral mutation rate ($\mu$) regardless of population size. In small populations, fewer mutations will occur $2N_e\mu$) but each new haplotype will have a relatively higher probability of being fixed ($1/2N_e$). In large populations, more new mutations will occur but each new haplotype has a correspondingly lower probability of being fixed.
+	Adaptive evolution will occur more rapidly in large populations. Although mutation rate is independent of population size, more mutations will occur in larger populations. For any mutation that is even slightly beneficial, it has a much better chance of becoming fixed in the population if the strength of selection $(s)$ is much larger than $1/4N_e$. That means $s$ can be very small in large populations. Simulations showed that even weakly favored mutations can increase rapidly in frequency.  In small populations, few mutations will occur so won't get beneficial mutations as often. Unless there is stronger strength of selection to overcome the effects of drift, the new mutation is more likely to be lost due to drift.
 	
 \end{AnswerPage}
 
-\question[10]
-Kumar and Subramanian estimated a mutation rate of $2.2 \times
-10^{-9}$ per base pair (bp) per year in the mammalian protein-coding genome. In contrast,
-Jaillon et al. estimated a mutation rate of $5.7 \times 10^{-9}$ per bp per year in the mammalian non-coding genome. Explain the apparent discrepancy between these two rates when both are estimated from mammalian genomes.
-
-\AnswerBox{0.35\textheight}{%
-Jaillon's estimate is based on non-coding regions so it is based on the neutral mutation rate. Kumar's is based on coding DNA so presumably some of those mutations were detrimental and removed by negative selection.}
 
 \newpage
 
-\question[10]
-You discover a particular allele is fixed in a population of mice. You suspect the allele became fixed due to positive selection but you must consider the possibility that negative (purifying) selection removed a detrimental allele. Explain how you can use $dN$ and $dS$ to determine whether the first allele became fixed by positive selection or by negative (purifying) selection. Explain \emph{why} the comparison works as a test for selection at the genetic level.
+\question[5]
+If the initial frequency of haplotype $A$ is 0.3, draw how the frequency will change if the mutation rate from $A$ to $a$ is 0.025 and the mutation rate from $a$ to $A$ is 0.05. You do not have to be exact but you should be reasonably close. Assume that $N_e$ is very large and all other assumptions of \textsc{hwe} are met. Do not draw the effects of drift.
 
-\AnswerBox{0.32\textheight}{%
- If $dN \gg dS$ then more non-synonymous substitutions have occurred than synonymous substitutions. This is consistent with positive selection.  If $dN \ll dS$, then more synonymous substitutions have occurred than non-synonymous substitutions. This is consistent with negative selection.
-}
+	\includegraphics[width=0.85\textwidth]{frequency_graph}
 
 
 \question[10]
@@ -165,53 +169,60 @@ Calculate whether genetic drift or natural selection is more likely to be the \t
 	\end{AnswerPage}
 
 
-\question[5]
-The fitness for three genotypes in a population is $B_1B_1 = 1$, $B_1B_2 = 0.96$, and $B_2B_2 = 1$. Name the mode of selection that explains how the phenotype would change in this population. Tell how you know.
-
-\AnswerBox{0.1\textheight}{%
-	Disruptive selection. Heterozygotes have decreased fitness compared to both homozygotes, which have equal fitness. The population will diverge towards both homozygote genotypes.
-}
-
 \newpage
 
-\question[12]
+\question[5]
+The values of $\omega$ for three genotypes in a population are $B_1B_1$ = 0.98, $B_1B_2$ = 1.0, and $B_2B_2$ = 0.96. Name the mode of selection that explains how the phenotype would change in this population. Tell how you know.
 
-\begin{multicols}{2}
-\flushleft
-The table at right (Sharp et al. 2005) shows how \textit{E. coli} uses 32 codons from 40 highly expressed genes. The tabled numbers are the ratio of actual use to expected use if all codons were used equally. A ratio of 1 means the codon is used exactly as often as expected (e.g., Met, in bold). Explain whether the data in the table provide evidence for natural selection at the genetic level and, if so, how. If not, explain why not. Use 1--2 specific codons from the table to support your answer.
+\AnswerBox{0.2\textheight}{%
+Stablilizing selection. Heterozygotes have the greatest fitness (heterozygote advantage) so the population will converge on the intermediate phenotype.
+}
 
-\columnbreak
 
-\begin{tabular}{@{}llrcllr@{}}
-	\toprule
-	\multicolumn{7}{l}{Codon use in \textit{E. coli}.}\\
-	\midrule
-	Phe & UUU & 0.45 &  & Ser & UCU & 2.54\\
-Phe & UUC & 1.55 &  & Ser & UCC & 1.52\\
-Leu & UUA & 0.14 &  & Ser & UCA & 0.19\\
-Leu & UUG & 0.25 &  & Ser & UCG & 0.06\\
-Leu & CUU & 0.30 &  & Pro & CCU & 0.59\\
-Leu & CUC & 0.23 &  & Pro & CCC & 0.05\\
-Leu & CUA & 0.01 &  & Pro & CCA & 0.52\\
-Leu & CUG & 5.07 &  & Pro & CCG & 2.85\\
-Ile & AUU & 0.72 &  & Thr & ACU & 1.89\\
-Ile & AUC & 2.27 &  & Thr & ACC & 1.75\\
-Ile & AUA & 0.01 &  & Thr & ACA & 0.19\\
-\textbf{Met} & \textbf{AUG} & \textbf{1.00} &  & Thr & ACG & 0.17\\
-Val & GUU & 2.07 &  & Ala & GCU & 1.83\\
-Val & GUC & 0.30 &  & Ala & GCC & 0.32\\
-Val & GUA & 1.14 &  & Ala & GCA & 1.09\\
-Val & GUG & 0.48 &  & Ala & GCG & 0.76\\
-	\bottomrule
-	\end{tabular}
-\end{multicols}
-%	\end{minipage}
-	\begin{solution}
-	Codon bias is present.
-	\end{solution}
+\question
+Assume a population is in Hardy-Weinberg equilibrium (\textsc{hwe}).
+\begin{parts}
+
+\part[5]
+Allele frequency $p$ in a population is 0.251.  Calculate the remaining frequencies.
+
+\bigskip
+
+\begin{tabular}{lC{1.1in}}
+\toprule
+&	Frequency \\
+\midrule
+ & \\[0.5em]
+$q$		& \ifprintanswers \textbf{0.749} \else \rule{1in}{0.4pt} \fi\\[2em]
+$p^2$	& \ifprintanswers \textbf{0.063} \else \rule{1in}{0.4pt} \fi\\[2em]
+$2pq$	& \ifprintanswers \textbf{0.376} \else \rule{1in}{0.4pt} \fi\\[2em]
+$q^2$	& \ifprintanswers \textbf{0.561} \else \rule{1in}{0.4pt} \fi\\
+\bottomrule
+\end{tabular}
+
+\bigskip
+
+\part[5]
+What is the homozygosity of this population? How would you predict homozygosity to change over the next 500 generations, assuming the population remains in \textsc{hwe}?
+
+\AnswerBox{0.2\textheight}{Homozygosity $(p^2 + q^2)$ is 0.624. It should remain at this value if the pop remains in \textsc{hwe}.}
+
+
+\end{parts}
 
 
 \end{questions}
+
+\newpage
+
+\thispagestyle{empty}
+%\topskip0pt
+
+\vspace*{\fill}
+
+\hspace*{\fill} {\tiny You're awesome!} \hspace*{\fill}
+
+\vspace*{\fill}
 
 
 \end{document}
