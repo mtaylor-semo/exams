@@ -21,15 +21,16 @@
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
 \pagestyle{headandfoot}
-\firstpageheader{Evolution, Exam 3, Sp\short{\year}. \numpoints\ points.}{}{%
+\firstpageheader{Evolution, Exam 3, Sp\short{\year}.}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 
-\footer{}{}{}
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\iflastpage{\small Have a great summer!}{}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
 
 \pointsinmargin
 \marginpointname{ pts}
+\marginbonuspointname{ pts \textsc{e.c.}}
 
 \usepackage{multicol}
 \usepackage{booktabs}
@@ -79,48 +80,62 @@
 
 \begin{questions}
 
-\question[5]
-List three of the five major mass extinctions that have occurred since the Cambrian.  Indicate which event was the largest and which event is the most famous.
+\bonusquestion[1] Favorite type of donut (no promises): \rule{2.5in}{0.4pt}
+
+\question
+\begin{parts}
+	\part[3]
+List (a) the largest mass extinction, (b), the most recent mass extinction, and (c) one other mass extinction.
 
 \begin{enumerate}[label=\alph*.]
-	\item \ifprintanswers \textbf{Permian (Largest)} \fi \vspace*{1\baselineskip}
+	\item Largest: \ifprintanswers \textbf{Permian} \fi \vspace*{1\baselineskip}
 	
-	\item \ifprintanswers \textbf{Cretaceous (Famous)} \fi  \vspace*{2\baselineskip}
+	\item Most recent: \ifprintanswers \textbf{Cretaceous} \fi  \vspace*{1\baselineskip}
 	
-	\item \ifprintanswers \textbf{Ordo, Dev., Triassic} \fi  \vspace*{2\baselineskip}
-	
+	\item One other: \ifprintanswers \textbf{Ordo, Dev., Triassic} \fi  \vspace*{1\baselineskip}
 \end{enumerate}
 
-\bigskip
+\part[2] 
+What is the common, underlying cause of all five mass extinctions that have occurred since the Cambrian.
 
-\question[5]
-Explain the common, underlying cause of all five mass extinctions that have occurred since the Cambrian.
-
-\AnswerBox{0.25\textheight}{Climate change.}
-
-\question[5]
-Tell whether lekking in Greater Prairie Chickens increases or decreases $N_e$. Explain why.
-
-
-\AnswerBox{0.3\textheight}{Decreases $N_e$. Fewer males in the population are actually breeding because females are choosing among the various males.}
-
-
-
-\newpage
-
-\question[5]
-Explain and diagram the cost of sex.
-
-\AnswerBox{0.25\textheight}{%
-	The cost of sex means that asexual individuals have greater fitness compared to sexual reproducers (2 pts). Asexual species can reproduce exponentially while sexually reproducing species can reproduce linearly (2 pts.) E.g.If each reproductive event results in four offspring, asexual individuals will reproduce 4, 16, 64 offspring. Sexual reproducers will produce 4, 8, 16.
-}
+\AnswerBox{0.01\textheight}{Climate Change}
+\end{parts}
 
 \question[5]
 Briefly explain the effects of Muller's Ratchet in asexually reproducting species.
 
-\AnswerBox{0.25\textheight}{%
+\AnswerBox{0.2\textheight}{%
 	Muller's ratchet is the accumulation of deleterious mutations in asexually reproducing species (2 pts). There is no way for asexually reproducing species to get rid of deleterious mutations (2 pts).
 }
+
+
+\question[5]
+Define turnover rate as it applies to the fossil record. %When turnover rate has been compared among multiple taxa, a distinct relationship has emerged between \emph{S} and \emph{O}. What is this relationship?
+
+\AnswerBox{0.2\textheight}{Turnover rate is the rate at which new taxa replace old taxa in the fossil record. Taxa with low origination rates tend to have low extinction rates. Taxa with high O tend to have high S.}
+
+\newpage
+
+\question[10]
+Explain the Red Queen hypothesis. Explain how it relates to the evolution of 
+love darts in the hermaphroditic land snail, \textit{Cantareus aspersus}.
+
+%sexual reproduction as a defense against parasites.
+
+\AnswerBox{0.3\textheight}{%
+	Red Queen Hypothesis suggests that the hermaphroditic snails evolve in response to each other. Snails that are better dart shooters may alter the reproductive physiology of the other individual. Thus, the other individual evolves the ability to resist the allohormones of the first individual.
+}
+
+%\AnswerBox{1\basespace}{%
+%	Red Queen Hypothesis suggests that parasites and their hosts continually evolve in response to each other. Parasites evolve to become better infectors, while hosts evolve better defenses. Sexual reproduction increase the ability generate new genetic combinations in an effort to evolve better defenses.
+%}
+
+%\question[5]
+%Explain and diagram the cost of sex.
+%
+%\AnswerBox{0.2\textheight}{%
+%	The cost of sex means that asexual individuals have greater fitness compared to sexual reproducers (2 pts). Asexual species can reproduce exponentially while sexually reproducing species can reproduce linearly (2 pts.) E.g.If each reproductive event results in four offspring, asexual individuals will reproduce 4, 16, 64 offspring. Sexual reproducers will produce 4, 8, 16.
+%}
 
 
 \question[5]
@@ -169,21 +184,27 @@ Male treehoppers (genus \textit{Enchenopa}) attract females by sending vibration
 \newpage
 
 
-%\newpage
-
 \question[5]
-Explain the Red Queen hypothesis as it relates to the evolution of 
-love darts in the hermaphroditic land snail, \textit{Cantareus aspersus}.
+Describe ecological release and how it might explain increased origination of taxa after a mass extinction.
 
-%sexual reproduction as a defense against parasites.
+\AnswerBox{0.2\textheight}{Description}
 
-\AnswerBox{1\basespace}{%
-	Red Queen Hypothesis suggests that the hermaphroditic snails evolve in response to each other. Snails that are better dart shooters may alter the reproductive physiology of the other individual. Thus, the other individual evolves the ability to resist the allohormones of the first individual.
-}
+\question[15]
+Describe the three types of bias in the fossil record and how each affects our understanding of evolutionary history.
 
-%\AnswerBox{1\basespace}{%
-%	Red Queen Hypothesis suggests that parasites and their hosts continually evolve in response to each other. Parasites evolve to become better infectors, while hosts evolve better defenses. Sexual reproduction increase the ability generate new genetic combinations in an effort to evolve better defenses.
-%}
+\begin{AnswerPage}{0.5\textheight}
+	\begin{enumerate}
+		\item Geographic: lowland or marine fossils
+		
+		\item Taxonomic: only have fossils for species with hard parts so other taxonomic groups poorly represented.
+		
+		\item Temporal: better fossil record from more recent formations.
+	\end{enumerate}
+	
+\end{AnswerPage}
+
+\newpage
+
 
 \question[10]
 Male satin bowerbirds decorate their bowers with bright blue objects they find around the area. The bower is not a nest. It's a structure built solely to attract females. Females build the nest elsewhere. Assuming the male does \emph{not} help raise his offspring, explain whether the good genes hypothesis or runaway sexual selection best fits this scenario, and why.
@@ -191,8 +212,6 @@ Male satin bowerbirds decorate their bowers with bright blue objects they find a
 \AnswerBox{4\basespace}{%
 	Good genes hypothesis. Males with the most decorated bowers expended more energy to find the objects. That would also make them more vulnerable to predation as they spend more time searching. The most decorated bowers would indicate to the female that the male has good genetic quality because he is still alive.
 }
-
-\newpage
 
 %\question[15]
 %\textbf{REPLACE WITH MADS and something else} Discuss in terms of fitness and adaptive flexibility the advantages and disadvantages of both asexual and sexual reproduction. That is, what are the advantages and disadvantages of maintaining the same genome (asexual) versus a variable genome (sexual) in relation to the current environment (in a broad sense) and possible future changes to the environment. 
@@ -208,22 +227,22 @@ Male satin bowerbirds decorate their bowers with bright blue objects they find a
 %	
 %\end{solution}
 %
-\question[5]
-Describe the basic process of fossil formation (assume the organism has hard parts like a skeleton or shell).
+%\question[5]
+%Describe the basic process of fossil formation (assume the organism has hard parts like a skeleton or shell).
+%
+%\AnswerBox{0.25\textheight}{
+%Description}
 
-\AnswerBox{0.25\textheight}{
-Description}
 
-
-\question[10]
-According to Barnosky et al., how does the current rate of extinction compare to the last five mass extinctions?
-Does this rate suggest a mass extinction is happening now? Explain.
-
-\AnswerBox{0.4\textheight}{The current rate exceeds that of previous known mass extinctions. Although a Barnoskey et al,
-does not suggest a mass extinction is currently underway, a mass extinction could be underway if the rate continues, or
-includes threatened/vulnerable species.}
-
-\vfill
+%\question[10]
+%According to Barnosky et al., how does the current rate of extinction compare to the last five mass extinctions?
+%Does this rate suggest a mass extinction is happening now? Explain.
+%
+%\AnswerBox{0.4\textheight}{The current rate exceeds that of previous known mass extinctions. Although a Barnoskey et al,
+%does not suggest a mass extinction is currently underway, a mass extinction could be underway if the rate continues, or
+%includes threatened/vulnerable species.}
+%
+%\vfill
 
 %\input{devious_extra_credit}
 \end{questions}
