@@ -21,16 +21,18 @@
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
 \pagestyle{headandfoot}
-\firstpageheader{Marine Biology, Exam 4, Sp\short{\year}. \numpoints\ points.}{}{%
+\firstpageheader{Marine Biology, Exam 4, Sp\short{\year}.}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
-\footer{\iflastpage{\small Have a great summer!}{}}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\iflastpage{\small Have a great summer!}{}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
 
 \pointsinmargin
 \marginpointname{ pts}
+\marginbonuspointname{ pts \textsc{e.c.}}
+
 
 \usepackage{multicol}
 \usepackage[version=4]{mhchem}
@@ -105,45 +107,29 @@
 
 \begin{questions}
 
-\fullwidth{Read each question carefully and completely. Be sure your answer addresses the question being asked. Use complete sentences.}
+\fullwidth{Read each question carefully and completely. Be sure your answer addresses the question being asked. Use complete sentences. Use your words.}
+
+\bonusquestion[1] Favorite type of donut (no promises): \rule{2.5in}{0.4pt}
 
 \question[5]
-Explain and justify whether the amount of iron recycled in the Antarctic by toothed whales (e.g., Killer Whale) would be higher or lower compared to baleen whales (e.g., Blue Whales). \textsc{Hint:} think trophic levels. 
+Mudskippers can absorb O\textsubscript{2} through their skin. Briefly describe another mechanism they use to breathe on exposed mudflats. How do mudskippers use this mechanism to deliver oxygen to their developing eggs?
 
-\AnswerBox{0.2\textheight}{Reduced. More trophic levels.}
+\AnswerBox{0.2\textheight}{Trap a bubble of air over their gills. Males will deliver this bubble into the burrow and release it over their eggs.}
 
 \question[5]
-Tell whether the results shown in the following figure support the predation risk hypothesis or the visual acuity hypothesis. Explain why.
+Compare and contrast the plasticity of the Atlantic Puffin versus the Little Auk. Which species shows more ability to adapt to its changing environment? 
 
-\includegraphics[width=\textwidth]{exam4_visual_acuity}
-
-\AnswerBox{0.2\textheight}{Visual acuity. Sharks were more successful when it was a new moon because the visual acuity of prey was reduced.}
+\AnswerBox{0.2\textheight}{Puffins abandoning nests and experiencing low reproductive success when food resources change, whereas little auks adapt to the change in food resources and adjust diving behavior according to sea-ice coverage, benefit from glacial melt and rising temps.}
 
 %\newpage
 
 \question[5]
-Explain one reason a conservation manager must understand how genetic variation is
-distributed across the entire range of a species that is being
-considered for conservation management or reintroduction into a
-particular area.
+Briefly describe how predators affect the distribution of prey species (like snails) in a salt marsh during low and high tides.
 
-\begin{AnswerPage}{0.2\textheight}
-	Many studies have shown that many organisms are not genetically uniform across its entire range.  
-	
-	\begin{itemize}
-		
-		\item A population adapted for one area my not be well adapted for another area. Thus, individuals are not amenable to transplant.
-		
-		\item Cannot let individuals in one area go extinct because they are genetically different. 
-		
-		\item Genetic variability across the population increases adaptive ability in a changing environment.
-	\end{itemize}
-	
-	Grade as 4 points per explained reason.
-	
-\end{AnswerPage}
+\AnswerBox{0.2\textheight}{
+	Prey species tend to move about in the water to feed during low tide because predators are restricted in their movement. Prey move up on the stems above the water line during high tide to avoid the predators.}
 
-%\newpage
+\newpage
 
 
 \question[5] \label{q:carbonate_buffering_system}
@@ -233,7 +219,7 @@ Describe how ocean acidification might affect the ability of juvenile coral reef
 
 \fullwidth{\centering\includegraphics[width=6.5in]{Exam4_Fig1a}}
 
-\question[20]
+\question[15]
 Use the figure above to clearly and thoroughly explain how increased ocean acidity
 will alter connectivity and fecundity across a large coral reef. You must include coral
 recruitment and growth (indicated by the black arrow), distance between patches, and coral fecundity (reproductive output of corals). Be sure to include both positive (dashed lines) and negative (solid lines) relationships among these factors. Do not include unnecessary factors and relationships. 
@@ -261,30 +247,20 @@ Reef scale fecundity has a positive influence on coral recruitment and growth. A
 
 \newpage
 
-\question[10]
-Briefly explain each of the three factors that must be considered to identify
-a potential biodiversity hotspot for conservation efforts.
+\question[5]
+List in order from ocean to land the four zones found in a typical New England salt marsh. You may use common or scientific names but scientific names make a greater impression. 
 
-%\textbf{Can turn into individual questions. E.g., Explain why FACTOR X is important to
-%	identify a potential biodiversity hotspot.}
+\AnswerBox{0.1\textheight}{Cordgrass zone, salt hay zone, black rush zone, marsh elder zone.}
+
+\question[10]
+Describe the \emph{specific} biotic and abiotic interactions between Cordgrass (\textit{Spartina alterniflora}) and Salt Hay (\textit{S. patens}) that determine their distribution in a salt marsh. Include in your answer which species is found in the low marsh and which is found in the high marsh. 
+
+\begin{AnswerPage}{0.6\textheight}%
+	1. Patens (high marsh) is better competitor for space but it cannot tolerate wet, low O\textsubscript{2} of sediment in low marsh.
 	
-\begin{AnswerPage}{4\basespace}%
-	
-	Grade as 1 point per item, plus 2 points for the explanation.\vspace{\baselineskip}
-	
-	1. Identify areas that have the highest organismal diversity.
-	
-	2. Identify the areas that have the highest amount of endemism.
-	
-	3. Identify the areas that have the greatest threats from human impacts.
-	
-	The areas where these three items intersect are the best candidates for biodiversity hotspots.
+	2. Alterniflora cannot compete with patens for space but can tolerate wet, low O\textsubscript{2} of sediment in low marsh.
 \end{AnswerPage}
 
-%\vfill
-%
-%\input{devious_extra_credit}
-%
 
 \end{questions}
 
