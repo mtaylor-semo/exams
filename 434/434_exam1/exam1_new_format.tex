@@ -1,0 +1,235 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+\usepackage[parfill]{parskip}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{bi}\,434/634 Marine Ecology \amper Conservation, Exam 1, \textsc{f}\short{\year}}{}{\numpoints\ points}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+
+\usepackage{hanging}
+
+\usepackage[sc]{titlesec}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+
+\newcommand{\fst}{$F_{ST}$}
+%\newlength{\basespace}
+%\setlength{\basespace}{5\baselineskip}
+
+
+%\printanswers
+
+
+\begin{document}
+
+Each question is based on a chapter from the text and one or more recent scientific publications. 
+The publications are available from the course Moodle page. Read each question, find the 
+relevant material in the chapter and publication, and then answer the question as fully
+as possible.
+
+Most questions have a \emph{technically correct} answer but I am more interested in
+the depth and justification of your answers. I expect that you will explain your reasoning 
+for your answers. You may quote directly (use quotation marks to  show when you are quoting) from the text and papers to 
+support your reasoning but do not quote extensively. The majority of writing must be in
+your own words. When you quote or otherwise reference the text, provide specific page, figure, or table numbers.
+
+Upload your answers to the drop box by the due date and time.
+
+\subsubsection*{Chapter 21: Ecosystem-based approaches to marine conservation and management}
+
+In Chapter 21, Halpern and Agardy (2014) listed five principles (page~478) that are 
+the foundation of ecosystem-based management (\textsc{ebm}). I summarized 
+the \textsc{ebm} principles as
+
+\begin{enumerate}[label=\textsc{\alph*}.]
+\item goals encompass all ecosystem services,
+\item the spatial scale is based on natural boundaries across multiple ecosystems,
+\item all sectors of human use are integrated,
+\item cumulative effects across sectors are estimated, and
+\item strategies adapt over time to account for uncertainty.
+\end{enumerate}
+
+Halpern and Agardy also identified cumulative impact mapping as a key tool of \textsc{ebm.}
+
+\begin{questions}
+
+\question
+Magris et~al.~(2018) assessed cumulative human impacts on Brazilian coral reefs.
+
+\begin{parts}
+\part[10] Describe how Magris~et~al.~addressed each of the five principles. If you think
+they did not address one or more of the principles, say so clearly. If you think
+they indirectly addressed one or more principles, explain why you think so and 
+provide justification.
+%
+\part[5] Describe the approach(es) Magris~et~al.~used for cumulative impact mapping. 
+
+\end{parts}
+%
+%
+%
+%
+%\AnswerBox{0.1\textheight}{No. Although larvae may have the potential to 
+%disperse far, they may not actually do so. Several studies have shown 
+%that some species with high potential do not disperse.}
+
+\begin{EnvFullwidth}
+\subsubsection*{Chapter 22: Marine restoration ecology}
+
+In Chapter 22, Powers and Boyer (2014) describe four approaches 
+to marine restoration ecology. They also provide in Fig.~22.1 a conceptual diagram for developing and testing a restoration plan.
+
+\end{EnvFullwidth}
+
+\question
+Williams~et~al.~(2017) test the role of species richness in a restoration of seagrasses.
+
+\begin{parts}
+
+\part[5] Which approach or approaches described by Powers and Boyer to restoration ecology best matches the study by Williams et~al.? Justify your choice(s).
+
+\part[10] Using specific examples, state which stages from Fig.~22.1 are addressed (as part of the study, introduction, or discussion) by Williams et~al. Include as appropriate the stages in the center of the diagram (document the historical resource, assess the current status, etc.) as well as the two outer columns (compile biological information, examine current ecological information, etc.)
+
+\end{parts}
+
+
+\begin{EnvFullwidth}
+\subsubsection*{Chapter 06: Biodiversity \amper ecosystem function}
+
+In Chapter 6, O'Connor and Byrnes (2014) list two predictions (page~113) derived from biodiversity and ecosystem function theory, including complementarity and redundancy.
+
+\end{EnvFullwidth}
+
+
+\question
+Kelly~et~al.~(2016) investigated functional redundancy and complementarity in a group of herbivorous reef fishes in Hawaii.
+
+\textsc{Hint:} The niche includes all of the resources needed by a species. You can determine whether niche partitioning is occurring by studying the fish's feeding guild (Table~1 and Fig.~2), substrate bitten and gut composition (Figs.~1\,\&\,3), and selectivity for substrate type (Fig.~5) 
+
+Be sure to explain and justify your answers.
+
+\begin{parts}
+
+\part[10] Do Kelly~et~al. provide evidence to support all or part of prediction 1? This prediction includes two conditions necessary to increase function so be sure to address \emph{each} condition in your answer.
+
+\part[5] Do Kelly~et~al. provide evidence to support all or part of prediction 2?
+ 
+\end{parts}
+
+\begin{EnvFullwidth}
+\subsubsection*{Chapter 04: Marine dispersal, ecology \amper conservation}
+
+In Chapter 4, Palumbi and Pinsky (2014) discuss genetic methods to measure dispersal and equilibrium among populations. Much of their discussion is based on using $F_{ST}$ to assess dispersal and connectivity among populations.
+
+\textsc{Important:} Early measures of $F_{ST}$ were based on sampling alleles from one or a few genes. Current genetic methods sample across the entire genome. Such fine-scale resolution can identify genetically different populations even with very low $F_{ST}$ values. For this question and your answers, assume that $F_{ST}$ values close to but greater than zero are low but not zero. You may determine what levels you want to use to separate low from moderate (see Table~4.1). 
+
+\end{EnvFullwidth}
+
+\question\label{ques:dispersal}
+Benestan~et~al.~(2015) studied population connectivity in the American Lobster \textit{Homarus americanus.} Van Wyngaarden~et~al.~(2016) performed a similar study in the Sea Scallop 
+\textit{Placopecten magellanicus.} Both species have planktotrophic larvae although \textit{H. americanus} can be lecithotrophic during early stages of larval development. Both studies sampled from similar locations along the northeastern coast of North America.
+
+Pay careful attention to the values that Benestan~et~al. use for “weak” genetic differentiation as you think about reported $F_{ST}$ values for both species. Ignore $F_{CT}$ values, which measures genetic similarity within regions.
+
+\begin{parts}
+
+\part[5] Both studies give the pelagic larval duration for their species. Compare the larval durations for both species, using the information from the papers. 
+
+% Lobster 3-6 weeks, temperature dependent.
+% scallop 30-35 days.
+
+\part[5] Based on reported \fst{} values, what population type (Table~4.1) do these species match?  How does this affect the potential for local adaptation and speciation?
+
+% Waples Zone
+
+\part[5] How many regional groups does each study find for its species? (A regional group is a cluster of genetically similar populations.) Do the studies find the same or different number of groups? Do some, all, or none of the regional groups occupy the same geographic areas along the coast; i.e., do any regional groups share common boundaries? Propose a reasonable hypothesis (with justification of course) for why the different species show similar or different regional group patterns.
+
+\part[5] From our discussion of Andrello et al.~(2014), predict how climate change might affect the population structure of \textit{H. americanus.} Will the number of regional groups increase? Decrease? Remain unchanged? Do you think the same would happen for \textit{P. magellanicus?} Justify your answers. 
+
+\end{parts}
+
+\end{questions}
+
+\subsubsection*{Literature cited}
+
+\begin{hangparas}{\leftmargin}{1}
+Andrello, M., D.\,Mouillot, S.,Somot, W.\,Thuiller, and S.\,Manel. 2014. Additive effects of climate change on connectivity between marine protected areas and larval supply to fished areas. Diversity and Distributions 2014: 1--12.
+
+Benestan, L.,B., T.\,Gosselin, C.\,Perrier, B.\,Sainte-Marie, R.\,Rochette, and L.\,Bernatchez. 2015. R\textsc{ad} genotyping reveals fine-scale genetic structuring and provides powerful population assignment in a widely distributed marine species, the American lobster (\textit{Homarus americanus}). Molecular Ecology 24: 3299–3315.
+
+Kelly,\,E.\,L.\,A., Y.\,Eynaud, S.\,M.\,Clements, M.\,Gleason, R.\,T.\,Sparks, I.\,D.\,Williams, and J.\,E.\,Smith. 2016. 
+Investigating functional redundancy versus complementarity in Hawaiian herbivorous coral reef fishes. Oecologia 182: 1151–1163.
+
+Magris, R.\,A., A.\,Grech, and R.\,L.\,Pressey. 2018. 
+Cumulative human impacts on coral reefs: assessing risk and management implications for Brazilian coral reefs. Diversity 2018, 10, 26; doi:10.3390/d10020026
+
+Van Wyngaarden,\,M., P.\,V.\,R.\,Snelgrove, C.\,DiBacco, L.\,C.\,Hamilton, N.\,Rodríguez-Ezpeleta, N.\,W.\,Jeffery, R.\,R.\,E.\,Stanley, and I.\,R.\,Bradbury. 2017. Identifying patterns of dispersal, connectivity and selection in the sea scallop, \textit{Placopecten magellanicus}, using R\textsc{ad}seq-derived S\textsc{np}s. Evolutionary Applications 10: 102–117.
+
+Williams, S.\,L., R.\,Ambo-Rappe, C.\,Sur, J.\,M.\,Abbott, and S.\,R.\,Limbong. 2017. Species richness accelerates marine ecosystem restoration in the Coral Triangle. Proceedings of the National Academy of Sciences \textsc{usa} 114: 11986–11991.
+
+
+\end{hangparas}
+
+\end{document}
