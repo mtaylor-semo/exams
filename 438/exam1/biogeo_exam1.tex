@@ -1,0 +1,254 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, addpoints]{exam}
+
+%\printanswers
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/pictures/teach/438/exam/}
+	{/Users/goby/pictures/teach/438/lectures/}} %
+	 set of paths to search for images
+
+\usepackage[left=0.75in,right=0.75in,top=1in]{geometry}    
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Linux Libertine Mono O}
+\usepackage{microtype}
+
+\usepackage{multicol}
+\usepackage{amsmath}
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Biogeography, Exam 1, \textsc{f}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY \numpoints~pts}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\begin{document}
+
+\begin{questions}
+
+\question[5]
+Range sizes of North American birds and mammals vary from small to very large.  In contrast, range sizes of Eurasian birds and mammals tend to be very large.  Explain this discrepancy between North America and Eurasia range sizes.
+
+	\AnswerBox{0.2\textheight}{%
+	North America has mountain ranges that run north south that tend to act as barriers that limit the east-west range boundaries. Eurasia tends to have east-west running ranges so the east-west range boundaries are not restricted.
+	}
+
+
+\question
+\begin{parts}
+\part[5]
+ 
+\begin{multicols}{2}
+
+Explain the relationship between body mass and\newline geographic range size shown in the figure.
+
+\columnbreak
+
+\includegraphics[width=0.45\textwidth]{range_size_area_mass}
+
+\end{multicols}
+
+\vspace*{0.1\textheight}
+
+\part[5]
+Explain why the range size for almost \emph{none} of the mammals falls below the diagonal dashed line. 
+
+\AnswerBox{0.1\textheight}{%
+Answer here.
+}
+
+
+\end{parts}
+
+
+%\question[10]
+%What is the name for pattern shown in the four panels of the figure below. Explain two reasons why this pattern is not universal for all taxa. Think broadly for all taxa. Do not use the fish and bird examples for the readings. %This pattern has been found for many taxa but does not appear to be universal. 
+%
+%\begin{multicols}{2}
+%
+%	\begin{AnswerPage}{1\basespace}
+%	Rapoport's rule. (2 points.)\bigskip
+%	
+%	Reason 1.(4 pts).\bigskip
+%	
+%	Reason 2. (4 pts). 
+%	\end{AnswerPage}
+%
+%\columnbreak
+%  \hfill \includegraphics{rapo_pattern} 
+%  
+%\end{multicols}
+%
+%\vspace*{\stretch{2}}
+
+\newpage
+
+
+\question[5]
+{\raggedcolumns
+\begin{multicols}{2}
+This figure, based on African catarrhine primates, illustrates a common biogeographic pattern. In 1–2 sentences, describe what this figure illustrates.
+
+\bigskip
+
+\ifprintanswers \textbf{Most species have small geographic range sizes.} \fi
+
+\columnbreak
+
+\hfill \includegraphics{catarrhine}
+
+\end{multicols}
+}%ragged columns
+
+\vspace{0.05\textheight}
+
+\question[5]
+Explain the difference between the fundamental and realized geographic range. 
+
+
+\AnswerBox{0.1\textheight}{%
+The fundamental geo.~range describes the geographic range that can be potentially occupied by a species. The realized range is the range actually occupied by a species after accounting for disturbance, competition, habitat quality, etc.
+}
+
+
+\question[5]
+Briefly explain how habitat quality can influence the geographic range size of a species.
+
+\AnswerBox{0.1\textheight}{%
+Habitat quality\dots
+}
+
+\question[5] 
+Briefly explain how ecological disturbance (e.g., fires, floods) can influence the geographic range size a species.
+
+\AnswerBox{0.1\textheight}{%
+Disturbance\dots
+}
+
+
+\newpage
+
+
+
+\question[10]
+{\raggedcolumns
+\begin{multicols}{2}
+Explain why arid regions like the Sahara Desert are concentrated around 30° latitude. Begin your explanation with solar input at the equator. You may use the figure as a guide.
+
+
+\ifprintanswers \textbf{Dry air descends, warms back up, sucks moisture out of the ground.} \fi
+
+\columnbreak
+
+	\hfill \includegraphics[width=0.45\textwidth]{climate_hadley_cells}
+
+\end{multicols}
+}% ragged columns
+
+%\vspace*{\stretch{5}}
+%
+%\question[3]
+%What physical geographic feature can also lead to desert formation?  Name this effect.
+%
+%\AnswerBox{4\baselineskip}{%
+%Mountains create rainshadows.
+%}
+
+\vspace{0.2\textheight}
+
+\newpage
+
+\question
+\begin{parts}
+\part[3]
+Draw and briefly state what is the latitudinal diversity gradient.
+
+\AnswerBox{0.1\textheight}{%
+	\textbf{Species diversity is highest at low latitudes and decreases with increasing latitude.}
+}
+
+\part[5]
+Briefly explain how high net primary productivity contributes to the latitudinal gradient.
+
+\AnswerBox{0.15\textheight}{
+High \textsc{npp}\dots
+}
+
+\part[12]
+Use relative rates of origination, extinction, and immigration to explain the Out-of-the-Tropics concepts of cradles, museums, and immigration pumps. Tell how these concepts together could explain the latitudinal diversity gradient. You may include an illustration to support your explanation.
+
+%The Out-of-the-Tropics model has been proposed to explain the latitudinal diversity gradient. Use origination, extinction, and immigration in tropical and extratropical regions to explain how the tropics act as cradles, museums, and immigration pumps, according to this model.
+
+\begin{AnswerPage}{0.3\textheight}
+	\vspace{2ex}
+	
+	4 points each.\bigskip
+	
+	Cradles: $O_t > O_e.$\bigskip
+	
+	Museum: $E_t < E_e.$\bigskip
+	
+	Immigration pump: $I_t < I_e.$ \bigskip
+	
+	Because origination is high and extinction is low in the tropics, species tend to accumulate in the tropics. Some taxa however do emigrate out of the tropics and immigrate into extra tropical regions. The tropics act as a source of taxa to extratropical regions but overall accumulation is highest in the tropics, leading to higher diversity in the tropics than in extratropical regions.
+	
+\end{AnswerPage}
+
+\end{parts}
+
+
+\newpage
+
+\question[10]
+Veter et al. (2013) examined whether Rapoport's rule applied to taxa that lived millions of years ago.  Below is a figure of their results.  Briefly explain Rapoport's Rule with regard to range size, then interpret their figure to explain whether their results are consistent with Rapoport's Rule. Explain each panel of the figure as it relates to the range size part of Rapoport's Rule.
+
+\begin{center}
+\includegraphics{paleorap} 
+\end{center}
+
+	\begin{AnswerPage}{0.2\textheight}
+	Rapoport's rule says that geographic range size increase with higher latitudes. Also diversity decreases at higher latitudes (4 points).\smallskip
+	
+	The Miocene and Pliocene show decreasing range size at higher latitudes so these periods are not consistent with Rapoport's Rule. The Pleistocene shows increasing range size at higher latitudes so that period is consistent with Rapoport. (2 points per panel).
+	\end{AnswerPage}
+
+
+\end{questions}
+
+\end{document}
