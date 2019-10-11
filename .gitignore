@@ -25,6 +25,11 @@
 *.txt
 *.xlsx
 
+## Exam files that do not need to be backed up.
+matching[A-C].tex
+multiplechoice[A-C].tex
+truefalse[A-C].tex
+
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
 
