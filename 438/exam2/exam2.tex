@@ -1,36 +1,43 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[12pt]{exam}
+\documentclass[12pt, addpoints]{exam}
 \usepackage{graphicx}
 	\graphicspath{{/Users/goby/pictures/teach/438/exam/}} % set of paths to search for images
 
-\usepackage[left=0.75in,right=0.75in,top=1in]{geometry}    
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}    
 
 \usepackage{fontspec}
-\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{Linux Libertine O}
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{Linux Libertine O}
 \setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
 \setmonofont[Scale=MatchLowercase]{Inconsolatazi4}
 \usepackage{microtype}
 
 \usepackage{multicol}
-\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
 \pagestyle{headandfoot}
 %\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
-\firstpageheader{Biogeography, Exam 2, F\short{\year}}{}{%
+\firstpageheader{Biogeography, Exam 2, \textsc{f}\short{\year}}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
-\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
+
+%\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+%\extrafootheight{-0.5in}
 
 \pointsinmargin
 \marginpointname{ pts}
-
+\marginbonuspointname{ pts\,\textsc{e.c.}}
 
 %% Remove comment %% to print answer key.
 %\printanswers
@@ -38,37 +45,77 @@
 \renewcommand{\solutiontitle}{}
 \SolutionEmphasis{\bfseries}
 
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
 \begin{document}
 
 \begin{questions}
 
-
 \question[2]
 From when to when did the Pleistocene occur?
 
-\ifprintanswers 2.6 MYA -- 12 KYA \fi
-
-\vspace*{\stretch{0.75}}
+\AnswerBox{0.01\textheight}{2.6 \textsc{mya} -- 12 \textsc{kya}}
 
 \question[5]
 Describe the albedo effect and how it contributed to expansion of Pleistocene glaciers.
 
-	\begin{solution}
+\AnswerBox{0.2\textheight}{
 	Albedo is amount of light reflected away from earth. More glaciers would have reflected back more sun, leading to cooler temperatures.
-	\end{solution}
+}
 
-\vspace*{\stretch{2}}
+\question[10]
+On the figure below, identify the eight terrestrial biogeographic regions. Draw horizontal lines that show the approximate north/south boundaries between each of the regions. You do not need to draw east/west boundaries. Identify the location of Wallace's Line.
+
+\ifprintanswers
+	\includegraphics[width=\linewidth]{globalmap_answer}	
+\else
+	\includegraphics[width=\linewidth]{GlobalMap}
+\fi
+
+\bonusquestion[2]
+Provide evidence that ocean salinity changes during the Pleistocene \emph{directly} affected the distribution of one or more taxa.
+
+\AnswerBox{0.1\textheight}{Who knows}
 
 
-\question[5]
-Describe the difference between the target effect and the rescue effect with respect to predicted and observed turnover rates.
+\newpage
 
-	\begin{solution}
-	Both are based on higher than expected immigration. Rescue effect occurs on ``near'' islands because high immigration reduces extinction rate (rescuing taxa), lowering the overall turnover rate. Target effect occurs on large islands because higher immigration (large target) replaces extinct taxa more often than expected, creating higher turnover rate.
-	\end{solution}
+\question
+\begin{parts}
+\part[5]
+The figure below shows the similarity of coastal bivalves (clams and mussels) between North America and Europe. Briefly explain how and why bivalve similarity between North America and Europe is changing over time. (\textsc{mya} = millions of years ago.)\bigskip
 
-\vspace*{\stretch{2}}
+\begin{minipage}{0.47\textwidth}%
+\ifprintanswers
+	\textbf{Similarity decreases with distance between the continents because continued speciation over time causes the continental faunas to become increasingly different. }
+\else
+	\hspace{0.47\textwidth}
+\fi
+\end{minipage}\begin{minipage}{0.45\textwidth}%
+	\hfill\includegraphics{atlanticbasin}
+\end{minipage}
 
+\bigskip
+
+
+\part[10]
+Briefly define or explain seafloor spreading and ridge push, and then describe how these processes together contribute to the pattern displayed in the figure above. You may draw a picture to aid your explanation.
+
+\AnswerBox{0.3\textheight}{
+	Ridge push, seafloor spreading is moving the basins apart.
+}
+
+\end{parts}
 
 \newpage
 
@@ -99,38 +146,60 @@ Each circle represents one allele. Shading corresponds to the population sampled
 
 \newpage
 
-\question[8]
-Draw and label the complete MacArthur-Wilson model of island biogeography. Be sure to label both axes of the model.
+\question
+Below is the distribution of the freshwater mussel family Hyriidae. The table lists the distributions of subfamilies (-inae) and tribes (-ini) for the family.
 
-\vspace*{\stretch{2}}
-
-\question[10]
 \begin{multicols}{2}
-Si et al. (2014) tested the MacArthur-Wilson model using 37 species of breeding birds living on islands in Thousand Island Lake, China. The following figure shows part of their results.  Based on the figure, tell whether their results are consistent with the MacArthur-Wilson model. Assume all islands are “near” islands. Clearly explain how you decided on your answer.
+
+\includegraphics[width=\linewidth]{hyriid_distribution}
+
 \columnbreak
-\begin{center}
-	\includegraphics[width=0.45\textwidth]{island_turnover}
-\end{center}
+
+\begin{tabular}{lL{1.6in}}
+\toprule
+Taxon & Location \\
+\midrule
+Velesunioninae & Australia, New Guinea \\
+Hyriinae & \\
+~~Hyridellini & Australia, New Guinea, \newline~~New Zealand \\
+~~Hyriini     & South America \\
+~~Castaliini  & South America \\
+~~Rhipidodontini & South America \\
+\bottomrule
+\end{tabular}
 \end{multicols}
 
-\vspace*{\stretch{2}}
+\begin{parts}
+\part[3] Write the \emph{most likely} type of distribution displayed by the hyriid mussels.
+
+\AnswerBox{0.05\textheight}{Gondwanan}
+
+\part[10]
+Graf et al.~(2015) tested whether hyriid mussel evolution was consistent with the distribution you named.  Below left is a dendrogram that shows the order of the breakup of the land masses.  Below right is a phylogeny of the relationships among the five mussel taxa listed above. Use these data to explain whether the relationship of the mussels is consistent with a vicariant distribution for \emph{all five taxa.} Provide two specific examples from the two trees to justify your answer. (Numbers in dendrogram indicate time of separation (millions of years ago, \textsc{mya}).
+
+
+\begin{minipage}{0.45\linewidth}%
+\noindent\includegraphics[width=\linewidth]{gondwanabreakup}\par
+\end{minipage}%
+\hfill\begin{minipage}{0.50\linewidth}%
+	\includegraphics[width=\linewidth]{hyriid_phylogeny2}\par
+\end{minipage}
+
+\AnswerBox{0.2\textheight}{Not entirely.}
+
+\end{parts}
+
+\end{questions}
 
 \newpage
 
-\question[15]
-Use Lomolino's extension of the MacArthur-Wilson model of island biogeography to explain why endemism is high on large, isolated islands, as shown in the figure below.  
+\thispagestyle{empty}
+%\topskip0pt
 
-\begin{minipage}{0.4\textwidth}
-	\hfill
-	\begin{solution}
-	Large islands provide resources to support abundance, different niches for adaptation. Isolation means little to no gene flow preventing evolution.
-	\end{solution}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-	\hfill \includegraphics[width=\textwidth]{lomolino_endemism}
-\end{minipage}
+\vspace*{\fill}
 
+\hspace*{\fill} {\tiny Hi!} \hspace*{\fill}
 
-\end{questions}
+\vspace*{\fill}
 
 \end{document}
