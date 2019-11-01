@@ -1,0 +1,200 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[addpoints]{exam}
+\usepackage{graphicx}
+	\graphicspath{{/Users/goby/pictures/teach/438/exam/}} % set of paths to search for images
+
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}    
+
+\usepackage{fontspec}
+\setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{Linux Libertine O}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX]{Linux Biolinum O}
+\setmonofont[Scale=MatchLowercase]{Inconsolatazi4}
+\usepackage{microtype}
+
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
+\firstpageheader{Biogeography, Exam 2, \textsc{f}\short{\year}}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+%\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+%\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+\marginbonuspointname{ \textsc{e.c.}}
+
+%% Remove comment %% to print answer key.
+%\printanswers
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace*{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace*{\stretch{1}}}
+
+\begin{document}
+{\fontsize{14pt}{16pt}\selectfont
+
+\begin{questions}
+
+\question[2]
+From when to when did the Pleistocene occur?
+
+\AnswerBox{0.01\textheight}{2.6 \textsc{mya} -- 12 \textsc{kya}}
+
+\question[5]
+Describe the albedo effect and how it contributed to expansion of Pleistocene glaciers.
+
+\AnswerBox{0.2\textheight}{
+	Albedo is amount of light reflected away from earth. More glaciers would have reflected back more sun, leading to cooler temperatures.
+}
+
+\question[10]
+On the figure below, identify the eight terrestrial biogeographic regions. Draw horizontal lines that show the approximate north/south boundaries between each of the regions. You do not need to draw east/west boundaries. Identify the location of Wallace's Line.
+
+\ifprintanswers
+	\includegraphics[width=\linewidth]{globalmap_answer}	
+\else
+	\includegraphics[width=\linewidth]{GlobalMap}
+\fi
+
+\bonusquestion[2]
+Provide evidence that ocean salinity changes during the Pleistocene \emph{directly} affected the distribution of one or more taxa.
+
+\AnswerBox{0.1\textheight}{Who knows}
+
+
+\newpage
+
+\question
+\begin{parts}
+\part[5]
+The figure below shows the similarity of coastal bivalves (clams and mussels) between North America and Europe. Briefly explain how and why bivalve similarity between North America and Europe is changing over time. (\textsc{mya} = millions of years ago.)\bigskip
+
+\begin{minipage}{0.47\textwidth}%
+\ifprintanswers
+	\textbf{Similarity decreases with distance between the continents because continued speciation over time causes the continental faunas to become increasingly different. }
+\else
+	\hspace{0.47\textwidth}
+\fi
+\end{minipage}\begin{minipage}{0.45\textwidth}%
+	\hfill\includegraphics{atlanticbasin}
+\end{minipage}
+
+\bigskip
+
+
+\part[10]
+Briefly define or explain seafloor spreading and ridge push, and then describe how these processes together contribute to the pattern displayed in the figure above. You may draw a picture to aid your explanation.
+
+\AnswerBox{0.3\textheight}{
+	Ridge push, seafloor spreading is moving the basins apart.
+}
+
+\end{parts}
+
+\newpage
+
+\question[15]
+\begin{multicols}{2}
+The figure shows the distribution of three species of pika (rabbit relatives) in the Nearctic (stars and circles) and Palearctic (triangles). Write a clear and detailed hypothesis that includes \textit{one or more} refugia to explain this distribution and how each might have contributed to speciation. Include the proper name for each refugium and assume the pikas evolved from a single common ancestor.
+\columnbreak
+\begin{center}
+	\includegraphics[width=0.45\textwidth]{pika_distribution}
+\end{center}
+\end{multicols}
+
+
+\newpage
+
+
+\question[15]
+Australia was not covered by glaciers but climate change during the Pleistocene still caused range contraction and expansion for many taxa.  An Australian gecko, \textit{Heteronotia binoei}, has the distribution indicated by the black dots in the inset below.  The large gap in the distribution suggests one of two scenarios: post-Pleistocene range expansion or a long-term barrier to dispersal between the two regions. Strasburg et al. (2007) tested these alternate hypotheses. Below is a simplified version of their parsimony network.  Based on the network, state which hypothesis is supported and describe how the network supports the hypothesis you chose. 
+
+Each circle represents one allele. Shading corresponds to the population sampled; grey is the western cluster and white is the central cluster. Each line connecting two circles indicates one mutation difference between alleles.  Small dashes indicate additional mutational differences between alleles.
+
+	{\centering
+	\includegraphics[width=\textwidth]{gecko_network}\par}
+
+	\begin{solution}
+	The western (grey) clade shows considerable genetic diversity, suggesting it is older and was likely a refuge. The central (white) clade has little genetic diversity, suggesting it is much younger and therefore the result of recent range expansion.
+	\end{solution}
+
+\newpage
+
+\question
+Below is the distribution of the freshwater mussel family Hyriidae. The table lists the distributions of subfamilies (-inae) and tribes (-ini) for the family.
+
+\begin{multicols}{2}
+
+\includegraphics[width=\linewidth]{hyriid_distribution}
+
+\columnbreak
+
+\begin{tabular}{lL{1.5in}}
+\toprule
+Taxon & Location \\
+\midrule
+Velesunioninae & Australia, New Guinea \\
+Hyriinae & \\
+~~Hyridellini & Australia, New Guinea, \newline~~New Zealand \\
+~~Hyriini     & South America \\
+~~Castaliini  & South America \\
+~~Rhipidodontini & South America \\
+\bottomrule
+\end{tabular}
+\end{multicols}
+
+\begin{parts}
+\part[3] Write the \emph{most likely} type of distribution displayed by the hyriid mussels.
+
+\AnswerBox{0.05\textheight}{Gondwanan}
+
+\vskip0pt plus 1filll
+
+Question ~8 continues next page.
+
+\part[10]
+Graf et al.~(2015) tested whether hyriid mussel evolution was consistent with the distribution you named.  Below left is a dendrogram that shows the order of the breakup of the land masses.  Below right is a phylogeny of the relationships among the five mussel taxa listed above. Use these data to explain whether the relationship of the mussels is consistent with a vicariant distribution for \emph{all five taxa.} Provide two specific examples from the two trees to justify your answer. (Numbers in dendrogram indicate time of separation (millions of years ago, \textsc{mya}).
+
+
+\begin{minipage}{0.45\linewidth}%
+\noindent\includegraphics[width=\linewidth]{gondwanabreakup}\par
+\end{minipage}%
+\hfill\begin{minipage}{0.50\linewidth}%
+	\includegraphics[width=\linewidth]{hyriid_phylogeny2}\par
+\end{minipage}
+
+\AnswerBox{0.2\textheight}{Not entirely.}
+
+\end{parts}
+
+\end{questions}
+}
+
+\end{document}

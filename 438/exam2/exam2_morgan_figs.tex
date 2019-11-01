@@ -1,0 +1,115 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{article}
+\usepackage[margin=0.5in]{geometry}     
+
+\usepackage[parfill]{parskip}
+
+\usepackage{pdflscape}
+\usepackage{multicol}
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={OldStyle,Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/438/exam/}}%
+
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{document}
+\thispagestyle{empty}
+
+{\fontsize{18pt}{21pt}\selectfont
+
+\begin{landscape}
+
+Figure for page 1, question~3. You can fill in the map here or the exam.
+
+\begin{center}
+	\includegraphics[width=\linewidth]{GlobalMap}
+\end{center}
+
+\end{landscape}
+}
+\newpage
+\thispagestyle{empty}
+
+{\fontsize{18pt}{21pt}\selectfont
+
+Figure for page 2, question 5a about coastal bivalves. 
+
+\includegraphics[height=0.42\textheight]{atlanticbasin}
+
+\bigskip
+
+Figure for page 3, question 6 about pikas. 
+
+\includegraphics[height=0.42\textheight]{pika_distribution}
+
+}
+
+\newpage
+\thispagestyle{empty}
+
+{\fontsize{18pt}{21pt}\selectfont
+
+\begin{landscape}
+
+%\newgeometry{right=0.5in}
+
+Figure for page 4, question 7 about Australian geckos.
+
+
+\includegraphics[width=0.95\linewidth]{gecko_network}
+
+\end{landscape}
+
+}
+
+\newpage
+
+{\fontsize{18pt}{21pt}\selectfont
+
+Figure and table for page 5, question 8a about mussels.
+
+\includegraphics[width=0.95\linewidth]{hyriid_distribution}
+
+
+\vspace{2\baselineskip}
+
+\begin{tabular}{lL{4.5in}}
+\toprule
+Taxon & Location \\
+\midrule
+Velesunioninae & Australia, New Guinea \\
+Hyriinae & \\
+~~Hyridellini & Australia, New Guinea, New Zealand \\
+~~Hyriini     & South America \\
+~~Castaliini  & South America \\
+~~Rhipidodontini & South America \\
+\bottomrule
+\end{tabular}
+
+\newpage
+
+Landmass dendrogram for page 5, question 8b about mussels.
+
+\includegraphics[height=0.42\textheight]{gondwanabreakup}
+
+\bigskip
+
+Hyriid phylogeny for question 8b.
+
+\includegraphics[height=0.42\textheight]{hyriid_phylogeny2}
+
+}
+\end{document}
