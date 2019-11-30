@@ -1,0 +1,240 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+\usepackage[parfill]{parskip}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{bi}\,434/634 Marine Ecology \amper Conservation, Exam 3, \textsc{f}\short{\year}}{}{\numpoints\ points}
+\runningheader{}{}{\small{pg. \thepage}}
+%\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+
+\usepackage{hanging}
+
+\usepackage[sc]{titlesec}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+
+\newcommand{\fst}{$F_{ST}$}
+%\newlength{\basespace}
+%\setlength{\basespace}{5\baselineskip}
+
+
+%\printanswers
+
+
+\begin{document}
+
+Each question is based on a chapter from the text and one or more recent scientific publications. 
+The publications are available from the course Moodle page. Read each question, find the 
+relevant material in the chapter and publication, and then answer the question as fully
+as possible.
+
+Most questions have a \emph{technically correct} answer but I am more interested in
+the depth and justification of your answers. I expect that you will explain your reasoning 
+for your answers. You may quote directly (use quotation marks to  show when you are quoting) from the text and papers to 
+support your reasoning but do not quote extensively. The majority of writing must be in
+your own words. \textbf{When you quote or otherwise reference the text, provide specific page, figure, or table numbers.}
+
+Upload your answers to the drop box by the due date and time.
+
+\subsubsection*{Chapter 11: salt marsh communities}
+
+Bertness and Silliman~(2014) list four items that must be part of managed areas for salt marshes to guard against the onslaught of human activity.
+
+\begin{questions}
+
+\question\label{q:main}
+Angelini and her colleagues (2016) examined the interaction between \textit{Geukensia demissa} (ribbed mussel) and \textit{Spartina alterniflora} (cordgrass). 
+
+\begin{parts}
+
+\part[5]\label{q:acid} Describe \emph{specifically} how ocean acidification might affect this interaction and the implications for salt marsh resilience. Your description should state clearly which species is most likely to be affected \emph{directly} by acidification and how this will affect the interaction.
+
+\part[5]
+Answer question~\ref{q:main}\ref{q:acid} again but this time for ocean warming. This one might not be as obvious as the first part, depending on how closely you read the paper. I am looking for a specific interaction here.
+
+\part[5]
+Describe which, if any, of the four items listed by Bertness and Silliman (2014) are met by this study. For each item met, clearly describe how this study meets that item. If you think none of the items are met, clearly state why.
+
+\end{parts}
+
+
+\subsubsection*{Chapter 13: coral reef ecosystems}
+
+Côté and Knowlton (2014) discuss several stressors that 
+can negatively affect the health state of coral reefs. They also discuss
+briefly prospects for conservation driven by these stressors. One prospect
+that they do not discuss is refugia from stressors.
+
+\question
+Glynn~(1996) discussed the potential effects of global climate change
+on shallow-water coral reefs. 
+
+\begin{parts}
+\part[5]
+Glynn~(1996) suggested that deep (low-light, or “mesophotic”) 
+reefs might serve as refuges for some shallow-water coral 
+species. Explain, with justification, the \emph{specific} stressors 
+listed by Côté and Knowlton (2014) that you think would be 
+ameliorated for shallow species if they were able to survive 
+in mesophotic reefs. 
+
+
+\part[5]
+Glynn~(1996) suggested that the value of mesophotic refuges 
+might vary among species with different growth forms and 
+colony sizes. What are the two \emph{specific} forms that Glynn 
+mentions. Give a reasonable justification for his choices; 
+that is, why would one form be more likely to survive in 
+a deep refuge than the other form? Be clear and specific.
+
+\end{parts}
+
+
+\question
+Bongaerts~et~al.~(2017) tested the deep-reef refuge 
+hypothesis for two coral species, \textit{Agaricia fragilis}
+and \textit{Stephanocoenia intersepta.}
+
+\begin{parts}
+\part[5] 
+Are these two species a good test of Glynn's hypothesis
+regarding coral growth forms? Why or why not? \textsc{Hint:} Google is your friend.
+
+\part[5]
+Do the results from Bongaerts~et~al.(2017) for each coral
+species support or falsify the deep-reef refuge hypothesis?
+Use specific examples from the paper to support your conclusions.
+\textsc{Hint:} Supplementary figure \textsc{s2} and table \textsc{s3} should 
+be helpful.
+
+
+\end{parts}
+
+\subsubsection*{Chapter 17: deep-sea hydrothermal vent communities}
+
+Mullineaux (2014) addressed concerns about mining of hydrothermal vent communities but little data on actual effects are available  so we'll take a different approach for this chapter. 
+
+Lique and Thomas (2018) used complex models to show how the Atlantic component of the Ocean Conveyor (the \textsc{amoc}) will be affected by large increases in atmospheric CO\textsubscript{2}. Their results are \emph{dense} but summarized in a perspective piece by Tamsitt (2018).  Read Tamsitt and compare her Fig.~1 to Fig.~5 of Lique and Thomas (do \emph{not} read all of Lique and Thomas unless you want to; just compare the figures.) Their results suggest the \textsc{amoc} will weaken, meaning the rate that water mass moves will slow-down. Weakening also might mean that water mass will not sink as deep below the surface.
+
+\question
+In a separate study, Turner and colleagues (2019) identified potential ecosystem functions and services from hydrothermal vents. See especially their Table~2 and Fig.~1. 
+
+\begin{parts}
+%\part[5]
+%If the conveyor is weakening (slowing down, not going as deep), describe how you think this will affect hydrothermal vent communities. I am asking you to write in essence a hypothesis. Be sure it is robust and well-justified. You should address at least oxygen and nutrient availability.
+
+\part[5]
+Pick \emph{one} ecosystem function identified by Turner~et~al.~(2019) and describe how you think it might be affected by a weakening \textsc{amoc}. I am asking you in essence to write a hypothesis. Be sure it is robust and well-justified.
+
+\part[5]
+If the \textsc{amoc} is weakening, describe how the potential change of a hydrothermal regulating service (Fig.~1 of Turner et~al.) might affect shallow-water marine ecosystems. Think carefully about the potential roles described for the regulating service. As well, Tamsitt mentions a specific function of the \textsc{amoc} that fits under the broader umbrella listed by Turner et al.
+
+\end{parts}
+
+\subsubsection*{Chapter 19: climate change and marine communities}
+
+Climate change is addressed, directly or indirectly, in most chapters of your text but Bruno, Harley, and Burrows (2014) discuss the many possible negative affects of climate change across marine ecosystems. Can there be positive effects of climate change on any marine ecosystem?
+
+\question
+Sunday and her colleagues (2017) tested for the possible effects of acidification on four biogenic habitat types. 
+
+\begin{parts}
+\part[10]
+List the four biogenic habitats. For each habitat type, describe how acidification affects biodiversity in that habitat. Provide specific evidence from their results for each habitat.
+
+\part[5]
+Describe what \emph{you} think are the implications for global biodiversity, using their results to guide your reasoning. You may include ecosystems other than the four studied above, but tell how they relate to one or more of the four studied habitat types.
+
+\end{parts}
+\end{questions}
+
+\subsubsection*{Literature cited}
+
+\begin{hangparas}{\leftmargin}{1}
+
+
+Angelini, C., J.\,N.\,Griffin, J.\,van de Koppel, L.\,P.\,M\,Lamers, A.\,J.\,P.\,Smolders, M.\,Derksen-Hooijberg, T.\,van der Heide, and B.\,R.\,Silliman. 2016. A keystone mutualism underpins resilience of a coastal ecosystem to drought. Nature Communications~7: 12473 | DOI: 10.1038/ncomms12473
+
+
+Bangaerts, P., C.\,Riginos, R.\,Brunner, N.\,Englebert, 
+S.\,R.\,Smith, and O.\,Hoegh-Guldberg. Deep reefs are not 
+universal refuges: Reseeding potential varies among coral species.
+Science Advances 3: e1602373.
+
+Glynn, P.\,W. 1996. Coral reef bleaching: facts, hypotheses and 
+implications. Global Change Biology 2: 495–509.
+
+Lique, C. and M.\,D.\,Thomas. 2018. Latitudinal shift of the Atlantic Meridional Overturning Circulation source regions under a warming climate. Nature Climate Change 8: 1013–1020. DOI: 10.1038/s41558-018-0316-5
+
+Sunday, J.\,M., K.\,E.\,Fabricius, K.\,J.\,Kroeker, K.\,M.\,Anderson, N.\,E.\,Brown, J.\,P.\,Barry, S.\,D.\,Connell, S.\,Dupont, B.\,Gaylord,
+J.\,M.\,Hall-Spencer, T.\,Klinger, M\,Milazzo, P.\,L.\,Munday, B.\,D.\,Russell, E.\,Sanford, V.\,Thiyagarajan, M.\,L.\,H.\,Vaughan, S.\,Widdicombe, and C.\,D.\,G.\,Harley. 2017. Ocean acidification can mediate biodiversity
+shifts by changing biogenic habitat. Nature Climate Change 7: 81–85. DOI: 10.1038/nclimate3161.
+
+Tamsitt, V. 2018. Moving windows to the deep ocean. Nature Climate Change 8: 941-945. 
+
+Turner, P.\,J., A.\,D.\,Thalerb, A.\,Freitag, and P.\,Colman Collins. 2019. Deep-sea hydrothermal vent ecosystem principles: Identification of ecosystem processes, services and communication of value. Marine Policy 101: 118-124.
+
+\end{hangparas}
+
+\end{document}
