@@ -1,0 +1,75 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{article}
+\usepackage[margin=0.5in]{geometry}     
+
+\usepackage[parfill]{parskip}
+
+\usepackage{pdflscape}
+\usepackage{multicol}
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={OldStyle,Proportional}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+%\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/438/exam/}}%
+
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{document}
+\thispagestyle{empty}
+
+{\fontsize{18pt}{21pt}\selectfont
+
+
+Figure for page 2, question 4 about the Eastern Yellow Robin. 
+
+\bigskip
+
+\includegraphics[width=\linewidth]{insular_distribution_robin}
+
+\newpage
+
+{\fontsize{18pt}{21pt}\selectfont
+
+\begin{landscape}
+
+Figure for page 3, question 8 about Neanderthals and Mammoths. 
+
+\bigskip
+
+\includegraphics[width=\linewidth]{neaderthal_mammoth}
+
+\end{landscape}
+
+}
+
+\newpage
+\thispagestyle{empty}
+
+{\fontsize{18pt}{21pt}\selectfont
+
+\begin{landscape}
+
+%\newgeometry{right=0.5in}
+
+Figure for page 4, question 9 about Abbott's Duiker.
+
+\bigskip
+
+\includegraphics[width=0.95\linewidth]{abbott_duiker_distrib}
+
+\end{landscape}
+
+}
+
+\end{document}
