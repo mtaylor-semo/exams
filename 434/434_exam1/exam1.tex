@@ -2,14 +2,26 @@
 %!TEX encoding = UTF-8 Unicode
 
 \documentclass[12pt, addpoints]{exam}
+
+\printanswers
+
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={Proportional, OldStyle}]{\mainfont}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
 %\setmonofont[Scale=MatchLowercase]{Inconsolata} 
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
 
 \usepackage{graphicx}
 	\graphicspath{%
@@ -19,10 +31,10 @@
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
 \pagestyle{headandfoot}
-\firstpageheader{Marine Evolutionary Ecology, Exam 1, \textsc{f}\short{\year}}{}{%
+\firstpageheader{Marine Ecology \amper Conservation, Exam 2, \textsc{f}\short{\year}}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
-%\runningheadrule
+\runningheadrule
 
 \footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
@@ -68,10 +80,6 @@
 
 \newlength{\basespace}
 \setlength{\basespace}{5\baselineskip}
-
-
-%\printanswers
-
 
 \begin{document}
 
