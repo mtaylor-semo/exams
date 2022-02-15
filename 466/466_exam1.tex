@@ -1,0 +1,214 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+
+%\printanswers
+
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Ornithology, Exam 1, \textsc{s}\short{\year}, \numpoints~points.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+\runningheadrule
+
+\footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\begin{document}
+
+\begin{questions}
+
+
+\vspace*{-1\baselineskip}
+
+\question[5]
+Match each letter to the correct structure. 1~point per blank. 
+
+\vspace*{2ex}
+
+\begin{multicols}{2}
+
+%\textsc{a}.~\ifprintanswers\textbf{Wavelength}\else \rule{6cm}{0.4pt} \fi\\[1ex]
+
+\textsc{a}.~\ifprintanswers\textbf{Rachis}\else \rule{5cm}{0.4pt} \fi\\[1ex]
+
+\textsc{b}.~\ifprintanswers\textbf{Distal barbule}\else \rule{5cm}{0.4pt} \fi\\[1ex]
+
+\textsc{c}.~\ifprintanswers\textbf{Proximal barbule}\else \rule{5cm}{0.4pt} \fi\\[1ex]
+
+\textsc{d}.~\ifprintanswers\textbf{Barbicel / hooklet}\else \rule{5cm}{0.4pt} \fi\\[1ex]
+
+\textsc{e}.~\ifprintanswers\textbf{Barb}\else \rule{5cm}{0.4pt} \fi
+
+\columnbreak
+	\includegraphics[width=0.47\textwidth]{exam1_flight_vane}
+
+\end{multicols}
+
+
+\question[5]
+Briefly describe the roles of the carina, the pectoralis, and the supracoracoideus during flight.
+
+\AnswerBox{0.1\textheight}{Carina provides attachment point for pectoralis and supracoracoideus. Pectoralis is the large muscle that pulls the wings downward when it contracts. It is the power stroke. The smaller supracoracoideus pulls the wing upward when it contracts.}
+
+\question[5]
+Briefly list two skeletal structures of the skull that separate birds (and reptiles) from mammals. Tell how each differs from mammals. 
+
+\AnswerBox{0.1\textheight}{%
+Answer goes here.}%
+	
+\question[5]
+Briefly describe how counter-current exchange helps keep the body warm in birds that land regularly on cold surfaces.
+
+\AnswerBox{0.1\textheight}{Answer goes here.}
+
+\newpage
+
+\question[10]
+
+\begin{multicols}{2}
+Describe how birds change the angle of attack of the wing tips (lower arrows) and wing base (upper arrows) during the downstroke (A) and upstroke (B). Include how the angle of attack affects both thrust and lift for each stroke type.
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{exam1_flight_upstroke_downstroke}
+\end{multicols}
+
+
+	\begin{AnswerPage}{0.3\textheight}%
+	\emph{3 points each explanation; 2 points for relationship; 2 points for example.}
+	
+	\vspace*{\baselineskip}
+	
+	Answer goes here.
+	
+			
+	\end{AnswerPage}
+
+
+\question[10]
+Describe the complete respiratory cycle of birds. Include the air sacs and parabronchi in your description.
+
+	\AnswerBox{0.3\textheight}{%
+	Answer goes here.}
+
+\newpage
+
+%\question[10]
+%Explain how having producer (finder) and scrounger individuals leads to an evolutionary stable strategy that maintains both foraging behaviors in the flock.
+%	\AnswerBox{0.6\textheight}{Answer goes here.}%
+
+\question[10]
+Compare and contrast the arboreal hypothesis and the ontogenetic transition wing hypothesis proposed for the evolution of flight in birds.
+
+	\AnswerBox{0.25\textheight}{Answer goes here.}%
+
+
+
+\question[5]
+Briefly describe competitive dominance structure in a foraging guild of tropical, ant-feeding birds. You don't have to name the types of birds, just describe the structure relative to the location (concentration) of ants.
+
+\AnswerBox{0.2\textheight}{Answer goes here.}
+
+	
+\question[5]
+\begin{multicols}{2}
+Cory's Shearwater is an oceanic seabird that displays Lévy's Flight pattern when foraging. Briefly describe the flight pattern and explain how it increases the chance of foraging success for this species.
+
+\columnbreak
+
+\hfil \includegraphics[width=0.5\linewidth]{corys_shearwater} \hfill
+\end{multicols}
+
+
+\AnswerBox{0.1\textheight}{Answer goes here.}
+
+\newpage
+
+\question[15]
+Below left is an Egyptian Vulture. Below right is a Magnificent Frigatebird. Assume both birds have the same wingspan length and the bodies have the same mass. Tell which bird has the highest aspect ratio and why (5 pts). Tell which bird has the highest wing loading and why (5 pts). Tell how aspect ratio and wing loading affect gliding ability and maneuverability (5 pts).
+
+\includegraphics[width=\linewidth]{exam1_aspect_loading}
+
+	\begin{AnswerPage}{0.4\textheight}%
+	\emph{3 points for each explanation of effects, plus 3 points for the stability/redundancy explanation.}
+
+	\vspace*{\baselineskip}
+	
+	Answer goes here.
+
+	\end{AnswerPage}
+
+
+
+\end{questions}
+
+
+\end{document}
