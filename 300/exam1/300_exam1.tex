@@ -4,18 +4,21 @@
 \documentclass[12pt, addpoints]{exam}
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
-%\printanswers
+\printanswers
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures=TeX, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle,Proportional}]{\mainfont}
+\setmainfont[Ligatures=TeX, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle,Proportional}]{\mainfont}
 %\setmonofont[Scale=MatchLowercase]{Inconsolata} 
 
 \newfontfamily{\lining}[Numbers=Lining,Ligatures=TeX]{\mainfont}
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
-\usepackage[libertine]{newtxmath}
+\usepackage{amssymb, amsmath}
+
+\usepackage{unicode-math}
+\setmathfont[Scale=MatchLowercase]{Asana Math}
 
 \usepackage{graphicx}
 	\graphicspath{%
@@ -30,7 +33,10 @@
 \runningheader{}{}{\small{pg. \thepage}}
 
 \footer{}{}{}
+%\footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%
 \extrafootheight{-0.5in}
+
+
 
 \pointsinmargin
 \marginpointname{ pts}
@@ -101,25 +107,11 @@ Genetic change (1 pt) in a population (1 pt) over time (1 pt).
 }
 
 \question[2]
-Based on the figure, which statement is false?
-
-\includegraphics[width=0.7\linewidth]{exam1_darwin_phylogeny}
-
-\begin{choices}
-\correctchoice Darwin recognized hybridization as an important means of genetic change. 
-\choice Darwin recognized that lineages may go extinct.
-\choice Darwin recognized that not all descendants of an organism’s ancestors still exist.
-\choice Darwin thought that evolution might take thousands of generations.
-\choice Darwin recognized that rates of evolutionary change may vary among lineages.
-\end{choices}
-
-
-\question[2]
 Which statement is true?
 \begin{choices}
-\correctchoice Mutations are the raw material for natural selection.
 \choice Natural selection acts on populations, not on individuals.
 \choice Evolutionary change occurs at the level of the individual.
+\correctchoice Mutations are the raw material for natural selection.
 \choice Developmental change is a population-level process.
 \choice Species are simply those organisms that share similar phenotypes.
 \end{choices}
@@ -127,13 +119,23 @@ Which statement is true?
 \question[2]
 Convergent evolution can cause this type of trait.
 
+\begin{choices}
+\choice Apomorphy.
+\choice Synapomorphy.
+\choice Homology.
+\correctchoice Homoplasy.
+\choice Symplesiomorphy.
+\end{choices}
+
+\question[2]
+A monophyletic group (also called a clade) is defined as
 
 \begin{choices}
-\correctchoice homoplasy.
-\choice apomorphy.
-\choice synapomorphy.
-\choice homology.
-\choice homozygosity.
+\choice having shared ancestral character states.
+\choice a branch point (node) in a phylogenetic tree.
+\choice having shared derived character states.
+\choice having shared autapomorphic characters.
+\correctchoice the set of all species derived from one common ancestor.
 \end{choices}
 
 
@@ -141,22 +143,24 @@ Convergent evolution can cause this type of trait.
 Gene trees can vary for different loci. What does this imply for species trees?
 
 \begin{choices}
-\correctchoice Multiple loci should be used to increase the chance of estimating the correct species tree..
-\choice Accurately estimated gene tree based on one gene will always give the correct species phylogeny.
+\choice Accurately estimating a gene tree from the longest gene will always give the correct species phylogeny.
 \choice Species trees require apomorphies to be resolved successfully.
 \choice Adaptive radiations do not occur.
+\correctchoice Multiple loci should be used to increase the chance of estimating the correct species tree.
 \choice All genes in the genome are subject to similar selective pressures.
 \end{choices}
 
 \question[2]
-A monophyletic group (also called a clade) is defined as
+Based on the figure, which statement is false?
+
+\includegraphics[width=0.6\linewidth]{exam1_darwin_phylogeny}
 
 \begin{choices}
-\correctchoice the set of all species derived from one common ancestor.
-\choice having shared ancestral character states.
-\choice a branch point (node) in a phylogenetic tree.
-\choice having shared derived character states.
-\choice having shared autapomorphic characters.
+\choice Darwin recognized that lineages may go extinct.
+\choice Darwin recognized that not all descendants of an organism’s ancestors still exist.
+\choice Darwin thought that evolution might take thousands of generations.
+\choice Darwin recognized that rates of evolutionary change may vary among lineages.
+\correctchoice Darwin recognized hybridization as an important means of genetic change. 
 \end{choices}
 
 \question[2]
@@ -174,8 +178,8 @@ Which of these describes paralogous genes?
 Alarm calls by ground squirrels alert other ground squirrels to danger, but they also draw attention to the caller and expose it to increased risk of predation. Such altruistic (unselfish) behavior is best explained by the phenomenon of
 
 \begin{choices}
-\correctchoice  kin selection.
 \choice unselfish genes.
+\correctchoice  kin selection.
 \choice genic selection.
 \choice individual selection.
 \choice species selection.
@@ -183,82 +187,93 @@ Alarm calls by ground squirrels alert other ground squirrels to danger, but they
 
 
 \question[2]
-\begin{multicols}{2}
 According to this phylogeny of some snakes and lizards, which statement is true?
+
+\begin{multicols}{2}
+\begin{choices}
+\choice Lacertilia (lizards) is a monophyletic taxon.
+\choice Squamata is a paraphyletic taxon.
+\choice The closest relative of \textit{Micrurus} (coral snake) is \textit{Thamnophis} (garter snake).
+\choice If we created a new taxon of just \textit{Vipera, Naja,} and \textit{Crotalus,} it would be paraphyletic.
+\correctchoice  If we created a new taxon consisting of the venomous snakes (shown in figure as group V), it would be paraphyletic.
+\end{choices}
 
 \columnbreak
 
 \includegraphics[width=\linewidth]{exam1_snake_phylogeny}
 \end{multicols}
 
-\begin{choices}
-\correctchoice  If we created a new taxon consisting of the venomous snakes (shown in figure as group V), it would be paraphyletic.
-\choice Lacertilia (lizards) is a monophyletic taxon.
-\choice Squamata is a paraphyletic taxon.
-\choice The closest relative of \textit{Micrurus} (coral snake) is \textit{Thamnophis} (garter snake).
-\choice If we created a new taxon of just \textit{Vipera, Naja,} and \textit{Crotalus,} it would be paraphyletic.
-\end{choices}
+
 
 
 \question[5]
 List the four nucleotides found in \textsc{dna} (single letters are \textsc{ok.}) Circle the two that are pyrimidines. 
 
-\AnswerBox{0.1\textheight}{\textsc{a g c t. c \& t} should be circled.}
+\AnswerBox{0.01\textheight}{A G C T. C \& T should be circled.}
+
+\question[5]
+Explain why Darwin's idea of natural selection was not widely accepted until after the Evolutionary Synthesis.
+
+\AnswerBox{0.05\textheight}{Lacked suitable genetic mechanism until E.S. rediscovered Mendel's work.}
 
 
 \question[5]
 Assume a locus with three alleles in equilibrium. Given $p^2=0.04$  and $q^2 = 0.01,$ calculate the frequency of the third allele, $r.$ Show your work for full credit!
 
-\AnswerBox{0.1\textheight}{0.7}
+\AnswerBox{0.15\textheight}{%
+\begin{align*}
+p &= \sqrt{0.04} = 0.2 \\
+q &= \sqrt{0.01} = 0.1 \\
+r &= 1 - 0.2 - 0.1 = \mathbf{0.7}
+\end{align*}}%$$r = 0.7$$}
 
 \newpage
 
 \question[10]
 List the five assumptions that must be met for a population to be in Hardy-Weinberg equilibrium.
 
-\textsc{a.} \vspace{\baselineskip}%\\%[1\baselineskip]
+\textsc{a.} \ifprintanswers \textbf{Inf. pop size}\fi \vspace{\baselineskip}
 
-\textsc{b.} \\%[2\baselineskip]
+\textsc{b.} \ifprintanswers \textbf{No mutation}\fi \vspace{\baselineskip}
 
-\textsc{c.} \\%[1\baselineskip]
+\textsc{c.} \ifprintanswers \textbf{No gene flow}\fi \vspace{\baselineskip}
 
-\textsc{d.} \\%[1\baselineskip]
+\textsc{d.} \ifprintanswers \textbf{Random mating}\fi \vspace{\baselineskip}
 
-\textsc{e.} \\%[1\baselineskip]
-
-\question[5]
-Explain why Darwin's idea of natural selection was not widely accepted until after the Evolutionary Synthesis.
-
-\AnswerBox{0.1\textheight}{Answer goes here.}
+\textsc{e.} \ifprintanswers \textbf{No selection}\fi \vspace{\baselineskip}
 
 \question[5]
 Explain the difference between paralogous and orthologous genes.
 
-\AnswerBox{0.1\textheight}{Answer goes here.}
+\AnswerBox{0.1\textheight}{Paralogs arise via duplication. Orthologs arise via speciation.}
 
 \question[5]
-The Asian Honey Bee \textit{(Apis cerana)} has a genome size of about $2.3 \times 10^{8}$ base pairs. The mutation rate is about $3.4 \times 10^{-9}.$ About how many new mutations would you expect in every gamete?
+%The Asian Honey Bee \textit{(Apis cerana)} has a genome size of about $2.3 \times 10^{8}$ base pairs. The mutation rate is about $3.4 \times 10^{-9}.$ About how many new mutations would you expect in every gamete?
+\textit{Caenorhabditis elegans} (a nematode) has a genome size of approximately $1 \times 10^8$ base pairs. It's mutation rate is about $2.1 \times 10^{-8}$ per bp. About how many new mutations would you expect in every gamete?
 
-\AnswerBox{0.1\textheight}{0.782}
+\AnswerBox{0.1\textheight}{2.1}
 
 \question[5]
-Explain why non-synonymous substitutions are subject to natural selection but synonymous substitutions are not.
+Explain why non-synonymous substitutions might be subject to natural selection but synonymous substitutions are not.
 
-\AnswerBox{0.1\textheight}{Answer goes here.}
+\AnswerBox{0.1\textheight}{NS changes amino acid order and thus possibly protein function. S does not change amino acid so no protein function change.}
 
 \question[5]
 Explain the difference between subfunctionalization and neofunctionalization for duplicate genes.
 
-\AnswerBox{0.1\textheight}{Answer goes here.}
+\AnswerBox{0.1\textheight}{Sub: each copy does one part of the original function. Neo: one duplicate evolves new function; other retains original function.}
 
 \newpage
 
+\setlength{\columnsep}{20pt}
+
 \question[10]
 \begin{multicols}{2}
-Construct a phylogenetic tree using parsimony from this presence/absence matrix. Label the tips with taxa T1-T9. Label the branches with the character (C1-C8) that is a synapomorphy for each clade. Only one tree is possible with just one synapomorphy per clade. 
+{\lining Construct a phylogenetic tree using parsimony from this presence/absence matrix. Label the tips with taxa T1–T9. Label the branches with the character (C1–C8) that is a synapomorphy for each clade. Only one tree is possible with just one synapomorphy per clade. The outgroup, not shown, has~0 for all characters.
 
 \columnbreak
-\begin{tabular}{ccccccccc}
+
+\begin{tabular}{@{}ccccccccc@{}}
 \toprule
  & C1 & C2 & C3 & C4 & C5 & C6 & C7 & C8 \\
 \midrule
@@ -272,7 +287,7 @@ T7 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 \\
 T8 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
 T9 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 
 
 \end{multicols}
@@ -290,14 +305,17 @@ T9 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
 %\choice 
 %\end{choices}
 
-
-
 \end{questions}
+
+\rfoot{\small \rule{0.6in}{0.4pt} / \numpoints\ points}
 
 \newpage
 
-\thispagestyle{empty}
+%\thispagestyle{empty}
 %\topskip0pt
+
+\rhead{} % Supress page number
+\rfoot{} % Suppress score footer
 
 \vspace*{\fill}
 
