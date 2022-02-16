@@ -65,6 +65,12 @@
 	\addtolength\matchlenb{-\matchlena}
 	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
 
+% change indentation for multiple choice
+\renewcommand{\choiceshook}{%
+	\setlength{\leftmargin}{0.25in}%
+	\setlength{\parsep}{3pt}%
+}
+
 
 \newcommand*\AnswerBox[2]{%
     \parbox[t][#1]{0.92\textwidth}{%
@@ -87,130 +93,203 @@
 
 \begin{questions}
 
-\question[5]
-How does a heterozygote advantage affect genetic variation (e.g., number of alleles at a gene locus) in a population? Explain briefly.
+\question[4]
+Write a concise definition of evolution.
 
-	\begin{AnswerPage}{0.2\textheight}
-	Maintain/increase: 2 points\\
-	Explanation: 3 points
-	\end{AnswerPage}
-
-
-\question[5]
-How does migration among small populations affect genetic drift in those populations?. Explain briefly.
-
-	\AnswerBox{0.2\textheight}{%
-	Increases effective population size so genetic drift is reduced. Grade for 4 points unless left blank.
-}	
-
-\question[5]
-Why did Darwin's concept of natural selection became widely accepted only after the Evolutionary Synthesis.
-
-	\AnswerBox{0.2\textheight}{%
-	Genetic mechanism of inheritance was not available to Darwin. Provided by Evolutionary synthesis. Grade for 4 points unless left blank.
+\AnswerBox{0.1\textheight}{%
+Genetic change (1 pt) in a population (1 pt) over time (1 pt).
 }
 
-%\fullwidth{(1 pt extra credit) 
-\bonusquestion[1]
-	Which Hardy-Weinberg assumption have we not yet studied?\ifprintanswers\quad\textbf{Random Mating}\fi%\vspace*{\stretch{0.05}}
+\question[2]
+Based on the figure, which statement is false?
 
-\newpage
+\includegraphics[width=0.7\linewidth]{exam1_darwin_phylogeny}
 
-\question
-The following mutation rates were found in yeast (\textit{Saccharomyces cerevisiae}). Rates are per base pair per generation.
-
-\begin{parts}
-\part[5]
-{\lining Zhu et al.~(2014) estimated that the average genome-wide mutation rate was 1.67 $\times$ 10\textsuperscript{-10}. 75\% of the yeast genome is coding and 25\% is non-coding. Would you predict the mutation rate in the non-coding region to be higher or lower than the genome-wide rate? Tell why.}
-
-\AnswerBox{0.25\textheight}{Predict non-coding rate to be higher. Most of their \textsc{dna} is coding so the overall rate is probably lower because detrimental mutations removed by natural selection. This would not affect non-coding regions, leading to higher average mutation rate.}
+\begin{choices}
+\correctchoice Darwin recognized hybridization as an important means of genetic change. 
+\choice Darwin recognized that lineages may go extinct.
+\choice Darwin recognized that not all descendants of an organism’s ancestors still exist.
+\choice Darwin thought that evolution might take thousands of generations.
+\choice Darwin recognized that rates of evolutionary change may vary among lineages.
+\end{choices}
 
 
-\part[5]
-Lang and Murray~(2008) compared mutation rates for two genes. Gene \textit{\textsc{ura3}} had a mutation rate of {\lining 3.8 $\times$ 10\textsuperscript{-10}}. Gene \textit{\textsc{can1}} had a mutation rate of {\lining 6.4 $\times$ 10\textsuperscript{-10}}. Provide a reason why these genes have different mutation rates and how this difference provides support for the Neutral Theory.
+\question[2]
+Which statement is true?
+\begin{choices}
+\correctchoice Mutations are the raw material for natural selection.
+\choice Natural selection acts on populations, not on individuals.
+\choice Evolutionary change occurs at the level of the individual.
+\choice Developmental change is a population-level process.
+\choice Species are simply those organisms that share similar phenotypes.
+\end{choices}
 
-\AnswerBox{0.25\textheight}{\textsc{ura3} might be more conserved so more mutations would be deleterious compared to \textsc{can1}. Neutral theory says that natural selection removes detrimental mutations so \textsc{ura3} would appear to have lower mutation rate.}
-\end{parts}
+\question[2]
+Convergent evolution can cause this type of trait.
 
-\newpage
+
+\begin{choices}
+\correctchoice homoplasy.
+\choice apomorphy.
+\choice synapomorphy.
+\choice homology.
+\choice homozygosity.
+\end{choices}
+
+
+\question[2]
+Gene trees can vary for different loci. What does this imply for species trees?
+
+\begin{choices}
+\correctchoice Multiple loci should be used to increase the chance of estimating the correct species tree..
+\choice Accurately estimated gene tree based on one gene will always give the correct species phylogeny.
+\choice Species trees require apomorphies to be resolved successfully.
+\choice Adaptive radiations do not occur.
+\choice All genes in the genome are subject to similar selective pressures.
+\end{choices}
+
+\question[2]
+A monophyletic group (also called a clade) is defined as
+
+\begin{choices}
+\correctchoice the set of all species derived from one common ancestor.
+\choice having shared ancestral character states.
+\choice a branch point (node) in a phylogenetic tree.
+\choice having shared derived character states.
+\choice having shared autapomorphic characters.
+\end{choices}
+
+\question[2]
+Which of these describes paralogous genes?
+
+\begin{choices}
+\correctchoice The result of a gene duplication within a species; for example, a copy of the original hemoglobin gene that evolved a slightly different functions within a mammal species as hemoglobin~α and~β.
+\choice The result of a speciation event; each derived species has evolved a different version of the gene, like the difference between hemoglobin α in humans and chimps.
+\choice Genes located on the same chromosome and that are genetically linked, like freckles and hair color in humans.
+\choice Genes that have independently evolved the same function in distantly related organisms, like the hearing gene, Prestin, which allows echolocation in both dolphins and bats.
+\choice Genes that have changed within a species as a result of adaptive evolution, such as improvements in the defensins proteins of the human immune system over time.
+\end{choices}
+
+\question[2]
+Alarm calls by ground squirrels alert other ground squirrels to danger, but they also draw attention to the caller and expose it to increased risk of predation. Such altruistic (unselfish) behavior is best explained by the phenomenon of
+
+\begin{choices}
+\correctchoice  kin selection.
+\choice unselfish genes.
+\choice genic selection.
+\choice individual selection.
+\choice species selection.
+\end{choices}
+
+
+\question[2]
+\begin{multicols}{2}
+According to this phylogeny of some snakes and lizards, which statement is true?
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{exam1_snake_phylogeny}
+\end{multicols}
+
+\begin{choices}
+\correctchoice  If we created a new taxon consisting of the venomous snakes (shown in figure as group V), it would be paraphyletic.
+\choice Lacertilia (lizards) is a monophyletic taxon.
+\choice Squamata is a paraphyletic taxon.
+\choice The closest relative of \textit{Micrurus} (coral snake) is \textit{Thamnophis} (garter snake).
+\choice If we created a new taxon of just \textit{Vipera, Naja,} and \textit{Crotalus,} it would be paraphyletic.
+\end{choices}
+
 
 \question[5]
-Tell whether population size affects the rate of haplotype substitution by genetic drift in a population. Demonstrate this for population sizes of 50 and 100 and a neutral mutation rate of 0.05 in each population. 
+List the four nucleotides found in \textsc{dna} (single letters are \textsc{ok.}) Circle the two that are pyrimidines. 
 
-\AnswerBox{0.1\textheight}{Haplotype substitution is independent of population size and occurs at the neutral mutation rate. 
-$$2 \cdot 50\cdot 0.05 \times \frac{1}{2\cdot 50} = 0.05.$$
-$$2 \cdot 500\cdot 0.05 \times \frac{1}{2\cdot 500} = 0.05.$$}
+\AnswerBox{0.1\textheight}{\textsc{a g c t. c \& t} should be circled.}
 
-
-\question[15]
-Based on the principles for mutation rate, genetic drift, and natural selection, do you expect the rate of \emph{adaptive} evolution to occur more rapidly in small or large populations, or at about the same rate regardless of population size? \emph{Explain your reasoning.} Be sure to include the roles of mutation rate, genetic drift, and selection in your answers. Disregard other assumptions of Hardy-Weinberg.
-
-\begin{AnswerPage}{0.4\textheight}
-	
-	Adaptive evolution will occur more rapidly in large populations. Although mutation rate is independent of population size, more mutations will occur in larger populations. For any mutation that is even slightly beneficial, it has a much better chance of becoming fixed in the population if the strength of selection $(s)$ is much larger than $1/4N_e$. That means $s$ can be very small in large populations. Simulations showed that even weakly favored mutations can increase rapidly in frequency.  In small populations, few mutations will occur so won't get beneficial mutations as often. Unless there is stronger strength of selection to overcome the effects of drift, the new mutation is more likely to be lost due to drift.
-	
-\end{AnswerPage}
-
-
-\newpage
 
 \question[5]
-If the initial frequency of haplotype $A$ is 0.3, draw how the frequency will change if the mutation rate from $A$ to $a$ is 0.025 and the mutation rate from $a$ to $A$ is 0.05. You do not have to be exact but you should be reasonably close. Assume that $N_e$ is very large and all other assumptions of \textsc{hwe} are met. Do not draw the effects of drift.
+Assume a locus with three alleles in equilibrium. Given $p^2=0.04$  and $q^2 = 0.01,$ calculate the frequency of the third allele, $r.$ Show your work for full credit!
 
-	\includegraphics[width=0.85\textwidth]{frequency_graph}
+\AnswerBox{0.1\textheight}{0.7}
 
+\newpage
 
 \question[10]
-Calculate whether genetic drift or natural selection is more likely to be the \textit{primary} cause of allele frequency change in a population of $N_e = 4000$, if the fitness of the three genotypes is $A_1A_1 = 0.999$, $A_1A_2 = 0.999$, and $A_2A_2 = 1.0$. Show your math and explain your reasoning. 
+List the five assumptions that must be met for a population to be in Hardy-Weinberg equilibrium.
 
-	\begin{AnswerPage}{0.25\textheight}
-	\textit{s} = 1 - 0.999 = 0.001. (2 points)\\
-	1/2N\textsubscript{e} = 1 / (2\,\times\,4000) = 1/8000 = 0.000125. (2 points) \vspace{\baselineskip}
-	
-	$s$ is about 10 times greater than $1/2N_e$. When $s$ is much greater than $1/2N_e$, then selection will be the primary cause of allele frequency change in the population. (4 points)
-	\end{AnswerPage}
+\textsc{a.} \vspace{\baselineskip}%\\%[1\baselineskip]
 
+\textsc{b.} \\%[2\baselineskip]
+
+\textsc{c.} \\%[1\baselineskip]
+
+\textsc{d.} \\%[1\baselineskip]
+
+\textsc{e.} \\%[1\baselineskip]
+
+\question[5]
+Explain why Darwin's idea of natural selection was not widely accepted until after the Evolutionary Synthesis.
+
+\AnswerBox{0.1\textheight}{Answer goes here.}
+
+\question[5]
+Explain the difference between paralogous and orthologous genes.
+
+\AnswerBox{0.1\textheight}{Answer goes here.}
+
+\question[5]
+The Asian Honey Bee \textit{(Apis cerana)} has a genome size of about $2.3 \times 10^{8}$ base pairs. The mutation rate is about $3.4 \times 10^{-9}.$ About how many new mutations would you expect in every gamete?
+
+\AnswerBox{0.1\textheight}{0.782}
+
+\question[5]
+Explain why non-synonymous substitutions are subject to natural selection but synonymous substitutions are not.
+
+\AnswerBox{0.1\textheight}{Answer goes here.}
+
+\question[5]
+Explain the difference between subfunctionalization and neofunctionalization for duplicate genes.
+
+\AnswerBox{0.1\textheight}{Answer goes here.}
 
 \newpage
 
-\question[5]
-The values of \textit{w} for three genotypes in a population are $B_1B_1$ = 0.98, $B_1B_2$ = 1.0, and $B_2B_2$ = 0.96. Name the mode of selection that explains how the phenotype would change in this population. Tell how you know.
+\question[10]
+\begin{multicols}{2}
+Construct a phylogenetic tree using parsimony from this presence/absence matrix. Label the tips with taxa T1-T9. Label the branches with the character (C1-C8) that is a synapomorphy for each clade. Only one tree is possible with just one synapomorphy per clade. 
 
-\AnswerBox{0.2\textheight}{%
-Stablilizing selection. Heterozygotes have the greatest fitness (heterozygote advantage) so the population will converge on the intermediate phenotype.
-}
-
-
-\question
-Assume a population is in Hardy-Weinberg equilibrium (\textsc{hwe}).
-\begin{parts}
-
-\part[5]
-Allele frequency $p$ in a population is 0.251.  Calculate the remaining frequencies.
-
-\bigskip
-
-\begin{tabular}{lC{1.1in}}
+\columnbreak
+\begin{tabular}{ccccccccc}
 \toprule
-&	Frequency \\
+ & C1 & C2 & C3 & C4 & C5 & C6 & C7 & C8 \\
 \midrule
- & \\[0.5em]
-$q$		& \ifprintanswers \textbf{0.749} \else \rule{1in}{0.4pt} \fi\\[2em]
-$p^2$	& \ifprintanswers \textbf{0.063} \else \rule{1in}{0.4pt} \fi\\[2em]
-$2pq$	& \ifprintanswers \textbf{0.376} \else \rule{1in}{0.4pt} \fi\\[2em]
-$q^2$	& \ifprintanswers \textbf{0.561} \else \rule{1in}{0.4pt} \fi\\
+T1 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 \\
+T2 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 \\
+T3 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+T4 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+T5 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \\
+T6 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+T7 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 \\
+T8 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+T9 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
 \bottomrule
 \end{tabular}
 
-\bigskip
 
-\part[5]
-What is the homozygosity of this population? How would you predict homozygosity to change over the next 500 generations, assuming the population remains in \textsc{hwe}? Why?
-
-\AnswerBox{0.2\textheight}{Homozygosity $(p^2 + q^2)$ is 0.624. It should remain at this value if the pop remains in \textsc{hwe}.}
+\end{multicols}
 
 
-\end{parts}
+
+
+%\question[2]
+%% TEMPLATE
+%\begin{choices}
+%\correctchoice  
+%\choice 
+%\choice 
+%\choice 
+%\choice 
+%\end{choices}
+
 
 
 \end{questions}
