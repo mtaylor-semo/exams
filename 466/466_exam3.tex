@@ -1,0 +1,156 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+
+%\printanswers
+
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Ornithology, Exam 3, \textsc{s}\short{\year}, \numpoints~points.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+\runningheadrule
+
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\begin{document}
+
+\begin{questions}
+
+\question[5]
+Explain the relationship between migration, breeding and wintering grounds, and global variation in peak primary productivity.
+
+\AnswerBox{0.01\textheight}{Answer}
+
+
+
+\question[10]
+Illustrate and describe a typical “figure 8” pattern for oceanic birds that migrate between the northern and southern hemispheres. Be sure to include the approximate location of the high pressure centers and the wind rotation direction around them (2 pts), the spring and fall routes (4 points), and a clear explanation (4 points).
+
+\AnswerBox{0.4\textheight}{Answer}
+
+\newpage
+
+\question[6]
+\begin{multicols}{2}
+Will a small bird adapted to specific wetland habitats (such as a Prothonotary Warbler) have a greater extinction threat from habitat loss or predation/persecution? (2 pts). Explain why. (4 pts)
+\columnbreak
+
+\hfil \includegraphics[height=2in]{prow} \hfill
+\end{multicols}
+
+\AnswerBox{0.1\textheight}{%
+Answer goes here.}%
+
+\question[15]
+You are charged with designing a bird sanctuary across a landscape. Describe how you will you patch dynamics (5 pts), corridors (5 pts), and fragment shape (5 pts), to maximize the number of species protected by your sanctuary. Be sure to clearly state the purpose of each of these three components.
+
+\AnswerBox{0.5\textheight}{Answer}
+
+\newpage
+		
+\question[10]
+\begin{multicols}{2}
+This figure shows the relationship between the density of adult Black-throated Blue Warblers and their rate of population growth \textit{(r).} Briefly describe two density-dependent factors that might explain the negative relationship between adult density and \textit{r.}
+\columnbreak
+
+\includegraphics[width=\linewidth]{r_N}
+\end{multicols}
+
+
+
+\AnswerBox{0.4\textheight}{Answer goes here.}
+
+%\newpage
+
+\question[4]
+Briefly explain why many bird populations experience their highest rate of mortality during migration.
+
+\AnswerBox{0.1\textheight}{Answer goes here.}
+
+\newpage
+
+\question[25]
+Please answer this question honestly and thoughtfully. As long as you provide some feedback, you will receive full credit. Please help improve the course; do not just write a short, meaningless answer. 
+
+This course is in a state of development. I have discussed ideas with you as I try to improve the course but this semester was incomplete. I would like your feedback.
+
+Please tell me what I can do to improve the course content for lab and lecture.  I would also like to know also whether you felt the balance for field trips was OK, or if you felt there were too many or too few field trips. I am interested in content; you have other avenues for evaluating my performance as your instructor. 
+
+Thank you for your thoughtful feedback. Have a great summer!
+
+
+
+
+\end{questions}
+
+
+\end{document}
