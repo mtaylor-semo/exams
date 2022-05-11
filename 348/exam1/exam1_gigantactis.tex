@@ -25,21 +25,20 @@
 % FONTS
 \usepackage{fontspec}
 \def\mainfont{Linux Biolinum O}
-\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
 \usepackage{graphicx}
 	\graphicspath{%
-	{/Users/goby/Pictures/teach/348/exams/}
-	{/img/}}%
+	{/Users/goby/Pictures/teach/348/exams/}}%
 
-\usepackage{amsmath,amssymb}
+%\usepackage{amsmath,amssymb}
 
 %\usepackage{units}
 
-\usepackage{booktabs}
-\usepackage{multicol}
+%\usepackage{booktabs}
+%\usepackage{multicol}
 %	\setlength{\columnsep=1em}
 
 %\usepackage{tikz}
@@ -57,21 +56,23 @@
   \setbeamertemplate{items}[square]
 }
 
-\usepackage{calc} % Needed for \widthof
-\usepackage{hyperref}
+%\usepackage{calc} % Needed for \widthof
+%\usepackage{hyperref}
 
-\newcommand\HiddenWord[1]{%
-	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
-}
+%\newcommand\HiddenWord[1]{%
+%	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+%}
 
 
 
 \begin{document}
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{exam1_gigantactis}}
+%{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{exam1_gigantactis}}
 \begin{frame}[b]
 
-\tiny\textcolor{white}{Theodore W. Pietsch, Wikimedia Commons\hfill Everyone \textsc{scuba} dives. Be a deep sea pioneer!}
-\end{frame}}
+\includegraphics[width=\linewidth]{exam1_gigantactis}
+
+\tiny\textcolor{black}{Theodore W. Pietsch, Wikimedia Commons\hfill Everyone \textsc{scuba} dives. Be a deep sea pioneer!}
+\end{frame}%}
 
 \end{document}
