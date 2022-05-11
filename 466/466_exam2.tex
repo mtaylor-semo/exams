@@ -1,0 +1,171 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+
+%\printanswers
+
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/466/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{Ornithology, Exam 2, \textsc{s}\short{\year}, \numpoints~points.}{}{%
+	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+\runningheader{}{}{\small{pg. \thepage}}
+\runningheadrule
+
+\footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{0.98\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+\newlength{\basespace}
+\setlength{\basespace}{5\baselineskip}
+
+\begin{document}
+
+\begin{questions}
+
+\fullwidth{The first three questions require an audio recording. I'll play the recording for everyone. Once you have written your answers, you may complete the rest of the exam.}
+
+\question
+Answer the first three questions based on an audio recording of an Eastern Towhee. All I ask is that you try to do your best.
+
+\begin{parts}
+\part[4]
+How many song types are heard in this recording? Enter the number below.
+
+\AnswerBox{2\baselineskip}{3}
+
+\part[3]
+How many phrases are heard in the second song? Enter the number below.
+
+\AnswerBox{2\baselineskip}{3 or 4}
+
+\part[3]
+How many notes are in the second phrase of the second song?
+
+\AnswerBox{2\baselineskip}{1}
+
+\end{parts}
+
+
+\question[5]
+Briefly describe the difference between a lek and an exploded lek.
+
+\AnswerBox{0.2\textheight}{Answer}
+
+\question[5]
+What does an honest indicator tell the female about potential mates.
+
+\AnswerBox{0.2\textheight}{Answer}
+
+\newpage
+
+\question[5]
+Briefly explain why resource-based polygyny might evolve in birds?
+
+\AnswerBox{0.2\textheight}{%
+Answer goes here.}%
+	
+\question[10]
+Eriefly explain the difference between the good genes hypothesis and the sexy sons hypothesis.
+
+\AnswerBox{0.4\textheight}{Answer goes here.}
+
+\newpage
+
+\question[10]
+Describe the functional difference between song and call in birds. 
+
+\AnswerBox{0.2\textheight}{Answer goes here.}
+
+\question[10]
+Name the structure used by oscine birds to produce song. Describe how the structure works.
+
+	\AnswerBox{0.2\textheight}{%
+	Answer goes here.}
+
+\newpage
+
+%\question[10]
+%Explain how having producer (finder) and scrounger individuals leads to an evolutionary stable strategy that maintains both foraging behaviors in the flock.
+%	\AnswerBox{0.6\textheight}{Answer goes here.}%
+
+\question[10]
+Describe the difference between a sensitive period and opened ended learning for bird songs.
+
+\AnswerBox{0.2\textheight}{Answer goes here.}%
+
+
+\question[10]
+Compare and contrast resource-based and mating territories. What do they have in common? What is different? 
+
+\AnswerBox{0.2\textheight}{Answer goes here.}
+
+	
+
+
+\end{questions}
+
+
+\end{document}
