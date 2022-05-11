@@ -17,6 +17,8 @@
 \graphicspath{%
 	{/Users/goby/Pictures/teach/300/exams/}}%
 
+\usepackage{amsmath}
+
 % Used to get the last two digits of the year for the header below.
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
@@ -70,88 +72,178 @@
 
 \begin{questions}
 
-\question[3]
-Explain co-option of genes. Provide an example.
+\question[5]
+Briefly explain the difference between a discrete trait and a quantitative trait.
 
-	\AnswerBox{0.15\textheight}{%
-		Co-option is when a gene evolves a new function while retaining an existing function. Examples include \emph{Hox} genes and tetrapod appendages, toolkit genes for eye spots, non-toolkit genes for crystallin proteins.}
-
-\question
-The longnose butterflyfish (right, on screen) has an unusually long mouth compared to other species of butterflyfishes (left). You plan to study the genetics of jaw length in the butterflyfishes.  
-\begin{parts}
-	\part[2] Identify one toolkit gene that you would be wise to study first.
-	
-	\AnswerBox{0.01\textheight}{Ca\textsc{m}1}
-
-	\part[5] Explain the existing evidence that caused you to identify this toolkit gene.
-	
-	\AnswerBox{0.15\textheight}{%		
-		Ca\textsc{m}1 was shown to correlate with jaw length in birds, may also work in fishes.
-	}
-
-\end{parts}
+\AnswerBox{0.05\textheight}{%
+		Discrete trait determined by single gene. Quant trait by multiple genes.}
 
 \question[5]
-Describe how thermoregulation might have favored the evolution of bipedalism in hominin ancestors.
+If $N_e = 1000$ and the neutral mutation rate is $0.000014,$ what is the rate of haplotype substitution in the population?
 
-\AnswerBox{0.15\textheight}{Reduce sun shining on back, increase exposure to breeze.}
-
-
-\bonusquestion[2]
-	Name two of the maternal effect genes that control the earliest development of the Drosophila egg, before \emph{Hox} genes are used.
-	
-	\ifprintanswers\textbf{Nanos, Bicoid, Hunchback, Caudal}\fi
-
-
-\newpage
+\AnswerBox{0.05\textheight}{0.000014}
 
 
 \question[5]
-Are dinosaurs extinct?  Explain why or why not.  Apply the concept of monophyly to justify your explanation.
+Briefly explain the difference between the meanings of allopatric, sympatric, and parapatric.
 
-\AnswerBox{2\basespace}{No, birds are dinosaurs. Birds are more closely related to theropod dinosaurs than theropods are to other dinosaurs (they share a more recent common ancestor). If theropods are dinosaurs, then so must be birds.}
-
-\question[5]
-Whales are most closely related to hippopotamuses but lack rear limbs.  Explain how a change to \emph{Hox} gene expression might cause the loss of rear limbs. 
-
-	\AnswerBox{2\basespace}{%
-	Mutations to \emph{Hox} A and \emph{Hox} D 9-13 may have stopped limb production. Or, \emph{Hox} genes for the a-p axis may have stopped producing legs in the posterior end.
-	}
+\AnswerBox{0.05\textheight}{Answer goes here.}
 
 
 \question[5]
-Explain ecological release and how it might have contributed to the Cambrian radiation.
+Briefly describe bottleneck and founder effects and how each affects heterozygosity in a population. 
 
-	\AnswerBox{2\basespace}{%
-	The Ediacaran fauna occupied various ecological niches. The extinction of the Ediacaran fauna would have freed up ecological resources, allowing the Cambrian fauna to evolve into new niches.}
-
+\AnswerBox{0.05\textheight}{Answer goes here.}
 
 
-\newpage
-
+%\question[10]
+%What is the biological species concept. Describe one advantage and one disadvantage of the BSC.
+%
+%\AnswerBox{0.2\textheight}{Defines species as those that can interbreed but reproductively isolated from other species. Advantage: can see if they reproduce. Disadvantage: can't test across allopatric distributions, time, or asexual species.}
+%
 \question[10]
 The snapping shrimp \textit{Synalpheus brooksi} lives in sponges on coral reefs.  Duffy (1996) showed that shrimp occupying nearby but different species of sponges rarely come into contact with each other because they don't usually leave their sponges. In the lab, a male shrimp from one sponge species is extremely aggressive towards females from a different sponge species, suggesting reproductive incompatibility. Analyses showed that shrimp from the same sponge species were genetically similar but shrimp from different sponge species were genetically distinct. Duffy argued the shrimp in different sponges are different species.  If so, explain which prezygotic mechanism or mechanisms reproductively isolate shrimps in different sponge species.
+
+\AnswerBox{0.2\textheight}{%
+Ecological. Occupy different habitats.
+}
+
+
+
+\newpage
+
+
+
+\question
+Use this table and equation to answer the next two questions.
+
+\begin{multicols}{2}
+\begin{tabular}{lR{2cm}R{2cm}}
+\toprule
+Population & Allele A frequency & Sample size (N) \tabularnewline
+\midrule
+1 & 0.31 & 70 \tabularnewline
+2 & 0.47 & 30 \tabularnewline
+\bottomrule
+\end{tabular}
+
+\columnbreak
+
+%\begin{equation*}
+$$F_{ST} = \frac{2pq - \sum c_i2p_iq_i}{2pq},$$
+%\end{equation*}
+
+where $2pq =$ overall heterozygosity across populations, and $c_i2p_iq_i =$ heterozygosity of each population, weighted for sample size.
+
+\end{multicols}
+
+\begin{parts}
+\part[5]
+Calculate F\textsubscript{ST}. Enter your result below. Round your answer to three digits after the decimal. Show your work.
+
+\begin{AnswerPage}{0.5\textheight}
+
+Pop weights
+\begin{align*}
+c_1 =& 70/100 = 0.7, \\
+%
+c_2 =& 30/100 = 0.3.
+%
+\end{align*}
+
+Pop1, overall 2pq
+\begin{align*}
+p =& (0.7*0.31) + (0.3 * 0.47) =  0.358\\
+%
+q =& 1 - p = 1 - 0.358 = 0.642\\
+%
+2pq =& 2 * 0.358 * 0.642 = 0.459672
+\end{align*}
+%
+
+
+Pop1, 2pq
+
+$$2pq = 0.7*2*0.31*(1-0.31) = 0.29946$$
+
+Pop2, 2pq
+
+$$2pq = 0.3*2 * 0.47*(1-0.47) = 0.14946$$
+
+Sum $c_i2p_iq_i$ for both pops and calculate $F_{ST}$
+
+\begin{align*}
+%
+\sum c_i2p_iq_i =& 0.29946 + 0.14946 = 0.44892\\
+%
+F_{ST} =& \frac{0.459672 - 0.44892}{0.459672} = 0.02339059 = \mathbf{0.023}
+%
+\end{align*}
+%
+%Pop weights\newline
+%$c_1 = 70/100 = 0.7,$ and $c_2 = 30/100 = 0.3.$
+%
+%Pop1, overall 2pq = \newline
+%$p = (0.7*0.31) + (0.3 * 0.47) =  0.358$
+%
+%$q = 1 - p = 1 - 0.358 = 0.642$
+%
+%$2pq = 2 * 0.358 * 0.642 = 0.459672$
+%
+%Pop1, 2pq = \newline
+%
+%$2pq = 0.7*2*0.31*(1-0.31) = 0.29946$
+%
+%Pop2, 2pq = \newline
+%
+%$2pq = 0.3*2 * 0.47*(1-0.47) = 0.14946$
+%
+%Sum $2pq$ for both pops = \newline
+%
+%$\sum c_i2p_iq_i = 0.29946 + 0.14946 = 0.44892$
+%
+%$F_{ST} = \frac{0.459672 - 0.44892}{0.459672} = 0.02339059$
+
+\end{AnswerPage}
+
+\part[5]
+Based on your result, would you say that the rate of migration is less than or more than one individual per generation. Explain why.
+
+\AnswerBox{0.01\textheight}{Answer goes here.}
+\end{parts}
+
+
+\question[10]
+The purple-throated carib is a species of hummingbird that lives on the Caribbean island of Dominica. Female caribs have longer, more curved bills than male caribs, which have shorter, straighter bills. Female hummingbirds get their nectar only from the red flowers of a plant called \textit{Heliconia bihai}. Male hummingbirds get their nectar only from the yellow flowers of the same plant species. An individual plant has either red or yellow flowers, but not both. The flower shape of each color morph corresponds to the bill shape of each sex. Red flowers have a longer, more curved flower corolla, while yellow flowers have a shorter, straighter corolla. The hummingbirds function as pollinators for \textit{H. bihai}.  No other pollinators (including wind) for this plant are known. Based on this information only, can reproductive isolation evolve for (1) the hummingbirds and (2) the color morphs of \textit{H. bihai}.  If so, say how. Justify your answer. 
+
+\AnswerBox{0.3\textheight}{%
+Yes for \textit{H. carib} because plant has different pollinators (4 pts). No for birds because males and females must come together to reproduce (4 pts).
+}
+
+
+%\question[10]
+%Describe the similarities and differences between these fitness functions: directional, stabilizing, and disruptive.
+%
+%\AnswerBox{0.3\textheight}{%
+%	Answer goes here.}
+
+
+\question[10]
+Describe the basic premise of the neutral theory of evolution. Does the neutral theory allow for natural selection at the genetic level? Explain.
 
 \AnswerBox{0.3\textheight}{%
 	Ecological. Occupy different habitats.
 }
 
-\question[10]
-The grasses (Poaceae, includes rice and corn) produce flowers that lack petals and sepals but have stamens and carpels.  Given the three classes of \textsc{mads} genes below, which class or classes most likely had a mutation or change in expression that caused the loss of petals and sepals?  Draw the ABC model of floral development, and then use that model to justify your answer.  Class A: Apetala1.  Class B: Apetala3.  Class C: Agamous.
-
-	\begin{AnswerPage}{0.3\textheight}
-	Class A causes loss of sepals and petals. Class B and C form stamens and C alone forms carpals. A needed for both petals and sepals. 
-	\end{AnswerPage}
-
 \newpage
-
 
 \question[15]
 
 \begin{multicols}{2}
 \flushleft
-The table at right (Sharp et al. 2005) shows how \textit{E. coli} uses 32 codons from 40 highly expressed genes. The tabled numbers are the ratio of actual use to expected use if all codons were used equally. A ratio of 1 means the codon is used exactly as often as expected (e.g., Met, in bold). Explain whether the data in the table provide evidence for natural selection at the genetic level. Explain why or why not. Use 1--2 specific codons from the table to support your answer.
+The table at right (Sharp et al.~2005) shows how \textit{E. coli} uses 32 codons from 40 highly expressed genes. The tabled numbers are the ratio of actual to expected use if all codons were used equally. A ratio of 1 means the codon is used exactly as often as expected (e.g., Met, in bold). Explain whether the data provide evidence for natural selection at the genetic level. Explain why or why not. Use 1--2 specific codons from the table to support your answer.
 \columnbreak
+{\addfontfeatures{Numbers=Lining}
 \begin{tabular}{@{}llrcllr@{}}
 	\toprule
 	\multicolumn{7}{l}{Codon use in \textit{E. coli}.}\\
@@ -173,39 +265,14 @@ Val & GUC & 0.30 &  & Ala & GCC & 0.32\\
 Val & GUA & 1.14 &  & Ala & GCA & 1.09\\
 Val & GUG & 0.48 &  & Ala & GCG & 0.76\\
 	\bottomrule
-	\end{tabular}
+	\end{tabular}}
 \end{multicols}
 %	\end{minipage}
 	\begin{solution}
 	Codon bias is present.
 	\end{solution}
 
-\newpage
 
-\question[10]
-{\addfontfeatures{Numbers=Lining}
-Use the following matrix of homologies (C1\dots C8) to make a phylogenetic tree that shows the relationships of the nine taxa (T1\dots T9). Only one tree is possible. Mark each branch with the homology that unites those taxa into a clade. You do not have to draw the outgroup. %The outgroup is not shown but is presumed to have character state 0 for all characters.
-
-\begin{tabular}{@{}rcccccccc@{}}
-\toprule
- & C1 & C2 & C3 & C4 & C5 & C6 & C7 & C8 \\
-\midrule
-T1 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
-T2 & 0 & 1 & 1 & 1 & 0 & 1 & 0 & 1 \\
-T3 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 1 \\
-T4 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 \\
-T5 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
-T6 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
-T7 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
-T8 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 1 \\
-T9 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
-\bottomrule
-\end{tabular}
-}
-
-\ifprintanswers
- \includegraphics[width=0.75\textwidth]{phylogeny_answer.png}
-\fi
 
 \end{questions}
 
