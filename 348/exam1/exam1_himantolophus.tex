@@ -1,0 +1,87 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+%	\setbeamercolor{background canvas}{bg=black!5}
+
+
+%%% Including only some slides for students.
+%%% Uncomment the following line. For the slides,
+%%% use the labels shown below the command.
+%\includeonlylecture{student}
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+%\usepackage{pgf,pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm]
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/348/exams/}
+	{/img/}}%
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+%\usepackage{booktabs}
+%\usepackage{multicol}
+%	\setlength{\columnsep=1em}
+
+%\usepackage{tikz}
+%	\tikzstyle{every picture}+=[remember picture,overlay]
+
+%\usepackage{chemfig}
+%\usepackage[version=4]{mhchem}
+
+%\usepackage{textcomp}
+%\usepackage{setspace}
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+%\usepackage{calc} % Needed for \widthof
+\usepackage{hyperref}
+
+
+
+\begin{document}
+
+{\setbeamercolor{background canvas}{bg=black}
+\begin{frame}
+\transduration{0.1}
+\end{frame}
+}
+
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{exam1_himantolophus1}}
+\begin{frame}[b]
+
+\tiny\href{https://www.theguardian.com/us-news/2021/may/11/deep-sea-anglerfish-california-beach-finding-nemo}{Ben Estes, The Guardian} \hfill Everyone \textsc{scuba} dives. Be a deep sea pioneer!
+\transduration{30}
+\end{frame}}
+
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{exam1_himantolophus2}}
+\begin{frame}[b]
+
+\tiny\href{https://www.theguardian.com/us-news/2021/may/11/deep-sea-anglerfish-california-beach-finding-nemo}{Ben Estes, The Guardian} \hfill Everyone \textsc{scuba} dives. Be a deep sea pioneer!
+\transduration{30}
+\end{frame}}
+
+\end{document}
