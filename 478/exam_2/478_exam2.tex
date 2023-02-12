@@ -1,11 +1,9 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[11pt]{exam}
+\documentclass[11pt, addpoints]{exam}
 
-
-
-\printanswers
+%\printanswers
 
 
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
@@ -26,7 +24,7 @@
 
 \pagestyle{headandfoot}
 %\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
-\firstpageheader{Ichthyology, Exam 2, \textsc{f}\short{\year}}{}{%
+\firstpageheader{Ichthyology, Exam 2, \textsc{f}\short{\year}, \numpoints~points.}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
@@ -48,6 +46,7 @@
 %\marginpointname{ pts}
 \marginpointname{ pt}
 
+\marginbonuspointname{ pt~\textsc{e.c.}}
 
 %% Create a Matching question format
 \newcommand*\Matching[1]{
@@ -66,13 +65,33 @@
 	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
 
 
+%% To hide and show points
+\newcommand{\hidepoints}{%
+	\pointsinmargin\pointformat{}
+}
+
+\newcommand{\showpoints}{%
+	\nopointsinmargin\pointformat{(\thepoints)}
+}
+
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
+
+\newcommand{\midmatch}[1]{%
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{1cm}{0.4pt} 
+\fi}
+
 
 \begin{document}
 
 \begin{questions}
 
 \question[11]
-Use the provided phylogeny of living fishes to fill in the blanks below with the appropriate systematic group name and classification level (class, subclass, etc.).  Each lettered blank below corresponds to the lettered branch on the phylogeny. ($1/2$ point per blank). Spelling counts throughout.\vspace{0.5\baselineskip}
+Use the phylogeny of living fishes on the last page of this exam (you may tear it off) to fill in the blanks below with the appropriate systematic group name and classification level (class, subclass, etc.).  Each lettered blank below corresponds to the lettered branch on the phylogeny. ($1/2$ point per blank). Spelling counts throughout.\vspace{0.5\baselineskip}
 
 \begin{tabular}{@{}lll@{}}
 	&	\multicolumn{1}{c}{Group Name}		& 	\multicolumn{1}{c}{Classification Level} \\[1em]
@@ -120,17 +139,26 @@ Groups C and D together form what group and classification level?
 \begin{solution}Subclass Elasmobranchii\end{solution}
 \vspace*{\stretch{0.5}}
 
-\question[1]
-Which group or groups form the Actinoptergyii?  Which classification level is this?
-\begin{solution}Class Actinopterygii is composed of F, G, H, I and Lepisosteiformes\end{solution}
-\vspace*{\stretch{1}}
+%\question[1]
+%Which group or groups form the Actinoptergyii?  Which classification level is this?
+%\begin{solution}Class Actinopterygii is composed of F, G, H, I and Lepisosteiformes\end{solution}
+%\vspace*{\stretch{1}}
 
-\question[1]
-Which group or groups form the Neopterygii?  Which classification level is this?
+% NOTE: Hid above question and turn below question into two points: 1 for subclass and 1 for groups.
+
+\question[2]
+Which group or groups form the Neopterygii (must get all groups correct for credit)?  Which classification level is this?
 \begin{solution}Subclass Neoptergyii is composed of F, G, and Lepisosteiformes\end{solution}
 \vspace*{\stretch{1}}
 
+
+%\question[1]
+\bumppoints{1}
+Be sure to answer questions shown on the separate page with the phylogeny.
+
 \newpage
+
+\bumppoints{16}
 
 \fullwidth{Match the \emph{most appropriate} term to each concept.  No term is used twice. (2 points each)}
 \vspace{-1\baselineskip}
@@ -160,16 +188,16 @@ Which group or groups form the Neopterygii?  Which classification level is this?
 \question\MatchQuestion{Schreckstoff}{Substance released by some fishes when bitten.}
 \vspace{0.4\baselineskip}
 
-\question\MatchQuestion{Paired Species}{One species of lamprey is a micropredator. Its sister species is not.}
-\vspace{0.4\baselineskip}
+%\question\MatchQuestion{Paired Species}{One species of lamprey is a micropredator. Its sister species is not.}
+%\vspace{0.4\baselineskip}
 
 \question\MatchQuestion{Lapillus}{Specific otolith used for orientation.}
 \vspace{0.4\baselineskip}
 
-\question\MatchQuestion{{\footnotesize Perc.,Moron.,Elasso., Centr., Sciaen.}}{Name any family from the Perciformes that is found in Missouri. The name is not in the list above!}
+%\question\MatchQuestion{{\footnotesize Perc.,Moron.,Elasso., Centr., Sciaen.}}{Name any family from the Perciformes that is found in Missouri. The name is not in the list above!}
 %\vspace{0.5\baselineskip}
 
-\fullwidth{\textbf{(GSH)} Answer the next two questions. Terms are not in the word bank. (2.5 points each.)}
+\fullwidth{\textbf{(GSH)} Answer the next two questions. Terms are not in the word bank.} %(2.5 points each.)}
 \vspace{1\baselineskip}
 
 \question\MatchQuestion{Ganoid}{Type of scales found on Cladistia.}
@@ -183,18 +211,18 @@ Which group or groups form the Neopterygii?  Which classification level is this?
 
 \fullwidth{Examine the photo on screen, and then answer the next three questions.}
 
-\question[1]
+\question[1]\label{myxini}
 To what class does the fish on screen belong? (Hint: not ichthyology class.) 
 \begin{solution}Myxini\end{solution}
 \vspace*{\stretch{0.5}}
 
 \question[4]
-List two diagnostic features that you used to determine your answer to the previous question.
+List two specific diagnostic features that you used to determine your answer to question~\ref{myxini}.
 \begin{solution}Three pairs barbels, four rows (two pairs) of teeth.\end{solution}
 
 \vspace*{\stretch{0.5}}
 
-\question[5]
+\question[4]
 Describe a mechanism that the fish on screen can use to reduce the chance of being killed by predation.  Be sure to explain how the mechanism you describe reduces the effectiveness of predators.
 
 \begin{solution}
@@ -213,9 +241,14 @@ To be written.
 
 \vspace*{\stretch{3}}
 
+\bonusquestion[1]
+Name either of the two largest families of perciform fishes in the world.
+\begin{solution}Gobiidae, Cichlidae\end{solution}
+%\vspace*{\stretch{0.5}}
+
 \newpage
 
-\question[15]
+\question[12]
 Name and briefly explain the difference between the two types of diadromy related to reproduction. Be clear where reproduction actually occurs. Explain any two adaptive advantages of diadromy for reproduction.  Name a representative group of fishes that displays each type. You do not have to use the scientific names for the groups.
 
 	\begin{solution}
@@ -231,22 +264,20 @@ Name and briefly explain the difference between the two types of diadromy relate
 \vspace*{\stretch{3}}
 
 
-\question[5]
-\textbf{(GSH)} Name the type of soft fin ray that is diagnostic of the Coelacanthimorpha. How does this ray differ from that same type of soft fin rays found in the Actinopterygii?
-
-\begin{solution}
-Coelacanthimorpha have \emph{unbranched} lepidotrichia. Actinopterygii have branched lepidotrichia.
-\end{solution}
-\vspace*{\stretch{0.5}}
-
-\question[1]
-\textbf{Extra Credit:} Name either of the two largest families of perciform fishes in the world.
-\begin{solution}Gobiidae, Cichlidae\end{solution}
+%\question[5]
+%\textbf{(GSH)} Name the type of soft fin ray that is diagnostic of the Coelacanthimorpha. How does this ray differ from that same type of soft fin rays found in the Actinopterygii?
+%
+%\begin{solution}
+%Coelacanthimorpha have \emph{unbranched} lepidotrichia. Actinopterygii have branched lepidotrichia.
+%\end{solution}
 %\vspace*{\stretch{0.5}}
+
+
+
 
 \newpage
 
-\question[15]
+\question[12]
 Name, compare and contrast the three types of jaw suspension found in fishes and how they contribute to gape width and strength. Clearly state which arches contribute to jaw suspension (connect to the cranium) and which do not. Indicate which type of suspension is most commonly found in actinopterygian fishes. For the other two types of jaw suspension, name one major group of fishes that has that type. Do not repeat group names.
 
 \begin{solution}
@@ -257,24 +288,28 @@ Name, compare and contrast the three types of jaw suspension found in fishes and
 	\end{itemize}
 \end{solution}
 
-\newpage
-
-\question[15]
-Describe the observed evolutionary trends of the following structures in the Actinopterygii:  scales, swim bladder, caudal fin, and paired fins.  Clearly explain how / why the evolutionary changes of these four structures are interrelated. That is, explain how / why the change in one particular structure reinforced the evolutionary changes of the other structures. 
-
-\begin{solution}
-\begin{itemize}
-	\item Early fishes had heavy, bony armor. Later fishes evolved thin, light, flexible scales.  This lightened the fish and increased flexibility of the body, which allowed for increased maneuverability.
-	\item The swim bladder evolved from the lung. The swim bladder provided buoyancy control, allowing the fish to remain at a particular position in the water column. The bladder eliminated the need of fins to provide lift.
-	\item The caudal fin evolved from heterocercal to homocercal (in a broad sense) shape. Because of the bladder, lift was not needed from a heterocercal tail. The homocercal allowed all of the energy to be directed forward.
-	\item The paired fins were no longer needed for lift due to the bladder. Fin position shifted from abdominal to thoracic/jugular. This allowed for greater maneuverability of the body. 
-\end{itemize}
-
-Early fishes depended on lift from the caudal and paired fins due to heavy armor and lack of a bladder. The reduction of the armor to light scales reduced the weight of the fish, reducing the need for strong lift. The bladder provided the remaining lift. That changed the role of the fins from providing lift to providing maneuverability. The maneuverability was enhanced by the thin, flexible scales.
-\end{solution}
-
+%\newpage
+%
+%\question[15]
+%Describe the observed evolutionary trends of the following structures in the Actinopterygii:  scales, swim bladder, caudal fin, and paired fins.  Clearly explain how / why the evolutionary changes of these four structures are interrelated. That is, explain how / why the change in one particular structure reinforced the evolutionary changes of the other structures. 
+%
+%\begin{solution}
+%\begin{itemize}
+%	\item Early fishes had heavy, bony armor. Later fishes evolved thin, light, flexible scales.  This lightened the fish and increased flexibility of the body, which allowed for increased maneuverability.
+%	\item The swim bladder evolved from the lung. The swim bladder provided buoyancy control, allowing the fish to remain at a particular position in the water column. The bladder eliminated the need of fins to provide lift.
+%	\item The caudal fin evolved from heterocercal to homocercal (in a broad sense) shape. Because of the bladder, lift was not needed from a heterocercal tail. The homocercal allowed all of the energy to be directed forward.
+%	\item The paired fins were no longer needed for lift due to the bladder. Fin position shifted from abdominal to thoracic/jugular. This allowed for greater maneuverability of the body. 
+%\end{itemize}
+%
+%Early fishes depended on lift from the caudal and paired fins due to heavy armor and lack of a bladder. The reduction of the armor to light scales reduced the weight of the fish, reducing the need for strong lift. The bladder provided the remaining lift. That changed the role of the fins from providing lift to providing maneuverability. The maneuverability was enhanced by the thin, flexible scales.
+%\end{solution}
+%
 \end{questions}
 
+
+\newpage
+
+\noindent This page intentionally left blank so that you can tear off the phylogeny on the next page. Turn in the phylogeny with your exam.
 
 \newpage
 

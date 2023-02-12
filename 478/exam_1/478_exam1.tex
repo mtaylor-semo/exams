@@ -1,10 +1,10 @@
 %!TEX TS-program = lualatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[11pt]{exam}
+\documentclass[11pt, addpoints]{exam}
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
-%\printanswers
+\printanswers
 
 
 \usepackage{fontspec}
@@ -23,7 +23,7 @@
 
 \pagestyle{headandfoot}
 %\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
-\firstpageheader{Ichthyology, Exam 1, \textsc{f}\short{\year}}{}{%
+\firstpageheader{Ichthyology, Exam 1, \textsc{f}\short{\year}, \numpoints~points.}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
@@ -57,7 +57,18 @@
 	\addtolength\matchlenb{-\matchlena}
 	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
 
+%% To hide and show points
+\newcommand{\hidepoints}{%
+	\pointsinmargin\pointformat{}
+}
 
+\newcommand{\showpoints}{%
+	\nopointsinmargin\pointformat{(\thepoints)}
+}
+
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
 
 \begin{document}
 
@@ -69,6 +80,8 @@
 \input{matchwordlist.tex}
 }
 \vspace{0.4\baselineskip}
+
+\bumppoints{20}
 
 \question\MatchQuestion{Ram-Gill Ventilation}{Breathing mechanism used by strong swimmers at high speeds.}
 \vspace{0.4\baselineskip}
@@ -124,7 +137,7 @@ List the five classes that together comprise “fishes.”
 		 \makebox[5.1cm][l]{e. \ifprintanswers\textbf{Sarcopterygii}\else\hrulefill\fi} \\
 	\end{tabular}
 
-\question[10]
+\question[5]
 Draw an oxygen dissociation curve for a typical fast-swimming fish in a normoxic environment on the graph below. Draw a second dissociation curve for a typical sluggish fish in a hypoxic environment. Indicate P$_{50}$ on the graph and two curves. Explain each curve along with your reasoning for the shape of the curve. \emph{Be sure your drawings shows clear and accurate differences between the two fishes.}
 
 \includegraphics[width=0.5\textwidth]{ex1_dissociation_graph}
@@ -135,22 +148,24 @@ Steepest curve will be for hypoxic sluggish. Oxygen is scarce, so hemoglobin has
 
 \vspace*{\stretch{1.3}}
 
+\noaddpoints
 \question[5]
 \textbf{(GSH)} If a typical fish has a relative gill surface area of 1000, would you expect the sluggish fish to have a similar, much higher, or much lower relative gill surface area.  Explain why. 
 	\begin{solution}
 	Lower surface area because not as much oxygen demand so does not need to take it up as quickly.\\
 	\end{solution}	
 \vspace*{\stretch{1}}
+\addpoints
 
 \newpage
 
-\question[10]
-How do active fishes like tuna fishes maintain a core body temperature several degrees higher than their surrounding environment?
-	\begin{solution}
-	Blood flows from along the skin, where it is cooled. It flows to the core where metabolic activity warms the blood. The warm blood then returns towards the skin. As the warm blood passes by the incoming cool blood, heat is transferred to the incoming blood via countercurrent exchange.
-	\end{solution}
-
-\vspace*{\stretch{1.5}}
+%\question[10]
+%How do active fishes like tuna fishes maintain a core body temperature several degrees higher than their surrounding environment?
+%	\begin{solution}
+%	Blood flows from along the skin, where it is cooled. It flows to the core where metabolic activity warms the blood. The warm blood then returns towards the skin. As the warm blood passes by the incoming cool blood, heat is transferred to the incoming blood via countercurrent exchange.
+%	\end{solution}
+%
+%\vspace*{\stretch{1.5}}
 
 \question[15]
 Sharks and tunas both cruise the open seas.  Despite this commonality, these two fishes have very different body forms.  Paul Webb, on pages 80--81 of his Scientific American article, “Form and Function in Fish Swimming,” explains why these two fishes differ so greatly.  Describe one physiological, one structural and one ecological difference between sharks and tunas, and then explain how these three differences relate to each other to explain the overall morphological differences between sharks and tunas.
@@ -166,7 +181,7 @@ Sharks and tunas both cruise the open seas.  Despite this commonality, these two
 
 \newpage
 
-\question[20]
+\question[15]
 Diagram and explain how a physoclistous bladder is inflated and emptied. Be sure to include all of the key structures and physiological processes.  Indicate proper direction of flow for all molecules involved. Use representative values for pH and oxygen concentration to aid your explanation.
 
 \begin{solution}
@@ -177,7 +192,7 @@ Diagram and explain how a physoclistous bladder is inflated and emptied. Be sure
 
 \newpage
 
-\question[20]
+\question[15]
 Explain how stenohaline freshwater and saltwater bony fishes maintain osmotic homeostasis.  Explain for water and for relevant ions (e.g., Na$^+$, Cl$^-$, K$^+$, Ca$^{2+}$).  Include for each when diffusion is operating and when active transport is required, and the primary regions for entry and exit of water and ions.  Use illustrations to enhance your explanation.  Do not include \emph{elasmobranchs or hagfishes}.
 
 \begin{solution}
@@ -197,13 +212,14 @@ Explain how stenohaline freshwater and saltwater bony fishes maintain osmotic ho
 %
 %\vspace*{\stretch{2}}
 
-\question[10]
+\noaddpoints
+\question[5]
 \textbf{(GSH)} O$_2$ has slightly lower solubility in saltwater than in freshwater but most air-breathing fishes are freshwater species.  Provide a hypothesis with justification to explain why air-breathing evolved several times in freshwater fishes.
 
 \begin{solution}
   More freshwater areas tend to be warmer, more sluggish and therefore lower oxygen environments compared to salt water.
 \end{solution}
-
+\addpoints
 \vspace*{\stretch{2}}
 
 \end{questions}

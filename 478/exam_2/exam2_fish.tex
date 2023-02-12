@@ -1,0 +1,58 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[t]{beamer}
+
+%%%% HANDOUTS For online Uncomment the following four lines for handout
+%\documentclass[t,handout]{beamer}  %Use this for handouts.
+%\includeonlylecture{student}
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
+
+
+%% For students, use \lecture{student}{student}
+%% For mine, use \lecture{instructor}{instructor}
+
+
+% FONTS
+\usepackage{fontspec}
+\def\mainfont{Linux Biolinum O}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={OldStyle}]{\mainfont}
+\setsansfont[Ligatures={Common,TeX}, Scale=MatchLowercase, Numbers=OldStyle]{Linux Biolinum O} 
+\usepackage{microtype}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/478/exams/}} % set of paths to search for images
+
+\usepackage{amsmath,amssymb}
+
+%\usepackage{units}
+
+
+\mode<presentation>
+{
+  \usetheme{Lecture}
+  \setbeamercovered{invisible}
+  \setbeamertemplate{items}[square]
+}
+
+\begin{document}
+
+{
+	\setbeamercolor{background canvas}{bg=black}
+	\begin{frame}
+		
+	\end{frame}
+}
+
+{
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[t,plain]{\textcolor{white}{Be specific for the diagnostic characters.}}
+	\centering
+%	\includegraphics{/Users/goby/Pictures/teach/478/exams/exam2_fish}
+	\includegraphics[height=0.85\textheight]{/Users/goby/Pictures/teach/478/exams/exam2_fish}
+\end{frame}
+}
+
+\end{document}
