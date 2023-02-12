@@ -25,7 +25,7 @@
 % FONTS
 \usepackage{fontspec}
 \def\mainfont{Linux Biolinum O}
-\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
@@ -57,13 +57,13 @@
   \setbeamertemplate{items}[square]
 }
 
-\usepackage{calc} % Needed for \widthof
-\usepackage{hyperref}
-
-\newcommand\HiddenWord[1]{%
-	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
-}
-
+%\usepackage{calc} % Needed for \widthof
+%\usepackage{hyperref}
+%
+%\newcommand\HiddenWord[1]{%
+%	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
+%}
+%
 
 
 \begin{document}
