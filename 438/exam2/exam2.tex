@@ -2,6 +2,9 @@
 %!TEX encoding = UTF-8 Unicode
 
 \documentclass[12pt, addpoints]{exam}
+
+\printanswers
+
 \usepackage{graphicx}
 	\graphicspath{{/Users/goby/pictures/teach/438/exam/}} % set of paths to search for images
 
@@ -40,7 +43,6 @@
 \marginbonuspointname{ pts\,\textsc{e.c.}}
 
 %% Remove comment %% to print answer key.
-%\printanswers
 \unframedsolutions
 \renewcommand{\solutiontitle}{}
 \SolutionEmphasis{\bfseries}
@@ -137,9 +139,8 @@ Australia was not covered by glaciers but climate change during the Pleistocene 
 
 Each circle represents one allele. Shading corresponds to the population sampled; grey is the western cluster and white is the central cluster. Each line connecting two circles indicates one mutation difference between alleles.  Small dashes indicate additional mutational differences between alleles.
 
-	{\centering
-	\includegraphics[width=\textwidth]{gecko_network}\par}
-
+	\includegraphics[width=\textwidth]{gecko_network}
+	
 	\begin{solution}
 	The western (grey) clade shows considerable genetic diversity, suggesting it is older and was likely a refuge. The central (white) clade has little genetic diversity, suggesting it is much younger and therefore the result of recent range expansion.
 	\end{solution}
@@ -172,7 +173,8 @@ Hyriinae & \\
 \begin{parts}
 \part[3] Write the \emph{most likely} type of distribution displayed by the hyriid mussels.
 
-\AnswerBox{0.05\textheight}{Gondwanan}
+\ifprintanswers \textbf{Gondwanan}\fi \vspace{2\baselineskip}
+%\AnswerBox{0.05\textheight}{Gondwanan}
 
 \part[10]
 Graf et al.~(2015) tested whether hyriid mussel evolution was consistent with the distribution you named.  Below left is a dendrogram that shows the order of the breakup of the land masses.  Below right is a phylogeny of the relationships among the five mussel taxa listed above. Use these data to explain whether the relationship of the mussels is consistent with a vicariant distribution for \emph{all five taxa.} Provide two specific examples from the two trees to justify your answer. (Numbers in dendrogram indicate time of separation (millions of years ago, \textsc{mya}).
