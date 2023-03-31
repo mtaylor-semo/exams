@@ -3,13 +3,13 @@
 
 \documentclass[11pt, addpoints]{exam}
 
-\printanswers
+%\printanswers
 
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={Proportional}]{\mainfont}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
 %\setmonofont[Scale=MatchLowercase]{Inconsolata} 
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
@@ -111,13 +111,14 @@ Identify the four parts of waves identified by the letters. 1/2 point per blank.
 
 \medskip
 
-\question[2]
-A squid at 670 m depth experiences~\ifprintanswers\quad\textbf{68}\quad\else\rule{2cm}{0.4pt}\fi~atmospheres of pressure.
+%\question[2]
+%A squid at 670 m depth experiences~\ifprintanswers\quad\textbf{68}\quad\else\rule{2cm}{0.4pt}\fi~atmospheres of pressure.
 
-%\question[4]
-%List the three sediment types that can occur on the continental slope in the deep sea, \emph{in order from the smallest to the largest size.} For 1 point extra credit, write the combination of types that make up mud. For 2 more points extra credit, write the size range in millimeters for each sediment type.
-%
-%\AnswerBox{\baselineskip}{Clay (\textless 0.004 mm), silt (0.062–0.004 mm), sand (2–0.062 mm) Clay and silt = mud.} 
+\question[6]
+List the three sediment types that can occur on the continental slope in the deep sea, \emph{in order from the smallest to the largest size.} For 1 point extra credit, write the combination of types that make up mud. For 2 more points extra credit, write the size range in millimeters for each sediment type.
+
+\AnswerBox{\baselineskip}{%
+Clay (\textless 0.004 mm), silt (0.062–0.004 mm), sand (2–0.062 mm) Clay and silt = mud.} 
 
 %\question[5]
 %Use salinity and turbidity to explain two distinct reasons why coral reefs are not found near the mouths of rivers.
@@ -126,12 +127,12 @@ A squid at 670 m depth experiences~\ifprintanswers\quad\textbf{68}\quad\else\rul
 %Dilute salinity from freshwater and turbidity from sediments/nutrient enrichment.%
 %}
 
-\question[5]
-Briefly explain how water temperature and salinity interact to cause thermohaline circulation in the North Atlantic Ocean. You do not need to explain the entire ocean conveyor.
-
-\AnswerBox{0.2\textheight}{%
-	Water gets extremely cold in the North Atlantic. Cold water has increased density. Strong winds cause evaporation of the water. Salt does not evaporate, so the cold, salty water becomes even denser. It gets dense enough to sink below the deeper water.
-}
+%\question[5]
+%Briefly explain how water temperature and salinity interact to cause thermohaline circulation in the North Atlantic Ocean. You do not need to explain the entire ocean conveyor.
+%
+%\AnswerBox{0.2\textheight}{%
+%	Water gets extremely cold in the North Atlantic. Cold water has increased density. Strong winds cause evaporation of the water. Salt does not evaporate, so the cold, salty water becomes even denser. It gets dense enough to sink below the deeper water.
+%}
 
 \question[10]
 Name \emph{in order} and briefly explain the four stages of succession for community development associated with whale fall. %Another stage overlaps the other three stages so the order of it does not matter but you must still explain what occurs during that stage.
@@ -150,8 +151,11 @@ Sulfide stage - Sediment becomes anaerobic, supports invertebrates and bacteria 
 \end{AnswerPage}
 
 %\bonusquestion[2]
-%Name one type of organism other than hermatypic corals that contribute to reef building.
-% Calcareous green algae or coralline red algae.
+\question[2]
+Name one type of organism other than hermatypic corals that contribute to reef building.
+
+\AnswerBox{-2\baselineskip}{%
+ Calcareous green algae or coralline red algae.}
 
 \newpage
 
@@ -193,37 +197,56 @@ Name and describe the biotic and abiotic factors that determine the depth at whi
 
 \newpage
 
-\question[6]
-	On screen is the Indo-Pacific Snaggletooth (\textit{Astronesthes indopacificus}). Tell whether the snaggletooth more likely lives in the mesopelagic or bathypelagic zone. Explain one adaptation, other than bioluminescence and \emph{visible in the image}, the fish exhibits to justify your answer. The adaptation \emph{must be characteristic of the depth zone} and not common to all deep-sea fishes. Be sure to explain the specific relationship between the adaptation and the zone you choose.
+%\question[6]
+%	On screen is the Indo-Pacific Snaggletooth (\textit{Astronesthes indopacificus}). Tell whether the snaggletooth more likely lives in the mesopelagic or bathypelagic zone. Explain one adaptation, other than bioluminescence and \emph{visible in the image}, the fish exhibits to justify your answer. The adaptation \emph{must be characteristic of the depth zone} and not common to all deep-sea fishes. Be sure to explain the specific relationship between the adaptation and the zone you choose.
+%	
+%	\smallskip
+%	\emph{Write only one adaptation. If you write more than one, I will grade only the first one I read.}
+%	
+%	\begin{AnswerPage}{0.25\textheight}
+%		Mesopelagic [2 points], plus one of:
+%		\vspace*{0.5\baselineskip}
+%		
+%		\quad Large eyes [2 pts] to gather available light. [2 points]
+%		\vspace*{0.5\baselineskip}
+%		
+%		\quad Muscular body {2 pts};  for active swimming, migration to surface. [2 points]
+%		\vspace*{0.5\baselineskip}
+%		
+%		\quad Consider color. [2 points plus 2 points for explanation.]
+%	\end{AnswerPage}
+%
+%
+%
+%\question[5]
+%Why do many mesopelagic fishes have laterally (side-to-side) compressed bodies with
+%countershading? 
+%
+%\AnswerBox{0.2\textheight}{Reduce visibility during nightly migrations to surface. Must include migration to surface.}
+%
+%\question[5]
+%Describe the trophic cascade that affects kelp abundance. %Tell which species is the keystone species.
+%
+%\AnswerBox{0.2\textheight}{High sea otter (keystone), low urchin, high kelp. If they add orca, OK, but otter still keystone because increases kelp and rest of community.}
+
+\question
+	\begin{parts}
+	\part[5]
+	Illustrate the profile of a fringing reef from shoreline to open ocean. Label each zone.
+
+	\AnswerBox{1\basespace}{%
+	Fore-reef slope, reef crest, reef flat.%
+}
+
+
+	\part[10]
+	Describe how light, aerial exposure, and wave action interact to determine the types of hermatypic corals (relative size, branching, etc.) present in each zone of a fringing reef.
 	
-	\smallskip
-	\emph{Write only one adaptation. If you write more than one, I will grade only the first one I read.}
-	
-	\begin{AnswerPage}{0.25\textheight}
-		Mesopelagic [2 points], plus one of:
-		\vspace*{0.5\baselineskip}
-		
-		\quad Large eyes [2 pts] to gather available light. [2 points]
-		\vspace*{0.5\baselineskip}
-		
-		\quad Muscular body {2 pts};  for active swimming, migration to surface. [2 points]
-		\vspace*{0.5\baselineskip}
-		
-		\quad Consider color. [2 points plus 2 points for explanation.]
-	\end{AnswerPage}
+		\begin{AnswerPage}{5in}
+		Answer goes here.
+		\end{AnswerPage}
+	\end{parts}
 
-
-
-\question[5]
-Why do many mesopelagic fishes have laterally (side-to-side) compressed bodies with
-countershading? 
-
-\AnswerBox{0.2\textheight}{Reduce visibility during nightly migrations to surface. Must include migration to surface.}
-
-\question[5]
-Describe the trophic cascade that affects kelp abundance. %Tell which species is the keystone species.
-
-\AnswerBox{0.2\textheight}{High sea otter (keystone), low urchin, high kelp. If they add orca, OK, but otter still keystone because increases kelp and rest of community.}
 
 \bonusquestion[1]
 Favorite movie with ocean or marine biology theme.
