@@ -7,8 +7,8 @@
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={OldStyle}]{\mainfont}
-\newfontface\liningnums[Numbers=Lining]{\mainfont}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={Off}, Numbers={OldStyle}]{\mainfont}
+%\newfontface\liningnums[Numbers=Lining]{\mainfont}
 \usepackage{microtype}
 
 % This defines \amper for the fancy ampersand
@@ -28,7 +28,7 @@
 	{/Users/goby/Pictures/teach/434/exams/}}%
 
 \usepackage[version=4]{mhchem}
-\mhchemoptions{textfontcommand=\liningnums}
+%\mhchemoptions{textfontcommand=\liningnums}
 
 % Used to get the last two digits of the year for the header below.
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
@@ -102,15 +102,24 @@ and successful coral recruitment. Tell how each of these differed
 between the two islands and how eutrophication contributed to these 
 differences.
 
-\AnswerBox{0.4\textheight}{1}{%
+\AnswerBox{0.3\textheight}{1}{%
 Answer here.}
 
 
-\question[10]
-Explain how high and low modularity among populations might affect 
-evolutionary rescue of those populations. Be specific.
+%\question[10]
+%Explain how high and low modularity among populations might affect 
+%evolutionary rescue of those populations. Be specific.
+%\AnswerBox{4\baselineskip}{1}{%
+%	Answer here.}
 
-\AnswerBox{0.4\textheight}{1}{%
+
+\question[10]
+Explain how high fishing pressure can cause a coral reef to shift to 
+an algal-dominated state through the loss of functional diversity
+in herbivorous fishes. You may use trophic cascades \emph{or} number
+of species interactions to support your explanation.
+
+\AnswerBox{0.3\textheight}{1}{%
 	Answer Here
 }
 
@@ -134,24 +143,42 @@ Write the equilibrium equation for the bicarbonate buffering system.
 Answer Here
 }
 
-\question[10] Using the equation from question~\ref{bicarb_equilibrium}, 
+\question[5] Using the equation from question~\ref{bicarb_equilibrium}, 
 explain how addition of atmospheric \ce{CO2} is causing the loss of 
 aragonite in the oceans.
 
-\AnswerBox{0.6\textheight}{3}{%
+\AnswerBox{0.2\textheight}{3}{%
+Answer here.}
+
+\question[5] 
+Explain how global warming might affect thermohaline circulation (Great Ocean Conveyor).
+
+\AnswerBox{0.2\textheight}{3}{%
 Answer here.}
 
 
 \newpage
 
 %
-\question[10]
-Crabs in a salt marsh can have a negative indirect interaction with 
-\textit{Spartina,} through snails. Explain the interaction, tell whether 
-the interaction is trait- or density-mediated, and tell why. 
+%\question[10]
+%Crabs in a salt marsh can have a negative indirect interaction with 
+%\textit{Spartina,} through snails. Explain the interaction, tell whether 
+%the interaction is trait- or density-mediated, and tell why. 
+%
+%\AnswerBox{0.4\textheight}{0.9}{%
+%Answer here.}
 
-\AnswerBox{0.4\textheight}{0.9}{%
+\question[10]
+A study showed that hydrothermal vent populations were not connected 
+between the northern and southern regions of the East Pacific Rise but
+had greater connectivity within each region. Predict how ocean warming
+might affect population connectivity between and within these two regions.
+Justify your prediction. (The vents are not located near the ocean conveyor.)
+
+
+\AnswerBox{0.3\textheight}{1}{%
 Answer here.}
+
 
 %
 \question[10] 
@@ -161,7 +188,7 @@ negatively by either warming or acidification of the oceans. Describe
 each service, and then tell specifically how warming or acidification 
 will alter the service.
 
-\AnswerBox{0.4\textheight}{1}{%
+\AnswerBox{0.3\textheight}{1}{%
 Answer here.}
 
 \newpage
@@ -191,8 +218,8 @@ number of species interactions caused this result.
 \vskip0pt plus 1fill
 
 %
-\bonusquestion[1]
-List your favorite pizza topping(s).
+%\bonusquestion[1]
+%List your favorite pizza topping(s).
 
 \end{questions}
 
