@@ -25,7 +25,7 @@
 % FONTS
 \usepackage{fontspec}
 \def\mainfont{Linux Biolinum O}
-\setmainfont[Ligatures={Common,TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
+\setmainfont[Ligatures={Common,TeX}, Contextuals={NoAlternate}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
@@ -38,8 +38,8 @@
 
 %\usepackage{units}
 
-\usepackage{booktabs}
-\usepackage{multicol}
+%\usepackage{booktabs}
+%\usepackage{multicol}
 %	\setlength{\columnsep=1em}
 
 %\usepackage{tikz}
@@ -58,26 +58,30 @@
 }
 
 %\usepackage{calc} % Needed for \widthof
-%\usepackage{hyperref}
-%
-%\newcommand\HiddenWord[1]{%
-%	\alt<handout>{\rule{\widthof{#1}}{\fboxrule}}{#1}%
-%}
-%
+\usepackage{hyperref}
+
 
 
 \begin{document}
 
 {\setbeamercolor{background canvas}{bg=black}
 \begin{frame}
-
+\transduration{0.1}
 \end{frame}
 }
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{exam1_gigantactis}}
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{exam1_himantolophus1}}
 \begin{frame}[b]
 
-\tiny\textcolor{white}{Theodore W. Pietsch, Wikimedia Commons\hfill Everyone \textsc{scuba} dives. Be a deep sea pioneer!}
+\tiny\href{https://www.theguardian.com/us-news/2021/may/11/deep-sea-anglerfish-california-beach-finding-nemo}{Ben Estes, The Guardian} \hfill Everyone \textsc{scuba} dives. Be a deep sea pioneer!
+\transduration{30}
+\end{frame}}
+
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{exam1_himantolophus2}}
+\begin{frame}[b]
+
+\tiny\href{https://www.theguardian.com/us-news/2021/may/11/deep-sea-anglerfish-california-beach-finding-nemo}{Ben Estes, The Guardian} \hfill Everyone \textsc{scuba} dives. Be a deep sea pioneer!
+\transduration{30}
 \end{frame}}
 
 \end{document}
