@@ -3,13 +3,13 @@
 
 \documentclass[11pt, addpoints]{exam}
 
-%\printanswers
+\printanswers
 
 \usepackage[left=1in,right=1.25in,top=1in]{geometry}     
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
-\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Fractions ={On}, Numbers={Proportional}]{\mainfont}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional}]{\mainfont}
 \setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
 \usepackage{microtype}
 
@@ -109,17 +109,22 @@
 
 \fullwidth{Read each question carefully and completely. Be sure your answer addresses the question being asked. Use complete sentences. Use your words.}
 
-\bonusquestion[1] Favorite type of donut (no promises): \rule{2.5in}{0.4pt}
+%\bonusquestion[1] Favorite type of donut (no promises): \rule{2.5in}{0.4pt}
+
+\question[2] % Questions from Emma VanDeven's honors presentation.
+What is the approximate percent similarity between all Brucella species (your answer should be ±2\%) 
+
+\AnswerBox{0.05\textheight}{97\%.}
+
+\question[3]
+What is attributed to cause host specialization between Brucella species?
+
+\AnswerBox{0.05\textheight}{Pseudogenes}
 
 \question[5]
-Mudskippers can absorb O\textsubscript{2} through their skin. Briefly describe another mechanism they use to breathe on exposed mudflats. How do mudskippers use this mechanism to deliver oxygen to their developing eggs?
+Briefly explain why marine \textit{Brucella} species are considered non-zoonotic? 
 
-\AnswerBox{0.2\textheight}{Trap a bubble of air over their gills. Males will deliver this bubble into the burrow and release it over their eggs.}
-
-\question[5]
-Compare and contrast the plasticity of the Atlantic Puffin versus the Little Auk. Which species shows more ability to adapt to its changing environment? 
-
-\AnswerBox{0.2\textheight}{Puffins abandoning nests and experiencing low reproductive success when food resources change, whereas little auks adapt to the change in food resources and adjust diving behavior according to sea-ice coverage, benefit from glacial melt and rising temps.}
+\AnswerBox{0.2\textheight}{A zoonosis is a disease that can be transmitted from animals to humans. Diseases caused by marine \textit{Brucella} are not transmissible to humans.}
 
 %\newpage
 
@@ -132,7 +137,7 @@ Briefly describe how predators affect the distribution of prey species (like sna
 \newpage
 
 
-\question[5] \label{q:carbonate_buffering_system}
+\question[2] \label{q:carbonate_buffering_system}
 Write the equilibrium equation for the carbonate buffering system in
 marine ecosystems, with correct valence for ions. Use this equation to explain how the increase in
 atmospheric \ce{CO2} increases ocean acidity. %Circle the hydrogen ion 
@@ -142,13 +147,13 @@ atmospheric \ce{CO2} increases ocean acidity. %Circle the hydrogen ion
 %	too many points. Replace one of the questions with something about
 %	biological response to acidification.}
 
-\begin{AnswerPage}{0.2\textheight}%
+\begin{AnswerPage}{0.05\textheight}%
 
 \ce{CO2 + H2O <=> H2CO3 <=> H+ + HCO3- <=> 2H+ + CO3^2-} (2 points)
 
-\vspace{\baselineskip}
+%\vspace{\baselineskip}
 
-As \ce{CO2} is added to seawater, the equation drives to the right to achieve equilibrium. This increases the amount of \ce{H+} dissolved in water. pH is a measure of free \ce{H+}.  More free \ce{H+} means lower pH, meaning higher acidity. (3 points)
+%As \ce{CO2} is added to seawater, the equation drives to the right to achieve equilibrium. This increases the amount of \ce{H+} dissolved in water. pH is a measure of free \ce{H+}.  More free \ce{H+} means lower pH, meaning higher acidity. (3 points)
 
 %\vspace{\baselineskip}
 
@@ -157,15 +162,25 @@ As \ce{CO2} is added to seawater, the equation drives to the right to achieve eq
 \end{AnswerPage}
 
 
-\question[5] \label{q:calcium_carbonate_equilibrium}
+\question[2] \label{q:calcium_carbonate_equilibrium}
 Write the equilibrium equation for \ce{CaCO3} chemistry, again with correct valence.
 
-\AnswerBox{0.1\textheight}{%
+\AnswerBox{0.05\textheight}{%
 \ce{CaCO3 <=> Ca^2+ + CO3^2-}   \\
 Grade as 1 point per molecule. Deduct 1 point for each incorrect superscript or subscript. Deduct 1 point if not shown as equilibrium equation.
 }
 
-\question[10]
+
+\question[5]
+What is the minimum value of \Omega\ necessary for carbonate skeleton
+formation? What is the optimum value?
+
+\AnswerBox{0.05\textheight}{%
+Minimum $>$ 1 for shell formation. (2 pts)\\
+Optimum $\ge$ \textasciitilde4.0 (2 pts)
+}
+
+\question[6]
 Explain how the increased acidity (from the equilibrium equation in
 question~\ref{q:carbonate_buffering_system}) interacts with \ce{CO3^2-} (from the equilibrium equation in question~\ref{q:calcium_carbonate_equilibrium})
 to reduce \ce{CaCO3} availability to marine animals. Include
@@ -173,7 +188,7 @@ the proper chemical equation as part of your answer
 
 %\textbf{Write 15 pt carbonate buffering system equation. Explain how increased CO2 causes decreased CO2 availability.}
 
-\begin{AnswerPage}{0.4\textheight}%
+\begin{AnswerPage}{0.3\textheight}%
 
 \ce{H+ + CO3^2- -> HCO3-} \qquad (2 pts)
 
@@ -185,14 +200,7 @@ This prevents the carbonate ion from being available to organisms that produce c
 
 \end{AnswerPage}
 
-\question[5]
-What is the minimum value of \Omega\ necessary for carbonate skeleton
-formation? What is the optimum value?
-
-\AnswerBox{0.1\textheight}{%
-Minimum $>$ 1 for shell formation. (2 pts)\\
-Optimum $\ge$ \textasciitilde4.0 (2 pts)
-}
+\newpage
 
 \question[5]
 Describe how ocean acidification might affect the ability of juvenile coral reef fishes (e.g., clownfish) to find the proper habitat to recruit into.
@@ -200,6 +208,12 @@ Describe how ocean acidification might affect the ability of juvenile coral reef
 \AnswerBox{0.2\textheight}{%
 	Tended to go to wrong habitat under acidic conditions. Also tended to be unable to identify predatory fishes, decreasing chance of surviving.
 }
+
+
+\question[10]
+Compare and contrast the predator/disturbance and recruitment limitation models proposed to explain high diversity of coral reef fish communities. Explain the roles of competition and post-recruitment processes in your answer.
+
+\AnswerBox{0.4\textheight}{Both models have weak competition. The predation/disturbance model proposes that there is an abundance of new larval recruits but predation or disturbance removes some of the recruits from the population. This keeps the population size of each species well below carrying capacity so competition among individuals is weak. Recruitment limitation suggests that there is a there is a limited number of new larval recruits. Because they are limited in abundance, the populations do not reach carrying capacity so competition is weak. There are no processes that affect the relative abundance of the new larval recruits so post-recruitment modification is absent.}
 
 
 \newpage
@@ -221,7 +235,9 @@ Describe how ocean acidification might affect the ability of juvenile coral reef
 
 \question[15]
 Use the figure above to clearly and thoroughly explain how increased ocean acidity
-will alter connectivity and fecundity across a large coral reef. You must include coral
+will alter connectivity and fecundity across a large coral reef. Fecundity is the ability to produce offspring; more fecund = more offspring. 
+
+You must include coral
 recruitment and growth (indicated by the black arrow), distance between patches, and coral fecundity (reproductive output of corals). Be sure to include both positive (dashed lines) and negative (solid lines) relationships among these factors. Do not include unnecessary factors and relationships. 
 
 \begin{solution}
