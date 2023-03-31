@@ -12,6 +12,9 @@
 *.cb2
 *_performance.tex # don't need to track this file
 *_plotter.R # Don't need to track this file
+matching[ABC].tex
+multiplechoice[ABC].tex
+truefalse[ABC].tex
 
 ## Intermediate documents:
 *.dvi
