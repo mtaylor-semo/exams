@@ -51,6 +51,28 @@
 \renewcommand{\solutiontitle}{}
 \SolutionEmphasis{\bfseries}
 
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+% change indentation for multiple choice
+\renewcommand{\choiceshook}{%
+	\setlength{\leftmargin}{0.25in}%
+	\setlength{\parsep}{3pt}%
+}
+
 
 \newcommand*\AnswerBox[2]{%
 	\parbox[t][#1]{0.92\textwidth}{%
@@ -67,33 +89,118 @@
 \newlength{\basespace}
 \setlength{\basespace}{5\baselineskip}
 
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
+
 
 \begin{document}
 
 \begin{questions}
 
-\question[5]
-Briefly explain the difference between a discrete trait and a quantitative trait.
+\fullwidth{Match the \emph{most appropriate} term to each concept. Not all terms are used. No term is used twice.\\(2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+\vspace{0.6\baselineskip}
 
-\AnswerBox{0.05\textheight}{%
-		Discrete trait determined by single gene. Quant trait by multiple genes.}
+\bumppoints{10}
 
-\question[5]
+\question\MatchQuestion{Sister species}{Two species that share the most recent ancestor.}
+\vspace{0.5\baselineskip}
+\question\MatchQuestion{Hybrid inviability}{Hybrids have reduced chance of surviving to reproductive age.} \vspace{0.5\baselineskip}
+%\question\MatchQuestion{Heterozygosity}{Decreases due to genetic drift.}
+\question\MatchQuestion{Selective sweep}{A beneficial allele brings linked neutral alleles to high frequency.}
+\vspace{0.5\baselineskip}
+\question\MatchQuestion{Morphological species}{Shape or color differences are used to determine species.}
+\vspace{0.5\baselineskip}
+\question\MatchQuestion{Mutation load}{Decreases average fitness of a population.}
+
+\bumppoints{6}
+\fullwidth{Multiple choice. Choose the \emph{best} answer. Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect. (2 points each)}
+
+\question
+%A scientist applied the McDonald-Kreitman test to a DNA sequence from a gene. The found the following values: $G = 2.63. \chi^2 = 3.841$. According to this result, the gene is evolving by
+A scientist applied the McDonald-Kreitman test to a \textsc{dna} sequence from a gene. The found that $G$ = 2.63. If $\chi^2$ = 3.841 then the gene is evolving by
+
+\begin{choices}
+\correctchoice neutral evolution.
+\choice neutral selection.
+\choice positive selection.
+\choice purifying selection.
+\choice negative selection.
+\end{choices}
+
+\question
+A scientist applied the breeder's equation to thorax width (behind the head) of stink bugs (Order Hemiptera). The trait had high heritability and the selection coefficient was negative. Therefore, they would predict the width of the thorax of the next generation should show
+
+\begin{choices}
+\choice a relatively large increase in width.
+\choice a relatively small increase in width.
+\choice no change (effectively neutral).
+\choice a relatively small decrease.
+\correctchoice a relatively large decrease.
+\end{choices}
+
+\newpage
+
+\question
+Quantitative traits are
+
+\begin{choices}
+\choice determined by multiple genes but not subject to natural selection.
+\choice determined by a single gene and subject to neutral selection.
+\choice determined by multiple genes and subject to neutral selection.
+\correctchoice determined by multiple genes and subject to natural selection.
+\choice determined by a single gene and subject to genetic drift.
+\end{choices}
+
+\question[2]
 If $N_e = 1000$ and the neutral mutation rate is $0.000014,$ what is the rate of haplotype substitution in the population?
 
-\AnswerBox{0.05\textheight}{0.000014}
+\AnswerBox{0.01\textheight}{0.000014}
+
+\question[3]
+The fitness for three genotypes in a population is $w_{11}$ = 1, $w_{12}$ = 0.96, and $w_{22}$ = 1. Name the mode of selection that explains how the phenotype would change in this population. Explain.
+
+\AnswerBox{0.05\textheight}{%
+Disruptive selection. Heterozygotes have decreased fitness compared to both homozygotes, which have equal fitness. The population will diverge towards both homozygote genotypes.
+}
 
 
-\question[5]
-Briefly explain the difference between the meanings of allopatric, sympatric, and parapatric.
+%\question[5]
+%Briefly explain the difference between a discrete trait and a quantitative trait.
+%
+%\AnswerBox{0.05\textheight}{%
+%		Discrete trait determined by single gene. Quant trait by multiple genes.}
 
-\AnswerBox{0.05\textheight}{Answer goes here.}
+
+%\question[5]
+%Briefly explain the difference between the meanings of allopatric, sympatric, and parapatric.
+%
+%\AnswerBox{0.05\textheight}{Answer goes here.}
+\question[4]
+List two evolutionary processes that \emph{always} cause a decrease in heterozygosity.
+
+\AnswerBox{0.01\textheight}{Genetic drift, non-random mating.}
+
+\question[4]
+Explain how gene swamping can overcome selection.
+
+\AnswerBox{0.05\textheight}{Migration $(m)$ is greater than the strength of selection $(s)$ so less beneficial alleles continue to be introduced into the population.}
 
 
-\question[5]
-Briefly describe bottleneck and founder effects and how each affects heterozygosity in a population. 
+%\question[4]
+%Briefly describe bottleneck and founder effects and how each affects heterozygosity in a population. 
+%
+%\AnswerBox{0.05\textheight}{Answer goes here.}
 
-\AnswerBox{0.05\textheight}{Answer goes here.}
+\question[4]
+Which form of frequency-dependent selection maintains genetic variation in a population? Briefly explain why.
+
+\AnswerBox{0.05\textheight}{Negative. Common alleles have lower fitness so are selected against. Less common alleles have higher fitness but become more common, thus reducing their fitness.}
+
 
 
 %\question[10]
@@ -102,20 +209,28 @@ Briefly describe bottleneck and founder effects and how each affects heterozygos
 %\AnswerBox{0.2\textheight}{Defines species as those that can interbreed but reproductively isolated from other species. Advantage: can see if they reproduce. Disadvantage: can't test across allopatric distributions, time, or asexual species.}
 %
 \question[10]
-The snapping shrimp \textit{Synalpheus brooksi} lives in sponges on coral reefs.  Duffy (1996) showed that shrimp occupying nearby but different species of sponges rarely come into contact with each other because they don't usually leave their sponges. In the lab, a male shrimp from one sponge species is extremely aggressive towards females from a different sponge species, suggesting reproductive incompatibility. Analyses showed that shrimp from the same sponge species were genetically similar but shrimp from different sponge species were genetically distinct. Duffy argued the shrimp in different sponges are different species.  If so, explain which prezygotic mechanism or mechanisms reproductively isolate shrimps in different sponge species.
+The snapping shrimp \textit{Synalpheus brooksi} lives in sponges on coral reefs.  Duffy (1996) showed that shrimp occupying nearby but different species of sponges rarely come into contact with each other because they don't usually leave their sponges. In the lab, a male shrimp from one sponge species is extremely aggressive towards females from a different sponge species, suggesting reproductive incompatibility. Analyses showed that shrimp from the same sponge species were genetically similar but shrimp from different sponge species were genetically distinct. Duffy argued the shrimp in different sponges are different species.  Explain \emph{two} prezygotic mechanisms described above that could reproductively isolate shrimps in different sponge species.
 
 \AnswerBox{0.2\textheight}{%
-Ecological. Occupy different habitats.
+Ecological. Occupy different habitats. Behavioral. Aggressive interactions.
 }
 
+
+\question[5]
+If two independent populations (no gene flow) are subject only to non-adaptive evolution, would you predict that the end result would be the same for each population? Explain why or why not.
+
+\AnswerBox{0.1\textheight}{%
+	No. Non-adaptive evolution is by drift. Drift is random. Because there is no gene flow between them, each population will drift independently of the other.
+}
 
 
 \newpage
 
 
 
-\question
-Use this table and equation to answer the next two questions.
+\question[5]
+%Use this table and equation to answer the next two questions.
+Use this table and equation to calculate $F_{ST}$. Enter your result below. Round your answer to three digits after the decimal. Show your work.
 
 \begin{multicols}{2}
 \begin{tabular}{lR{2cm}R{2cm}}
@@ -137,9 +252,9 @@ where $2pq =$ overall heterozygosity across populations, and $c_i2p_iq_i =$ hete
 
 \end{multicols}
 
-\begin{parts}
-\part[5]
-Calculate F\textsubscript{ST}. Enter your result below. Round your answer to three digits after the decimal. Show your work.
+%\begin{parts}
+%\part[5]
+%Calculate $F_{ST}$. Enter your result below. Round your answer to three digits after the decimal. Show your work.
 
 \begin{AnswerPage}{0.5\textheight}
 
@@ -206,17 +321,17 @@ F_{ST} =& \frac{0.459672 - 0.44892}{0.459672} = 0.02339059 = \mathbf{0.023}
 
 \end{AnswerPage}
 
-\part[5]
-Based on your result, would you say that the rate of migration is less than or more than one individual per generation. Explain why.
+%\part[5]
+%Based on your result, would you say that the rate of migration is less than or more than one individual per generation. Explain why.
+%
+%\AnswerBox{0.01\textheight}{Answer goes here.}
+%\end{parts}
+%
 
-\AnswerBox{0.01\textheight}{Answer goes here.}
-\end{parts}
-
-
-\question[10]
+\question[8]
 The purple-throated carib is a species of hummingbird that lives on the Caribbean island of Dominica. Female caribs have longer, more curved bills than male caribs, which have shorter, straighter bills. Female hummingbirds get their nectar only from the red flowers of a plant called \textit{Heliconia bihai}. Male hummingbirds get their nectar only from the yellow flowers of the same plant species. An individual plant has either red or yellow flowers, but not both. The flower shape of each color morph corresponds to the bill shape of each sex. Red flowers have a longer, more curved flower corolla, while yellow flowers have a shorter, straighter corolla. The hummingbirds function as pollinators for \textit{H. bihai}.  No other pollinators (including wind) for this plant are known. Based on this information only, can reproductive isolation evolve for (1) the hummingbirds and (2) the color morphs of \textit{H. bihai}.  If so, say how. Justify your answer. 
 
-\AnswerBox{0.3\textheight}{%
+\AnswerBox{0.2\textheight}{%
 Yes for \textit{H. carib} because plant has different pollinators (4 pts). No for birds because males and females must come together to reproduce (4 pts).
 }
 
@@ -228,16 +343,22 @@ Yes for \textit{H. carib} because plant has different pollinators (4 pts). No fo
 %	Answer goes here.}
 
 
-\question[10]
-Describe the basic premise of the neutral theory of evolution. Does the neutral theory allow for natural selection at the genetic level? Explain.
+\question[4]
+Describe the basic premise of the neutral theory of evolution. Does the neutral theory allow a role for natural selection at the genetic level? Explain.
 
-\AnswerBox{0.3\textheight}{%
-	Ecological. Occupy different habitats.
+\AnswerBox{0.1\textheight}{%
+	All DNA evolves by neutral mutations (2 pts). Natural selection is only allowed to remove negative mutations (2 pts).
 }
+
+\vfill
+
+\bonusquestion[2]
+Name of favorite band or musical artist.
+
 
 \newpage
 
-\question[15]
+\question[10]
 
 \begin{multicols}{2}
 \flushleft
@@ -269,9 +390,8 @@ Val & GUG & 0.48 &  & Ala & GCG & 0.76\\
 \end{multicols}
 %	\end{minipage}
 	\begin{solution}
-	Codon bias is present.
+	The data do provide evidence for natural selection. Methionine is 1 because AUG is the only possible codon. Codons like AUC (2.27) and UCU (2.54) are used 2X more than expected. CUG is used 5X more than expected. When some codons are used more than random (codon bias), then other codons have to be used less often than random (values below 1). That provides evidence of natural selection because using few codons more often increases translation efficiency.
 	\end{solution}
-
 
 
 \end{questions}
