@@ -17,27 +17,42 @@
 % This defines \amper for the fancy ampersand
 % to be used in the header. See
 % https://tex.stackexchange.com/a/58185/39194
-\usepackage{xspace}
-\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
-\makeatletter
-\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
-\makeatother
+%\usepackage{xspace}
+%\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
+%\makeatletter
+%\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+%\makeatother
 
 \usepackage{graphicx}
 	\graphicspath{%
 	{/Users/goby/Pictures/teach/466/exams/}}%
 
+
 % Used to get the last two digits of the year for the header below.
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
+\usepackage[sc]{titlesec}
+
 \pagestyle{headandfoot}
+
 \firstpageheader{Ornithology, Exam 2, \textsc{s}\short{\year}, \numpoints~points.}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 \runningheadrule
 
-\footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\footer{\iflastpage{\small Lecture: \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\iflastpage{\small Lab: \rule{0.6in}{0.4pt} / 24~points}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
+
+
+%\fancypagestyle{labexam}{
+%\fancyfoot[L]{\small \rule{0.6in}{0.4pt} / \numpoints\ points}
+%}
+%\pagestyle{foot}
+%\footer{\small \rule{0.6in}{0.4pt} / 25~points}{}{}
+
+
+%\fancypagestyle{alim}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\fancyfoot[R]{Alim, from Unknown City}}
+
 
 \pointsinmargin
 \marginpointname{ pts}
@@ -54,7 +69,7 @@
 \ifprintanswers
 	\textbf{#1}
 \else
-	\rule{2in}{0.5pt}
+	\rule{2in}{0.4pt}
 \fi
 }
 \newlength\matchlena
@@ -64,6 +79,29 @@
 	\setlength\matchlenb{0.98\linewidth}
 	\addtolength\matchlenb{-\matchlena}
 	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+
+%% Create a Matching question format
+\newcommand*\LabMatching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.0in}{0.4pt}
+\fi
+}
+\newlength\matchlaba
+\newlength\matchlabb
+\settowidth\matchlaba{\rule{2in}{0pt}}
+\newcommand\LabMatch[2]{%
+	\setlength\matchlabb{0.98\linewidth}
+	\addtolength\matchlabb{-\matchlaba}
+	\parbox[t]{\matchlaba}{\LabMatching{#1}} \parbox[t]{\matchlabb}{#2}}
+
+% change indentation for multiple choice
+\renewcommand{\choiceshook}{%
+	\setlength{\leftmargin}{0.25in}%
+	\setlength{\parsep}{3pt}%
+}
 
 
 \newcommand*\AnswerBox[2]{%
@@ -81,6 +119,11 @@
 \newlength{\basespace}
 \setlength{\basespace}{5\baselineskip}
 
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
+
+
 \begin{document}
 
 \begin{questions}
@@ -88,84 +131,320 @@
 \fullwidth{The first three questions require an audio recording. I'll play the recording for everyone. Once you have written your answers, you may complete the rest of the exam.}
 
 \question
-Answer the first three questions based on an audio recording of an Eastern Towhee. All I ask is that you try to do your best.
+Answer the first three questions based on an audio recording of an Eastern Towhee. All I ask is that you try to do your best. (2 points each)
 
+\bumppoints{18}
 \begin{parts}
-\part[4]
+\part
 How many song types are heard in this recording? Enter the number below.
 
-\AnswerBox{2\baselineskip}{3}
+\ifprintanswers \textbf{3} \fi
+\vspace{2\baselineskip}
+%\AnswerBox{1\baselineskip}{3}
 
-\part[3]
+\part
 How many phrases are heard in the second song? Enter the number below.
 
-\AnswerBox{2\baselineskip}{3 or 4}
+\ifprintanswers \textbf{3 or 4} \fi
+\vspace{2\baselineskip}
+%\AnswerBox{1\baselineskip}{3 or 4}
 
-\part[3]
+\part
 How many notes are in the second phrase of the second song?
 
-\AnswerBox{2\baselineskip}{1}
+\ifprintanswers \textbf{1} \fi
+\vspace{2\baselineskip}
+%\AnswerBox{1\baselineskip}{1}
 
 \end{parts}
 
+\fullwidth{Multiple choice. Choose the \emph{best} answer. Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect. (2 points each)}
+
+\begin{multicols}{2}
+\question
+The foraging functional response shown at right depends most on
+
+\begin{choices}
+\choice satiation point.
+\choice predator abundance.
+\correctchoice handling time.
+\choice prey abundance.
+\choice search image.
+\end{choices}
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{exam2_handling_functional_response}
+
+\end{multicols}
+
+\question
+Seabirds like the Black-browed Albatross often use this specific type of flight to efficiently forage over large areas of the ocean.
+
+\begin{choices}
+\choice Dynamic soaring.
+\correctchoice Lévy's flight.
+\choice Slope soaring.
+\choice Gliding flight.
+\choice Thermal soaring.
+\end{choices}
+
+\question
+Honest indicators are a signal to the
+
+\begin{choices}
+\choice male that the female is likely to be truly monogamous and not socially monogamous.
+\correctchoice female that the male is likely to be a good at obtaining food for her offspring.
+\choice female that the male is \emph{not} likely to be truly monogamous.
+\choice female that male is likely to mate guard.
+\choice male that the female is likely to lay more eggs fertilized by him.
+\end{choices}
+
+\question
+A character that separates all diving ducks from all dabbling ducks is
+
+\begin{choices}
+\correctchoice The hallux of diving ducks is lobed. The hallux of dabbling ducks is not lobed.
+\choice The bill of diving ducks is terrete. The bill of dabbling ducks is spatulate.
+\choice The front toes of diving ducks are fully webbed. The front toes of dabbling ducks are partially webbed.
+\choice The tomium of diving ducks is serrate. The tomium of dabbling ducks is lamellate.
+\end{choices}
+
+
+
+\question
+The only grebe in Missouri is the Pied-billed Grebe. It belongs to the family
+
+\begin{choices}
+\choice Anatidae
+\choice Anseriformes
+\correctchoice Podicipedidae
+\choice Phasianidae
+\choice Galloanseriformes
+\choice Columbiformes
+\end{choices}
+
+\question
+This family of weak-footed flyers has pamprodactyl feet.
+
+\begin{choices}
+\choice Caprimulgidae
+\correctchoice Apodidae
+\choice Trochilidae
+\choice Podicipedidae
+\choice Passeridae
+\end{choices}
+
+\question[5]
+Describe the difference between a sensitive period and opened ended learning for bird songs.
+
+\AnswerBox{0.1\textheight}{Answer goes here.}%
 
 \question[5]
 Briefly describe the difference between a lek and an exploded lek.
 
-\AnswerBox{0.2\textheight}{Answer}
+\AnswerBox{0.1\textheight}{Answer}
 
-\question[5]
-What does an honest indicator tell the female about potential mates.
+\newpage
 
-\AnswerBox{0.2\textheight}{Answer}
+\bumppoints{12}
+\fullwidth{Match the \emph{most appropriate} term to each concept. Not all terms are used. No term is used twice.\\(2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{exam2_matchwordlist.tex}
+}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{Rhynchokinesis}{Foraging shorebirds with long bills have this ability.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{sit-and-wait}{Hawk sitting in a tree is likely using this foraging strategy.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{feeding guild}{Birds that use the same type of food resource, such as the ant-following birds of South America.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{polyandry}{One female mates with multiple males.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{syrinx}{Throat structure that allows birds to make complex vocalizations.}
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{cryptochrome}{Chemical compound that is hypothesized to allow birds to see Earth's magnetic field.}
+\vspace{0.6\baselineskip}
+
+
+\question[10]
+Describe how climate change might affect nesting success after arrival on breeding grounds. Assume climate change does not affect the time that birds arrive at their breeding ground. This is an open-ended question that you can answer many different ways. \emph{Be biologically reasonably.}
+
+%\question[5]
+%What does an honest indicator tell the female about potential mates.
+%
+%\AnswerBox{0.2\textheight}{Answer}
 
 \newpage
 
 \question[5]
 Briefly explain why resource-based polygyny might evolve in birds?
 
-\AnswerBox{0.2\textheight}{%
+\AnswerBox{0.1\textheight}{%
 Answer goes here.}%
 	
 \question[10]
 Eriefly explain the difference between the good genes hypothesis and the sexy sons hypothesis.
 
-\AnswerBox{0.4\textheight}{Answer goes here.}
-
-\newpage
-
-\question[10]
-Describe the functional difference between song and call in birds. 
-
 \AnswerBox{0.2\textheight}{Answer goes here.}
 
-\question[10]
-Name the structure used by oscine birds to produce song. Describe how the structure works.
 
-	\AnswerBox{0.2\textheight}{%
-	Answer goes here.}
+%\question[10]
+%Describe the functional difference between song and call in birds. 
 
-\newpage
+%\AnswerBox{0.2\textheight}{Answer goes here.}
+
+%\question[10]
+%Name the structure used by oscine birds to produce song. Describe how the structure works.
+%
+%	\AnswerBox{0.2\textheight}{%
+%	Answer goes here.}
+
+%\newpage
 
 %\question[10]
 %Explain how having producer (finder) and scrounger individuals leads to an evolutionary stable strategy that maintains both foraging behaviors in the flock.
 %	\AnswerBox{0.6\textheight}{Answer goes here.}%
 
 \question[10]
-Describe the difference between a sensitive period and opened ended learning for bird songs.
-
-\AnswerBox{0.2\textheight}{Answer goes here.}%
-
-
-\question[10]
 Compare and contrast resource-based and mating territories. What do they have in common? What is different? 
 
 \AnswerBox{0.2\textheight}{Answer goes here.}
 
-	
+\vfill
+
+
+{\flushright This completes the lecture portion of the exam. Turn the page for the laboratory portion.}
+
+\newpage
+
+\textsc{Laboratory:} This section is graded independently from the rest of the exam. Each question is worth 2 points.
+
+Fill in the blanks with the region of the body or the feather group that correspond to the numbered parts in the figure at right. Ignore unnumbered labels.
+
+%\vspace{2\baselineskip}
+\bigskip
+
+\setcounter{question}{0}
+
+\begin{multicols}{2}
+\question 
+\LabMatch{Mantle}{body region.}
+%\rule{2in}{0.4pt} body region.
+\vspace{0.4\baselineskip}
+
+\question
+\LabMatch{Nape}{body region.}
+%\rule{2in}{0.4pt} body region.
+\vspace{0.4\baselineskip}
+
+\question 
+\LabMatch{Greater Secondary Tertials}{feather group.}
+\vspace{0.4\baselineskip}
+
+\question 
+\LabMatch{Primaries}{feather group.}
+\vspace{0.6\baselineskip}
+
+\question 
+\LabMatch{Rectices}{feather group.} 
+\vspace{0.6\baselineskip}
+
+\question 
+\LabMatch{Upper tail coverts}{feather group.}
+\vspace{0.6\baselineskip}
+
+\question 
+\LabMatch{Rump}{body region.} 
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{bird_upper_numbered}
+
+\end{multicols}
+
+Choose the answer that matches the number of the numbered head region. Ignore the unnumbered labels.
+%\vspace{\baselineskip}
+
+\begin{multicols}{2}
+\question
+Region that covers the top of the head.
+
+\begin{choices}
+\choice Auricular.
+\correctchoice Crown.
+\choice Supercilium.
+\choice Nape.
+\choice Lores.
+\end{choices}
+
+
+\question
+Stripe above the eye.
+
+\begin{choices}
+\choice Malar.
+\choice Lores.
+\choice Median stripe.
+\choice Auricular.
+\correctchoice Supercilium
+\end{choices}
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{bird_head_numbered}
+
+\question
+Region of the face between the eye and bill.
+
+\begin{choices}
+\choice Malar
+\choice Nasal
+\choice Supercilium
+\correctchoice Lores.
+\choice Crown
+\end{choices}
+
+\end{multicols}
+
+\newpage
+
+\begin{multicols}{2}
+
+\vspace*{2\baselineskip}
+
+\question\LabMatch{Furcula}{Proper name for the fused collar bone.}
+\vspace{0.6\baselineskip}
+
+\question\LabMatch{Tarsus}{Overall name for the leg .}
+\vspace{0.6\baselineskip}
+
+\vfill
+
+\bonusquestion (extra credit)
+Name the type of bill found on the Atlantic Puffin, pictured below.
+
+\columnbreak
+
+\vspace{-\baselineskip}
+
+\includegraphics[width=\linewidth]{skeleton_pigeon_numbered}
+
+\end{multicols}
+
+\includegraphics[width=0.5\linewidth]{puffin_head}
 
 
 \end{questions}
+
+
 
 
 \end{document}
