@@ -42,6 +42,28 @@
 \renewcommand{\solutiontitle}{}
 \SolutionEmphasis{\bfseries}
 
+%% Create a Matching question format
+\newcommand*\Matching[1]{
+\ifprintanswers
+	\textbf{#1}
+\else
+	\rule{2.1in}{0.5pt}
+\fi
+}
+\newlength\matchlena
+\newlength\matchlenb
+\settowidth\matchlena{\rule{2.1in}{0pt}}
+\newcommand\MatchQuestion[2]{%
+	\setlength\matchlenb{\linewidth}
+	\addtolength\matchlenb{-\matchlena}
+	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
+
+% change indentation for multiple choice
+\renewcommand{\choiceshook}{%
+	\setlength{\leftmargin}{0.25in}%
+	\setlength{\parsep}{3pt}%
+}
+
 
 \newcommand*\AnswerBox[2]{%
     \parbox[t][#1]{0.92\textwidth}{%
@@ -59,35 +81,244 @@
 \setlength{\basespace}{5\baselineskip}
 
 
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
+
+
 \begin{document}
 
 \begin{questions}
 
-\question[3]\label{rocky_intertidal_zones}
-Name the three zones of the rocky intertidal, from mean low tide to mean high tide.
+\fullwidth{Match the \emph{most appropriate} term to each concept. Not all terms are used. No term is used twice.\\(2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
+}
+%\vspace{0.6\baselineskip}
 
-\AnswerBox{0.1\textheight}{infralittral zone, midlittoral zone, supralittoral fringe.}
+\bumppoints{12}
+
+\question\MatchQuestion{Brackish}{Organisms restricted to intermediate salinity concentrations, such as 5--15 ppt.}
+
+\vspace{1\baselineskip}
+
+%\question\MatchQuestion{Neap Tide}{The highest low tide occurs when the moon is half full.}
+
+%\vspace{1\baselineskip}
+
+%\question\MatchQuestion{Stenohaline}{Organisms can tolerate only a narrow range of salinity.}
+
+%\vspace{1\baselineskip}
+
+\question\MatchQuestion{Supralittoral Fringe}{Also known as the splash zone.}
+
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Meiofauna}{Tiny organisms that live in the spaces between sand grains.}
+
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Low marsh}{Area of the marsh between the low and high tide marks.}
+
+\vspace{1\baselineskip}
+
+\question\MatchQuestion{Hypotonic}{Organism's blood solute concentration is lower than the environment solute concentration.}
+
+\vspace{1\baselineskip}
+
+%\question\MatchQuestion{Cordgrass}{Marsh plant with the greatest tolerance to anoxic soil.}
+
+%\vspace{1\baselineskip}
+
+\question\MatchQuestion{Exploitative Competition}{A species reduces resource availability to another species.}
+
+\vspace{1\baselineskip}
+
+
+\bumppoints{14}
+\fullwidth{Multiple choice. Choose the \emph{best} answer. Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect. (2 points each)}
+
+
+
+\question
+Which of the following does not appear to be an important biotic controlling factor of zonation in the rocky intertidal zone?
+
+\begin{choices}
+\choice  Competition  
+\correctchoice Parasitism 
+\choice Predation 
+\choice Larval recruitment 
+\choice Grazing 
+\end{choices}
+
+%\question
+%Which two of the these five factors are the most important causes of zonation in sandy beaches?
+%\begin{multicols}{3}
+%1. Competition \\
+%2. Predation \\
+%3. Sediment particle size\\
+%
+%\columnbreak
+%
+%4. Space\\
+%5. Wave action\\
+%\phantom{6.} \null
+%
+%\columnbreak
+%
+%\phantom{7.}\null
+%
+%\end{multicols}\vspace*{-1\baselineskip}
+%
+%\begin{choices}
+%\choice 1 and 2 
+%\choice 4 and 5 
+%\choice 1 and 3  
+%\choice 2 and 4 
+%\correctchoice 3 and 5 
+%\end{choices}
+
+\question
+The rocky intertidal and the rocky subtidal share one zone in common. That zone is the
+
+\begin{choices}
+\choice sublittoral zone.
+\choice midlittoral zone.
+\choice supralittoral fringe.
+\choice littoral fringe.
+\correctchoice infralittoral zone.
+\end{choices}
+
+\question
+Wind is the dominant abiotic factor determining community structure in \rule{1.25in}{0.4pt} estuaries?
+
+\begin{choices}
+\choice tectonic
+\choice delta
+\correctchoice bar-built
+\choice coastal plain
+\choice fjord
+\end{choices}
+
+%\newpage
+
+\question
+The hypothesis proposed to explain coral reef fish diversity that assumes competition is strong and post-recruitment processes are not modified is the 
+
+\begin{choices}
+\choice recruitment limitation model. 
+\choice competition model. 
+\choice temporal dynamics model. 
+\choice predation-disturbance model. 
+\choice spatial heterogeneity model. 
+\correctchoice lottery model. 
+\end{choices}
+
+\question
+Hypersaline bare patches are most likely to occur in
+
+\begin{choices}
+\choice any mangrove forest. 
+\choice southern salt marshes. 
+\choice any salt marsh. 
+\choice southern mangrove forests. 
+\correctchoice northern salt marshes. 
+\choice northern mangrove forests. 
+\end{choices}
+
+\question
+The outwelling hypothesis refers to
+
+\begin{choices}
+\choice the export of larval individuals from estuary nursery grounds to the open ocean.
+\choice the loss of primary productivity to consumers in low productivity estuaries.
+\choice the enhancement of offshore productivity due to larval individuals leaving low productivity estuaries.
+\choice the export of organic material out of the estuary by a microbial loop.
+\correctchoice the export of excess primary production from high productivity estuaries. 
+\end{choices}
+
+\question
+The dynamics of patches in rocky intertidal communities is most determined by
+
+\begin{choices}
+\choice the species that colonizes the patch first. 
+\choice ice and wrack. 
+\choice wave action. 
+\correctchoice patch size. 
+\choice competition. 
+\choice predation. 
+\end{choices}
 
 
 \question[4]
-\begin{multicols}{2}
-	What is the name of the tidal pattern shown at right. Tell how you know.
-	
-	\begin{solution}
-		Mixed semidurnal. Has two high tides of unequal height in 24 hour period.
-	\end{solution}
-	
-	\columnbreak
-	
-	\hfil \includegraphics[width=0.35\textwidth]{mixed_semidiurnal_tide} \hfill
-	
-\end{multicols}
+Name the tidal pattern displayed in the graph below (next question), and tell how you know. The tides shown go from the first low tide of 01 September to the last low tide of 12 September.
 
-\AnswerBox{0.01\textheight}{}
+\AnswerBox{0.05\textheight}{Mixed semi-diurnal. Two high and two low with very unequal heights}
+
+\bonusquestion[2]
+
+Circle on the graph the day of spring tide and the day of neap tide. Write the days in the space provided below the graph.
+
+\fullwidth{
+\includegraphics[width=\linewidth]{tidal_plot}}
+
+
+Spring tide: \ifprintanswers \textbf{2 Sep} \fi
+
+\bigskip
+
+Neap tide: \ifprintanswers \textbf{10 Sep} \fi
+
+%\question[3]\label{rocky_intertidal_zones}
+%Name the three zones of the rocky intertidal, from mean low tide to mean high tide.
+%
+%\AnswerBox{0.1\textheight}{infralittral zone, midlittoral zone, supralittoral fringe.}
+%
+%\question[3]
+%	Name the three rocky intertidal zones labeled in the diagram at right.
+%
+%\begin{multicols}{2}
+%
+%\vspace*{0.2\baselineskip}
+%
+%	A.
+%	
+%	\bigskip \medskip
+%	
+%	B.
+%	
+%	\bigskip
+%	
+%	C.	
+%
+%	\columnbreak
+%	
+%	\hfil \includegraphics[width=0.35\textwidth]{intertidal_zones} \hfill
+%	
+%\end{multicols}
+%
+
+%\question[4]
+%\begin{multicols}{2}
+%	What is the name of the tidal pattern shown at right. Tell how you know.
+%	
+%	\begin{solution}
+%		Mixed semidurnal. Has two high tides of unequal height in 24 hour period.
+%	\end{solution}
+%	
+%	\columnbreak
+%	
+%	\hfil \includegraphics[width=0.35\textwidth]{mixed_semidiurnal_tide} \hfill
+%	
+%\end{multicols}
+
+
 
 \question[5]
 \begin{multicols}{2}
-	This figure shows the blood salinity of a marine worm relative to sea water. Is this worm mostly an osmoconformer or an osmoregulator? Tell how you know.
+	%This figure shows the blood salinity of a marine worm relative to sea water. Is this worm mostly an osmoconformer or an osmoregulator? Tell how you know.
+	Young male alligators are forced by adult males into higher salinity water than preferred. The figure shows blood sodium concentration in young male alligators compared to their environment. Are young male alligators osmoconformers or osmoregulators? Tell how you know.
 	
 	\begin{solution}
 		Osmoconformer. Blood salinity changes with external salinity.
@@ -95,7 +326,9 @@ Name the three zones of the rocky intertidal, from mean low tide to mean high ti
 
 	\columnbreak
 	
-	\hfil \noindent\includegraphics[width=0.35\textwidth]{osmoconformer_graph}\hfill
+	%\hfil \noindent\includegraphics[width=0.35\textwidth]{osmoconformer_graph}\hfill
+	\hfil \noindent\includegraphics[width=\linewidth]{blood_sodium}\hfill
+
 	
 \end{multicols}
 
@@ -106,10 +339,22 @@ Why is a stenohaline marine fish in a coastal plain estuary more likely to be lo
 
 \AnswerBox{0.1\textheight}{Deep estuaries are more likely to form a salt water wedge. The denser sea water will be deeper than the less dense freshwater.}
 
+\question[5]
+Explain bioturbation and how it increases oxygen availability in the sediments of a soft-bottom intertidal community.
+
+\AnswerBox{0.1\textheight}{Bioturbation is the movement of organisms through the substrate. Their movement increases water flow through the sediment. The water contains oxygen so more water means more oxygen available to the organisms.}
+
+
 %\question[5]
 %How do hypersaline patches form in New England marshes?
 
 %\AnswerBox{\basespace}{Wrack or ice opens bare patches. Evaporation removes water, leaving salt behind, causing hypersaline conditions.}
+
+\question[5]
+Describe how patch dynamics at local scales in a rocky intertidal affects diversity at regional scales.
+
+
+\AnswerBox{0.1\textheight}{Answer goes here.}
 
 
 \bonusquestion[1]
@@ -118,10 +363,11 @@ Write the name of your favorite band or musical artist.
 
 \newpage
 
-\question[5]
-Explain bioturbation and how it increases oxygen availability in the sediments of a soft-bottom intertidal community.
+\question[10]
+Compare and contrast the competition and recruitment limitation models of reef fish community structure in terms of competition and post-recruitment processes.
 
-\AnswerBox{0.1\textheight}{Bioturbation is the movement of organisms through the substrate. Their movement increases water flow through the sediment. The water contains oxygen so more water means more oxygen available to the organisms.}
+\AnswerBox{0.3\textheight}{Competition has strong comp and affected by post-recruitment processes. Recruitment limitation has weak comp and not modified by post-recruitment.}
+
 
 %\question[8]
 %Two days ago was a full moon. Tell whether that phase would have caused a neap tide or a spring tide, and then diagram and explain why.
@@ -133,32 +379,26 @@ Explain bioturbation and how it increases oxygen availability in the sediments o
 %
 %\AnswerBox{2\basespace}{The sun and moon are at right angles to each other, relative to Earth, negating the gravitational pull of each. This causes lower high tides and higher low tides, which are neap tides.}
 
-\question[5]
-Briefly explain why newly created patches larger than 1m tend to increase diversity in the rocky intertidal. (\textsc{Hint:} California and Bay mussels.)
-
-\AnswerBox{0.1\textheight}{Large patches give other spp a chance to colonize before original species fully recolonize.}
+%\question[5]
+%Briefly explain why newly created patches larger than 1m tend to increase diversity in the rocky intertidal. (\textsc{Hint:} California and Bay mussels.)
+%
+%\AnswerBox{0.1\textheight}{Large patches give other spp a chance to colonize before original species fully recolonize.}
 
 %\question[5]
 %Briefly describe how the recruitment limitation model explains diversity of fishes on coral reef.
 %
 %\AnswerBox{0.1\textheight}{Recruits are limited\dots}
 %
-\question[8]
-A half moon is approaching. Tell whether that phase would have caused a neap tide or a spring tide, and then diagram and explain why.
-
-\AnswerBox{0.3\textheight}{The sun and moon are at right angles to each other, relative to Earth, negating the gravitational pull of each. This causes lower high tides and higher low tides, which are neap tides.}
-
+%\question[8]
+%A half moon is approaching. Tell whether that phase would have caused a neap tide or a spring tide, and then diagram and explain why.
+%
+%\AnswerBox{0.3\textheight}{The sun and moon are at right angles to each other, relative to Earth, negating the gravitational pull of each. This causes lower high tides and higher low tides, which are neap tides.}
+%
 %\question[10]
 %Explain how patch size affects whether a patch in the rocky intertidal will return to the original species or if a new species will be able to colonize and remain established. (\textsc{Hint:} California and Bay mussels.)
 %
 %\AnswerBox{2\basespace}{Small patches less than 1m more likely to return to orignal.
 %}
-
-\question[10]
-Compare and contrast the competition and recruitment limitation models of reef fish community structure in terms of competition and post-recruitment processes.
-
-\AnswerBox{0.25\textheight}{Competition has strong comp and affected by post-recruitment processes. Recruitment limitation has weak comp and not modified by post-recruitment.}
-
 
 %\question[5]
 %Describe the size distribution of POM in a bar-built estuary from the river input to the sand bar. Justify your answer.
@@ -173,21 +413,15 @@ Compare and contrast the competition and recruitment limitation models of reef f
 
 %\AnswerBox{0.01\textheight}{Coralline red algae, calcareous green algae.}
 
-\question[5]
-Describe how patch dynamics at local scales in a rocky intertidal affects diversity at regional scales.
-
-
-\AnswerBox{0.1\textheight}{Answer goes here.}
-
-\question[10]
-Describe how the Coriolis effect causes salinity to vary from side to side. Diagram this for an estuary that runs north to south in the \emph{southern} hemisphere.
-
-\AnswerBox{0.3\textheight}{Large near freshwater input because sand grains fall out first, leaving larger grains so larger individuals required to ingest grains. In the middle, clay and silt fall out, so smaller deposit feeders. Behind the sandbar, wave action removes the smaller sediments, leaving sand so once again larger deposit feeders.}
+%\question[10]
+%Describe how the Coriolis effect causes salinity to vary from side to side. Diagram this for an estuary that runs north to south in the \emph{southern} hemisphere.
+%
+%\AnswerBox{0.3\textheight}{Large near freshwater input because sand grains fall out first, leaving larger grains so larger individuals required to ingest grains. In the middle, clay and silt fall out, so smaller deposit feeders. Behind the sandbar, wave action removes the smaller sediments, leaving sand so once again larger deposit feeders.}
 
 \question[15]
 Deposit feeders are small animals that ingest sediments to digest any organic material present between sediment grains. Describe how the relative size (larger, smaller, etc.) of the deposit feeders change in a bar-built estuary from the river to the sand bar at the ocean. Tell why the size of the deposit feeders changes. Deposit feeder size is proportional to sediment size. 
 
-\AnswerBox{0.4\textheight}{Large near freshwater input because sand grains fall out first, leaving larger grains so larger individuals required to ingest grains. In the middle, clay and silt fall out, so smaller deposit feeders. Behind the sandbar, wave action removes the smaller sediments, leaving sand so once again larger deposit feeders.}
+\AnswerBox{0.3\textheight}{Large near freshwater input because sand grains fall out first, leaving larger grains so larger individuals required to ingest grains. In the middle, clay and silt fall out, so smaller deposit feeders. Behind the sandbar, wave action removes the smaller sediments, leaving sand so once again larger deposit feeders.}
 
 %\question[15]
 %Meiofauna refers to the small animals that live between sediment grains. Describe how the relative size (larger, smaller, etc.) of the meiofauna will change in a bar-built estuary from the river to the sand bar at the ocean. Tell why the size of the meiofauna changes. % Tell how water movement (river flow or wave action) determines this distribution.
@@ -224,5 +458,17 @@ Deposit feeders are small animals that ingest sediments to digest any organic ma
 %	\end{parts}
 
 \end{questions}
+
+\newpage
+
+\rhead{} % Supress page number
+\rfoot{} % Suppress score footer
+
+\vspace*{\fill}
+
+\hspace*{\fill} {\tiny Just a few more weeks! Keep your focus!} \hspace*{\fill}
+
+\vspace*{\fill}
+
 
 \end{document}
