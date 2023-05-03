@@ -36,13 +36,21 @@
 \runningheader{}{}{\small{pg. \thepage}}
 \runningheadrule
 
-\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{}%{\makebox[0.75in]{\hrulefill}}
+
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{\iflastpage{\small Seagull go and fly \dots\,
+fly to your tomorrow}}{\makebox[1in]{\hrulefill}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
+
 
 \pointsinmargin
 \marginpointname{ pts}
 
 \usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 %% Remove comment %% to print answer key.
 \unframedsolutions
@@ -81,76 +89,147 @@
 \newlength{\basespace}
 \setlength{\basespace}{5\baselineskip}
 
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
+
+
 \begin{document}
 
 \begin{questions}
 
 \question[5]
-Explain the relationship between migration, breeding and wintering grounds, and global variation in peak primary productivity.
-
-\AnswerBox{0.01\textheight}{Answer}
-
-
-
-\question[10]
-Illustrate and describe a typical “figure 8” pattern for oceanic birds that migrate between the northern and southern hemispheres. Be sure to include the approximate location of the high pressure centers and the wind rotation direction around them (2 pts), the spring and fall routes (4 points), and a clear explanation (4 points).
-
-\AnswerBox{0.4\textheight}{Answer}
-
-\newpage
-
-\question[6]
 \begin{multicols}{2}
 Will a small bird adapted to specific wetland habitats (such as a Prothonotary Warbler) have a greater extinction threat from habitat loss or predation/persecution? (2 pts). Explain why. (4 pts)
 \columnbreak
 
-\hfil \includegraphics[height=2in]{prow} \hfill
+\hfil \includegraphics[height=2in]{exam3_prow} \hfill
 \end{multicols}
 
 \AnswerBox{0.1\textheight}{%
 Answer goes here.}%
 
-\question[15]
-You are charged with designing a bird sanctuary across a landscape. Describe how you will you patch dynamics (5 pts), corridors (5 pts), and fragment shape (5 pts), to maximize the number of species protected by your sanctuary. Be sure to clearly state the purpose of each of these three components.
-
-\AnswerBox{0.5\textheight}{Answer}
-
-\newpage
-		
 \question[10]
 \begin{multicols}{2}
-This figure shows the relationship between the density of adult Black-throated Blue Warblers and their rate of population growth \textit{(r).} Briefly describe two density-dependent factors that might explain the negative relationship between adult density and \textit{r.}
+This figure shows the relationship between the abundance of Magpie Goose and their rate of population growth \textit{(r).} Briefly describe two density-dependent factors that might explain the negative relationship between adult abundance and \textit{r.}
 \columnbreak
 
-\includegraphics[width=\linewidth]{r_N}
+\includegraphics[width=\linewidth]{exam3_magpie_goose}
 \end{multicols}
 
 
 
-\AnswerBox{0.4\textheight}{Answer goes here.}
-
-%\newpage
-
-\question[4]
-Briefly explain why many bird populations experience their highest rate of mortality during migration.
-
-\AnswerBox{0.1\textheight}{Answer goes here.}
+\AnswerBox{0.3\textheight}{Answer goes here.}
 
 \newpage
 
-\question[25]
-Please answer this question honestly and thoughtfully. As long as you provide some feedback, you will receive full credit. Please help improve the course; do not just write a short, meaningless answer. 
 
-This course is in a state of development. I have discussed ideas with you as I try to improve the course but this semester was incomplete. I would like your feedback.
+\question[10]
+You are charged with designing a bird sanctuary across a landscape. Describe how you will you patch dynamics (5 pts) and stepping stones (5 pts) to maximize the number of species protected by your sanctuary. Be sure to clearly state the purpose of each of these three components.
+%
+%\question[15]
+%You are charged with designing a bird sanctuary across a landscape. Describe how you will you patch dynamics (5 pts), corridors (5 pts), and fragment shape (5 pts), to maximize the number of species protected by your sanctuary. Be sure to clearly state the purpose of each of these three components.
 
-Please tell me what I can do to improve the course content for lab and lecture.  I would also like to know also whether you felt the balance for field trips was OK, or if you felt there were too many or too few field trips. I am interested in content; you have other avenues for evaluating my performance as your instructor. 
+\AnswerBox{0.4\textheight}{Answer}
 
-Thank you for your thoughtful feedback. Have a great summer!
+\question[5]
+Explain how you can minimize edge effect in your sanctuary design to minimize brood parasitism for bird species you are trying to protect.
 
+\AnswerBox{0.1\textheight}{Answer}
+
+
+\newpage
+		
+
+%\question[10]
+%\begin{multicols}{2}
+%This figure shows the relationship between the density of adult Black-throated Blue Warblers and their rate of population growth \textit{(r).} Briefly describe two density-dependent factors that might explain the negative relationship between adult density and \textit{r.}
+%\columnbreak
+%
+%\includegraphics[width=\linewidth]{r_N}
+%\end{multicols}
+%
+%
+%
+%\AnswerBox{0.4\textheight}{Answer goes here.}
+
+%\newpage
+
+\newpage
+
+%\begin{multicols}{2}
+%
+%Ducks Unlimited has conserved millions of acres of wetland habitat across North American for the preservation of waterfowl. Areas range from hundreds of acres to tens of thousands of acres in size. Use the diagram on the back page (or below) to
+%explain three reserve principles of reserve design that could have contributed 
+%to the successful preservation of waterfowl.
+%
+%Rosenberg et al. 2019 showed that waterfowl was one group of birds that
+%increased in abundance. They argued that successful waterfowl recovery was due 
+%to adaptive harvest management and billions of dollars devoted to wetland 
+%habitat protection and restoration. 
+%
+%\question[5]
+%Explain adaptive harvest management.
+%
+%\AnswerBox{0.2\textheight}{Answer goes here}
+%
+%
+%\columnbreak
+%
+%
+%
+%\end{multicols}
+
+\fullwidth{
+\begin{minipage}{9.9cm}
+Ducks Unlimited has conserved millions of acres of wetland habitat across North American for the preservation of waterfowl. Areas range from hundreds of acres to tens of thousands of acres in size. 
+
+\medskip
+
+Rosenberg et al.~2019 showed that waterfowl was one group of birds that has
+increased in abundance since the 1970s. They argued that successful waterfowl recovery was due 
+to adaptive harvest management and billions of dollars devoted to wetland 
+habitat protection and restoration.
+\end{minipage}\hfill
+\begin{minipage}{4cm}
+\includegraphics[width=\linewidth]{exam3_reserve_design}
+\end{minipage}
+}
+
+\question[5]
+Explain adaptive harvest management.
+
+\AnswerBox{0.01\textheight}{Answer goes here}
+
+
+\question[15]
+Use the diagram above right as a guide to explain three principles of reserve design 
+that could have contributed to the successful preservation of waterfowl. One of the 
+principles must specifically relate to adaptive harvest management. Explain how adaptive harvest management fits that principle. (Four principles are illustrated; choose the most appropriate three.)
+
+\AnswerBox{0.2\textheight}{Answer goes here}
+
+
+\newpage
+
+\fullwidth{%}
+The table below is an excerpt from Rosenberg et al.~2019. 
+
+\includegraphics[width=\textwidth]{exam3_rosenberg_table}}
+
+\question[3]
+Which biome shows the greatest percent loss of abundance?
+
+\ifprintanswers\textbf{Grassland} \fi \vspace{2\baselineskip}
+
+\question[12]
+Tell how you might use burn management in a conservation area to increase overall diversity of species in this type of biome. 
+
+\AnswerBox{0.2\textheight}{Answer goes here}
 
 
 
 \end{questions}
 
-
+\bumppoints{10} % Bonus points for 2023 to compensate for a mistake I made.
 \end{document}
