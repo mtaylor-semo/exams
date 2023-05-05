@@ -76,43 +76,81 @@
 \newlength{\basespace}
 \setlength{\basespace}{5\baselineskip}
 
+\newcommand{\bumppoints}[1]{%
+	\addtocounter{numpoints}{#1}
+}
+
 
 \begin{document}
 
 \begin{questions}
 
-\question[3]
-List (a) the largest mass extinction, (b), the most recent mass extinction, and (c) one other mass extinction.
-
-\AnswerBox{0.01\textheight}{a. End Permian; b. End K/T; End Ordo, Late Devo, End Tria.}
-
-\question[2]
-What is the common, underlying cause of all five mass extinctions that have occurred since the Cambrian.
-
-\AnswerBox{0.01\textheight}{%
-	Climate change.
+\fullwidth{Match the \emph{most appropriate} term to each concept. Not all terms are used. No term is used twice.\\(2 points each)}
+\vspace{-1\baselineskip}
+\fullwidth{%
+\input{matchwordlist.tex}
 }
+\vspace{0.6\baselineskip}
+
+\bumppoints{10}
+
+\vspace{0.6\baselineskip}
+
+\question\MatchQuestion{Serial homology}{Repeating segments within an organism, serving different functions, inherited from a common ancestor.}\vspace{0.5\baselineskip}
+\question\MatchQuestion{Anisogamy}{Sexes have different sized gametes.}\vspace{0.5\baselineskip}
+\question\MatchQuestion{End Ordovician}{First mass extinction.}\vspace{0.5\baselineskip}
+\question\MatchQuestion{Maternal effect}{mRNA transcripts inside unfertilized egg.}\vspace{0.5\baselineskip}
+\question\MatchQuestion{Muller's Ratchet}{Accumulation of detrimental mutations in asexually-reproducing species.}
 
 
 \question[5]
-Briefly explain the effects of Muller's Ratchet in asexually reproducing species. Be sure to state clearly whether the effects are positive or negative.
+Define turnover rate as it applies to the fossil record. %When turnover rate has been compared among multiple taxa, a distinct relationship has emerged between \emph{S} and \emph{O}. What is this relationship?
 
+\AnswerBox{0.1\textheight}{Turnover rate is the rate at which new taxa replace old taxa in the fossil record. Taxa with low origination rates tend to have low extinction rates. Taxa with high O tend to have high S.}
+
+\question[5]
+On screen is a goosefish. It has an unusually wide jaw compared to most fishes. You wish to explore which toolkit genes might be involved. Based on your knowledge of previous studies, which toolkit gene or genes would you be most likely to start with? Briefly explain why.
 
 \AnswerBox{0.1\textheight}{%
-	Accumulation of deleterious mutations in asexual lineages with no mechanism to remove them.
+CaM1 has been associated with jaw width in fishes so would be a good place to start. BMP1 has been associated with bill width in birds so this too would be a good starting place.
 }
 
-%\question[5]
-%Define turnover rate as it applies to the fossil record. %When turnover rate has been compared among multiple taxa, a distinct relationship has emerged between \emph{S} and \emph{O}. What is this relationship?
-%
-%\AnswerBox{0.1\textheight}{Turnover rate is the rate at which new taxa replace old taxa in the fossil record. Taxa with low origination rates tend to have low extinction rates. Taxa with high O tend to have high S.}
-
-%\newpage
+\newpage
 
 \question[10]
-Explain how ecological specialization might contribute to the evolution of taxa with high turnover rates. (I presented this hypothesis intertwined with two other hypotheses but explained how the three are intertwined. You may explain ecological specialization alone or in the context of the other two hypotheses.)
+\begin{multicols}{2}
+Hellberg and Roy~(2001) studied populations of a marine snail north and south of Point Conception (see figure). They tested whether genetic differences were due to vicariance or range expansion. At right is a simplified version of their parsimony network.  Based on the network, state which hypothesis is supported and describe how the network supports the hypothesis you chose. 
 
-\AnswerBox{0.2\textheight}{Turnover rate is the rate at which new taxa replace old taxa in the fossil record. Taxa with low origination rates tend to have low extinction rates. Taxa with high O tend to have high S.}
+Each circle represents one allele. Letter codes inside each circle is the sample site shown along the coast. Each line connecting two circles indicates one mutation difference between alleles.  Small dashes circles additional mutational differences between alleles.
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{hellberg_roy}
+
+\end{multicols}
+
+
+	\AnswerBox{0.2\textheight}{
+	The western (grey) clade shows considerable genetic diversity, suggesting it is older and was likely a refuge. The central (white) clade has little genetic diversity, suggesting it is much younger and therefore the result of recent range expansion.
+	}
+
+
+
+\question[10]
+Persimmon trees produce either male flowers (no carpels) or female flowers (no stamens). Use the floral quartet model to explain which (if any) class or classes of MADS genes could be lost (no expression) to produce 1) male flowers and 2) female flowers. If the model does not work for one or both sexes of flowers, explain why for each sex.
+
+\AnswerBox{0.1\textheight}{%
+Loss of Class B would produce female flowers. However, female flowers cannot be exlained by the loss of any one class without also losing male flowers. For example, Class C is needed for both male and female reproductive structures.
+}
+
+
+
+\newpage
+
+%\question[10]
+%Explain how ecological specialization might contribute to the evolution of taxa with high turnover rates. (I presented this hypothesis intertwined with two other hypotheses but explained how the three are intertwined. You may explain ecological specialization alone or in the context of the other two hypotheses.)
+%
+%\AnswerBox{0.2\textheight}{Turnover rate is the rate at which new taxa replace old taxa in the fossil record. Taxa with low origination rates tend to have low extinction rates. Taxa with high O tend to have high S.}
 
 
 \newpage
@@ -131,31 +169,9 @@ Explain how ecological specialization might contribute to the evolution of taxa 
 %\newpage
 
 
-\question[5]
-On screen is a goosefish. It has an unusually wide jaw compared to most fishes. You wish to explore which toolkit genes might be involved. Based on your knowledge of previous studies, which toolkit gene or genes would you be most likely to start with? Briefly explain why.
-
-\AnswerBox{0.2\textheight}{%
-CaM1 has been associated with jaw width in fishes so would be a good place to start. BMP1 has been associated with bill width in birds so this too would be a good starting place.
-}
 
 
 
-
-\question[5] % Switch between protandry or protogyny
-\begin{multicols}{2}
-Is sequential hermaphroditism likely to evolve in this species? If not, explain why not. If so, then name which type and explain why.
-
-\columnbreak
-
-	%\includegraphics[width=0.45\textwidth]{seq_hermaph_protogyny}\\
-	\includegraphics[width=0.45\textwidth]{seq_hermaph_protandry}\\
-	
-	\vspace*{-2\baselineskip}\hfill\tiny Modified from Avise and Mank 2009.
-
-\end{multicols}
-
-% Protandry answer
-\AnswerBox{0.01\textheight}{Protandry (1 pt). Males have higher fitness than females at a younger age. Females have greater fitness at later age (2 pts). Being male first and female second increases fitness over the lifetime of the individual (2 pts)}
 %
 
 \newpage
@@ -189,25 +205,19 @@ Male treehoppers (genus \textit{Enchenopa}) attract females by sending vibration
 %\end{equation}
 \newpage
 
+
 \question[10]
-Persimmion trees produce either male flowers (no carpels) or female flowers (no stamens). Use the floral quartet model to explain which (if any) class or classes of MADS genes could be lost (no expression) to produce 1) male flowers and 2) female flowers. If the model does not work for one or both sexes of flowers, explain why for each sex.
+This bird is a Long-tailed Widowbird. Use the model of runaway selection to explain how a short tail that was ecologically beneficial might have become much too long to be of ecological benefit.
 
-\question[5]
-On screen is a goosefish. It has an unusually wide jaw compared to most fishes. You wish to explore which toolkit genes might be involved. Based on your knowledge of previous studies, which toolkit gene or genes would you be most likely to start with? Briefly explain why.
+\begin{multicols}{2}
+\AnswerBox{0.2\textheight}{Female preference becomes linked to male trait. Females prefer males with longer tails and mate with them so the tail becomes much much longer.}
 
 
+\columnbreak
 
-\question[15]
-Strasburg et al.~(2007) tested whether the disjunct distribution of an Australian gecko, \textit{Heteronotia binoei}, was due to vicariance or range expansion. The distribution is indicated by the black dots in the inset below.  Below is a simplified version of their parsimony network.  Based on the network, state which hypothesis is supported and describe how the network supports the hypothesis you chose. 
+\includegraphics[width=\linewidth]{ltwi}
 
-Each circle represents one allele. Shading corresponds to the population sampled; grey is the western cluster and white is the central cluster. Each line connecting two circles indicates one mutation difference between alleles.  Small dashes indicate additional mutational differences between alleles.
-
-	{\centering
-	\includegraphics[width=0.95\textwidth]{gecko_network_trimmed}\par}
-
-	\AnswerBox{0.2\textheight}{
-	The western (grey) clade shows considerable genetic diversity, suggesting it is older and was likely a refuge. The central (white) clade has little genetic diversity, suggesting it is much younger and therefore the result of recent range expansion.
-	}
+\end{multicols}
 
 
 %\vfill
