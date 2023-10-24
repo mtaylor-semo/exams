@@ -1,0 +1,404 @@
+%!TEX TS-program = lualatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt, addpoints]{exam}
+\usepackage[left=1in,right=0.75in,top=1in]{geometry}     
+
+%\printanswers
+
+
+\usepackage{fontspec}
+\def\mainfont{Linux Libertine O}
+\setmainfont[Ligatures={TeX, Common}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{\mainfont}
+%\setmonofont[Scale=MatchLowercase]{Inconsolata} 
+\setsansfont[Scale=MatchLowercase]{Linux Biolinum O} 
+\usepackage{microtype}
+
+
+% This defines \amper for the fancy ampersand
+% to be used in the header. See
+% https://tex.stackexchange.com/a/58185/39194
+\usepackage{xspace}
+\newfontfamily\amperfont[Style=Alternate]{Linux Libertine O}
+\makeatletter
+\DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
+\makeatother
+
+\usepackage[parfill]{parskip}
+
+\usepackage{graphicx}
+	\graphicspath{%
+	{/Users/goby/Pictures/teach/434/exams/}}%
+
+% Used to get the last two digits of the year for the header below.
+\def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
+
+\pagestyle{headandfoot}
+\firstpageheader{\textsc{bi}\,434/634 Marine Ecology \amper Conservation, Exam 2, \textsc{f}\short{\year}}{}{\numpoints\ points}
+\runningheader{}{}{\small{pg. \thepage}}
+\runningheadrule
+
+\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\extrafootheight{-0.5in}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*}
+\setlist[1]{labelindent=\parindent}
+
+\usepackage{hanging}
+
+\usepackage[sc]{titlesec}
+
+\pointsinmargin
+\marginpointname{ pts}
+
+\usepackage{multicol}
+
+%% Remove comment %% to print answer key.
+\unframedsolutions
+\renewcommand{\solutiontitle}{}
+\SolutionEmphasis{\bfseries}
+
+\renewcommand{\questionshook}{%
+	\setlength{\leftmargin}{-\leftskip}%
+}
+
+
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\textwidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace{\stretch{1}}
+}
+
+\newenvironment{AnswerPage}[1]
+    {\begin{minipage}[t][#1]{0.92\textwidth}%
+    \begin{solution}}
+    {\end{solution}\end{minipage}
+    \vspace{\stretch{1}}}
+
+
+\newcommand{\fst}{$F_{ST}$}
+%\newlength{\basespace}
+%\setlength{\basespace}{5\baselineskip}
+
+
+
+\begin{document}
+
+Each question is based on a chapter from the text and one or more recent scientific publications. 
+The publications are available from the course Canvas page. Read each question, find the 
+relevant material in the chapter and publication(s), and then answer the 
+question as fully as possible.
+
+Most questions have a \emph{technically correct} answer. Other questions
+are more open ended. In either case, the depth and justification of your 
+answers is most important. I expect that you will explain your reasoning 
+for your answers. You may quote directly (use quotation marks to  show when you are quoting) from the text and papers to 
+support your reasoning but do not quote extensively. The majority of writing must be in
+your own words. When you quote or otherwise reference the text, provide specific page, figure, or table numbers.
+
+Upload your answers to the drop box by the due date and time.
+
+\subsubsection*{Chapter 16: Phytoplankton communities}
+
+In Chapter 16, Edwards and Litchman (2014) presented a model of 
+size-structured phytoplankton communities limited by both top-down
+and bottom-up processes, summarized by Fig.~16.4. This model 
+explains size-fractionated (size structured) phytoplankton
+communites, such as the data shown in Fig.~16.2. \emph{Be sure you are comfortable thinking about ratios.}
+
+\begin{questions}
+
+\question
+Ward et al.~2017 used real-world and computer-modeled data to
+explore the role of top-down and bottom-up processes on 
+phytoplankton communities. They explored a global scale but they
+also compared high ($>$40°) and low ($<$40°) latitudes.
+
+\begin{parts}
+\part[5] Ward et al.~provide evidence for size-fractionated
+phytoplankton communuties. Describe their evidence, including
+reference to the proper figure(s). 
+
+\ifprintanswers \textbf{Fig.~1 shows that both nano- and 
+pico-plankton increase initially at low total chl but level
+off as chl continues to increase. Micro- starts off more
+slowly but then increases at higher chl.}\fi
+
+\part[5] Describe in depth how their Fig.~5 provides evidence for
+top-down control pf the phytoplankton communities as outlined
+by Fig.~16.4 of the text. Provide exemplar numbers from Ward
+et~al.'s figure to support your answer. Include an example of a
+region where largest phytoplankton size is very small and a 
+region where phytoplankton size is much larger. Note that
+phytoplankton size is where your answer begins; it ends with
+zooplankton size.
+
+\ifprintanswers \textbf{%
+There is a strong correlation between phytoplankton and zooplankton
+size classes. One small phyto example: the Atlantic coast of South
+America below the equator	has phytoplankton ca. 1.0 µm in size. The
+largest zooplankton is about 6 or so µm. Off the Gulf of Maine, largest
+phyto approaches 100 µm in size and the largest zoo is about 500 µm.
+}\fi
+
+\part[5] The model shown in Fig.~16.4 of your text suggests
+that as phytoplankton biomass increases, zooplankton biomass
+will also increase. If both increase, the $\mathcal{Z}:\mathcal{P}$ ratio also increases. This is supported on a global level by 
+Fig.~5 of Ward et~al. However, their Fig.~7 suggests a difference
+in how the $\mathcal{Z}:\mathcal{P}$ ratio changes between
+low and high latitudes. Describe how Fig.~7 shows this difference.
+What is Ward et~al.'s explanation for the difference between 
+low and high latitudes?
+
+\ifprintanswers \textbf{%
+Panel D shows a decrease in $\mathcal{Z}:\mathcal{P}$ as phytoplankton
+increases. The authors propose that zooplankton are unable to respond
+quickly following a rapid algal bloom, so the denominator of the ratio
+increases more quickly than the numerator, thus lowering the ratio.
+}\fi
+
+\end{parts}
+
+
+\begin{EnvFullwidth}
+\subsubsection*{Chapter 9: Intertidal rocky shores}
+
+In Chapter 9, Benedetti-Cecchi and Trussel (2014) describe how
+trait-mediated indirect interactions can influence rocky intertidal
+community structure. 
+
+\end{EnvFullwidth}
+
+\question
+The experiments presented in this chapter suggest prey respond based on 
+the current presence or absence of the potential predator (see for example Fig.~9.11 and other examples presented in lecture.). The two studies below asked whether prey have long-term indirect responses to predators and whether acidification can affect indirect responses to predators.
+
+
+\begin{parts}
+
+\part[5] 
+Ng and Gaylord~(2020) tested whether altered prey behaviors that remain
+long after the predator has departed can still influence a trophic
+cascade. What do Ng and Gaylord conclude at the end of their experiment? Describe
+how Figs.~4-6 show altered behavior of the snail \textit{Nucella} and 
+their mussel prey.
+
+\ifprintanswers \textbf{%
+Fig.~3 shows that more conditioned snails (history of exposure to prey) 
+remained above water for 15 days after last exposure compared to 
+unconditioned snail. As a result, they consumed fewer mussels (Fig.~4).
+This is echoed in Fig.~5 which also shows conditioned snails ate
+fewer mussels. NOTE: watch their answers here as overall point of Fig.~5
+is that snail size did not significantly affect mussels consumed.
+}\fi
+
+\part[5] 
+Jellison~et~al.~(2021) tested whether decreased pH might influence prey
+behavior through trait-mediated indirect interactions.  They studied a
+basic cascade of predator (sea-star), herbivore (snail), and producer
+(kelp). Use their Figs.~2-4 to describe if lower pH affected snail
+behavior, predation success, and amount of kelp consumed. Use the
+middle panel (27 November) from all three figures for your discussion,
+although you can reference other dates if you notice variation or 
+contradicting results.
+
+\ifprintanswers \textbf{%
+Jellison showed that the proportion of snails seeking refuge decreased
+greatly (Fig.~2), resulting in a large increase in snails consumed (Fig.~3). Regardless, more snails in the water led to an increase in
+kelp consumed (Fig.~4).
+}\fi
+
+\part[5]
+Jellison~et~al.~found that predation on snails by sea stars increased
+but that snail consumption of kelp also increased. How would you explain
+this apparent contradiction of results.
+
+\ifprintanswers \textbf{%
+Open-ended. I think that snails increased more than predation rate, so
+still more snails to consume kelp.
+}\fi
+
+\end{parts}
+
+
+\begin{EnvFullwidth}
+\subsubsection*{Chapter 14: Kelp forests}
+
+In Chapter 14, Steneck and Johnson (2014) discuss the abiotic and biotic forces that cause phase shifts between alternate stable states.
+
+\end{EnvFullwidth}
+
+\question
+The ocean off coastal California experienced an extreme marine heatwave (\textsc{mhw}) from 2014–2017. The two studies below examined how the \textsc{mhw} affected the phase states of the coastal kelp forests.
+
+\begin{parts}
+
+\part[5] 
+Rogers-Bennett and Catton (2019) examined whether the \textsc{mhw}
+influenced abundance of important organisms in the California kelp ecosystem. Describe how their Fig.~4 suggests a phase shift before 
+and during the heat wave.
+
+\ifprintanswers \textbf{%
+Prior to 2014, sea star abundance was high, urchin abundance was
+low, and abalone abundance was high. All three patterns reversed
+with the beginning of the \textsc{mhw.}
+}\fi
+
+\part[5]
+Fig.~4 does not directly show a cascading effect (sea urchins do 
+not eat abalone; if you already said that, go fix your answer). 
+What other figure in the paper, in combination with Fig.~4 suggests
+a phase shift reversed the cascade? Kelp thrive in cool waters. 
+The authors allude to the roles of temperature and kelp for 
+causing and maintaining the loss of kelp. What change was the
+primary cause of the loss of kelp? What cause(s) maintains the loss
+of kelp?
+
+\ifprintanswers \textbf{%
+Fig.~3 shows kelp density decreased greatly. In the results section,
+they state that sea urchin foraging on new kelp in the barrens state
+suggesting urchins are maintaining the state. Under the water temp
+result, they state that the \textsc{mhw} caused the initial loss.
+}\fi
+ 
+\part[5]
+McPherson~et~al.~(2021) studied the same \textsc{mhw} event as Rogers-Bennett and Catton (note that Rogers-Bennett is an author on
+both papers). They suggested that disease (epizootic) may also play an 
+important role, both in helping to cause the kelp forest phase shift
+to barrens and also to (possibly) help the kelp forest recover. 
+What disease in what organism do they propose helped to cause the
+loss of kelp forest? How would this contribute to the phase shift? 
+What organism, if affected by disease could facilitate ecosystem
+recover? How?
+
+\ifprintanswers \textbf{%
+Sea-star wasting syndrome \textsc{(ssws) }in the sea star caused
+their rapid decline, so not preying on urchins. Similarly, if a 
+disease infected the urchins, then the forest might be able to recover.
+}\fi
+
+\end{parts}
+
+\begin{EnvFullwidth}
+\subsubsection*{Chapter 12: Ecology of seagrass communities}
+
+In Chapter 12, Duffy, Hughes, and Moksnes (2014) showed how small
+mesograzers can regulate ecosystem function in seagrass beds, through
+the mutualistic mesograzer model (read that three times fast!). 
+\end{EnvFullwidth}
+
+\question
+Facilitation cascades may also improve seagrass ecosystem function. Zhang and Silliman (2019) tested this hypothesis with \textit{Zostera} (a seagrass genus) and \textit{Atrina rigida}, the pen clam. The authors \emph{removed} mesograzers to determine whether the pen clams alone improved ecosystem function.
+
+
+\begin{parts}
+
+\part[5]
+In your own words, describe what is a facilitation cascade? Again, in your words, what is the facilitation cascade proposed by this study?
+
+\ifprintanswers \textbf{%
+Faciliation cascades are a series of positive interactions that promote
+diversity. Here, they test whether \textit{Zostera} facilitates the
+settlement and survival of a second foundation species, \textit{Atrina.}
+}\fi
+
+
+\part[6]
+Use Figs.\ 2–5 in any combination you deem necessary to answer these brief questions: i) Does \textit{Zostera} seem to facilitate the presence of \textit{Actina?} ii) Does the presence of \textit{Actina} improve overall biological diversity in the ecosystem? iii) Does the presence of \textit{Actina} seem to improve ecosystem function?
+
+\ifprintanswers \textbf{%
+i) Fig.\ 2 shows that pen clam density was higher and mortality lower in seagrass beds compared to surrounding sand flats. ii) Fig.\ 5 showed that abundance and SW diversity increased, but iii) ecosystem function did not improve, at least by the measured used.
+}\fi
+
+\part[4]
+Do you think that long-term facilitation between \textit{Zostera} and
+\textit{Actina} could improve seagrass ecosystem function? Why or why not? Provide a well-reasoned answer.
+
+\ifprintanswers \textbf{%
+Open-ended but I kinda think function could be improved. The clams may
+help to stabilize the sediments for the seagrass. Pseudofaeces may 
+further provide nutrients. Filter feeding may contribute to clearing. 
+The hard surfaces may facilitate growth of other primary producers.
+}\fi
+
+
+\end{parts}
+
+\begin{EnvFullwidth}
+\subsubsection*{Chapter 11: Salt marsh communities}
+
+In chapter 11, Bertness and Silliman (2014) discussed how top-down 
+procceses influence diversity and ecosystem function in salt marsh 
+communities. Further, in lecture, I have stressed how local disturbances
+can increase diversity over time at regional scales.
+
+\end{EnvFullwidth}
+
+\question
+Elschot et al.\ (2017) studied whether the local foraging affects of
+Greylag Goose affected top-down vs bottom-up effects in salt marshes
+at different scales. They examined both geographic and temporal scales. Study the paper to learn the details of the scales they considered. (Notes: i) grubbing is digging below the surface to feed. ii) the arrow colors given in the legend for Fig.~2 are not correct. Replace white and yellow arrow color, respectively, with black and white arrows color.)
+
+\begin{parts}
+
+\part[5]
+What was the specific top-down process studied? Why is this a top-down process? What was the specific bottom-up process studied? Why is this a bottom-up process?
+
+
+\ifprintanswers \textbf{%
+Top-down was grubbing by the geese, which opens bare batches in the vegetation. Here, the geese are controlling the plants, so this is top-down. Bottom-up is soil accretion, or the accumulation of soil above sea level. Soil is necessary for plant growth so this is bottom up.
+}\fi
+
+\part[6]
+What is the dominant plant species in these salt marshes, prior to 
+disturbance by the geese? Fig.~5 suggests three stages of succession as bare patches created by the geese return to the dominate vegetation state: early (2 years), middle (6 years), and late (12 years) as the marsh returns to the dominant species. Describe the 
+pattern of succession by listing the dominant pairs of species present 
+from Fig.~5 at each of the three stages. Use percent vegetation cover 
+from Table~1 to support your answer. You do not need to discuss other 
+species from Table 1 that are not included in Fig.~5.
+
+\ifprintanswers \textbf{%
+Early species are \textit{Pucinella} and \textit{Aster}. Their 
+abundances peak at year 2 at 11 and 28\% respectively. Middle species
+are Glaux and Salicornia at 6 and 13\%, respectively. NOTE to MST: other species have higher percent cover. Finally, \textit{Elytrigia} and \textit{Bolboschoenus} dominate the late stage with 15 and 38\%.
+}\fi
+
+\part[4]
+How does the presence of the geese increase diversity of the salt marsch at the scaled defined in this study?
+
+\ifprintanswers \textbf{%
+The bare patches allow new plant species to colonize. During succession, each patch will have different plant species, depending on when the patches were made. This increases diversity over time. Further, as patches are created across the marsh, the patches will be in different states of recovery, thus increasing diversity across the region.
+}\fi
+
+\end{parts}
+
+\end{questions}
+
+\subsubsection*{Literature cited}
+
+\begin{hangparas}{\leftmargin}{1}
+
+Elschot, K., A.\ Vermeulen, W.\ Vandenbruwaene, J.\ P.\ Bakker, T.\ J.\ Bouma, J.\ Stahl, H.\ Castelijns, and S.\ Temmerman. 2017. Top-down vs. bottom-up control on vegetation composition in a tidal marsh depends on scale. PLoS ONE 12(2): e0169960. doi:10.1371/journal.pone.0169960
+
+
+Gaylord, Ng and B.\ Gaylord. 2020. The legacy of predators: persistence of trait-mediated indirect effects in an intertidal food chain. Journal of Experimental Marine Biology and Ecology 530–531: 151416.
+
+Jellison, B.\,M., K.\,E.\ Elsmore, J.\,T.\ Miller, G.\ Ng, A.\,T.\ Ninokawa, T.\,M.\ Hill, and B.\ Gaylord. 2022. Low-pH seawater alters indirect interactions in rocky-shore tidepools. Ecology and Evolution 12:e8607.
+
+McPherson, M.\,L., D.\,J.\,I.\ Finger, H.\,F.\ Houskeeper, 
+T.\,W.\ Bell, M.\,H.\ Carr, L.\ Rogers-Bennett, and R.\,M.\ Kudela. 2021.
+Large-scale shift in the structure of a kelp forest ecosystem co-occurs with an epizootic and marine heatwave. Communications Biology 4: 298.
+
+Rogers-Bennett, L.\ and C.\,A.\ Catton. Marine heat wave and multiple
+stressors tip bull kelp forest to sea urchin barrens. Scientific
+Reports 9: 15050. 
+
+Ward,\,B.\,A., S.\ Dutkiewicz, and M.\,J.\ Follows. 2014. Modelling spatial and temporal patterns in size-structured marine plankton communities: top–down and bottom–up controls. Journal of Plankton
+Research 36: 31–47.
+
+Zhang, Y.\,S.\ and B.\ Silliman. 2019. A facilitation cascade enhances local biodiversity in seagrass beds. Diversity 11. doi:10.3390/d11030030
+
+\end{hangparas}
+
+\end{document}
