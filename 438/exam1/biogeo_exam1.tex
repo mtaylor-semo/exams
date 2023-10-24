@@ -30,8 +30,11 @@
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
-\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\makebox[1in]{\hrulefill}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
+
+%\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+%\extrafootheight{-0.5in}
 
 \pointsinmargin
 \marginpointname{ pts}
@@ -178,44 +181,47 @@ Explain why arid regions like the Sahara Desert are concentrated around 30° lat
 	\hfill \includegraphics[width=0.45\textwidth]{climate_hadley_cells}
 
 \end{multicols}
+
+\AnswerBox{0.4\textheight} {%
+}
 }% ragged columns
 
-%\vspace*{\stretch{5}}
-%
-%\question[3]
-%What physical geographic feature can also lead to desert formation?  Name this effect.
-%
-%\AnswerBox{4\baselineskip}{%
-%Mountains create rainshadows.
-%}
+%5\vspace*{\stretch{5}}
 
-\vspace{0.2\textheight}
+\question[3]
+What physical geographic feature can also lead to desert formation?  Name this effect.
+
+\AnswerBox{0.1\textheight}{%
+Mountains create rain shadows.
+}
+
+%\vspace{0.2\textheight}
 
 \newpage
 
-\question
-\begin{parts}
-\part[3]
-Draw and briefly state what is the latitudinal diversity gradient.
+%\question
+%\begin{parts}
+%\part[3]
+%Draw and briefly state what is the latitudinal diversity gradient.
+%
+%\AnswerBox{0.1\textheight}{%
+%	\textbf{Species diversity is highest at low latitudes and decreases with increasing latitude.}
+%}
 
-\AnswerBox{0.1\textheight}{%
-	\textbf{Species diversity is highest at low latitudes and decreases with increasing latitude.}
-}
-
-\part[5]
+\question[5]
 Briefly explain how high net primary productivity contributes to the latitudinal gradient.
 
-\AnswerBox{0.15\textheight}{
+\AnswerBox{0.05\textheight}{
 High \textsc{npp}\dots
 }
 
-\part[12]
+\question[12]
 Use relative rates of origination, extinction, and immigration to explain the Out-of-the-Tropics concepts of cradles, museums, and immigration pumps. Tell how these concepts together could explain the latitudinal diversity gradient. You may include an illustration to support your explanation.
 
 %The Out-of-the-Tropics model has been proposed to explain the latitudinal diversity gradient. Use origination, extinction, and immigration in tropical and extratropical regions to explain how the tropics act as cradles, museums, and immigration pumps, according to this model.
 
-\begin{AnswerPage}{0.3\textheight}
-	\vspace{2ex}
+\begin{AnswerPage}{0.5\textheight}
+%	\vspace{2ex}
 	
 	4 points each.\bigskip
 	
@@ -229,7 +235,7 @@ Use relative rates of origination, extinction, and immigration to explain the Ou
 	
 \end{AnswerPage}
 
-\end{parts}
+%\end{parts}
 
 
 \newpage
