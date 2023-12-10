@@ -43,7 +43,11 @@
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
-\footer{\iflastpage{\rule{0.4in}{0.4pt}~/\,\numpoints~pts}}{}{\iflastpage{Have a good break. Do great things!}}%{\makebox[0.75in]{\hrulefill}}
+\footer{\iflastpage{\rule{0.4in}{0.4pt}~/\,\numpoints~pts}}{\iflastpage{Have a great break. Do good things!}}{%
+\makebox[1in]{\hrulefill}}
+
+
+%\footer{\iflastpage{\rule{0.4in}{0.4pt}~/\,\numpoints~pts}}{}{\iflastpage{Have a good break. Do good things!}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
 
 \pointsinmargin
@@ -54,10 +58,10 @@
 \renewcommand{\solutiontitle}{}
 \SolutionEmphasis{\bfseries}
 
-\newcommand*\AnswerBox[3]{%
-	\parbox[t][#1]{0.92\textwidth}{%
-		\begin{solution}#3\end{solution}}
-	\vspace*{\stretch{#2}}
+\newcommand*\AnswerBox[2]{%
+    \parbox[t][#1]{0.92\linewidth}{%
+    \begin{solution}#2\end{solution}}
+    \vspace*{\stretch{1}}
 }
 
 \newenvironment{AnswerPage}[2]
@@ -69,6 +73,10 @@
 \newlength{\basespace}
 \setlength{\basespace}{4\baselineskip}
 
+\renewcommand{\partshook}{%
+	\setlength{\leftmargin}{3.5\parskip}
+}
+
 \begin{document}
 
 \begin{questions}
@@ -77,21 +85,21 @@
 \question[5]
 Draw and label the Macarthur-Wilson equilibrium model of island biogeography. 
 
-\AnswerBox{\basespace}{0.75}{%
+\AnswerBox{0.2\textheight}{%
 	Image here.
 }
 
 \question[10]
 Explain “turnover rate” on islands. Explain how the target effect and the rescue effect alters the turnover rate on islands of different sizes and degrees of isolation, as appropriate.
 
-\AnswerBox{\basespace}{2}{%
+\AnswerBox{0.3\textheight}{%
 	Answer here.
 }
 
 \question[5]
 Explain the “island rule” and how \textit{Homo floresiensis} fits the rule. 
 
-\AnswerBox{\basespace}{0.5}{%
+\AnswerBox{0.2\textheight}{%
 	Answer here.
 }
 
@@ -108,9 +116,9 @@ Explain the “island rule” and how \textit{Homo floresiensis} fits the rule.
 }
 
 \question[5]
-Name of the function illustrated. Explain what this function illustrates (in an general sense).
+Give the name of the function illustrated. Explain what this function illustrates (in an general sense).
 
-\AnswerBox{2\baselineskip}{0.5}{%
+\AnswerBox{2\baselineskip}{%
 	Insular distribution function shows the combination of island size and isolation required for a species to be present.
 }
 
@@ -118,14 +126,14 @@ Name of the function illustrated. Explain what this function illustrates (in an 
 \question[10]
 Suppose the robin is endangered. Describe how you can use information from the figure to increase the abundance of this species in the more isolated fragments (e.g., 3,000–6,000 km). Your answer must depend on the natural dispersal ability of the robin, which you can infer from the figure. You may not introduce the robin to any island. You may not kill other organisms that might be present. That goes against your conservation principles.
 
-\AnswerBox{\basespace}{2}{%
+\AnswerBox{0.2\textheight}{%
 	Answer here.
 }
 
 \question[5]
 Describe nestedness on islands. Explain how filters can create a pattern of nestedness.
 
-\AnswerBox{1\basespace}{0.25}{%
+\AnswerBox{0.1\textheight}{%
 	Answer here.
 }
 
@@ -143,23 +151,48 @@ Describe nestedness on islands. Explain how filters can create a pattern of nest
 \question[10]
 \textit{Homo neanderthalensis} lived across Europe for at least 100,000 years during the Pleistocene. Recent evidence suggests that Neanderthals went extinct due to climate change. Explain how the mild climate around the Mediterranean Sea may have allowed Neandertals to survive longer across \textit{all} of Europe during the late Pleistocene. 
 
-\AnswerBox{0.2\textheight}{1}{%
+\AnswerBox{0.2\textheight}{%
 	The climate acted as refugia during glacial advances so pockets of Neandertals survived in that region. They were then able to expand back into Europe as the glaciers retreated. Eventually, they went extinct as population sizes reduced.
 }
 
 
-\question[10]
-\begin{multicols}{2}
-Findlay et al.~(2007) studied how ecological changes during the last glacial maximum (\textsc{lgm}) influenced Neanderthal evolution. Their figure (right, and on screen) shows the distribution of mammoths (and reindeer) relative to climate during the \textsc{lgm}. Tell how their figure above provides support for the conclusions of Lorezen et al.~(2011) regarding the role of climate and  \textit{Homo} for the extinction of mammoths.
+%\question[10]
+%\begin{multicols}{2}
+%Findlay et al.~(2007) studied how ecological changes during the last glacial maximum (\textsc{lgm}) influenced Neanderthal evolution. Their figure (right, and on screen) shows the distribution of mammoths (and reindeer) relative to climate during the \textsc{lgm}. Tell how their figure above provides support for the conclusions of Lorezen et al.~(2011) regarding the role of climate and  \textit{Homo} for the extinction of mammoths.
+%
+%\columnbreak
+%
+%\includegraphics[width=\linewidth]{neaderthal_mammoth}
+%
+%\end{multicols}
+%
+%\AnswerBox{0.2\textheight}{1}{The mammoths are farther north while Neanderthals existed in refugia along the Mediterrean. Thus, the two really didn't coexist, consistent with the conclusion of Lorezen et al. that climate was the more likely cause of extinction for mammoths.}
 
-\columnbreak
+\question
+Answer this series of brief questions regarding the genus \textit{Homo.}
 
-\includegraphics[width=\linewidth]{neaderthal_mammoth}
+\begin{parts}
+\part[2]
+On what continent and what region of that continent did \textit{Homo} first evolve?
 
-\end{multicols}
+\vspace{2\baselineskip}\ifprintanswers \textbf{East Africa} \fi
 
-\AnswerBox{0.2\textheight}{1}{The mammoths are farther north while Neanderthals existed in refugia along the Mediterrean. Thus, the two really didn't coexist, consistent with the conclusion of Lorezen et al. that climate was the more likely cause of extinction for mammoths.}
+\part[2]
+Which species of \textit{Homo} was likely the first to leave that continent?
 
+\vspace{2\baselineskip}\ifprintanswers \textbf{\textit{H. erecturs}} \fi
+
+\part[2]
+About how many years did it take for \textit{H. sapiens} to span the globe?
+\vspace{2\baselineskip}\ifprintanswers \textbf{200,000} \fi
+
+
+\end{parts}
+
+\question[4]
+Briefly summarize the Replacement model as it relates to the evolution and range expansion of \textit{Homo.}
+
+\AnswerBox{0.1\textheight}{All species of Homo first evolved in Africa. H.~erectus left first and expanded across Europe and Asia. H.~sapiens evolved later. As it expanded across the globe it replaced H.~erectus.}
 
 \newpage
 
