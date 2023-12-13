@@ -3,7 +3,7 @@
 
 \documentclass[12pt, addpoints]{exam}
 
-%\printanswers
+\printanswers
 
 \usepackage{fontspec}
 \setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{Linux Libertine O}
@@ -17,7 +17,9 @@
 \usepackage[left=0.75in,right=0.75in,top=1in]{geometry}    
 
 \usepackage{graphicx}
-	\graphicspath{{/Users/goby/pictures/teach/438/exam/}} % set of paths to search for images
+	\graphicspath{%
+	{/Users/goby/pictures/teach/438/exam/}
+	{/Users/goby/pictures/teach/438/lectures/}} % set of paths to search for images
 
 \usepackage{multicol}
 \usepackage{amsmath}
@@ -86,21 +88,22 @@
 Draw and label the Macarthur-Wilson equilibrium model of island biogeography. 
 
 \AnswerBox{0.2\textheight}{%
-	Image here.
+	\vspace*{-\baselineskip}
+	\includegraphics[height=0.22\textheight]{island_equilibrium}
 }
 
 \question[10]
 Explain “turnover rate” on islands. Explain how the target effect and the rescue effect alters the turnover rate on islands of different sizes and degrees of isolation, as appropriate.
 
 \AnswerBox{0.3\textheight}{%
-	Answer here.
+	Turnover rate is replacement of extinct species with new, different species. Rescue effect lowers turnover rate because high immigration to near islands lowers extinction. Larger islands have higher turnover rate as immigration is easier on large islands, so new species can replace extinct species more quicky.
 }
 
 \question[5]
 Explain the “island rule” and how \textit{Homo floresiensis} fits the rule. 
 
 \AnswerBox{0.2\textheight}{%
-	Answer here.
+	Island rule suggests that small vertebrates can become larger on islands (perhaps due to release from predators) and large vertebrates become smaller on islands (perhaps due to more resource limitation). The small \textit{Homo floresiensis} evolved from larger \textit{H.~erectus.}
 }
 
 \newpage
