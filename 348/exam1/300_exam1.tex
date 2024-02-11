@@ -23,12 +23,14 @@
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
 \pagestyle{headandfoot}
-\firstpageheader{Marine Biology, Exam 1, Sp\short{\year}, \numpoints~points.}{}{%
+\firstpageheader{Marine Biology, Exam 1, \textsc{s}\short{\year}, \numpoints~points.}{}{%
 	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
-\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+%\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
+%\extrafootheight{-0.5in}
+\footer{\iflastpage{\hspace{-1.2cm}\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
 
 \pointsinmargin
@@ -98,45 +100,59 @@
 \question[2]
 Chloride and sodium are the two most common ions in sea water. List the next four most common ions in sea water, from highest to lowest concentration. Do not list the concentration of each ion. 1/2 point per ion.
 
-	\AnswerBox{\baselineskip}{%
+	\AnswerBox{0.1\textheight}{%
 	Sulfate, Magnesium, Calcium, Potassium.
 }
 
 
-\question[4]
-You learned the deepest point of each ocean. Of these five points, list the three \emph{shallowest} points (i.e., least deep), from shallow to deep, and the ocean in which each point is located. 1/2 point per blank plus 1 point for the correct order.
+\question[2]
+How many atmospheres of pressure does a squid living 560 meters deep in the Pacific Ocean experience?
 
-\vspace{0.5\baselineskip}
+\AnswerBox{\baselineskip}{57 atm}
 
-	\begin{tabular}{rll}
-		& Trench Name		&	Ocean Basin \\[4ex]
-		%
-		Most shallow: &
-		\makebox[6cm][l]{\ifprintanswers\textbf{Eurasian Basin / Litke Deep}\else \hrulefill \fi} &
-		\makebox[6cm][l]{\ifprintanswers\textbf{Arctic}\else \hrulefill \fi} \\[4ex]
-		%
-		&
-		\makebox[6cm][l]{\ifprintanswers\textbf{Sandwich}\else\hrulefill \fi} &
-		\makebox[6cm][l]{\ifprintanswers\textbf{Southern Ocean}\else \hrulefill \fi} \\[4ex]
-		%
-		Most deep: &
-		\makebox[6cm][l]{\ifprintanswers\textbf{Sunda/Diamantina}\else \hrulefill \fi} &
-		\makebox[6cm][l]{\ifprintanswers\textbf{Indian}\else \hrulefill \fi} \\
-	\end{tabular}
+\question[2]
+Name the ocean and the trench or deep within that ocean that is the deepest point on Earth.
+
+\AnswerBox{\baselineskip}{Pacific: Mariana Trench / Challenger Deep}
+
+
+%\question[4]
+%You learned the deepest point of each ocean. Of these five points, list the three \emph{shallowest} points (i.e., least deep), from shallow to deep, and the ocean in which each point is located. 1/2 point per blank plus 1 point for the correct order.
+%
+%\vspace{0.5\baselineskip}
+%
+%\begin{tabular}{rll}
+%	& Trench Name		&	Ocean Basin \\[4ex]
+%	%
+%	Most shallow: &
+%	\makebox[6cm][l]{\ifprintanswers\textbf{Eurasian Basin / Litke Deep}\else \hrulefill \fi} &
+%	\makebox[6cm][l]{\ifprintanswers\textbf{Arctic}\else \hrulefill \fi} \\[4ex]
+%	%
+%	&
+%	\makebox[6cm][l]{\ifprintanswers\textbf{Sandwich}\else\hrulefill \fi} &
+%	\makebox[6cm][l]{\ifprintanswers\textbf{Southern Ocean}\else \hrulefill \fi} \\[4ex]
+%	%
+%	Most deep: &
+%	\makebox[6cm][l]{\ifprintanswers\textbf{Sunda/Diamantina}\else \hrulefill \fi} &
+%	\makebox[6cm][l]{\ifprintanswers\textbf{Indian}\else \hrulefill \fi} \\
+%\end{tabular}
 
 \question[6]
 %Briefly explain the difference between planktotrophic and lecithotrophic larval strategies, and why the planktotrophic strategy is less common than the lecithotrophic strategy for marine organisms living at high latitudes. 
 Briefly explain the difference between planktotrophic and lecithotrophic larval strategies, and why the lecithotrophic strategy is more common than the planktotrophic strategy for marine organisms living at high latitudes. 
 
-	\AnswerBox{\basespace}{%
+	\AnswerBox{0.3\textheight}{%
 	Planktotrophic larvae eat phytoplankton. The phytoplankton season is so short at high latitudes that a slight mistiming of larvae may miss the food supply. Lecithotrophic larvae do not feed so are not dependent on a food source so they have increased chance of survival.
 }
+
+\bonusquestion[1]
+Tell me what would you \emph{see} if you walked along the abyssal plain from Maine to Spain. Why? This is a trick question; I do have a sense of humor.
 
 \newpage
 \vspace*{-1\baselineskip}
 
 \fullwidth{\noindent Use correct names to fill in the blanks below for the zones identified by letters in the figure. (1 point each.)\vspace{-0.5\baselineskip}
-\begin{center}\includegraphics[width=0.7\textwidth]{exam1_figure}\end{center}
+\begin{center}\includegraphics[width=0.9\textwidth]{exam1_figure}\end{center}
 }%end full width
 
 \question\MatchQuestion{Epipelagic Zone}{A, based on depth.}
@@ -169,11 +185,8 @@ D. \ifprintanswers \textbf{Abyssopelagic} \else \rule{2.1in}{0.4pt} \fi \qquad \
 E. \ifprintanswers \textbf{Hadopelagic} \else \rule{2.1in}{0.4pt} \fi
 }%
 
-\vspace{1\baselineskip}
+%\vspace{1\baselineskip}
 
-\bonusquestion[1]
-Tell me what would you \emph{see} if you walked along the abyssal plain from Maine to Spain. Why? This is a trick question; I do have a sense of humor.
-%\fullwidth{Extra credit: For one point, tell me what would you \emph{see} if you walked along the abyssal plain from Maine to Spain. Why? This is a trick question; I do have a sense of humor.
 
 %	\ifprintanswers\textbf{Nothing. No light.}\else \vspace*{\baselineskip}\fi}
 	
