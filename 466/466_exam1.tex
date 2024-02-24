@@ -23,6 +23,13 @@
 \DeclareRobustCommand{\amper}{{\amperfont\ifx\f@shape\scname\smaller[1.2]\fi\&}\xspace}
 \makeatother
 
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{booktabs}
+
 \usepackage{graphicx}
 	\graphicspath{%
 	{/Users/goby/Pictures/teach/466/exams/}}%
@@ -97,13 +104,21 @@ Match each letter to the correct structure. 1~point per blank.
 
 %\textsc{a}.~\ifprintanswers\textbf{Wavelength}\else \rule{6cm}{0.4pt} \fi\\[1ex]
 
-\textsc{a}.~\ifprintanswers\textbf{Rachis}\else \rule{5cm}{0.4pt} \fi\\[1ex]
+\textsc{a}.~\ifprintanswers\textbf{Rachis}\else \rule{5cm}{0.4pt} \fi 
 
-\textsc{b}.~\ifprintanswers\textbf{Distal barbule}\else \rule{5cm}{0.4pt} \fi\\[1ex]
+\medskip%\\[1ex]
 
-\textsc{c}.~\ifprintanswers\textbf{Proximal barbule}\else \rule{5cm}{0.4pt} \fi\\[1ex]
+\textsc{b}.~\ifprintanswers\textbf{Distal barbule}\else \rule{5cm}{0.4pt} \fi %\\[1ex]
 
-\textsc{d}.~\ifprintanswers\textbf{Barbicel / hooklet}\else \rule{5cm}{0.4pt} \fi\\[1ex]
+\medskip
+
+\textsc{c}.~\ifprintanswers\textbf{Proximal barbule}\else \rule{5cm}{0.4pt} \fi %\\[1ex]
+
+\medskip
+
+\textsc{d}.~\ifprintanswers\textbf{Barbicel / hooklet}\else \rule{5cm}{0.4pt} \fi %\\[1ex]
+
+\medskip
 
 \textsc{e}.~\ifprintanswers\textbf{Barb}\else \rule{5cm}{0.4pt} \fi
 
@@ -118,15 +133,43 @@ Briefly describe the roles of the carina, the pectoralis, and the supracoracoide
 
 \AnswerBox{0.1\textheight}{Carina provides attachment point for pectoralis and supracoracoideus. Pectoralis is the large muscle that pulls the wings downward when it contracts. It is the power stroke. The smaller supracoracoideus pulls the wing upward when it contracts.}
 
-\question[5]
-Briefly list two skeletal structures of the skull that separate birds (and reptiles) from mammals. Tell how each differs from mammals. 
-
-\AnswerBox{0.1\textheight}{%
-One occipital condyle in birds vs 2 in mammals.\\
-One middle ear bone in birds vs 3 in mammals.\\
-Articular-quadrate jaw joint in birds vs dentary-squamosal in mammals.
-}%
+%\question[5]
+%Briefly list two skeletal structures of the skull that separate birds (and reptiles) from mammals. Tell how each differs from mammals. 
+%
+%\AnswerBox{0.1\textheight}{%
+%One occipital condyle in birds vs 2 in mammals.\\
+%One middle ear bone in birds vs 3 in mammals.\\
+%Articular-quadrate jaw joint in birds vs dentary-squamosal in mammals.
+%}%
 	
+	
+\question[6]
+Complete this table of comparisons between birds and mammals. Enter the number or name in the blanks provided. 1 point per blank.
+
+\ifprintanswers
+\begin{tabular}{L{0.75in}C{1.25in}C{1.25in}C{2.5in}}
+	\toprule
+	 & Number of occipital condyles & Number of middle ear bones & Type of jaw joint\tabularnewline
+	\midrule
+	& & &\\[0.35em]
+	Birds & 1 & 1 & articular-quadrate \\[1.25em]
+	Mammals & 2 & 3 & dentary-squamosal \tabularnewline
+	\bottomrule
+\end{tabular}
+\else
+
+\begin{tabular}{L{0.75in}C{1.25in}C{1.25in}C{2.5in}}
+	\toprule
+	 & Number of occipital condyles & Number of middle ear bones & Type of jaw joint\tabularnewline
+	\midrule
+	& & &\\[0.35em]
+	Birds & \rule{1in}{0.4pt} & \rule{1in}{0.4pt}& \rule{2.4in}{0.4pt} \\[1.25em]
+	Mammals & \rule{1in}{0.4pt} & \rule{1in}{0.4pt}& \rule{2.4in}{0.4pt} \tabularnewline
+	\bottomrule
+\end{tabular}
+
+\fi
+
 \question[5]
 Briefly describe how counter-current exchange helps keep the body warm in birds that land regularly on cold surfaces.
 
