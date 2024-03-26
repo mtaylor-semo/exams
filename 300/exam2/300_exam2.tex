@@ -4,7 +4,7 @@
 \documentclass[12pt, addpoints]{exam}
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
-\printanswers
+%\printanswers
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
@@ -115,14 +115,17 @@
 \vspace{0.5\baselineskip}
 \question\MatchQuestion{Morphological species}{Shape or color differences are used to determine species.}
 \vspace{0.5\baselineskip}
-\question\MatchQuestion{Mutation load}{Decreases average fitness of a population.}
+%\question\MatchQuestion{Mutation load}{Decreases average fitness of a population.}
+\question\MatchQuestion{Selection gradient}{Measures strength of directional selection for polygenic traits.}
+
+\vspace{0.5\baselineskip}
 
 \bumppoints{6}
 \fullwidth{Multiple choice. Choose the \emph{best} answer. Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect. (2 points each)}
 
 \question
 %A scientist applied the McDonald-Kreitman test to a DNA sequence from a gene. The found the following values: $G = 2.63. \chi^2 = 3.841$. According to this result, the gene is evolving by
-A scientist applied the McDonald-Kreitman test to a \textsc{dna} sequence from a gene. The found that $G$ = 2.63. If $\chi^2$ = 3.841 then the gene is evolving by
+A scientist applied the McDonald-Kreitman test to \textsc{dna} sequence from a gene. The found that $G$ = 2.63. If $\chi^2$ = 3.841 then the gene is evolving by
 
 \begin{choices}
 \correctchoice neutral evolution.
@@ -138,9 +141,9 @@ A scientist applied the breeder's equation to thorax width (behind the head) of 
 \begin{choices}
 \choice a relatively large increase in width.
 \choice a relatively small increase in width.
-\choice no change (effectively neutral).
-\choice a relatively small decrease.
-\correctchoice a relatively large decrease.
+\choice no change in width (effectively neutral).
+\choice a relatively small decrease in width.
+\correctchoice a relatively large decrease in width.
 \end{choices}
 
 \newpage
@@ -161,7 +164,7 @@ If $N_e = 1000$ and the neutral mutation rate is $0.000014,$ what is the rate of
 
 \AnswerBox{0.01\textheight}{0.000014}
 
-\question[3]
+\question[5]
 The fitness for three genotypes in a population is $w_{11}$ = 1, $w_{12}$ = 0.96, and $w_{22}$ = 1. Name the mode of selection that explains how the phenotype would change in this population. Explain.
 
 \AnswerBox{0.05\textheight}{%
@@ -185,11 +188,11 @@ List two evolutionary processes that \emph{always} cause a decrease in heterozyg
 
 \AnswerBox{0.01\textheight}{Genetic drift, non-random mating.}
 
-\question[4]
-Explain how gene swamping can overcome selection.
-
-\AnswerBox{0.05\textheight}{Migration $(m)$ is greater than the strength of selection $(s)$ so less beneficial alleles continue to be introduced into the population.}
-
+%\question[4]
+%Explain how gene swamping can overcome selection.
+%
+%\AnswerBox{0.05\textheight}{Migration $(m)$ is greater than the strength of selection $(s)$ so less beneficial alleles continue to be introduced into the population.}
+%
 
 %\question[4]
 %Briefly describe bottleneck and founder effects and how each affects heterozygosity in a population. 
@@ -197,7 +200,7 @@ Explain how gene swamping can overcome selection.
 %\AnswerBox{0.05\textheight}{Answer goes here.}
 
 \question[4]
-Which form of frequency-dependent selection maintains genetic variation in a population? Briefly explain why.
+Which form of frequency-dependent (positive or negative) selection maintains genetic variation in a population? Briefly explain why.
 
 \AnswerBox{0.05\textheight}{Negative. Common alleles have lower fitness so are selected against. Less common alleles have higher fitness but become more common, thus reducing their fitness.}
 
@@ -208,12 +211,33 @@ Which form of frequency-dependent selection maintains genetic variation in a pop
 %
 %\AnswerBox{0.2\textheight}{Defines species as those that can interbreed but reproductively isolated from other species. Advantage: can see if they reproduce. Disadvantage: can't test across allopatric distributions, time, or asexual species.}
 %
-\question[10]
-The snapping shrimp \textit{Synalpheus brooksi} lives in sponges on coral reefs.  Duffy (1996) showed that shrimp occupying nearby but different species of sponges rarely come into contact with each other because they don't usually leave their sponges. In the lab, a male shrimp from one sponge species is extremely aggressive towards females from a different sponge species, suggesting reproductive incompatibility. Analyses showed that shrimp from the same sponge species were genetically similar but shrimp from different sponge species were genetically distinct. Duffy argued the shrimp in different sponges are different species.  Explain \emph{two} prezygotic mechanisms described above that could reproductively isolate shrimps in different sponge species.
+%\question[10]
+%The snapping shrimp \textit{Synalpheus brooksi} lives in sponges on coral reefs.  Duffy (1996) showed that shrimp occupying nearby but different species of sponges rarely come into contact with each other because they don't usually leave their sponges. In the lab, a male shrimp from one sponge species is extremely aggressive towards females from a different sponge species, suggesting reproductive incompatibility. Analyses showed that shrimp from the same sponge species were genetically similar but shrimp from different sponge species were genetically distinct. Duffy argued the shrimp in different sponges are different species.  Explain \emph{two} prezygotic mechanisms described above that could reproductively isolate shrimps in different sponge species.
+%
+%\AnswerBox{0.2\textheight}{%
+%Ecological. Occupy different habitats. Behavioral. Aggressive interactions.
+%}
 
-\AnswerBox{0.2\textheight}{%
-Ecological. Occupy different habitats. Behavioral. Aggressive interactions.
+\newpage
+
+\question[10]
+When pollen (with male gametes) lands on the stigma of a flower, a number of pollen tubes grow from the pollen grain down to the egg (female gamete) for fertilization to occur. Abadie~et~ al.~(2012) compared the number and growth rates of pollen tubes within and between two species of sympatric oak trees (genus \textit{Quercus}). Their results are shown below. Within is for pollen and egg from the same species. Between is for pollen and egg from different species. 
+
+\begin{multicols}{2}
+Based on these data, tell whether number and growth rate of pollen tubes appear to act as a reproductive barrier. If yes, explain why and whether the barrier is more likely to be pre- or post-zygotic. If no, then explain why not.
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{exam2_pollen_tubes}	
+\end{multicols}
+
+\AnswerBox{0.3\textheight}{%
+See how answers go but pre-zygotic isolation is best answer as the gametes from the other species is less likely to reach the egg because fewer tubes and slower growth rate. Hybridization much less likely to occur.
 }
+
+
+
+
 
 
 \question[5]
@@ -328,13 +352,26 @@ F_{ST} =& \frac{0.459672 - 0.44892}{0.459672} = 0.02339059 = \mathbf{0.023}
 %\end{parts}
 %
 
-\question[8]
-The purple-throated carib is a species of hummingbird that lives on the Caribbean island of Dominica. Female caribs have longer, more curved bills than male caribs, which have shorter, straighter bills. Female hummingbirds get their nectar only from the red flowers of a plant called \textit{Heliconia bihai}. Male hummingbirds get their nectar only from the yellow flowers of the same plant species. An individual plant has either red or yellow flowers, but not both. The flower shape of each color morph corresponds to the bill shape of each sex. Red flowers have a longer, more curved flower corolla, while yellow flowers have a shorter, straighter corolla. The hummingbirds function as pollinators for \textit{H. bihai}.  No other pollinators (including wind) for this plant are known. Based on this information only, can reproductive isolation evolve for (1) the hummingbirds and (2) the color morphs of \textit{H. bihai}.  If so, say how. Justify your answer. 
+%\question[8]
+%The purple-throated carib is a species of hummingbird that lives on the Caribbean island of Dominica. Female caribs have longer, more curved bills than male caribs, which have shorter, straighter bills. Female hummingbirds get their nectar only from the red flowers of a plant called \textit{Heliconia bihai}. Male hummingbirds get their nectar only from the yellow flowers of the same plant species. An individual plant has either red or yellow flowers, but not both. The flower shape of each color morph corresponds to the bill shape of each sex. Red flowers have a longer, more curved flower corolla, while yellow flowers have a shorter, straighter corolla. The hummingbirds function as pollinators for \textit{H. bihai}.  No other pollinators (including wind) for this plant are known. Based on this information only, can reproductive isolation evolve for (1) the hummingbirds and (2) the color morphs of \textit{H. bihai}.  If so, say how. Justify your answer. 
+
+%\AnswerBox{0.2\textheight}{%
+%Yes for \textit{H. carib} because plant has different pollinators (4 pts). No for birds because males and females must come together to reproduce (4 pts).
+%}
+
+\question[5]
+Explain why reproductive isolation is more likely to evolve between allopatric populations than within a sympatric population.
 
 \AnswerBox{0.2\textheight}{%
-Yes for \textit{H. carib} because plant has different pollinators (4 pts). No for birds because males and females must come together to reproduce (4 pts).
+	Allopatry isolates two populations, eliminating gene flow. This more easily allows for the evolution of reproductive isolation.  Gene flow can occur within a sympatric population, then making the evolution of reproductive isolation much more difficult.
 }
 
+\question[5]
+Briefly explain the biological species concept. Briefly describe one problem with this concept for determining what is a species.
+
+\AnswerBox{0.2\textheight}{%
+Biological species concept states that individuals of the same species can interbreed with each other but not with individuals of other species. Requires sexual reproduction so does not apply to asexual species. Cannot be easily tested between allopatric species or across extant and extinct species.
+}
 
 %\question[10]
 %Describe the similarities and differences between these fitness functions: directional, stabilizing, and disruptive.
