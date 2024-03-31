@@ -3,7 +3,7 @@
 
 \documentclass[12pt, addpoints]{exam}
 
-\printanswers
+%\printanswers
 
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
@@ -40,7 +40,7 @@
 \runningheader{}{}{\small{pg. \thepage}}
 \runningheadrule
 
-\footer{\iflastpage{\small Lecture: \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\iflastpage{\small Lab: \rule{0.6in}{0.4pt} / 24~points}}%{\makebox[0.75in]{\hrulefill}}
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\rule{0.6in}{0.4pt}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
 
 
@@ -56,6 +56,7 @@
 
 \pointsinmargin
 \marginpointname{ pts}
+\marginbonuspointname{ pts\,\textsc{e.c.}}
 
 \usepackage{multicol}
 
@@ -81,21 +82,6 @@
 	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
 
 
-%% Create a Matching question format
-\newcommand*\LabMatching[1]{
-\ifprintanswers
-	\textbf{#1}
-\else
-	\rule{2.0in}{0.4pt}
-\fi
-}
-\newlength\matchlaba
-\newlength\matchlabb
-\settowidth\matchlaba{\rule{2in}{0pt}}
-\newcommand\LabMatch[2]{%
-	\setlength\matchlabb{0.98\linewidth}
-	\addtolength\matchlabb{-\matchlaba}
-	\parbox[t]{\matchlaba}{\LabMatching{#1}} \parbox[t]{\matchlabb}{#2}}
 
 % change indentation for multiple choice
 \renewcommand{\choiceshook}{%
@@ -156,104 +142,15 @@ How many notes are in the second phrase of the second song?
 
 \end{parts}
 
-\fullwidth{Multiple choice. Choose the \emph{best} answer. Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect. (2 points each)}
-
-\begin{multicols}{2}
-\question
-The foraging functional response shown at right depends most on
-
-\begin{choices}
-\choice satiation point.
-\choice predator abundance.
-\correctchoice handling time.
-\choice prey abundance.
-\choice search image.
-\end{choices}
-
-\columnbreak
-
-\includegraphics[width=\linewidth]{exam2_handling_functional_response}
-
-\end{multicols}
-
-\question
-Seabirds like the Black-browed Albatross often use this specific type of flight to efficiently forage over large areas of the ocean.
-
-\begin{choices}
-\choice Dynamic soaring.
-\correctchoice Lévy's flight.
-\choice Slope soaring.
-\choice Gliding flight.
-\choice Thermal soaring.
-\end{choices}
-
-\question
-Honest indicators are a signal to the
-
-\begin{choices}
-\choice male that the female is likely to be truly monogamous and not socially monogamous.
-\correctchoice female that the male is likely to be a good at obtaining food for her offspring.
-\choice female that the male is \emph{not} likely to be truly monogamous.
-\choice female that male is likely to mate guard.
-\choice male that the female is likely to lay more eggs fertilized by him.
-\end{choices}
-
-\question
-A character that separates all diving ducks from all dabbling ducks is
-
-\begin{choices}
-\correctchoice The hallux of diving ducks is lobed. The hallux of dabbling ducks is not lobed.
-\choice The bill of diving ducks is terrete. The bill of dabbling ducks is spatulate.
-\choice The front toes of diving ducks are fully webbed. The front toes of dabbling ducks are partially webbed.
-\choice The tomium of diving ducks is serrate. The tomium of dabbling ducks is lamellate.
-\end{choices}
-
-
-
-\question
-The only grebe in Missouri is the Pied-billed Grebe. It belongs to the family
-
-\begin{choices}
-\choice Anatidae
-\choice Anseriformes
-\correctchoice Podicipedidae
-\choice Phasianidae
-\choice Galloanseriformes
-\choice Columbiformes
-\end{choices}
-
-\question
-This family of weak-footed flyers has pamprodactyl feet.
-
-\begin{choices}
-\choice Caprimulgidae
-\correctchoice Apodidae
-\choice Trochilidae
-\choice Podicipedidae
-\choice Passeridae
-\end{choices}
-
-\question[5]
-Describe the difference between a sensitive period and opened ended learning for bird songs.
-
-\AnswerBox{0.1\textheight}{Answer goes here.}%
-
-\question[5]
-Briefly describe the difference between a lek and an exploded lek.
-
-\AnswerBox{0.1\textheight}{Answer}
-
-\newpage
-
 \bumppoints{12}
 \fullwidth{Match the \emph{most appropriate} term to each concept. Not all terms are used. No term is used twice.\\(2 points each)}
 \vspace{-1\baselineskip}
 \fullwidth{%
-\input{exam2_matchwordlist.tex}
+	\input{exam2_matchwordlist.tex}
 }
 \vspace{0.6\baselineskip}
 
-\question\MatchQuestion{Rhynchokinesis}{Foraging shorebirds with long bills have this ability.}
+\question\MatchQuestion{rhynchokinesis}{Foraging shorebirds with long bills have this ability.}
 \vspace{0.6\baselineskip}
 
 \question\MatchQuestion{sit-and-wait}{Hawk sitting in a tree is likely using this foraging strategy.}
@@ -268,25 +165,118 @@ Briefly describe the difference between a lek and an exploded lek.
 \question\MatchQuestion{syrinx}{Throat structure that allows birds to make complex vocalizations.}
 \vspace{0.6\baselineskip}
 
-\question\MatchQuestion{cryptochrome}{Chemical compound that is hypothesized to allow birds to see Earth's magnetic field.}
-\vspace{0.6\baselineskip}
+%\question\MatchQuestion{cryptochrome}{Chemical compound that is hypothesized to allow birds to see Earth's magnetic field.}
+%\vspace{0.6\baselineskip}
 
-
-\question[10]
-Describe how climate change might affect nesting success after arrival on breeding grounds. Assume climate change does not affect the time that birds arrive at their breeding ground. This is an open-ended question that you can answer many different ways. \emph{Be biologically reasonably.}
-
-%\question[5]
-%What does an honest indicator tell the female about potential mates.
-%
-%\AnswerBox{0.2\textheight}{Answer}
 
 \newpage
+
+\fullwidth{Multiple choice. Choose the \emph{best} answer. Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect. (2 points each)}
+
+\begin{multicols}{2}
+\question
+The foraging functional response shown at right depends most on
+
+\begin{choices}
+\choice satiation point.
+\choice predator abundance.
+\choice prey abundance.
+\choice search image.
+\correctchoice handling time.
+\end{choices}
+
+\columnbreak
+
+\includegraphics[width=\linewidth]{exam2_handling_functional_response}
+
+\end{multicols}
+
+\question
+Seabirds like the Black-browed Albatross often use this specific type of flight to efficiently forage over large areas of the ocean.
+
+\begin{choices}
+\choice Dynamic soaring.
+\choice Slope soaring.
+\choice Gliding flight.
+\correctchoice Lévy's flight.
+\choice Thermal soaring.
+\end{choices}
+
+\question
+Honest indicators are a signal to the
+
+\begin{choices}
+\correctchoice female that the male is likely to be a good at obtaining food for her offspring.
+\choice male that the female is likely to be truly monogamous and not socially monogamous.
+\choice female that the male is \emph{not} likely to be truly monogamous.
+\choice female that male is likely to mate guard.
+\choice male that the female is likely to lay more eggs fertilized by him.
+\end{choices}
+
+
+\question
+The Northern Mockingbird flashes the white patches in its wings to startle prey. This is an example of the \rule{1in}{0.4pt} type of feeding strategy.
+
+\begin{choices}
+\choice flash-capture
+\choice evolutionary-stable
+\choice bait-and-switch
+\choice scare-tactic
+\choice disturb-consume
+\correctchoice flush-pursuit
+\end{choices}
+
+\newpage
+
+\question
+Sexual conflict arises in birds because
+
+\begin{choices}
+\choice males compete for resource-based territories while females complete for nesting territories.
+\correctchoice males expend far less energy than females to produce gametes.
+\choice females of most species incubate their eggs but males do not.
+\choice males of most species are polygynous but females are mostly polyandrous.
+\choice males mate-guard when females are fertile but females do not mate-guard at all.
+\end{choices}
+
+\question
+The graphical representation of bird sound is called a(n)
+
+\begin{choices}
+\choice	frequency-response curve.
+\choice	decibel.
+\choice	functional response curve.
+\correctchoice	spectrogram.
+\choice	frequency-intensity curve.
+\choice	amplitude curve.
+\end{choices}
+
+
+
+\question[5]
+%Describe the difference between a sensitive period and opened ended learning for bird songs.
+Briefly describe how oscine and suboscine birds in terms of specific throat structure and song-learning ability.
+
+\AnswerBox{0.1\textheight}{The syrinx of oscines is much more muscular than suboscinces. Oscines learn their song. Suboscines do not.}%
+
+\question[5]
+Briefly describe the difference between a lek and an exploded lek.
+
+\AnswerBox{0.1\textheight}{Answer}
+
 
 \question[5]
 Briefly explain why resource-defense polygyny might evolve in birds?
 
 \AnswerBox{0.1\textheight}{%
-Answer goes here.}%
+	Answer goes here.}%
+
+\newpage
+
+
+
+
+%\newpage
 	
 \question[10]
 Briefly explain the difference between the good genes hypothesis and the sexy sons hypothesis.
@@ -316,129 +306,32 @@ Compare and contrast resource-based and mating territories. What do they have in
 
 \AnswerBox{0.2\textheight}{Answer goes here.}
 
-\vfill
-
-
-{\flushright This completes the lecture portion of the exam. Turn the page for the laboratory portion.}
 
 \newpage
 
-\textsc{Laboratory:} This section is graded independently from the rest of the exam. Each question is worth 2 points.
+\question[10]
+Describe the difference between songs and calls in birds. You must explain the differences in terms of simplicity or complexity and in terms of function. Name at least one function (purpose) of song and at least two functions of calls.
+%Describe how climate change might affect nesting success after arrival on breeding grounds. Assume climate change does not affect the time that birds arrive at their breeding ground. This is an open-ended question that you can answer many different ways. \emph{Be biologically reasonably.}
 
-Fill in the blanks with the region of the body or the feather group that correspond to the numbered parts in the figure at right. Ignore unnumbered labels.
+%\question[5]
+%What does an honest indicator tell the female about potential mates.
+%
+\AnswerBox{0.2\textheight}{Answer}
 
-%\vspace{2\baselineskip}
-\bigskip
-
-\setcounter{question}{0}
-
+\bonusquestion[2]
 \begin{multicols}{2}
-\question 
-\LabMatch{Mantle}{body region.}
-%\rule{2in}{0.4pt} body region.
-\vspace{0.4\baselineskip}
-
-\question
-\LabMatch{Nape}{body region.}
-%\rule{2in}{0.4pt} body region.
-\vspace{0.4\baselineskip}
-
-\question 
-\LabMatch{\small Greater secondary coverts}{feather group.}
-\vspace{0.4\baselineskip}
-
-\question 
-\LabMatch{Primaries}{feather group.}
-\vspace{0.6\baselineskip}
-
-\question 
-\LabMatch{Rectices}{feather group.} 
-\vspace{0.6\baselineskip}
-
-\question 
-\LabMatch{Upper tail coverts}{feather group.}
-\vspace{0.6\baselineskip}
-
-\question 
-\LabMatch{Rump}{body region.} 
-
-\columnbreak
-
-\includegraphics[width=\linewidth]{bird_upper_numbered}
-
+	This warbler will soon return to Missouri's woods, where is forages close to the main trunk and large branches, much like the White-breasted Nuthatch.  It is a good bird to print on a black-and-white exam.  What is the common name of this species? \textit{Use proper capitalization rules to receive credit.} \textsc{Hint:} I have given you the name somewhere on this exam. 
+	
+	\ifprintanswers \textbf{Black-and-white Warbler} \fi
+	
+	\columnbreak
+	
+	\reflectbox{\includegraphics[width=0.9\linewidth]{exam2_baww}}\newline
+	\tiny Ryan Schain, Macaulay Library, \textsc{ml57253261}
+	
 \end{multicols}
 
-Choose the answer that matches the number of the numbered head region. Ignore the unnumbered labels.
-%\vspace{\baselineskip}
-
-\begin{multicols}{2}
-\question
-Region that covers the top of the head.
-
-\begin{choices}
-\choice Auricular.
-\correctchoice Crown.
-\choice Supercilium.
-\choice Nape.
-\choice Lores.
-\end{choices}
-
-
-\question
-Stripe above the eye.
-
-\begin{choices}
-\choice Malar.
-\choice Lores.
-\choice Median stripe.
-\choice Auricular.
-\correctchoice Supercilium
-\end{choices}
-
-\columnbreak
-
-\includegraphics[width=\linewidth]{bird_head_numbered}
-
-\question
-Region of the face between the eye and bill.
-
-\begin{choices}
-\choice Malar
-\choice Nasal
-\choice Supercilium
-\correctchoice Lores.
-\choice Crown
-\end{choices}
-
-\end{multicols}
-
-\newpage
-
-\begin{multicols}{2}
-
-\vspace*{2\baselineskip}
-
-\question\LabMatch{Furcula}{Proper name for the fused collar bone.}
-\vspace{0.6\baselineskip}
-
-\question\LabMatch{Tarsus}{Overall name for the leg .}
-\vspace{0.6\baselineskip}
-
-\vfill
-
-\bonusquestion (extra credit)
-Name the type of bill found on the Atlantic Puffin, pictured below.
-
-\columnbreak
-
-\vspace{-\baselineskip}
-
-\includegraphics[width=\linewidth]{skeleton_pigeon_numbered}
-
-\end{multicols}
-
-\includegraphics[width=0.5\linewidth]{puffin_head}
-
+\vspace{2\baselineskip}
 
 \end{questions}
 
