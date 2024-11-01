@@ -26,13 +26,12 @@
 \def\short#1{\csname @gobbletwo\expandafter\endcsname\number#1}
 
 \pagestyle{headandfoot}
-%\firstpageheader{\bfseries{Ichthyology, Exam 1, F14}}{}{\bfseries{Name: \enspace \makebox[2.5in]{\hrulefill}}}
 \firstpageheader{Biogeography, Exam 2, \textsc{f}\short{\year}}{}{%
-	\ifprintanswers\textbf{KEY}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
+	\ifprintanswers\textbf{KEY \numpoints~pts}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
-\footer{}{}{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}%{\makebox[0.75in]{\hrulefill}}
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\makebox[1in]{\hrulefill}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
 
 %\footer{}{}{}%{\makebox[0.75in]{\hrulefill}}
@@ -192,6 +191,7 @@ Graf et al.~(2015) tested whether hyriid mussel evolution was consistent with th
 \end{parts}
 
 \end{questions}
+
 
 \newpage
 
