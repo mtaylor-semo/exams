@@ -3,7 +3,7 @@
 
 \documentclass[12pt, addpoints]{exam}
 
-\printanswers
+%\printanswers
 
 \usepackage{fontspec}
 \setmainfont[Ligatures={Common, TeX}, BoldFont={* Bold}, ItalicFont={* Italic}, Numbers={Proportional, OldStyle}]{Linux Libertine O}
@@ -83,11 +83,32 @@
 
 \begin{questions}
 
+\question
+Answer this series of brief questions regarding the genus \textit{Homo.}
+
+\begin{parts}
+	\part[2]
+	On what continent and what region of that continent did \textit{Homo} first evolve?
+	
+	\vspace{2\baselineskip}\ifprintanswers \textbf{East Africa} \fi
+	
+	\part[2]
+	Which species of \textit{Homo} was likely the first to leave that continent?
+	
+	\vspace{2\baselineskip}\ifprintanswers \textbf{\textit{H. erecturs}} \fi
+	
+	\part[2]
+	About how many years did it take for \textit{H. sapiens} to span the globe?
+	\vspace{2\baselineskip}\ifprintanswers \textbf{200,000} \fi
+	
+	
+\end{parts}
+
 
 \question[5]
 Draw and label the Macarthur-Wilson equilibrium model of island biogeography. 
 
-\AnswerBox{0.2\textheight}{%
+\AnswerBox{0.1\textheight}{%
 	\vspace*{-\baselineskip}
 	\includegraphics[height=0.22\textheight]{island_equilibrium}
 }
@@ -95,14 +116,14 @@ Draw and label the Macarthur-Wilson equilibrium model of island biogeography.
 \question[10]
 Explain “turnover rate” on islands. Explain how the target effect and the rescue effect alters the turnover rate on islands of different sizes and degrees of isolation, as appropriate.
 
-\AnswerBox{0.3\textheight}{%
+\AnswerBox{0.1\textheight}{%
 	Turnover rate is replacement of extinct species with new, different species. Rescue effect lowers turnover rate because high immigration to near islands lowers extinction. Larger islands have higher turnover rate as immigration is easier on large islands, so new species can replace extinct species more quicky.
 }
 
 \question[5]
 Explain the “island rule” and how \textit{Homo floresiensis} fits the rule. 
 
-\AnswerBox{0.2\textheight}{%
+\AnswerBox{0.01\textheight}{%
 	Island rule suggests that small vertebrates can become larger on islands (perhaps due to release from predators) and large vertebrates become smaller on islands (perhaps due to more resource limitation). The small \textit{Homo floresiensis} evolved from larger \textit{H.~erectus.}
 }
 
@@ -133,12 +154,12 @@ Suppose the robin is endangered. Describe how you can use information from the f
 	The robin has a relatively low dispersal ability, as it is found most often in fragments much less than 1000 m. It also needs freagments at least 10 ha or larger.  Thus, need to create stepping stones (or corridor) at least 10 ha in size that are within 100-200 m (generally) of each other.
 }
 
-\question[5]
-Describe nestedness on islands. Explain how filters can create a pattern of nestedness.
-
-\AnswerBox{0.1\textheight}{%
-	The species present on distant islands are subsets of species present on closer islands. Filters limit dispersal ability of some species, so filters remove species that can not disperse to the farther islands.
-}
+%\question[5]
+%Describe nestedness on islands. Explain how filters can create a pattern of nestedness.
+%
+%\AnswerBox{0.1\textheight}{%
+%	The species present on distant islands are subsets of species present on closer islands. Filters limit dispersal ability of some species, so filters remove species that can not disperse to the farther islands.
+%}
 
 
 
@@ -150,6 +171,15 @@ Describe nestedness on islands. Explain how filters can create a pattern of nest
 %\AnswerBox{\basespace}{1}{%
 %	First occupied about 14 \textsc{kya} (3 pts). The \textsc{icf} would have been under water at that time (3 pts). They would have passed along a coastal route (3 pts).
 %}
+
+\question[10]
+Jones et al.~(2016), in their paper on invasive mammal eradication, stated that only five resident species of invertebrates successfully recovered following eradication of invasive mammals on islands. In class, you learned of two “shortfalls” that might affect that result. Name each shortfall and explain how each might change that result.
+
+\AnswerBox{0.2\textheight}{%
+	Linnean and Wallacean shortfalls. Linnean is taxonomic so we may not know of species to be studied. Wallacean is geographic distribution so we might  know of the species but not whether it was present. In both cases, the result could be higher.
+}
+
+
 
 \question[10]
 \textit{Homo neanderthalensis} lived across Europe for at least 100,000 years during the Pleistocene. Recent evidence suggests that Neanderthals went extinct due to climate change. Explain how the mild climate around the Mediterranean Sea may have allowed Neandertals to survive longer across \textit{all} of Europe during the late Pleistocene. 
@@ -171,35 +201,21 @@ Describe nestedness on islands. Explain how filters can create a pattern of nest
 %
 %\AnswerBox{0.2\textheight}{1}{The mammoths are farther north while Neanderthals existed in refugia along the Mediterrean. Thus, the two really didn't coexist, consistent with the conclusion of Lorezen et al. that climate was the more likely cause of extinction for mammoths.}
 
-\question
-Answer this series of brief questions regarding the genus \textit{Homo.}
 
-\begin{parts}
-\part[2]
-On what continent and what region of that continent did \textit{Homo} first evolve?
-
-\vspace{2\baselineskip}\ifprintanswers \textbf{East Africa} \fi
-
-\part[2]
-Which species of \textit{Homo} was likely the first to leave that continent?
-
-\vspace{2\baselineskip}\ifprintanswers \textbf{\textit{H. erecturs}} \fi
-
-\part[2]
-About how many years did it take for \textit{H. sapiens} to span the globe?
-\vspace{2\baselineskip}\ifprintanswers \textbf{200,000} \fi
-
-
-\end{parts}
+%\question[4]
+%Briefly summarize the Replacement model as it relates to the evolution and range expansion of \textit{Homo.}
+%
+%\AnswerBox{0.1\textheight}{All species of \textit{Homo} first evolved in Africa. \textit{H.~erectus} left first and expanded across Europe and Asia. \textit{H.~sapiens} evolved later. As it expanded across the globe it replaced \textit{H.~erectus}.}
 
 \question[4]
-Briefly summarize the Replacement model as it relates to the evolution and range expansion of \textit{Homo.}
+Alroy (2001) and Lorenzen et al.~(2011) modeled whether humans or climate change could explain the megafauna extinction at the end of the Pleistocene. However, small mammals (say, rabbit-sized and smaller) also went extinct at that time. Write a convincing hypothesis that humans \emph{or} climate exchange led to the extinction of the small mammals.
 
-\AnswerBox{0.1\textheight}{All species of \textit{Homo} first evolved in Africa. \textit{H.~erectus} left first and expanded across Europe and Asia. \textit{H.~sapiens} evolved later. As it expanded across the globe it replaced \textit{H.~erectus}.}
+\AnswerBox{0.1\textheight}{%
+Open-ended.}
 
 \newpage
 
-\question[15]
+\question[10]
 Abbott's Duiker is a small antelope endemic to the fragmented Eastern Arc forests of Tanzania.  Known localities with the duiker are shown in the inset.  Assume you are given the task of increasing survivorship and movement of individuals between the southernmost and northernmost locations.  Apply whatever island biogeography or metapopulation concepts (or both) you think are necessary to accomplish this goal.  You must explain \textit{how} each concept you choose helps achieve the goal.  You must also discuss corridors and how / why they can contribute to your conservation goals. If you need more writing space for your novel, you may use the other side of this page.
 
 	\vspace{-\baselineskip}\null\hfill\includegraphics[width=0.7\textwidth]{abbott_duiker_distrib}
@@ -207,6 +223,9 @@ Abbott's Duiker is a small antelope endemic to the fragmented Eastern Arc forest
 	\begin{solution}[1in]
 	Open-ended discussion.
 	\end{solution}
+
+
+
 
 \end{questions}
 
