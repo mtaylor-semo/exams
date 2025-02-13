@@ -60,6 +60,11 @@
 	\addtolength\matchlenb{-\matchlena}
 	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
 
+% change indentation for multiple choice
+\renewcommand{\choiceshook}{%
+	\setlength{\leftmargin}{0.25in}%
+	\setlength{\parsep}{3pt}%
+}
 
 \newcommand*\AnswerBox[2]{%
     \parbox[t][#1]{0.92\textwidth}{%
@@ -105,12 +110,12 @@ Chloride and sodium are the two most common ions in sea water. List the next fou
 }
 
 
-\question[2]
+\question[3]
 How many atmospheres of pressure does a squid living 560 meters deep in the Pacific Ocean experience?
 
 \AnswerBox{\baselineskip}{57 atm}
 
-\question[2]
+\question[3]
 Name the ocean and the trench or deep within that ocean that is the deepest point on Earth.
 
 \AnswerBox{\baselineskip}{Pacific: Mariana Trench / Challenger Deep}
@@ -208,7 +213,7 @@ The gladiator crab \textit{Callinectes gladiator} lives in estuaries along the w
 \end{multicols}
 
 
-\begin{AnswerPage}{3\basespace}
+\begin{AnswerPage}{0.2\textheight}
 	The site is located in the southern hemisphere. 
 	\vspace*{0.5\baselineskip}
 		
@@ -225,34 +230,88 @@ The gladiator crab \textit{Callinectes gladiator} lives in estuaries along the w
 	
 \end{AnswerPage}
 
+\question[5]
+Briefly describe one common adaptation found among bottom-dwelling organisms living along a passive margin coastline that you are less likely to see in bottom-dwelling organisms living along an active margin. Tell why.
+
+\begin{AnswerPage}{0.1\textheight}
+	
+\end{AnswerPage}
+
+
 
 \newpage
 
-\question
-You may use illustrations to aid your answers to this two-part question. Please do not tell me about earthquakes and volcanos in your answers.
 
-\begin{parts}
-	\part[5] Name the two types of the Earth's crust, and then list the differences between them for age, density, and thickness.
-	
-	\begin{AnswerPage}{0.1\textheight}
-	
-	Continental crust (1 point) is older (1 point), less dense (1 point), and thicker (1 point) than oceanic crust (1 point).
-	
-	\end{AnswerPage}
+\question[2]
+Relative to oceanic crust, continental crust is
+\begin{choices}
+\choice younger, denser, and thinner.
+\correctchoice older, less dense, and thicker.
+\choice younger, less dense, and thicker.
+\choice older, less dense, and thinner.
+\choice older, denser, and thinner.
+\choice younger, denser, and thicker.
+\end{choices}
 
-	\part[6] Describe ridge push and how it contributes to the movement of tectonic plates and formation of new sea floor.
-	
-	\begin{AnswerPage}{0.3\textheight}
-	1. Magma rises through the space at the edges of two oceanic crust plates, pushing up the plate edges. [2 points]
-	
-	\vspace*{0.5\baselineskip}
-	
-	2. The magma cools on the edge of the plates. [2 points]
-	\vspace*{0.5\baselineskip}
-	
-	3. The weight of the plate edges pushes the plate away from the ridge.  [2 points]
-	
-	\end{AnswerPage}
+\question[2]
+Slab pull occurs when
+\begin{choices}
+	\choice Oceanic crust subducts near oceanic ridges.
+	\choice Continental crust subducts belong oceanic crust.
+	\correctchoice Oceanic crust subducts below continental crust.
+	\choice Continental crust of one plate pulls away from continental crust of the adjacent plate.
+	\choice Oceanic crust of one plate pulls away from oceanic crust of the adjacent plate.
+	\choice Adjacent plates subduct away from each other, regardless of crust type.
+\end{choices}
+
+\question[2]
+Ekman transport occurs when
+\begin{choices}
+	\correctchoice wind causes water to move 90° relative to the direction of wind.
+	\choice wind causes water to move 45° relative to the direction of wind.
+	\choice currents bend to right in the northern hemisphere.
+	\choice currents bend to left in the northern hemisphere.	
+	\choice wind causes water to move in the same direction as the wind.
+\end{choices}
+
+\question[2]
+Organisms that spend their entire life as free-swimming organisms moving under their own power are
+\begin{choices}
+	\correctchoice holonektonic.
+	\choice meroplanktonic.
+	\choice holoplantonic.
+	\choice meronektonic.
+	\choice nektotrophic.
+	\choice planktotrophic.
+\end{choices}
+
+
+
+%\question
+%You may use illustrations to aid your answers to this two-part question. Please do not tell me about earthquakes and volcanos in your answers.
+%
+%\begin{parts}
+%	\part[5] Name the two types of the Earth's crust, and then list the differences between them for age, density, and thickness.
+%	
+%	\begin{AnswerPage}{0.1\textheight}
+%	
+%	Continental crust (1 point) is older (1 point), less dense (1 point), and thicker (1 point) than oceanic crust (1 point).
+%	
+%	\end{AnswerPage}
+
+%	\part[6] Describe ridge push and how it contributes to the movement of tectonic plates and formation of new sea floor.
+%	
+%	\begin{AnswerPage}{0.3\textheight}
+%	1. Magma rises through the space at the edges of two oceanic crust plates, pushing up the plate edges. [2 points]
+%	
+%	\vspace*{0.5\baselineskip}
+%	
+%	2. The magma cools on the edge of the plates. [2 points]
+%	\vspace*{0.5\baselineskip}
+%	
+%	3. The weight of the plate edges pushes the plate away from the ridge.  [2 points]
+%	
+%	\end{AnswerPage}
 	
 %	\part[6] Describe slab pull and how it contributes to the movement of tectonic plates and formation of trenches. 
 %	
@@ -266,18 +325,13 @@ You may use illustrations to aid your answers to this two-part question. Please 
 %
 %	3. This causes it to sink faster, pulling along the rest of the plate. [2 points]
 %\end{AnswerPage}	
-\end{parts}
-
-\question[5]
-Briefly describe one common adaptation found among bottom-dwelling organisms living along a passive margin coastline that you are less likely to see in bottom-dwelling organisms living along an active margin. Tell why.
-
-\begin{AnswerPage}{0.3\textheight}
-	
-\end{AnswerPage}
-
+%\end{parts}
 
 \newpage
-\vspace*{-0.5\baselineskip}
+
+
+%\newpage
+%\vspace*{-0.5\baselineskip}
 
 \question
 	\begin{parts}
@@ -361,7 +415,7 @@ Summarize the classic model of primary productivity in the North Atlantic Ocean 
 			\quad Consider color. [2 points plus 2 points for explanation.]
 		\end{AnswerPage}
 
-	\part[5]
+	\part[6]
 	Identify a different adaptation that is visible in the image that is found in many deep-sea species, regardless of whether they live in the mesopelagic or bathypelagic. Explain how that adaptation is related to the environment or survival in the deep-sea. Bioluminescence is \emph{not} visible in the image.
 	
 %	\smallskip
