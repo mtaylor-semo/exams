@@ -44,6 +44,7 @@ fly to your tomorrow.}}{\makebox[1in]{\hrulefill}}%{\makebox[0.75in]{\hrulefill}
 
 \pointsinmargin
 \marginpointname{ pts}
+\marginbonuspointname{ pts\,\textsc{e.c.}}
 
 \usepackage{multicol}
 \usepackage{booktabs}
@@ -73,6 +74,12 @@ fly to your tomorrow.}}{\makebox[1in]{\hrulefill}}%{\makebox[0.75in]{\hrulefill}
 	\addtolength\matchlenb{-\matchlena}
 	\parbox[t]{\matchlena}{\Matching{#1}}\enspace\parbox[t]{\matchlenb}{#2}}
 
+% change indentation for multiple choice
+\renewcommand{\choiceshook}{%
+	\setlength{\leftmargin}{0.25in}%
+	\setlength{\parsep}{3pt}%
+}
+
 
 \newcommand*\AnswerBox[2]{%
     \parbox[t][#1]{0.92\textwidth}{%
@@ -98,6 +105,43 @@ fly to your tomorrow.}}{\makebox[1in]{\hrulefill}}%{\makebox[0.75in]{\hrulefill}
 
 \begin{questions}
 
+\bumppoints{2}
+
+\question
+During migration, birds navigate by all of the following mechanisms \emph{except one.} Which one?
+\begin{choices}
+	\choice Geomagnetism.
+	\correctchoice GPS.
+	\choice Orientation of the stars.
+	\choice Orientation of the sun.
+\end{choices}
+
+
+\question[5]
+Briefly explain why most temperate birds migrate but most tropical birds are non-migratory.
+
+
+\AnswerBox{0.1\textheight}{Primary production is consistent in tropics but seasonal in temperate zone.}
+
+
+\question[10]
+Describe two \emph{different} ways that climate change might affect migration or nesting success after arrival on breeding grounds.
+
+\AnswerBox{0.4\textheight}{Many possible answers.}
+
+\newpage
+\question[10]
+Explain why birds from eastern Canada (for example) tend to fly out over the Atlantic Ocean when flying to South America in the fall but fly over land (near the east coast) when flying back to Canada in the spring? Be sure to include the role of prevailing winds in the northern hemisphere (\textsc{Hint:} 30° latitude)
+
+\AnswerBox{0.4\textheight}{arg2}
+
+\question[10]
+The migratory routes of many seabirds that migrate between the two hemispheres show a figure-8 pattern. Explain why in terms of high pressure systems in each hemisphere.
+
+\AnswerBox{0.4\textheight}{Answer goes here.}
+
+\newpage
+
 \question[5]
 \begin{multicols}{2}
 Will a small bird adapted to specific wetland habitats (such as a Prothonotary Warbler) have a greater extinction threat from habitat loss or predation/persecution? (2 pts). Explain why. (3 pts)
@@ -122,22 +166,29 @@ This figure shows the relationship between the abundance of Magpie Goose and the
 
 \AnswerBox{0.3\textheight}{Answer goes here.}
 
-\newpage
-
-
-\question[10]
-You are charged with designing a bird sanctuary across a landscape. Describe how you will use patch dynamics (5 pts) and stepping stones (5 pts) to maximize the number of species protected by your sanctuary. Be sure to clearly state the purpose of each of these two components.
+%\newpage
+%\question[10]
+%\begin{multicols}{2}
+%Kirtland's Warbler (pictured at right) breeds in central Michigan in stands of Jack Pine tree that are between 5–10 years of age. Describe how you can might use fire to increase breeding success of this bird. Important: you must have suitable breeding habitat every summer.
 %
-%\question[15]
-%You are charged with designing a bird sanctuary across a landscape. Describe how you will you patch dynamics (5 pts), corridors (5 pts), and fragment shape (5 pts), to maximize the number of species protected by your sanctuary. Be sure to clearly state the purpose of each of these three components.
+%\columnbreak
+%
+%\hfil \reflectbox{\includegraphics[height=2in]{exam3_kiwa}} \hfill
+%\end{multicols}
+%
+%\question[10]
+%You are charged with designing a bird sanctuary across a landscape. Describe how you will use patch dynamics (5 pts) and stepping stones (5 pts) to maximize the number of species protected by your sanctuary. Be sure to clearly state the purpose of each of these two components.
+%%
+%%\question[15]
+%%You are charged with designing a bird sanctuary across a landscape. Describe how you will you patch dynamics (5 pts), corridors (5 pts), and fragment shape (5 pts), to maximize the number of species protected by your sanctuary. Be sure to clearly state the purpose of each of these three components.
+%
+%\AnswerBox{0.4\textheight}{Answer}
 
-\AnswerBox{0.4\textheight}{Answer}
-
-\question[5]
-Explain how you can minimize edge effect in your sanctuary design to minimize brood parasitism for bird species you are trying to protect.
-
-\AnswerBox{0.1\textheight}{Answer}
-
+%\question[5]
+%Explain how you can minimize edge effect in your sanctuary design to minimize brood parasitism for bird species you are trying to protect.
+%
+%\AnswerBox{0.1\textheight}{Answer}
+%
 
 %\question[10]
 %\begin{multicols}{2}
@@ -153,18 +204,8 @@ Explain how you can minimize edge effect in your sanctuary design to minimize br
 
 %\newpage
 
-\question[5]
-Describe broadly how climate change might nesting success after arrival on breeding grounds following migration.
-
-\AnswerBox{0.1\textheight}{Answer goes here.}
-
 
 \newpage
-
-\question[10]
-The migratory routes of many seabirds that migrate between the two hemispheres show a figure-8 pattern. Explain why in terms of high pressure systems in each hemisphere.
-
-\AnswerBox{0.2\textheight}{Answer goes here.}
 
 
 
@@ -191,87 +232,103 @@ The migratory routes of many seabirds that migrate between the two hemispheres s
 %
 %\end{multicols}
 
-\fullwidth{
-\begin{minipage}{9.9cm}
-Ducks Unlimited has conserved millions of acres of wetland habitat across North American for the preservation of waterfowl. Areas range from hundreds of acres to tens of thousands of acres in size. 
-
-\medskip
-
-Rosenberg et al.~2019 showed that waterfowl was one group of birds that has
-increased in abundance since the 1970s. They argued that successful waterfowl recovery was due 
-to adaptive harvest management and billions of dollars devoted to wetland 
-habitat protection and restoration.
-\end{minipage}\hfill
-\begin{minipage}{4cm}
-\includegraphics[width=\linewidth]{exam3_reserve_design}
-\end{minipage}
-}
-
-%\question[5]
-%Explain adaptive harvest management.
+%\fullwidth{
+%\begin{minipage}{9.9cm}
+%Ducks Unlimited has conserved millions of acres of wetland habitat across North American for the preservation of waterfowl. Areas range from hundreds of acres to tens of thousands of acres in size. 
 %
-%\AnswerBox{0.01\textheight}{Answer goes here}
+%\medskip
+%
+%Rosenberg et al.~2019 showed that waterfowl was one group of birds that has
+%increased in abundance since the 1970s. They argued that successful waterfowl recovery was due 
+%to adaptive harvest management and billions of dollars devoted to wetland 
+%habitat protection and restoration.
+%\end{minipage}\hfill
+%\begin{minipage}{4cm}
+%\includegraphics[width=\linewidth]{exam3_reserve_design}
+%\end{minipage}
+%}
+%
+%%\question[5]
+%%Explain adaptive harvest management.
+%%
+%%\AnswerBox{0.01\textheight}{Answer goes here}
+%%
+%%
+%\question[10]
+%Use the diagram above right as a guide to explain two principles of reserve design 
+%that could have contributed to the successful preservation of waterfowl.  (Four principles are illustrated; choose the most appropriate two.)
+%
+%%Use the diagram above right as a guide to explain three principles of reserve design 
+%%that could have contributed to the successful preservation of waterfowl. One of the 
+%%principles must specifically relate to adaptive harvest management. Explain how adaptive %harvest management fits that principle. (Four principles are illustrated; choose the most %appropriate three.)
+%
+%\AnswerBox{0.2\textheight}{Answer goes here}
 %
 %
+%\newpage
+
+\fullwidth{%}
+The table below is an excerpt from Rosenberg~et~al.\,(2019). 
+
+\includegraphics[width=\textwidth]{exam3_rosenberg_table}}
+
+\question[3]
+Which biome shows the greatest percent loss of abundance?
+
+\ifprintanswers\textbf{Grassland} \fi \vspace{2\baselineskip}
+
 \question[10]
-Use the diagram above right as a guide to explain two principles of reserve design 
-that could have contributed to the successful preservation of waterfowl.  (Four principles are illustrated; choose the most appropriate two.)
-
-%Use the diagram above right as a guide to explain three principles of reserve design 
-%that could have contributed to the successful preservation of waterfowl. One of the 
-%principles must specifically relate to adaptive harvest management. Explain how adaptive %harvest management fits that principle. (Four principles are illustrated; choose the most %appropriate three.)
+Tell how you might use burn management in a conservation area to increase overall diversity of species in this type of biome. 
 
 \AnswerBox{0.2\textheight}{Answer goes here}
 
 
 \newpage
 
-%\fullwidth{%}
-%The table below is an excerpt from Rosenberg et al.~2019. 
+%\question[10]
+%Improve this course. Here are 10 free points for answering honestly and openly. I welcome all feedback, positive or negative. Just please make it constructive.  I have a few questions, but feel free to add more.
 %
-%\includegraphics[width=\textwidth]{exam3_rosenberg_table}}
-%
-%\question[3]
-%Which biome shows the greatest percent loss of abundance?
-%
-%\ifprintanswers\textbf{Grassland} \fi \vspace{2\baselineskip}
+%\begin{parts}
+%	\part Are there any changes to lecture topics you would suggest? Any lectures you wanted more information? Any you felt had too much information? Are there topics I didn't cover that you wished I had?
+%	
+%		\AnswerBox{0.01\textheight}{\phantom{1}}
+%	
+%	\part
+%	I don't like the way I handled lab exams this semester. I think the first lab exam should be soon after the external anatomy and skeletal anatomy labs. Would you agree with this or do you have a different suggestion?
+%	
+%		\AnswerBox{0.01\textheight}{\phantom{1}}
+%		
+%	\part
+%	What was your opinion of the campus eBird survey assignment? (There was a flaw in the assignment that prevented me from using your data for a follow-up analysis this semester.)
+%	
+%		\AnswerBox{0.01\textheight}{\phantom{1}}
+%	
+%	\part
+%	I was developing the taxonomy lectures as we went through the semester. In the future I can start them earlier. Do you think the taxonomy lectures should be kept separate as part of a laboratory grade or folded into the lecture exams? Any other suggestions to improve the taxonomy materiaL
+%	
+%		\AnswerBox{0.01\textheight}{\phantom{1}}
+%		
+%	\part
+%	Please add any other suggestions that you think would improve this course.  
+%	
+%		\AnswerBox{0.1\textheight}{\phantom{1}}
+%	
+%\end{parts}
 
-%\question[5]
-%Tell how you might use burn management in a conservation area to increase overall diversity of species in this type of biome. 
-%
-%\AnswerBox{0.2\textheight}{Answer goes here}
 
 \question[10]
-Improve this course. Here are 10 free points for answering honestly and openly. I welcome all feedback, positive or negative. Just please make it constructive.  I have a few questions, but feel free to add more.
+According to Rosenberg~et~al.\,(2019), waterfowl and raptors are two relative success stories among the loss of most groups. Explain how management and/or conservation policy led to the successful recovery for each group.
 
-\begin{parts}
-	\part Are there any changes to lecture topics you would suggest? Any lectures you wanted more information? Any you felt had too much information? Are there topics I didn't cover that you wished I had?
-	
-		\AnswerBox{0.01\textheight}{\phantom{1}}
-	
-	\part
-	I don't like the way I handled lab exams this semester. I think the first lab exam should be soon after the external anatomy and skeletal anatomy labs. Would you agree with this or do you have a different suggestion?
-	
-		\AnswerBox{0.01\textheight}{\phantom{1}}
-		
-	\part
-	What was your opinion of the campus eBird survey assignment? (There was a flaw in the assignment that prevented me from using your data for a follow-up analysis this semester.)
-	
-		\AnswerBox{0.01\textheight}{\phantom{1}}
-	
-	\part
-	I was developing the taxonomy lectures as we went through the semester. In the future I can start them earlier. Do you think the taxonomy lectures should be kept separate as part of a laboratory grade or folded into the lecture exams? Any other suggestions to improve the taxonomy materiaL
-	
-		\AnswerBox{0.01\textheight}{\phantom{1}}
-		
-	\part
-	Please add any other suggestions that you think would improve this course.  
-	
-		\AnswerBox{0.1\textheight}{\phantom{1}}
-	
-\end{parts}
+
+\AnswerBox{0.6\textheight}{Waterfowl habitat and stopping insecticide}
+
+
+\bonusquestion[3]
+Suggest one (or more) improvements to this course.
+
+\AnswerBox{0.1\textheight}{Anything}
 
 \end{questions}
 
-\bumppoints{10} % Bonus points for 2023 to compensate for a mistake I made.
+%\bumppoints{10} % Bonus points for 2023 to compensate for a mistake I made.
 \end{document}
