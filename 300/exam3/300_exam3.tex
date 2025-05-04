@@ -16,6 +16,7 @@
 \usepackage{graphicx}
 	\graphicspath{%
 	{/Users/goby/Pictures/teach/300/exams/}
+	{/Users/goby/Pictures/teach/300/lectures/}
 	{/Users/goby/pictures/teach/438/exam/}}%
 	
 
@@ -26,9 +27,9 @@
 \firstpageheader{Evolution, Exam 3, Sp\short{\year}.}{}{%
 	\ifprintanswers\textbf{KEY~\numpoints~pts.}\else Name: \enspace \makebox[2.5in]{\hrulefill}\fi}
 \runningheader{}{}{\small{pg. \thepage}}
-
-\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{\iflastpage{\small Have a great summer!}}{\makebox[1in]{\hrulefill}}%{\makebox[0.75in]{\hrulefill}}
-\extrafootheight{-0.5in}
+\footer{}{}{}
+%\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{\iflastpage{\small Have a great summer!}}{\makebox[1in]{\hrulefill}}%{\makebox[0.75in]{\hrulefill}}
+%\extrafootheight{-0.5in}
 
 \pointsinmargin
 \marginpointname{ pts}
@@ -81,6 +82,11 @@
 	\addtocounter{numpoints}{#1}
 }
 
+% change indentation for multiple choice
+\renewcommand{\choiceshook}{%
+	\setlength{\leftmargin}{0.25in}%
+	\setlength{\parsep}{3pt}%
+}
 
 \begin{document}
 
@@ -93,57 +99,158 @@
 }
 \vspace{0.6\baselineskip}
 
-%\bumppoints{10}
+\bumppoints{14}
 
-\vspace{0.6\baselineskip}
 
+\question\MatchQuestion{Allometry}{Different body parts develop at different rates.}\vspace{0.5\baselineskip}
+%
+\question\MatchQuestion{End Permian}{Largest mass extinction.}\vspace{0.5\baselineskip}
+%
+\question\MatchQuestion{Co-option}{Existing gene evolves new function without duplication.}\vspace{0.5\baselineskip}
+%
+\question\MatchQuestion{Ruby-in-the-Rubbish}{Many detrimental mutations prevent a beneficial mutation from becoming fixed in an asexual lineage.}\vspace{0.5\baselineskip}
+%
 \question\MatchQuestion{Serial homology}{Repeating segments within an organism, serving different functions, inherited from a common ancestor.}\vspace{0.5\baselineskip}
-\question\MatchQuestion{Anisogamy}{Sexes have different sized gametes.}\vspace{0.5\baselineskip}
-\question\MatchQuestion{End Ordovician}{First mass extinction.}\vspace{0.5\baselineskip}
-\question\MatchQuestion{Maternal effect}{mRNA transcripts inside unfertilized egg.}\vspace{0.5\baselineskip}
-\question\MatchQuestion{Muller's Ratchet}{Accumulation of detrimental mutations in asexually-reproducing species.}
+
+\bigskip
 
 
-\question[5]
-Define turnover rate as it applies to the fossil record. %When turnover rate has been compared among multiple taxa, a distinct relationship has emerged between \emph{S} and \emph{O}. What is this relationship?
+\question
+The ultimate cause of mass extinctions is
 
-\AnswerBox{0.1\textheight}{Turnover rate is the rate at which new taxa replace old taxa in the fossil record. Taxa with low origination rates tend to have low extinction rates. Taxa with high O tend to have high S.}
+\begin{choices}
+\choice asteroid impact.
+\choice methane gas.
+\choice glaciation (ice ages).
+\correctchoice rapid climate change.
+\choice vulcanism.
+\end{choices}
 
-\question[5]
-On screen is a goosefish. It has an unusually wide jaw compared to most fishes. You wish to explore which toolkit genes might be involved. Based on your knowledge of previous studies, which toolkit gene or genes would you be most likely to start with? Briefly explain why.
 
-\AnswerBox{0.1\textheight}{%
-CaM1 has been associated with jaw width in fishes so would be a good place to start. BMP1 has been associated with bill width in birds so this too would be a good starting place.
-}
+\question
+Muller's Ratchet
+\begin{choices}
+	\choice maintains mutational load in sexually reproducing species.
+	\choice decreases mutational load in asexually reproducing species.
+	\choice increases mutational load in sexually reproducing species.
+	\choice maintains mutational load in asexually reproducing species.
+	\choice decreases mutational load in sexually reproducing species.
+	\correctchoice increases mutational load in asexually reproducing species.
+\end{choices}
+
 
 \newpage
 
+
 \question[10]
-\begin{multicols}{2}
-Hellberg and Roy~(2001) studied populations of a marine snail north and south of Point Conception (see figure). They tested whether genetic differences were due to vicariance or range expansion. At right is a simplified version of their parsimony network.  Based on the network, state whether vicariance or range expansion is supported and describe how the network supports your choice. 
+Persimmon trees produce either male flowers (no carpels) or female flowers (no stamens). Use the floral quartet model to explain which (if any) class or classes of \textsc{mads} genes could be lost (no expression) to produce 1) male flowers and 2) female flowers. If the model does not work for one or both sexes of flowers, explain why for each sex.
 
-Each oval represents one allele. Letter codes inside each oval is the sample site shown along the coast. Numbers in parentheses after each site is individuals with that allele. Each line connecting two ovals indicates one mutation difference between alleles.  Small circles indicate additional mutational differences between alleles.
-
-\columnbreak
-
-\includegraphics[width=\linewidth]{exam3_hellberg_roy}
-
-\end{multicols}
-
-
-	\AnswerBox{0.1\textheight}{%
-	Genetic diversity is much higher south of Point Conception compared to northern populations. Most individuals sampled from north of P.C. share the same allele, suggesting this region is much younger and therefore the result of recent range expansion.%
+\AnswerBox{0.3\textheight}{%
+	Loss of Class B would produce female flowers. However, male flowers cannot be explained by the loss of any one class without also losing female flowers. For example, Class C is needed for both male and female reproductive structures.
 	}
 
 
 
-\question[10]
-Persimmon trees produce either male flowers (no carpels) or female flowers (no stamens). Use the floral quartet model to explain which (if any) class or classes of MADS genes could be lost (no expression) to produce 1) male flowers and 2) female flowers. If the model does not work for one or both sexes of flowers, explain why for each sex.
 
-\AnswerBox{0.1\textheight}{%
-Loss of Class B would produce female flowers. However, male flowers cannot be explained by the loss of any one class without also losing female flowers. For example, Class C is needed for both male and female reproductive structures.
-}
+%\question[10]
+%On the figure below, identify the eight terrestrial biogeographic regions. Draw horizontal lines that show the approximate north/south boundaries between each of the regions. You do not need to draw east/west boundaries. 
+%
+%\ifprintanswers
+%\includegraphics[width=\linewidth]{globalmap_answer}	
+%\else
+%\includegraphics[width=\linewidth]{GlobalMap}
+%\fi
 
+%\newpage
+
+%\question\MatchQuestion{Serial homology}{Repeating segments within an organism, serving different functions, inherited from a common ancestor.}\vspace{0.5\baselineskip}
+%\question\MatchQuestion{Anisogamy}{Sexes have different sized gametes.}\vspace{0.5\baselineskip}
+%\question\MatchQuestion{End Ordovician}{First mass extinction.}\vspace{0.5\baselineskip}
+%\question\MatchQuestion{Maternal effect}{mRNA transcripts inside unfertilized egg.}\vspace{0.5\baselineskip}
+%\question\MatchQuestion{Muller's Ratchet}{Accumulation of detrimental mutations in asexually-reproducing species.}
+
+\question[5]
+List two skeletal modifications that are associated with bipedalism. For each, define the specific change that happened between the quadripedal and bipedal form.
+
+\AnswerBox{0.1\textheight}{Foremen magnum placement, pelvis shape, slant of femora, modifications to feet, change is slope of spine etc…}
+
+\newpage
+
+\question[5]
+The longnose butterflyfish (right, on screen) has an unusually long mouth compared to other species of butterflyfishes. You plan to study the genetics of jaw length in the butterflyfishes.  Based on your knowledge of previous studies in birds, which toolkit gene would you be most likely to start with? Briefly explain why.
+	
+	\AnswerBox{0.3\textheight}{CaM1 (expression) was shown to correlate with bill length in birds.}
+
+
+\question[5]
+\begin{multicols}{2}
+	Briefly explain why mutational load increases in human populations as distance increases from Africa.
+	
+\AnswerBox{0.01\textheight}{Genetic drift associated with multiple founder effects.}
+	\columnbreak
+	
+	\includegraphics[width=\linewidth]{exam3_human_mutational_load}
+	
+\end{multicols}
+
+\AnswerBox{0.1\textheight}{\phantom{spacer}}
+
+
+%\question[5]
+%Define turnover rate as it applies to the fossil record. %When turnover rate has been compared among multiple taxa, a distinct relationship has emerged between \emph{S} and \emph{O}. What is this relationship?
+
+%\AnswerBox{0.1\textheight}{Turnover rate is the rate at which new taxa replace old taxa in the fossil record. Taxa with low origination rates tend to have low extinction rates. Taxa with high O tend to have high S.}
+
+
+
+
+%\question[5]
+%On screen is a goosefish. It has an unusually wide jaw compared to most fishes. You wish to explore which toolkit genes might be involved. Based on your knowledge of previous studies, which toolkit gene or genes would you be most likely to start with? Briefly explain why.
+%
+%\AnswerBox{0.1\textheight}{%
+%CaM1 has been associated with jaw width in fishes so would be a good place to start. BMP1 has been associated with bill width in birds so this too would be a good starting place.
+%}
+%
+
+\newpage
+
+\question
+\fullwidth{Male swordtail characin fishes (\textit{Corynopoma riisei}) have a long, narrow extension of the gill cover. The extension has a ``flag'' on the tip, which mimics the fish's prey. The male uses the flag to attract females for mating. A study by Arnqvist and Kolm (2010) showed that the shape of the flag was strongly correlated with environmental variables like prey availability. Based on this information, answer the next two questions.}
+\begin{parts}
+	\part[4]
+	Explain whether this is intrasexual or intersexual selection and why.
+	
+	\AnswerBox{0.01\textheight}{%
+		Intersexual. Females are choosing males based on a characteristic of the male.
+	}
+	
+	\part[10]
+	Decide whether the flag more likely evolved by sensory bias or sensory drive. Explain what is sensory bias or sensory drive (depending on your choice), and justify your decision by explaining how your choice is consistent with the scenario described above.
+	
+	\AnswerBox{0.3\textheight}{%
+		Sensory drive. Sensory drive is when female drives evolution of a trait based on the ability of the trait to stand out from the environment. Females are choosing males whose trait indicates something about the environment.
+	}
+\end{parts}
+
+
+%\question[10]
+%\begin{multicols}{2}
+%Hellberg and Roy~(2001) studied populations of a marine snail north and south of Point Conception (see figure). They tested whether genetic differences were due to vicariance or range expansion. At right is a simplified version of their parsimony network.  Based on the network, state whether vicariance or range expansion is supported and describe how the network supports your choice. 
+%
+%Each oval represents one allele. Letter codes inside each oval is the sample site shown along the coast. Numbers in parentheses after each site is individuals with that allele. Each line connecting two ovals indicates one mutation difference between alleles.  Small circles indicate additional mutational differences between alleles.
+%
+%\columnbreak
+%
+%\includegraphics[width=\linewidth]{exam3_hellberg_roy}
+%
+%\end{multicols}
+%
+%
+%	\AnswerBox{0.1\textheight}{%
+%	Genetic diversity is much higher south of Point Conception compared to northern populations. Most individuals sampled from north of P.C. share the same allele, suggesting this region is much younger and therefore the result of recent range expansion.%
+%	}
+%
+%
 
 
 %\newpage
@@ -170,62 +277,85 @@ Loss of Class B would produce female flowers. However, male flowers cannot be ex
 %\newpage
 
 
-\question[10]
-On the figure below, identify the eight terrestrial biogeographic regions. Draw horizontal lines that show the approximate north/south boundaries between each of the regions. You do not need to draw east/west boundaries. 
-
-\ifprintanswers
-\includegraphics[width=\linewidth]{globalmap_answer}	
-\else
-\includegraphics[width=\linewidth]{GlobalMap}
-\fi
 
 %\begin{equation}\label{key}
-\question
-\begin{multicols}{2}
-Male treehoppers (genus \textit{Enchenopa}) attract females by sending vibrations through plants. One species sends low frequency vibrations through the stem of a plant. The other species sends high frequency vibrations through the petiole.  The frequency differences of the males maximize detection by their respective females in the same environment (McNett and Cocroft 2008).
-
-\columnbreak
-
-\includegraphics[height=1.75in]{exam3_petiole_stem}
-\end{multicols}
-
-	\begin{parts}
-	\part[5]
-	Is this intrasexual or intersexual selection? Why?
-	
-	\AnswerBox{0.03\textheight}{%
-	Intersexual. Females are choosing males based on a characteristic of the male.
-	}
-	
-	\part[10]
-	Did the frequency differences more likely evolved by sensory bias or sensory drive? Explain what is sensory bias or sensory drive (depending on your choice), and then explain how your choice is consistent with the scenario described above.
-
-	\AnswerBox{0.15\textheight}{%
-	Sensory drive. Sensory drive is when female drives evolution of a trait based on the ability of the trait to stand out from the environment. Here, the different vibrations standout relative to their environments.
-	}
-	\end{parts}
+%\question
+%\begin{multicols}{2}
+%Male treehoppers (genus \textit{Enchenopa}) attract females by sending vibrations through plants. One species sends low frequency vibrations through the stem of a plant. The other species sends high frequency vibrations through the petiole.  The frequency differences of the males maximize detection by their respective females in the same environment (McNett and Cocroft 2008).
+%
+%\columnbreak
+%
+%\includegraphics[height=1.75in]{exam3_petiole_stem}
+%\end{multicols}
+%
+%	\begin{parts}
+%	\part[5]
+%	Is this intrasexual or intersexual selection? Why?
+%	
+%	\AnswerBox{0.03\textheight}{%
+%	Intersexual. Females are choosing males based on a characteristic of the male.
+%	}
+%	
+%	\part[10]
+%	Did the frequency differences more likely evolved by sensory bias or sensory drive? Explain what is sensory bias or sensory drive (depending on your choice), and then explain how your choice is consistent with the scenario described above.
+%
+%	\AnswerBox{0.15\textheight}{%
+%	Sensory drive. Sensory drive is when female drives evolution of a trait based on the ability of the trait to stand out from the environment. Here, the different vibrations standout relative to their environments.
+%	}
+%	\end{parts}
 
 %\end{equation}
 \newpage
 
+\question[12]
+An Australian gecko, \textit{Heteronotia binoei}, has the distribution indicated by the black dots in the inset below.  The large gap in the distribution suggests one of two scenarios: range expansion after the last ice-age or vicariance via a long-term barrier to dispersal between the two regions. Strasburg et al. (2007) tested these alternate hypotheses. Below is a simplified version of their parsimony network.  Based on the network, state which hypothesis is supported and describe how the network supports the hypothesis you chose. 
 
-\question[10]
-This bird is a Long-tailed Widowbird. Use the model of runaway selection to explain how a short tail that was ecologically beneficial might have become much too long to be of ecological benefit.
+Each circle represents one allele. Shading corresponds to the population sampled; grey is the western cluster and white is the central cluster. Each line connecting two circles indicates one mutation difference between alleles.  Small dashes indicate additional mutational differences between alleles.
 
-\begin{multicols}{2}
+\includegraphics[width=\textwidth]{gecko_network}
 
-\AnswerBox{0.2\textheight}{Female preference becomes linked to male trait. Females prefer males with longer tails and mate with them so the tail becomes much much longer.}
-
-\columnbreak
-
-\includegraphics[width=\linewidth]{exam3_ltwi}
-
-\end{multicols}
+\begin{solution}
+	The western (grey) clade shows considerable genetic diversity, suggesting it is older and was likely a refuge. The central (white) clade has little genetic diversity, suggesting it is much younger and therefore the result of recent range expansion.
+\end{solution}
 
 
+
+%\question[10]
+%This bird is a Long-tailed Widowbird. Use the model of runaway selection to explain how a short tail that was ecologically beneficial might have become much too long to be of ecological benefit.
+%
+%\begin{multicols}{2}
+%
+%\AnswerBox{0.2\textheight}{Female preference becomes linked to male trait. Females prefer males with longer tails and mate with them so the tail becomes much much longer.}
+%
+%\columnbreak
+%
+%\includegraphics[width=\linewidth]{exam3_ltwi}
+%
+%\end{multicols}
+%
+%
 %\vfill
 
 %\input{devious_extra_credit}
+
 \end{questions}
+
+\lfoot{\small \rule{0.6in}{0.4pt} / \numpoints\ points}
+\rfoot{\makebox[1in]{\hrulefill}}
+
+\newpage
+
+%\thispagestyle{empty}
+%\topskip0pt
+
+\rhead{} % Supress page number
+\rfoot{} % Suppress score footer
+\lfoot{}
+
+\vspace*{\fill}
+
+\hspace*{\fill} {\tiny I enjoyed having you in class!} \hspace*{\fill}
+
+\vspace*{\fill}
 
 \end{document}
