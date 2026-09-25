@@ -27,8 +27,13 @@
 \runningheader{}{}{\small{pg. \thepage}}
 %\runningheadrule
 
-\footer{\iflastpage{\hspace{-1.2cm}\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{}%{\makebox[0.75in]{\hrulefill}}
+%\footer{\iflastpage{\hspace{-1.2cm}\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{}%{\makebox[0.75in]{\hrulefill}}
+%\extrafootheight{-0.5in}
+
+\footer{\iflastpage{\small \rule{0.6in}{0.4pt} / \numpoints\ points}{}}{}{\makebox[1in]{\hrulefill}}%{\makebox[0.75in]{\hrulefill}}
 \extrafootheight{-0.5in}
+
+
 
 \pointsinmargin
 \marginpointname{ pts}
@@ -88,9 +93,10 @@
 
 \begin{document}
 
+\noindent Match the \emph{most appropriate} term to each concept. Not all terms are used. No term is used twice.\\(2 points each)
+
 \begin{questions}
 
-\fullwidth{Match the \emph{most appropriate} term to each concept. Not all terms are used. No term is used twice.\\(2 points each)}
 \vspace{-1\baselineskip}
 \fullwidth{%
 \input{matchwordlist.tex}
@@ -101,27 +107,31 @@
 
 \question\MatchQuestion{Brackish}{Organisms restricted to intermediate salinity concentrations, such as 5--15 ppt.}
 
-\vspace{1\baselineskip}
+\vspace{0.7\baselineskip}
 
 %\question\MatchQuestion{Neap Tide}{The highest low tide occurs when the moon is half full.}
-
-%\vspace{1\baselineskip}
+%
+%\vspace{0.7\baselineskip}
 
 %\question\MatchQuestion{Stenohaline}{Organisms can tolerate only a narrow range of salinity.}
+%
+%\vspace{0.7\baselineskip}
 
-%\vspace{1\baselineskip}
+\question\MatchQuestion{Infauna}{All benthic organisms that live \emph{in} the sediment.}
+
+\vspace{0.7\baselineskip}
 
 \question\MatchQuestion{Supralittoral Fringe}{Also known as the splash zone.}
 
-\vspace{1\baselineskip}
+\vspace{0.7\baselineskip}
 
 \question\MatchQuestion{Meiofauna}{Tiny organisms that live in the spaces between sand grains.}
 
-\vspace{1\baselineskip}
+\vspace{0.7\baselineskip}
 
-\question\MatchQuestion{Low marsh}{Area of the marsh between the low and high tide marks.}
+%\question\MatchQuestion{Low marsh}{Area of the marsh between the low and high tide marks.}
 
-\vspace{1\baselineskip}
+%\vspace{1\baselineskip}
 
 \question\MatchQuestion{Hypotonic}{Organism's blood solute concentration is lower than the environment solute concentration.}
 
@@ -136,7 +146,7 @@
 \vspace{1\baselineskip}
 
 
-\bumppoints{14}
+\bumppoints{10}
 \fullwidth{Multiple choice. Choose the \emph{best} answer. Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect. (2 points each)}
 
 
@@ -215,28 +225,28 @@ The hypothesis proposed to explain coral reef fish diversity that assumes compet
 \correctchoice lottery model. 
 \end{choices}
 
-\question
-Hypersaline bare patches are most likely to occur in
-
-\begin{choices}
-\choice any mangrove forest. 
-\choice southern salt marshes. 
-\choice any salt marsh. 
-\choice southern mangrove forests. 
-\correctchoice northern salt marshes. 
-\choice northern mangrove forests. 
-\end{choices}
-
-\question
-The outwelling hypothesis refers to
-
-\begin{choices}
-\choice the export of larval individuals from estuary nursery grounds to the open ocean.
-\choice the loss of primary productivity to consumers in low productivity estuaries.
-\choice the enhancement of offshore productivity due to larval individuals leaving low productivity estuaries.
-\choice the export of organic material out of the estuary by a microbial loop.
-\correctchoice the export of excess primary production from high productivity estuaries. 
-\end{choices}
+%\question
+%Hypersaline bare patches are most likely to occur in
+%
+%\begin{choices}
+%\choice any mangrove forest. 
+%\choice southern salt marshes. 
+%\choice any salt marsh. 
+%\choice southern mangrove forests. 
+%\correctchoice northern salt marshes. 
+%\choice northern mangrove forests. 
+%\end{choices}
+%
+%\question
+%The outwelling hypothesis refers to
+%
+%\begin{choices}
+%\choice the export of larval individuals from estuary nursery grounds to the open ocean.
+%\choice the loss of primary productivity to consumers in low productivity estuaries.
+%\choice the enhancement of offshore productivity due to larval individuals leaving low productivity estuaries.
+%\choice the export of organic material out of the estuary by a microbial loop.
+%\correctchoice the export of excess primary production from high productivity estuaries. 
+%\end{choices}
 
 \question
 The dynamics of patches in rocky intertidal communities is most determined by
@@ -254,21 +264,22 @@ The dynamics of patches in rocky intertidal communities is most determined by
 \question[4]
 Name the tidal pattern displayed in the graph below (next question), and tell how you know. The tides shown go from the first low tide of 01 September to the last low tide of 15 September.
 
-\AnswerBox{0.05\textheight}{Mixed semi-diurnal. Two high and two low with very unequal heights}
-
-\bonusquestion[2]
-
-Circle on the graph the day of spring tide and the day of neap tide. Write the days in the space provided below the graph.
-
+%\bonusquestion[2]
+%
+%Circle on the graph the day of spring tide and the day of neap tide. Write the days in the space provided below the graph.
+%
 \fullwidth{
 \includegraphics[width=\linewidth]{tidal_plot_arena_cove}}
 
+\AnswerBox{0.01\textheight}{Mixed semi-diurnal. Two high and two low with very unequal heights}
 
-Spring tide: \ifprintanswers \textbf{2 Sep} \fi
+\newpage
 
-\bigskip
+%Spring tide: \ifprintanswers \textbf{2 Sep} \fi
 
-Neap tide: \ifprintanswers \textbf{10 Sep} \fi
+%\bigskip
+
+%Neap tide: \ifprintanswers \textbf{10 Sep} \fi
 
 %\question[3]\label{rocky_intertidal_zones}
 %Name the three zones of the rocky intertidal, from mean low tide to mean high tide.
@@ -350,14 +361,14 @@ Explain bioturbation and how it increases oxygen availability in the sediments o
 
 %\AnswerBox{\basespace}{Wrack or ice opens bare patches. Evaporation removes water, leaving salt behind, causing hypersaline conditions.}
 
-\question[5]
-Describe how patch dynamics at local scales in a rocky intertidal affects diversity at regional scales.
+%\question[5]
+%Describe how patch dynamics at local scales in a rocky intertidal affects diversity at regional scales.
+%
+%
+%\AnswerBox{0.1\textheight}{Answer goes here.}
 
 
-\AnswerBox{0.1\textheight}{Answer goes here.}
-
-
-\bonusquestion[1]
+\bonusquestion[2]
 Write the name of your favorite band or musical artist.
 
 
@@ -366,7 +377,7 @@ Write the name of your favorite band or musical artist.
 \question[10]
 Compare and contrast the competition and recruitment limitation models of reef fish community structure in terms of competition and post-recruitment processes.
 
-\AnswerBox{0.3\textheight}{Competition has strong comp and affected by post-recruitment processes. Recruitment limitation has weak comp and not modified by post-recruitment.}
+\AnswerBox{0.4\textheight}{Competition has strong comp and affected by post-recruitment processes. Recruitment limitation has weak comp and not modified by post-recruitment.}
 
 
 %\question[8]
@@ -374,10 +385,10 @@ Compare and contrast the competition and recruitment limitation models of reef f
 
 %\AnswerBox{2\basespace}{The sun and moon are in a direct line with Earth, increasing the gravitational pull. This causes higher high tides and lower low tides, which are spring tides.}
 
-%\question[8]
-%Three days ago was a half moon. Tell whether that phase would have caused a neap tide or a spring tide, and then diagram and explain why.
-%
-%\AnswerBox{2\basespace}{The sun and moon are at right angles to each other, relative to Earth, negating the gravitational pull of each. This causes lower high tides and higher low tides, which are neap tides.}
+\question[9]
+Last night was a half moon (third quarter). Tell whether that phase would have caused a neap tide or a spring tide, then diagram and explain why.
+
+\AnswerBox{0.3\textheight}{The sun and moon are at right angles to each other, relative to Earth, negating the gravitational pull of each. This causes lower high tides and higher low tides, which are neap tides.}
 
 %\question[5]
 %Briefly explain why newly created patches larger than 1m tend to increase diversity in the rocky intertidal. (\textsc{Hint:} California and Bay mussels.)
@@ -418,10 +429,10 @@ Compare and contrast the competition and recruitment limitation models of reef f
 %
 %\AnswerBox{0.3\textheight}{Large near freshwater input because sand grains fall out first, leaving larger grains so larger individuals required to ingest grains. In the middle, clay and silt fall out, so smaller deposit feeders. Behind the sandbar, wave action removes the smaller sediments, leaving sand so once again larger deposit feeders.}
 
-\question[15]
-Deposit feeders are small animals that ingest sediments to digest any organic material present between sediment grains. Describe how the relative size (larger, smaller, etc.) of the deposit feeders change in a bar-built estuary from the river to the sand bar at the ocean. Tell why the size of the deposit feeders changes. Deposit feeder size is proportional to sediment size. 
-
-\AnswerBox{0.3\textheight}{Large near freshwater input because sand grains fall out first, leaving larger grains so larger individuals required to ingest grains. In the middle, clay and silt fall out, so smaller deposit feeders. Behind the sandbar, wave action removes the smaller sediments, leaving sand so once again larger deposit feeders.}
+%\question[15]
+%Deposit feeders are small animals that ingest sediments to digest any organic material present between sediment grains. Describe how the relative size (larger, smaller, etc.) of the deposit feeders change in a bar-built estuary from the river to the sand bar at the ocean. Tell why the size of the deposit feeders changes. Deposit feeder size is proportional to sediment size. 
+%
+%\AnswerBox{0.3\textheight}{Large near freshwater input because sand grains fall out first, leaving larger grains so larger individuals required to ingest grains. In the middle, clay and silt fall out, so smaller deposit feeders. Behind the sandbar, wave action removes the smaller sediments, leaving sand so once again larger deposit feeders.}
 
 %\question[15]
 %Meiofauna refers to the small animals that live between sediment grains. Describe how the relative size (larger, smaller, etc.) of the meiofauna will change in a bar-built estuary from the river to the sand bar at the ocean. Tell why the size of the meiofauna changes. % Tell how water movement (river flow or wave action) determines this distribution.
@@ -429,6 +440,10 @@ Deposit feeders are small animals that ingest sediments to digest any organic ma
 %\AnswerBox{0.7\textheight}{Large near freshwater input because sand grains fall out first, leaving larger spaces between the grains. In the middle, clay and silt fall out, so small spaces and thus smaller meiofauna. Behind , smaller with mud in middle of estuary, then large again behind the sand bar.}
 
 \newpage
+
+
+\question[15]
+Describe (compare and contrast) how light, aerial exposure, and wave action interact to determine the types of hermatypic corals (relative size, branching, etc.) present on a reef flat and on the fore-reef slope. 
 
 %\question[15]
 %Compare and contrast the abiotic and biotic processes that determine zonation in a rocky intertidal compared to a salt marsh. Be sure to describe which processes (e.g., competition, wave action, etc.) is most important the upper and lower boundaries of each zone.
