@@ -4,7 +4,7 @@
 \documentclass[12pt, addpoints]{exam}
 \usepackage[left=1in,right=0.75in,top=1in]{geometry}     
 
-\printanswers
+%\printanswers
 
 \usepackage{fontspec}
 \def\mainfont{Linux Libertine O}
@@ -96,9 +96,11 @@
 
 \begin{document}
 
-\begin{questions}
+\noindent Match the \emph{most appropriate} term to each concept. Not all terms are used. No term is used twice.\\ (2 points each)
 
-\fullwidth{Match the \emph{most appropriate} term to each concept. Not all terms are used. No term is used twice.\\(2 points each)}
+\begin{questions}
+	
+
 \vspace{-1\baselineskip}
 \fullwidth{%
 \input{matchwordlist.tex}
@@ -107,7 +109,8 @@
 
 \bumppoints{10}
 
-\question\MatchQuestion{Sister species}{Two species that share the most recent ancestor.}
+%\question\MatchQuestion{Sister species}{Two species that share the most recent ancestor.}
+\question\MatchQuestion{Parapatric speciation}{Can occur between adjacent populations when gene flow is reduced due to different habitats.}
 \vspace{0.5\baselineskip}
 \question\MatchQuestion{Hybrid inviability}{Hybrids have reduced chance of surviving to reproductive age.} \vspace{0.5\baselineskip}
 %\question\MatchQuestion{Heterozygosity}{Decreases due to genetic drift.}
@@ -123,20 +126,31 @@
 \bumppoints{6}
 \fullwidth{Multiple choice. Choose the \emph{best} answer. Clearly circle the letter for your answer.  Vague or unclear marks will be counted as incorrect. (2 points each)}
 
+%\question
+%%A scientist applied the McDonald-Kreitman test to a DNA sequence from a gene. The found the following values: $G = 2.63. \chi^2 = 3.841$. According to this result, the gene is evolving by
+%A scientist applied the McDonald-Kreitman test to \textsc{dna} sequence from a gene. The found that $G$ = 2.63. If $\chi^2$ = 3.841 then the gene is evolving by
+%
+%\begin{choices}
+%\correctchoice neutral evolution.
+%\choice neutral selection.
+%\choice positive selection.
+%\choice purifying selection.
+%\choice negative selection.
+%\end{choices}
+
 \question
-%A scientist applied the McDonald-Kreitman test to a DNA sequence from a gene. The found the following values: $G = 2.63. \chi^2 = 3.841$. According to this result, the gene is evolving by
-A scientist applied the McDonald-Kreitman test to \textsc{dna} sequence from a gene. The found that $G$ = 2.63. If $\chi^2$ = 3.841 then the gene is evolving by
+The reduction of average fitness in a population due to constant introduction of new, deleterious mutations is known as
 
 \begin{choices}
-\correctchoice neutral evolution.
-\choice neutral selection.
-\choice positive selection.
-\choice purifying selection.
-\choice negative selection.
+	\choice negative selection.
+	\correctchoice mutation load.
+	\choice genetic hitchhiking.
+	\choice negative frequency-dependent selection.
+	\choice mutation-selection balance.
 \end{choices}
 
 \question
-A scientist applied the breeder's equation to thorax width (behind the head) of stink bugs (Order Hemiptera). The trait had high heritability and the selection coefficient was negative. Therefore, they would predict the width of the thorax of the next generation should show
+A scientist applied the breeder's equation to thorax width (behind the head) of stink bugs (Order Hemiptera). The trait had high heritability and the selection coefficient was negative. Therefore, they would predict the thorax width in the next generation should show
 
 \begin{choices}
 \choice a relatively large increase in width.
@@ -241,13 +255,18 @@ See how answers go but pre-zygotic isolation is best answer as the gametes from 
 
 
 
+%\question[5]
+%If two independent populations (no gene flow) are subject only to non-adaptive evolution, would you predict that the end result would be the same for each population? Explain why or why not.
+%
+%\AnswerBox{0.1\textheight}{%
+%	No. Non-adaptive evolution is by drift. Drift is random. Because there is no gene flow between them, each population will drift independently of the other.
+%}
+%
+
 \question[5]
-If two independent populations (no gene flow) are subject only to non-adaptive evolution, would you predict that the end result would be the same for each population? Explain why or why not.
+Explain why non-synonymous substitutions might be subject to natural selection but synonymous substitutions are not.
 
-\AnswerBox{0.1\textheight}{%
-	No. Non-adaptive evolution is by drift. Drift is random. Because there is no gene flow between them, each population will drift independently of the other.
-}
-
+\AnswerBox{0.1\textheight}{NS changes amino acid order and thus possibly protein function. S does not change amino acid so no protein function change.}
 
 \newpage
 
